@@ -1,0 +1,3 @@
+
+def findPromoters(query):
+    

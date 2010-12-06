@@ -1,0 +1,3 @@
+
+def findTerminators(query, transterm):
+    
