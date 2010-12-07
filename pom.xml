@@ -4,40 +4,35 @@
   <groupId>com.curious</groupId>
   <artifactId>neofelis</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>pounce</name>
+  <name>Neofelis Genome Annotator</name>
   <url>http://maven.apache.org</url>
   <packaging>clojure</packaging>
-  <repositories>
-    <repository>
-      <id>clojars</id>
-      <url>http://clojars.org/repo</url>
-    </repository>
-  </repositories>
   <build>
     <plugins>
       <plugin>
         <groupId>org.curious</groupId>
-        <artifactId>neofelis</artifactId>
-        <version>1.3.6</version>
+        <artifactId>hiss</artifactId>
+        <version>1.0.0</version>
         <extensions>true</extensions>
+        <configuration>
+          <pythonMain>org.curious.neofelis.main</pythonMain>
+          <pythonPath>/home/jarl/jython/Lib</pythonPath>
+          <pythonArgs>
+            <param>--heuristically</param>
+            <param>--genemark=/home/jarl/genemark</param>
+            <param>--blast=/home/jarl/blast</param>
+            <param>--eValue=0.1</param>
+            <param>Phi-4-1.fas</param>
+          </pythonArgs>
+        </configuration>
       </plugin>
     </plugins>
   </build>
   <dependencies>
     <dependency>
-      <groupId>swank-clojure</groupId>
-      <artifactId>swank-clojure</artifactId>
-      <version>1.2.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.clojure</groupId>
-      <artifactId>clojure</artifactId>
-      <version>1.2.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.clojure</groupId>
-      <artifactId>clojure-contrib</artifactId>
-      <version>1.2.0</version>
+      <groupId>org.python</groupId>
+      <artifactId>jython</artifactId>
+      <version>2.5.0</version>
     </dependency>
   </dependencies>
 </project>

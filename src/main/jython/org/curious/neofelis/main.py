@@ -1,3 +1,25 @@
+"""
+This Module is the main file for the Neofelis Genome Annotator
+"""
+
+"""
+Copyright 2010 Jarl Haggerty
+This file is part of Neofelis.
+
+Neofelis is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Neofelis is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with Neofelis.  If not, see <http://www.gnu.org/licenses/>.
+"""
+
 import os
 import sys
 from getopt import getopt
@@ -8,80 +30,66 @@ from org.curious.neofelis import promoters
 from org.curious.neofelis import terminators
 
 if __name__ == "__main__":
-	opts, args = getopt(sys.argv[1:], "ht:c:i:m:p:d:b:g:e:n:lx:a:", ["help", 
-                                                                         "transterm=", 
-                                                                         "cut-offs=",
-                                                                         "interval=",
-                                                                         "matrix=", 
-                                                                         "prefix=", 
-                                                                         "database=", 
-                                                                         "blastall=", 
-                                                                         "genemark=", 
-                                                                         "evalue=", 
-                                                                         "min-length=", 
-                                                                         "local", 
-                                                                         "excel-suffix=", 
-                                                                         "max-e="])
-	documentation = """
+  print sys.argv
+  opts, args = getopt(sys.argv, "m:d:g:b:e:h", ["matrix=", "database=", "genemark=", "blast=", "eValue=", "help"])
+  documentation = """
 -m --matrix        :Matrix with which to run genemark
--u --heuristically :Run genemark heuristically
+-d --database      :Database to use when running blast
 -g --genemark      :Location of genemark
 -b --blast         :Location of blast
 -e --eValue        :Minimal evalue for any genes detected
 -h --help          :Print help documentation
 """
-	blastall = "~/blast"
-	database = "nr"
-	genemark = "~/genemark"
-	evalue = 0.1
-	matrix = None
+  
+  blastLocation = "~/blast"
+  database = "nr"
+  genemarkLocation = "~/genemark"
+  eValue = 0.1
+  matrix = None
 	
-	queries = []
-	for arg in sys.argv[1:]:
-		if arg.find('-') != 0:
-			queries.append(arg)
-
-        for opt, arg in opts:
-                if arg in queries:
-                        quieries.remove(arg)
-                if opt in ("-h", "--heuristically"):
-                        heuristically = True
-                if opt in ("-g", "--genemark"):
-                        genemark = arg
-                if opt in ("-b", "--blast"):
-                        blast = arg
-                if opt in ("-d", "--database"):
-                        database = arg
-                if opt in ("-m", "--matrix"):
-                        matrix = arg
-                if opt in ("-e", "--eValue"):
-                        e_value = arg
+  queries = []
+  for arg in sys.argv:
+    if arg.find('-') != 0:
+      queries.append(arg)
+    for opt, arg in opts:
+      if arg in queries:
+        quieries.remove(arg)
+      if opt in ("-g", "--genemark"):
+        genemarkLocation = arg
+      if opt in ("-b", "--blast"):
+        blastLocation = arg
+      if opt in ("-d", "--database"):
+        database = arg
+      if opt in ("-m", "--matrix"):
+        matrix = arg
+      if opt in ("-e", "--eValue"):
+        eValue = arg
                         
-	for query in queries:
+  for query in queries:
 		if not os.path.split(query)[1]:
 			queries.remove(query)
 			queries.extend([os.path.split(query)[0] + '/' + file for file in os.listdir(query) if file[0] != '.'])
-			
-	for query in queries:
-                name = os.path.splitext(query)[0]
-                name = os.path.split(name)[1]
 
-                if matrix:
-                        initialGenes = genemark.findGenes(query, name, genemark, matrix, blast, e_value)
-                elif:
-                        initialGenes = genemark.findGenes(query, name, genemark, blast, e_value)
-                extendedGenes = extend.extendGenes(initial_genes, name, blast, e_value)
-                intergenicGenes = intergenics.findIntergenics(query, extendedGenes, name, minLength, eValue)
-                genes = {}
-                for k, v in extendedGenes.items() + intergenicGenes.items():
-                        genes[k] = v
+  for query in queries:
+    name = os.path.splitext(query)[0]
+    name = os.path.split(name)[1]
+    
+    initialGenes = genemark.findGenes(query, name, blastLocation, database, eValue, genemarkLocation, matrix)
+    
+    sys.exit(0)
+    
+    extendedGenes = extend.extendGenes(initial_genes, name, blastLocation, e_value)
+    intergenicGenes = intergenics.findIntergenics(query, extendedGenes, name, minLength, eValue)
+    genes = {}
+    for k, v in extendedGenes.items() + intergenicGenes.items():
+      genes[k] = v
+        
+    initialTerminators = terminators.findTerminators(query, transterm)
+    initialPromoters = promoters.findPromoters(query)
                 
-                initialTerminators = terminators.findTerminators(query, transterm)
-                initialPromoters = promoters.findPromoters(query)
+    writeArtemisFile(genes, promoters, terminators)
                 
-                writeArtemisFile(genes, promoters, terminators)
-                
-		
+"""
 		#remove all signals inside orfs
 		for f in os.listdir("artemis_complete/"):
 			for c in cut_offs:
@@ -98,4 +106,4 @@ if __name__ == "__main__":
 		fasta_command_now = "python make_fasta.py " + q
 		print fasta_command_now
 		os.system(fasta_command_now)
-		
+"""	
