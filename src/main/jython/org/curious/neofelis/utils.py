@@ -27,7 +27,13 @@ from javax.xml.parsers import DocumentBuilderFactory
 from org.python.core.util import FileUtil
 from java.lang import Double
 from java.lang import Runtime
+from org.xml.sax.helpers import XMLReaderFactory
+from org.xml.sax import XMLReader
+from org.xml.sax.helpers import DefaultHandler
 import os
+import subprocess
+import re
+import org.python.core.io.RawIOBase
 
 """Start and stop codons."""
 startCodons = ("ATG", "GTG", "TTG")
@@ -143,7 +149,7 @@ def countIterations(document):
   """
   return xPath.evaluate(iterationString[:-4], document, XPathConstants.NODESET).getLength()
 
-def countIterationHits(document, n):
+def countHits(document, n):
   """
   Counts the number of hits in the nth iteration of a blast Document.
   """
@@ -182,8 +188,8 @@ def getMinHsp(document, n, i, measure):
   as defined by the text in the node with the tag specified by measure under the hsps.
   """
   minValue, minHsp = Double.POSITIVE_INFINITY, 0
-  for hsp in xrange(countHsps(document, iteration, hit)):
-    value = float(xPath.evaluate(hspString % (iteration, hit, hsp) + "/" + measure, document))
+  for hsp in xrange(1, countHsps(document, n, i)+1):
+    value = float(xPath.evaluate(hspString % (n, i, hsp) + "/" + measure, document))
     if value < minValue:
       minValue, minHsp = value, hsp
   return minHsp
@@ -194,25 +200,11 @@ def getMaxHsp(document, iteration, hit, measure):
   as defined by the text in the node with the tag specified by measure under the hsps.
   """
   maxValue, maxHsp = Double.NEGATIVE_INFINITY, 0
-  for hsp in xrange(countHsps(document, iteration, hit)):
-    value = float(xPath.evaluate(hspString % (iteration, hit, hsp) + "/" + measure, document))
+  for hsp in xrange(1, countHsps(document, n, i)+1):
+    value = float(xPath.evaluate(hspString % (n, i, hsp) + "/" + measure, document))
     if value > maxValue:
       maxValue, maxHsp = value, hsp
   return maxHsp
-
-class GeneStruct:
-  """
-  A structure for holding information about a gene's blast result.
-  """
-  location =        []
-  numHits =         0
-  bitScore =        0
-  eValue =          Double.POSITIVE_INFINITY
-  identity =        0
-  alignmentLength = 0
-  hitId =           -1
-  title =           "None"
-  organism =        "None"
 
 def loadGenome(fileName):
   """
@@ -250,15 +242,138 @@ def cachedBlast(fileName, blastLocation, database, eValue, query):
   already exists the search is skipped.
   """
   if not os.path.isfile(fileName):
-    process = Runtime.getRuntime().exec([blastLocation + "/bin/blastp",
-                                        "-db", blastLocation + "/db/" + database,
-                                        "-num_threads", str(Runtime.getRuntime().availableProcessors()),
-                                        "-evalue", str(eValue),
-                                        "-outfmt", "5",
-                                        "-query", query + ".orf"])
-    process.waitFor()
-    input = FileUtil.wrap(process.getInputStream())
     output = open(fileName, "w")
-    output.write(input.read())
+    subprocess.Popen(["bin/blastp",
+                      "-db", "db/" + database,
+                      "-num_threads", str(Runtime.getRuntime().availableProcessors()),
+                      "-evalue", str(eValue),
+                      ",-outfmt", "5",
+                      "-query", query + ".orf"],
+                     cwd = blastLocation,
+                     stdout = output)
     output.close()
-    input.close()
+
+class Iteration:
+  """
+  A structure for holding information about a gene's blast result.
+  """
+  query =           None
+  location =        []
+  numHits =         0
+  bitScore =        0
+  eValue =          Double.POSITIVE_INFINITY
+  identity =        0
+  alignmentLength = 0
+  id =              None
+  title =           None
+  organism =        None
+
+  def __str__(self):
+    result = "<"
+    result += "Query = " + str(self.query) + ", "
+    result += "Location = " + str(self.location) + ", "
+    result += "NumHits = " + str(self.numHits) + ", "
+    result += "BitScore = " + str(self.bitScore) + ", "
+    result += "EValue = " + str(self.eValue) + ", "
+    result += "Identity = " + str(self.identity) + ", "
+    result += "AlignmentLength = " + str(self.alignmentLength) + ", "
+    result += "ID = " + str(self.id) + ", "
+    result += "Title = " + str(self.title) + ", "
+    result += "Organism = " + str(self.organism)
+    result += ">"
+    return result
+
+class Hit:
+  eValue = Double.POSITIVE_INFINITY
+  bitScore = 0
+  identity = 0
+  alignmentLength = 0
+  id = None
+  title = None
+  organism = None
+
+  def __str__(self):
+    result = "<"
+    result += "BitScore = " + str(self.bitScore) + ", "
+    result += "EValue = " + str(self.eValue) + ", "
+    result += "Identity = " + str(self.identity) + ", "
+    result += "AlignmentLength = " + str(self.alignmentLength) + ", "
+    result += "ID = " + str(self.id) + ", "
+    result += "Title = " + str(self.title) + ", "
+    result += "Organism = " + str(self.organism)
+    result += ">"
+    return result
+
+class Hsp:
+  eValue = Double.POSITIVE_INFINITY
+  bitScore = 0
+  identity = 0
+  alignmentLength = 0
+
+class BlastHandler(DefaultHandler):
+  iterations = []
+  hits = []
+  hsps = []
+  tag = None
+  
+  def startElement(self, uri, tag, name, attributes):
+    if name == "Iteration":
+      self.iterations += [Iteration()]
+    elif name == "Hit":
+      self.hits += [Hit()]
+    elif name == "Hsp":
+      self.hsps += [Hsp()]
+    self.tag = tag
+
+  def endElement(self, uri, tag, name):
+    if tag == "Iteration" and self.hits:
+      bestHit = min(self.hits, key = lambda hit:hit.eValue)
+      self.iterations[-1].eValue = bestHit.eValue
+      self.iterations[-1].bitScore = bestHit.bitScore
+      self.iterations[-1].identity = bestHit.identity
+      self.iterations[-1].alignmentLength = bestHit.alignmentLength
+      self.iterations[-1].id = bestHit.id
+      self.iterations[-1].title = bestHit.title
+      self.iterations[-1].organism = bestHit.organism
+      self.iterations[-1].numHits = len(self.hits)
+      self.hits = []
+    elif tag == "Hit":
+      bestHsp = min(self.hsps, key = lambda hsp:hsp.eValue)
+      self.hits[-1].eValue = bestHsp.eValue
+      self.hits[-1].bitScore = bestHsp.bitScore
+      self.hits[-1].identity = bestHsp.identity
+      self.hits[-1].alignmentLength = bestHsp.alignmentLength
+      self.hsps = []
+    self.tag = ""
+
+  def characters(self, raw, start, length):
+    text = raw[start:start+length].tostring()
+    if self.tag == "Iteration_query-def":
+      #print text, self.tag, self.iterations
+      self.iterations[-1].query, location = text.split(":")
+      self.iterations[-1].location = [int(l) for l in location.split("-")]
+    elif self.tag == "Hit_id":
+      self.hits[-1].id = text
+    elif self.tag == "Hit_def" and not self.hits[-1].title:
+      match = re.search("(.+)\\[(.+)\\]", text)
+      if match:
+        self.hits[-1].title, self.hits[-1].organism = match.group(1), match.group(2)
+      else:
+        self.hits[-1].title, self.hits[-1].organism = text, ""
+    elif self.tag == "Hsp_bit-score":
+      self.hsps[-1].bitScore = float(text)
+    elif self.tag == "Hsp_evalue":
+      self.hsps[-1].eValue = float(text)
+    elif self.tag == "Hsp_identity":
+      self.hsps[-1].identity = float(text)
+    elif self.tag == "Hsp_align-len":
+      self.hsps[-1].alignmentLength = int(text)
+
+
+
+def parseBlast(fileName):
+  reader = XMLReaderFactory.createXMLReader()
+  reader.setContentHandler(BlastHandler())
+  reader.parse(fileName)
+
+  return dict(map(lambda iteration: (iteration.query, iteration), reader.getContentHandler().iterations))

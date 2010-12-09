@@ -21,6 +21,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with Neofelis.  If not, see <http://www.gnu.org/licenses/>.
 """
 
+from java.lang import Double
 from java.lang import Runtime
 from org.python.core import PyFile
 from org.python.core.util import FileUtil
@@ -63,45 +64,6 @@ def modifyFastaHeader(fileName, name):
   output.write(swap)
   output.close()
 
-def parseBlast(fileName):
-  """
-  Returns a Dictionary mapping the name of each gene in the blast result named by fileName to a
-  GeneStruct containing information about the result of the search for that gene.
-  """
-  document = getDocument(fileName)
-  result = {}
-  for iteration in xrange(1, countIterations(document)+1):
-    id, location = getQueryDef(document, iteration).split(":")
-
-    newGene = GeneStruct()
-    newGene.location = [int(l) for l in location.split("-")]
-
-    hits = countHits(document, iteration)+1
-    if hits > 0:
-      minEValue, bestHit, minHsp = Double.POSITIVE_INFINITY, 0, 0
-      for hit in xrange(1, hits+1):
-        hsp = getMinHsp(document, iteration, hit, "Hsp_evalue")
-        eValue = getHspValue(document, iteration, hit, hsp, "Hsp_evalue")
-        if eValue < minEValue:
-          minEValue, bestHit, minHsp = eValue, hit, hsp
-          
-          hitDef = getHitValue(document, iteration, bestHit, "Hit_def")[hitDef.find(">")+1:].strip()
-          if hitDef.find("[") != -1:
-            title, organism = hitDef[:hitDef.find("[")].strip(), hitDef[hitDef.find("[")+1:]
-            organism = organism.strip()
-          else:
-            tile = organism = hitDef    
-      newGene.numHits = hits
-      newGene.bitScore = float(getHspValue(document, iteration, bestHit, bestHsp, "Hsp_bit-score")),
-      newGene.eValue = minEValue
-      newGene.identity = int(getHspValue(document, iteration, bestHit, bestHsp, "Hsp_identity")),
-      newGene.alignmentLength = int(getHspValue(document, iteration, bestHit, bestHsp, "Hsp_align-len")),
-      newGene.hitId = int(getHitValue(document, iteration, bestHit, "Hit_id")),
-      newGene.title = title
-      newGene.organism = organism
-    result[id] = newGene
-  return result
-
 def findGenes(query, name, blast, database, eValue, genemark, matrix = None):
   """
   Uses genemark to predict genes in query and then uses blast with the given eValue
@@ -116,4 +78,4 @@ def findGenes(query, name, blast, database, eValue, genemark, matrix = None):
   modifyFastaHeader(query + ".orf", name)
   utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blast, database, eValue, query)
   #Runtime.getRuntime().exec("rm " + query + ".orf")
-  return parseXML("initialBlasts" + name + ".blastp.xml")
+  return utils.parseBlast("initialBlasts/" + name + ".blastp.xml")

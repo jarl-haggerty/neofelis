@@ -29,6 +29,12 @@ from org.curious.neofelis import intergenic
 from org.curious.neofelis import promoters
 from org.curious.neofelis import terminators
 
+from org.python.util import PythonInterpreter
+
+interpreter = PythonInterpreter()
+interpreter.exec("print 3+6");
+sys.exit(0)
+
 if __name__ == "__main__":
   print sys.argv
   opts, args = getopt(sys.argv, "m:d:g:b:e:h", ["matrix=", "database=", "genemark=", "blast=", "eValue=", "help"])
@@ -75,7 +81,9 @@ if __name__ == "__main__":
     name = os.path.split(name)[1]
     
     initialGenes = genemark.findGenes(query, name, blastLocation, database, eValue, genemarkLocation, matrix)
-    
+
+    for k, v in initialGenes.items():
+      print k, v
     sys.exit(0)
     
     extendedGenes = extend.extendGenes(initial_genes, name, blastLocation, e_value)
