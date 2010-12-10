@@ -15,11 +15,11 @@
         <version>1.0.0</version>
         <extensions>true</extensions>
         <configuration>
-          <pythonMain>org.curious.neofelis.main</pythonMain>
-          <pythonPath>/home/jarl/jython/Lib</pythonPath>
+          <pythonMain>neofelis.main</pythonMain>
+          <pythonPath>/Users/mbsulli/jython2.5.1/Lib</pythonPath>
           <pythonArgs>
-            <param>--genemark=/home/jarl/genemark</param>
-            <param>--blast=/home/jarl/blast</param>
+            <param>--genemark=/Users/mbsulli/genemark</param>
+            <param>--blast=/usr/local/ncbi/blast</param>
             <param>--eValue=0.1</param>
             <param>Phi-4-1.fas</param>
           </pythonArgs>
