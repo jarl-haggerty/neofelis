@@ -59,10 +59,11 @@ def findGenes(query, name, blast, database, eValue, genemark, matrix = None):
   to refer to the genome(typically query without the file extension).
   """
   if not matrix:
-    gc = int(getGCContent(loadGenome(query)))
+    gc = int(utils.getGCContent(utils.loadGenome(query)))
     matrix = genemark + "/" + "heuristic_mat/heu_11_" + str(gc) + ".mat"
   subprocess.Popen([genemark + "/gm", "-opq", "-m", matrix, query]).wait()
   modifyFastaHeader(query + ".orf", name)
   utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blast, database, eValue, query)
   os.remove(query + ".orf")
+  os.remove(query + ".lst")
   return utils.parseBlast("initialBlasts/" + name + ".blastp.xml")

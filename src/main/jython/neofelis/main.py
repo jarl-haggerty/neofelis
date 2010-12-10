@@ -66,21 +66,20 @@ if __name__ == "__main__":
         eValue = arg
                         
   for query in queries:
-		if not os.path.split(query)[1]:
-			queries.remove(query)
-			queries.extend([os.path.split(query)[0] + '/' + file for file in os.listdir(query) if file[0] != '.'])
+    if not os.path.split(query)[1]:
+      queries.remove(query)
+      queries.extend([os.path.split(query)[0] + '/' + file for file in os.listdir(query) if file[0] != '.'])
 
   for query in queries:
     name = os.path.splitext(query)[0]
     name = os.path.split(name)[1]
     
     initialGenes = genemark.findGenes(query, name, blastLocation, database, eValue, genemarkLocation, matrix)
-
-    for k, v in initialGenes.items():
+    
+    extendedGenes = extend.extendGenes(initialGenes, name, blastLocation, eValue)
+    for k, v in extendedGenes.items():
       print k, v
     sys.exit(0)
-    
-    extendedGenes = extend.extendGenes(initial_genes, name, blastLocation, e_value)
     intergenicGenes = intergenics.findIntergenics(query, extendedGenes, name, minLength, eValue)
     genes = {}
     for k, v in extendedGenes.items() + intergenicGenes.items():

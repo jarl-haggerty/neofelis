@@ -129,12 +129,14 @@ def loadGenome(fileName):
   """
   Loads the genome from a fasta file containing a single genome.
   """
+  print fileName
   input = open(fileName, "r")
   result = ""
   for line in input:
-    match = re.match("([ACGT]+)\n", line.upper())
+    match = re.match("([ACGT]+)", line.upper())
     if match:
       result += match.group(1)
+  input.close()
   return result
 
 def getGeneLocations(genes):
@@ -161,7 +163,6 @@ def cachedBlast(fileName, blastLocation, database, eValue, query):
   already exists the search is skipped.
   """
   if not os.path.isfile(fileName):
-    print "Caching"
     output = open(fileName, "w")
     temp = [blastLocation + "/bin/blastp",
                       "-db", blastLocation + "/db/" + database,
@@ -169,11 +170,9 @@ def cachedBlast(fileName, blastLocation, database, eValue, query):
                       "-evalue", str(eValue),
                       "-outfmt", "5",
                       "-query", query + ".orf"]
-    print temp
     subprocess.Popen(temp,
                      stdout = output).wait()
     output.close()
-    print "Cached"
 
 class Iteration:
   """
@@ -246,6 +245,7 @@ class BlastHandler(DefaultHandler):
   hits = []
   hsps = []
   tag = None
+  text = ""
   
   def startElement(self, uri, tag, name, attributes):
     """
@@ -259,7 +259,7 @@ class BlastHandler(DefaultHandler):
       self.hits += [Hit()]
     elif name == "Hsp":
       self.hsps += [Hsp()]
-    self.tag = tag
+    self.tag, self.text = tag, ""
 
   def endElement(self, uri, tag, name):
     """
@@ -285,33 +285,33 @@ class BlastHandler(DefaultHandler):
       self.hits[-1].identity = bestHsp.identity
       self.hits[-1].alignmentLength = bestHsp.alignmentLength
       self.hsps = []
-    self.tag = ""
+    elif self.tag == "Iteration_query-def":
+      self.iterations[-1].query, location = self.text.split(":")
+      self.iterations[-1].location = [int(l) for l in location.split("-")]
+    elif self.tag == "Hit_id":
+      self.hits[-1].id = self.text
+    elif self.tag == "Hit_def":
+      match = re.search(r"([^\[]+)\[([^\]]+)", self.text)
+      if match:
+        self.hits[-1].title, self.hits[-1].organism = match.group(1).strip(), match.group(2).strip()
+      else:
+        self.hits[-1].title, self.hits[-1].organism = self.text.strip(), ""
+    elif self.tag == "Hsp_bit-score":
+      self.hsps[-1].bitScore = float(self.text)
+    elif self.tag == "Hsp_evalue":
+      self.hsps[-1].eValue = float(self.text)
+    elif self.tag == "Hsp_identity":
+      self.hsps[-1].identity = float(self.text)
+    elif self.tag == "Hsp_align-len":
+      self.hsps[-1].alignmentLength = int(self.text)
 
   def characters(self, raw, start, length):
     """
     Pulls the character information from the current node depending on the
     tag of the parent.
     """
-    text = raw[start:start+length].tostring()
-    if self.tag == "Iteration_query-def":
-      self.iterations[-1].query, location = text.split(":")
-      self.iterations[-1].location = [int(l) for l in location.split("-")]
-    elif self.tag == "Hit_id":
-      self.hits[-1].id = text
-    elif self.tag == "Hit_def" and not self.hits[-1].title:
-      match = re.search("(.+)\\[(.+)\\]", text)
-      if match:
-        self.hits[-1].title, self.hits[-1].organism = match.group(1), match.group(2)
-      else:
-        self.hits[-1].title, self.hits[-1].organism = text, ""
-    elif self.tag == "Hsp_bit-score":
-      self.hsps[-1].bitScore = float(text)
-    elif self.tag == "Hsp_evalue":
-      self.hsps[-1].eValue = float(text)
-    elif self.tag == "Hsp_identity":
-      self.hsps[-1].identity = float(text)
-    elif self.tag == "Hsp_align-len":
-      self.hsps[-1].alignmentLength = int(text)
+    self.text += raw[start:start+length].tostring()
+    
 
 def parseBlast(fileName):
   """
@@ -327,4 +327,5 @@ def getGCContent(genome):
   """
   A function for calculating the GC content of a genome.
   """
+  print len(genome)
   return reduce(lambda x, y: x+int(y in ("G", "C")), genome, 0)/float(len(genome))*100

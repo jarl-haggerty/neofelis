@@ -20,88 +20,70 @@ import os
 from java.lang import Runtime
 from neofelis import utils
 
-def getForwardExtensions(genome, locations, stops):
-        result = {}
-        for gene, location in locations.items():
-                results[gene] = []
-                lowerBound = max(filter(lambda x: x < location[0], stops))
-                for i in xrange(location[0] - 3, lowerBound, -3):
-                        if genome[i:i+3] in startCodons:
-                                result[gene].append(i)
-                        elif genome[i:i+3] in stopCodons:
-                                break
-        return result
+def getStops(genes):
+  return map(lambda x: x.location[1]-2, filter(lambda x: x.location[0] < x.location[1], genes)), map(lambda x: x.location[0]-2, filter(lambda x: x.location[1] < x.location[0], genes))
 
-def getReverseExtensions(genome, locations, stops):
-        result = {}
-        for gene, location in locations.items():
-                results[gene] = []
-                upperBound = max(filter(lambda x: x > location[1], stops))
-                for i in xrange(location[1], upperBound, 3):
-                        if reverseComplement(genome[i:i+3]) in startCodons:
-                                result[gene].append(i)
-                        elif reverseComplement(genome[i:i+3]) in stopCodons:
-                                break
-        return result
+def getExtensions(genome, genes):
+  forwardStops, reverseStops = getStops(genes)
+  result = {}
+  for gene, geneData in locations.items():
+    results[gene] = []
+    if geneData.location[0] < geneData.location[1]:
+      bound = max(filter(lambda x: x < geneData.location[0], forwardStops))
+      for i in xrange(geneData.location[0] - 3, bound, -3):
+        if genome[i:i+3] in startCodons:
+          result[geneData].append(i)
+        elif genome[i:i+3] in stopCodons:
+          break
+    else:
+      bound = max(filter(lambda x: x > geneData.location[1], reverseStops))
+      for i in xrange(geneData.location[1], bound, 3):
+        if reverseComplement(genome[i:i+3]) in startCodons:
+          result[geneData].append(i)
+        elif reverseComplement(genome[i:i+3]) in stopCodons:
+          break
+  return result
 
-def writeForwardExtensions(genome, extensions):
-        output = open("extensions.fas", "a")
-        for gene, location in extension.items():
-                output.write(gene + "~" +
-                             "-".join([location[0]+1, location[1]]) + "\n")
-                proteins = translate(genome[location[0]:location[1]])
-                for i in xrange(location[0], location[1], 50):
-                        output.write(genome[i:min(i+50, location[1])] + "\n")
-        output.close()
-
-def writeReverseExtensions(genome, extensions):
-        output = open("extensions.fas", "a")
-        for gene, location in extension.items():
-                output.write(gene + "~" +
-                             "-".join([location[1], location[0]+1]) + "\n")
-                proteins = translate(reverseComplement(genome[location[0]:location[1]]))
-                for i in xrange(location[0], location[1], 50):
-                        output.write(genome[i:min(i+50, location[1])] + "\n")
-        output.close()
+def writeExtensions(genome, extensions):
+  output = open("extensions.fas", "w")
+  for gene, extension in extension.items():
+    if gene.location[0] < gene.location[1]:
+      output.write(gene.query + "~" +
+                   "-".join([gene.location[0], gene.location[1]]) + "\n")
+      proteins = translate(genome[gene.location[0]-1:gene.location[1]])
+      for i in xrange(0, len(proteins), 50):
+        output.write(proteins[i:min(i+50, len(proteins))] + "\n")
+    else:
+      output.write(gene.query + "~" +
+                   "-".join([gene.location[0], gene.location[1]]) + "\n")
+      proteins = translate(reverseComplement(genome[gene.location[1]-1:gene.location[0]]))
+      for i in xrange(0, len(proteins), 50):
+        output.write(proteins[i:min(i+50, len(proteins))] + "\n")
+  output.close()
 
 def applyExtensions(genes, extendedGenes):
-        def reduceFunction(x, y):
-                if y[0].find(gene) == 0 and y[1].eValue < x.eValue: 
-                        min(x, y[1], key = lambda x: x.eValue)
-        result = {}
-        for gene, geneData in genes.items():
-                bestExtension = reduce(reduceFunction, extendedGenes.items(), GeneStruct())
-                if bestExtension.eValue < geneData.eValue:
-                        result[gene] = bestExtension
-                else:
-                        result[gene] = geneData
-        return result
+  forwardStops, reverseStops = getStops()
+  def forwardReduce(gene, x, y):
+    if y.find(gene) == 0:
+      if gene.location[0] < gene.location[1]:
+        gapSize = y.location[0] - max(filter(lambda z: z < gene.location[0], forwardStops))
+      else:
+        gapSize = min(filter(lambda z: z > gene.location[0], reverseStops)) - y.location[0]
+      if gapSize < 100:
+        return max(x, y, key = lambda z: z.location[1] - z.location[0])
+      else:
+        return min(x, y, key = lambda z: z.eValue)
+    else:
+      return x
+        
+  result = {}
+  for gene, geneData in genes.items():
+    result[gene] = reduce(reduceFunction, extendedGenes.items(), geneData)
+  return result
 
 def extendGenes(query, genes, name, blast, database, eValue):
         genome = loadGenome(query)
-        forwardLocations, reverseLocations = getGenelocations(genes)
-        forwardStops = map(lambda x: x[1]-2, forwardLocations.values())
-        reverseStops = map(lambda x: x[0]-2, reverseLocations.values())
-
-        forwardExtensions = getForwardExtensions(genome, forwardLocations, forwardStops)
-        reverseExtensions = getReverseExtensions(genome, reverseLocations, reverseStops)
-
-        os.remove("extensions.fas")
-        writeForwardExtensions(genome, forwardLocations, forwardExtensions)
-        writeReverseExtensions(genome, reverseLocations, reverseExtensions)
-
-        if not os.path.isfile("extendedBlasts/" + name + ".blastp.xml"):
-                process = Runtime.getRuntime().exec(blast + "/bin/blastp" +
-                                                    " -db " + database +
-                                                    " -num_threads " + str(Runtime.getRuntime.availableProcessors()) +
-                                                    " -evalue " + str(eValue) +
-                                                    " -outfmt 5" +
-                                                    " -query extensions.fas")
-                input = PyFile(process.getInputStream())
-                output = open("extendedBlasts/" + name + ".blastp.xml", "w")
-                output.write(input.read)
-                input.close()
-                output.close()
-        
-        extendedGenes = parseBlast("extendedBlasts/" + name + ".blastp.xml")
+        extensions = getExtensions(genome, locations)
+        writeExtensions(genome, extensions)
+        extendedGenes = cachedBlast("extendedBlasts/" + name + ".blastp.xml")
         return applyExtensions(genes, extendedGenes)
