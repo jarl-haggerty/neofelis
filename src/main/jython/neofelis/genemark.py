@@ -21,29 +21,16 @@ You should have received a copy of the GNU Lesser General Public License
 along with Neofelis.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-from java.lang import Double
-from java.lang import Runtime
-from org.python.core import PyFile
-from org.python.core.util import FileUtil
 from neofelis import utils
 import sys
 import re
 import os
+import subprocess
 
 
 """Have to make sure that a directory to store the blasts this module creates exists."""
 if not os.path.isdir("initialBlasts"):
   os.mkdir("initialBlasts")
-
-def getGC(query, genemark):
-  """
-  Calculate the GC content of the query(a fasta file) with the gc program in the
-  specified genemark directory.
-  """
-  process = Runtime.getRuntime().exec(genemark + "/gc " + query)
-  process.waitFor()
-  result = FileUtil.wrap(process.getInputStream()).read()
-  return float(re.search("GC% = (\d+)", result).group(1))
 
 def modifyFastaHeader(fileName, name):
   """
@@ -72,10 +59,10 @@ def findGenes(query, name, blast, database, eValue, genemark, matrix = None):
   to refer to the genome(typically query without the file extension).
   """
   if not matrix:
-    gc = int(getGC(query, genemark))
+    gc = int(getGCContent(loadGenome(query)))
     matrix = genemark + "/" + "heuristic_mat/heu_11_" + str(gc) + ".mat"
-  Runtime.getRuntime().exec(genemark + "/gm -opq -m " + matrix + " " + query).waitFor()
+  subprocess.Popen([genemark + "/gm", "-opq", "-m", matrix, query]).wait()
   modifyFastaHeader(query + ".orf", name)
   utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blast, database, eValue, query)
-  #Runtime.getRuntime().exec("rm " + query + ".orf")
+  os.remove(query + ".orf")
   return utils.parseBlast("initialBlasts/" + name + ".blastp.xml")

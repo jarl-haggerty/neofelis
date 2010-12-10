@@ -19,7 +19,7 @@
           <pythonPath>/Users/mbsulli/jython2.5.1/Lib</pythonPath>
           <pythonArgs>
             <param>--genemark=/Users/mbsulli/genemark</param>
-            <param>--blast=/usr/local/ncbi/blast</param>
+            <param>--blast=/Users/mbsulli/blast</param>
             <param>--eValue=0.1</param>
             <param>Phi-4-1.fas</param>
           </pythonArgs>

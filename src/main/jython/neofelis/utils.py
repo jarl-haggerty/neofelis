@@ -20,13 +20,9 @@ You should have received a copy of the GNU Lesser General Public License
 along with Neofelis.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-from javax.xml.xpath import XPathFactory
-from javax.xml.xpath import XPath
-from javax.xml.xpath import XPathConstants
 from javax.xml.parsers import DocumentBuilderFactory
 from org.python.core.util import FileUtil
 from java.lang import Double
-from java.lang import Runtime
 from org.xml.sax.helpers import XMLReaderFactory
 from org.xml.sax import XMLReader
 from org.xml.sax.helpers import DefaultHandler
@@ -136,7 +132,7 @@ def loadGenome(fileName):
   input = open(fileName, "r")
   result = ""
   for line in input:
-    match = re.match("([ACGT]+)\n", line)
+    match = re.match("([ACGT]+)\n", line.upper())
     if match:
       result += match.group(1)
   return result
@@ -167,12 +163,14 @@ def cachedBlast(fileName, blastLocation, database, eValue, query):
   if not os.path.isfile(fileName):
     print "Caching"
     output = open(fileName, "w")
-    subprocess.Popen([blastLocation + "/bin/blastp",
+    temp = [blastLocation + "/bin/blastp",
                       "-db", blastLocation + "/db/" + database,
                       "-num_threads", str(Runtime.getRuntime().availableProcessors()),
                       "-evalue", str(eValue),
-                      ",-outfmt", "5",
-                      "-query", query + ".orf"],
+                      "-outfmt", "5",
+                      "-query", query + ".orf"]
+    print temp
+    subprocess.Popen(temp,
                      stdout = output).wait()
     output.close()
     print "Cached"
@@ -208,6 +206,9 @@ class Iteration:
     return result
 
 class Hit:
+  """
+  A structure for holding information about a hit.
+  """
   eValue = Double.POSITIVE_INFINITY
   bitScore = 0
   identity = 0
@@ -229,18 +230,29 @@ class Hit:
     return result
 
 class Hsp:
+  """
+  A structure for holding information about a Hsp.
+  """
   eValue = Double.POSITIVE_INFINITY
   bitScore = 0
   identity = 0
   alignmentLength = 0
 
 class BlastHandler(DefaultHandler):
+  """
+  A SAX handler for parsing Blast XML output.
+  """
   iterations = []
   hits = []
   hsps = []
   tag = None
   
   def startElement(self, uri, tag, name, attributes):
+    """
+    Records the tag of the current node and generates a new
+    object to store the information in the iteration,
+    hit, and hsp nodes.
+    """
     if name == "Iteration":
       self.iterations += [Iteration()]
     elif name == "Hit":
@@ -250,6 +262,11 @@ class BlastHandler(DefaultHandler):
     self.tag = tag
 
   def endElement(self, uri, tag, name):
+    """
+    Calculates the contents of a Hit structure once the end of a Hit node has been reached,
+    and calculates the contents of a Iteration structure once the end of an Iteration node
+    has been reached.
+    """
     if tag == "Iteration" and self.hits:
       bestHit = min(self.hits, key = lambda hit:hit.eValue)
       self.iterations[-1].eValue = bestHit.eValue
@@ -271,9 +288,12 @@ class BlastHandler(DefaultHandler):
     self.tag = ""
 
   def characters(self, raw, start, length):
+    """
+    Pulls the character information from the current node depending on the
+    tag of the parent.
+    """
     text = raw[start:start+length].tostring()
     if self.tag == "Iteration_query-def":
-      #print text, self.tag, self.iterations
       self.iterations[-1].query, location = text.split(":")
       self.iterations[-1].location = [int(l) for l in location.split("-")]
     elif self.tag == "Hit_id":
@@ -293,11 +313,18 @@ class BlastHandler(DefaultHandler):
     elif self.tag == "Hsp_align-len":
       self.hsps[-1].alignmentLength = int(text)
 
-
-
 def parseBlast(fileName):
+  """
+  A function for parsing XML blast output.
+  """
   reader = XMLReaderFactory.createXMLReader()
   reader.setContentHandler(BlastHandler())
   reader.parse(fileName)
 
   return dict(map(lambda iteration: (iteration.query, iteration), reader.getContentHandler().iterations))
+
+def getGCContent(genome):
+  """
+  A function for calculating the GC content of a genome.
+  """
+  return reduce(lambda x, y: x+int(y in ("G", "C")), genome, 0)/float(len(genome))*100
