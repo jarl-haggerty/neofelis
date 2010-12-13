@@ -75,12 +75,10 @@ if __name__ == "__main__":
     name = os.path.split(name)[1]
     
     initialGenes = genemark.findGenes(query, name, blastLocation, database, eValue, genemarkLocation, matrix)
-    
-    extendedGenes = extend.extendGenes(initialGenes, name, blastLocation, eValue)
-    for k, v in extendedGenes.items():
-      print k, v
+    extendedGenes = extend.extendGenes(query, initialGenes, name, blastLocation, database, eValue)
     sys.exit(0)
     intergenicGenes = intergenics.findIntergenics(query, extendedGenes, name, minLength, eValue)
+    
     genes = {}
     for k, v in extendedGenes.items() + intergenicGenes.items():
       genes[k] = v

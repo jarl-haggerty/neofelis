@@ -23,6 +23,7 @@ along with Neofelis.  If not, see <http://www.gnu.org/licenses/>.
 from javax.xml.parsers import DocumentBuilderFactory
 from org.python.core.util import FileUtil
 from java.lang import Double
+from java.lang import Runtime
 from org.xml.sax.helpers import XMLReaderFactory
 from org.xml.sax import XMLReader
 from org.xml.sax.helpers import DefaultHandler
@@ -113,7 +114,7 @@ def translate(input):
   Returns a Neucleotide sequence translated into Proteins.
   """
   result = ""
-  for i in xrange(len(input)-2):
+  for i in xrange(0, len(input)-2, 3):
     result += translationDictionary[input[i:i+3]]
   return result
 
@@ -155,24 +156,6 @@ def getGeneLocations(genes):
     else:
       reverse[k] = [v.location[1]-1, v.location[0]]
   return forward, reverse
-
-def cachedBlast(fileName, blastLocation, database, eValue, query):
-  """
-  Performs a blast search using the blastp executable and database in blastLocation on
-  the query with the eValue.  The result is an XML file saved to fileName.  If fileName
-  already exists the search is skipped.
-  """
-  if not os.path.isfile(fileName):
-    output = open(fileName, "w")
-    temp = [blastLocation + "/bin/blastp",
-                      "-db", blastLocation + "/db/" + database,
-                      "-num_threads", str(Runtime.getRuntime().availableProcessors()),
-                      "-evalue", str(eValue),
-                      "-outfmt", "5",
-                      "-query", query + ".orf"]
-    subprocess.Popen(temp,
-                     stdout = output).wait()
-    output.close()
 
 class Iteration:
   """
@@ -322,6 +305,24 @@ def parseBlast(fileName):
   reader.parse(fileName)
 
   return dict(map(lambda iteration: (iteration.query, iteration), reader.getContentHandler().iterations))
+
+def cachedBlast(fileName, blastLocation, database, eValue, query):
+  """
+  Performs a blast search using the blastp executable and database in blastLocation on
+  the query with the eValue.  The result is an XML file saved to fileName.  If fileName
+  already exists the search is skipped.
+  """
+  if not os.path.isfile(fileName):
+    output = open(fileName, "w")
+    subprocess.Popen([blastLocation + "/bin/blastp",
+                      "-db", blastLocation + "/db/" + database,
+                      "-num_threads", str(Runtime.getRuntime().availableProcessors()),
+                      "-evalue", str(eValue),
+                      "-outfmt", "5",
+                      "-query", query],
+                     stdout = output).wait()
+    output.close()
+  return parseBlast(fileName)
 
 def getGCContent(genome):
   """

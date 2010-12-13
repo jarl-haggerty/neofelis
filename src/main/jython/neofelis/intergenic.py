@@ -20,32 +20,39 @@ import copy
 from java.lang import Runtime
 from neofelis import utils
 
-def deleteLocations(original, deletions, minLength = 3):
-    result = copy.deepcopy(original)
-    for deletion in deletions:
+def deleteGenes(genomeLength, genes, minLength = 3):
+    forwardResult, reverseResult = [0, genomeLength], [0, genomeLength]
+    for gene in genes:
         intermediate = []
+        if gene.location[0] < gene.location[1]:
+            result = forwardResult
+            bottom, top = gene.location[0]-1, gene.location[1]
+        else:
+            result = reverseResult
+            bottom, top = gene.location[1]-1, gene.location[0]
         for region in result:
-            if deletion[0] < region[1] and region[1] < deletion[1]:
-                intermediate += [(region[0], deletion[0])]
-            elif deletion[0] < region[0] and region[0] < deletion[1]:
-                intermediate += [(deletion[1], region[1])]
-            elif region[0] < deletion[0] and deletion[1] < region[1]:
-                intermediate += [(region[0], deletion[0]), (deletion[1], region[1])]
+            if bottom < region[1] and region[1] < top:
+                intermediate += [(region[0], bottom)]
+            elif bottom < region[0] and region[0] < top:
+                intermediate += [(top, region[1])]
+            elif region[0] < bottom and top < region[1]:
+                intermediate += [(region[0], bottom), (top, region[1])]
             else:
                 intermediate += [region]
         result = intermediate
-    return filter(lambda x: x[1]-x[0] > minLength, result)
+    return filter(lambda x: x[1]-x[0] > minLength, forwardResult), filter(lambda x: x[1]-x[0] > minLength, reverseResult)
 
-def findPotentialGenes(genome, openForwardLocations):
+def findPotentialGenes(genome, openLocations):
     result = []
+    stop = None
     for region in openForwardLocations:
         for frame in xrange(3):
-            for start in xrange(region[0]-frame, region[1]-2):
-                if genome[start:start+3] in startCodons:
-                    for stop in xrange(start+3, region[1]-2):
-                        if genome[stop:stop+3] in stopCodons:
-                            result += [(start, stop+3)]
-
+            for start in xrange(region[1]+frame, region[0]):
+                if genome[start-3:start] in startCodons:
+                    stop = start
+                if genome[start-3:start] in startCodons and stop:
+                    result.append((start-3, stop))
+                    
 def writePotentialGenes(genome, genes):
     output = open("intergenics.fas", "a")
     for location in genes:
@@ -57,31 +64,17 @@ def writePotentialGenes(genome, genes):
     output.close()
 
 def findIntergenics(query, genes, name, minLength, eValue):
-    genome = loadGenome(query)
-    reverseComplementGenome = reverseComplement(genome)
-    forwardLocations, reverseLocations = getGeneLocations(genes)
-    openForwardLocations = deleteLocations((0, genome.length), forwardLocations.values(), minLength)
-    openReverseLocations = deleteLocations((0, genome.length), reverseLocations.values(), minLength)
+    genome = utils.loadGenome(query)
+    reverseComplementGenome = utils.reverseComplement(genome)
+    openLocations = deleteLocations(genome.length, genes, minLength)
 
     potentialForwardGenes = findPotentialGenes(genome, openForwardLocations)
-    potentialReverseGenes = findPotentialGenes(reverseComplementGenome, openReverseLocations)
+    potentialReverseGenes = map(lambda x: (len(genome) - x[0], len(genome) - x[1]), findPotentialGenes(reverseComplementGenome, openReverseLocations))
 
     os.remove("intergenics.fas")
     writePotentialGenes(genome, potentialForwardGenes)
     writePotentialGenes(reverseComplementGenome, potentialReverseGenes)
 
-    if not os.path.isfile("intergenicBlasts/" + name + ".blastp.xml"):
-        process = Runtime.getRuntime().exec(blast + "/bin/blastp" +
-                                            " -db " + database +
-                                            " -num_threads " + str(Runtime.getRuntime.availableProcessors()) +
-                                            " -evalue " + str(eValue) +
-                                            " -outfmt 5" +
-                                            " -query intergenics.fas")
-        input = PyFile(process.getInputStream())
-        output = open("intergenicBlasts/" + name + ".blastp.xml", "w")
-        output.write(input.read)
-        input.close()
-        output.close()
-
-    intergenicGenes = parseBlast("intergenicBlasts/" + name + ".blastp.xml")
+    result = utils.cachedBlast("intergenicBlasts/" + name + ".blastp.xml", blast, database, eValue, "intergenics.fas")
+    os.remove("intergenics.fas")
     return result

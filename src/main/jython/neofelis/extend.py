@@ -17,48 +17,55 @@ along with Neofelis.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import os
-from java.lang import Runtime
+import sys
 from neofelis import utils
 
+"""Have to make sure that a directory to store the blasts this module creates exists."""
+if not os.path.isdir("extendedBlasts"):
+  os.mkdir("extendedBlasts")
+  
 def getStops(genes):
-  return map(lambda x: x.location[1]-2, filter(lambda x: x.location[0] < x.location[1], genes)), map(lambda x: x.location[0]-2, filter(lambda x: x.location[1] < x.location[0], genes))
+  return map(lambda x: x.location[1], filter(lambda x: x.location[0] < x.location[1], genes)), map(lambda x: x.location[0], filter(lambda x: x.location[1] < x.location[0], genes))
 
 def getExtensions(genome, genes):
   forwardStops, reverseStops = getStops(genes)
-  result = {}
-  for gene, geneData in locations.items():
+  forwardStops.append(1)
+  reverseStops.append(len(genome))
+  results = {}
+  for gene in genes:
     results[gene] = []
-    if geneData.location[0] < geneData.location[1]:
-      bound = max(filter(lambda x: x < geneData.location[0], forwardStops))
-      for i in xrange(geneData.location[0] - 3, bound, -3):
-        if genome[i:i+3] in startCodons:
-          result[geneData].append(i)
-        elif genome[i:i+3] in stopCodons:
+    if gene.location[0] < gene.location[1]:
+      bound = max(filter(lambda x: x < gene.location[0], forwardStops))
+      for i in xrange(gene.location[0]-1, bound-1, -3):
+        if genome[i-3:i] in utils.startCodons:
+          results[gene].append(i-3)
+        elif genome[i-3:i] in utils.stopCodons:
           break
     else:
-      bound = max(filter(lambda x: x > geneData.location[1], reverseStops))
-      for i in xrange(geneData.location[1], bound, 3):
-        if reverseComplement(genome[i:i+3]) in startCodons:
-          result[geneData].append(i)
-        elif reverseComplement(genome[i:i+3]) in stopCodons:
+      bound = max(filter(lambda x: x > gene.location[1], reverseStops))
+      for i in xrange(gene.location[0], bound-1, 3):
+        if utils.reverseComplement(genome[i:i+3]) in utils.startCodons:
+          results[gene].append(i+3)
+        elif utils.reverseComplement(genome[i:i+3]) in utils.stopCodons:
           break
-  return result
+  return results
 
 def writeExtensions(genome, extensions):
   output = open("extensions.fas", "w")
-  for gene, extension in extension.items():
-    if gene.location[0] < gene.location[1]:
-      output.write(gene.query + "~" +
-                   "-".join([gene.location[0], gene.location[1]]) + "\n")
-      proteins = translate(genome[gene.location[0]-1:gene.location[1]])
-      for i in xrange(0, len(proteins), 50):
-        output.write(proteins[i:min(i+50, len(proteins))] + "\n")
-    else:
-      output.write(gene.query + "~" +
-                   "-".join([gene.location[0], gene.location[1]]) + "\n")
-      proteins = translate(reverseComplement(genome[gene.location[1]-1:gene.location[0]]))
-      for i in xrange(0, len(proteins), 50):
-        output.write(proteins[i:min(i+50, len(proteins))] + "\n")
+  for gene, extensionList in extensions.items():
+    for extension in extensionList:
+      if gene.location[0] < gene.location[1]:
+        output.write(">" + gene.query + ":" +
+                     "-".join(map(str, [extension, gene.location[1]])) + "\n")
+        proteins = utils.translate(genome[extension:gene.location[1]])
+        for i in xrange(0, len(proteins), 50):
+          output.write(proteins[i:min(i+50, len(proteins))] + "\n")
+      else:
+        output.write(">" + gene.query + ":" +
+                     "-".join(map(str, [gene.location[0], extension])) + "\n")
+        proteins = utils.translate(utils.reverseComplement(genome[gene.location[1]-1:extension]))
+        for i in xrange(0, len(proteins), 50):
+          output.write(proteins[i:min(i+50, len(proteins))] + "\n")
   output.close()
 
 def applyExtensions(genes, extendedGenes):
@@ -70,7 +77,7 @@ def applyExtensions(genes, extendedGenes):
       else:
         gapSize = min(filter(lambda z: z > gene.location[0], reverseStops)) - y.location[0]
       if gapSize < 100:
-        return max(x, y, key = lambda z: z.location[1] - z.location[0])
+        return max(x, y, key = lambda z: abs(z.location[1] - z.location[0]))
       else:
         return min(x, y, key = lambda z: z.eValue)
     else:
@@ -82,8 +89,10 @@ def applyExtensions(genes, extendedGenes):
   return result
 
 def extendGenes(query, genes, name, blast, database, eValue):
-        genome = loadGenome(query)
-        extensions = getExtensions(genome, locations)
+        genome = utils.loadGenome(query)
+        extensions = getExtensions(genome, genes.values())
         writeExtensions(genome, extensions)
-        extendedGenes = cachedBlast("extendedBlasts/" + name + ".blastp.xml")
+        print "extending"
+        extendedGenes = utils.cachedBlast("extendedBlasts/" + name + ".blastp.xml", blast, database, eValue, "extensions.fas")
+        sys.exit(0)
         return applyExtensions(genes, extendedGenes)

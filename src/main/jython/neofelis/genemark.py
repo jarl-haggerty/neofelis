@@ -63,7 +63,7 @@ def findGenes(query, name, blast, database, eValue, genemark, matrix = None):
     matrix = genemark + "/" + "heuristic_mat/heu_11_" + str(gc) + ".mat"
   subprocess.Popen([genemark + "/gm", "-opq", "-m", matrix, query]).wait()
   modifyFastaHeader(query + ".orf", name)
-  utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blast, database, eValue, query)
-  os.remove(query + ".orf")
+  result = utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blast, database, eValue, query + ".orf")
+  #os.remove(query + ".orf")
   os.remove(query + ".lst")
-  return utils.parseBlast("initialBlasts/" + name + ".blastp.xml")
+  return result
