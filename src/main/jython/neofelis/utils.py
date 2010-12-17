@@ -161,16 +161,17 @@ class Iteration:
   """
   A structure for holding information about a gene's blast result.
   """
-  query =           None
-  location =        []
-  numHits =         0
-  bitScore =        0
-  eValue =          Double.POSITIVE_INFINITY
-  identity =        0
-  alignmentLength = 0
-  id =              None
-  title =           None
-  organism =        None
+  def __init__(self):
+    self.query =           None
+    self.location =        []
+    self.numHits =         0
+    self.bitScore =        0
+    self.eValue =          Double.POSITIVE_INFINITY
+    self.identity =        0
+    self.alignmentLength = 0
+    self.id =              "None"
+    self.title =           "None"
+    self.organism =        "None"
 
   def __str__(self):
     result = "<"
@@ -191,13 +192,14 @@ class Hit:
   """
   A structure for holding information about a hit.
   """
-  eValue = Double.POSITIVE_INFINITY
-  bitScore = 0
-  identity = 0
-  alignmentLength = 0
-  id = None
-  title = None
-  organism = None
+  def __init__(self):
+    self.eValue = Double.POSITIVE_INFINITY
+    self.bitScore = 0
+    self.identity = 0
+    self.alignmentLength = 0
+    self.id = None
+    self.title = None
+    self.organism = None
 
   def __str__(self):
     result = "<"
@@ -215,20 +217,22 @@ class Hsp:
   """
   A structure for holding information about a Hsp.
   """
-  eValue = Double.POSITIVE_INFINITY
-  bitScore = 0
-  identity = 0
-  alignmentLength = 0
+  def __init__(self):
+    self.eValue = Double.POSITIVE_INFINITY
+    self.bitScore = 0
+    self.identity = 0
+    self.alignmentLength = 0
 
 class BlastHandler(DefaultHandler):
   """
   A SAX handler for parsing Blast XML output.
   """
-  iterations = []
-  hits = []
-  hsps = []
-  tag = None
-  text = ""
+  def __init__(self):
+    self.iterations = []
+    self.hits = []
+    self.hsps = []
+    self.tag = None
+    self.text = ""
   
   def startElement(self, uri, tag, name, attributes):
     """
@@ -330,3 +334,6 @@ def getGCContent(genome):
   """
   print len(genome)
   return reduce(lambda x, y: x+int(y in ("G", "C")), genome, 0)/float(len(genome))*100
+
+def isNaN(number):
+  return number == number

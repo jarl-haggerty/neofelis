@@ -40,40 +40,49 @@ def deleteGenes(genomeLength, genes, minLength = 3):
             else:
                 intermediate += [region]
         result = intermediate
-    return filter(lambda x: x[1]-x[0] > minLength, forwardResult), filter(lambda x: x[1]-x[0] > minLength, reverseResult)
+    reverseResult = map(lambda x: (genomeLength-x[1], genomeLength-x[0]), reverseResult)
+    return forwardResult, reverseResult
 
 def findPotentialGenes(genome, openLocations):
     result = []
     stop = None
     for region in openForwardLocations:
         for frame in xrange(3):
-            for start in xrange(region[1]+frame, region[0]):
-                if genome[start-3:start] in startCodons:
+            for start in xrange(region[1]+frame, region[0]-3, 3):
+                if genome[start-3:start] in stopCodons:
                     stop = start
                 if genome[start-3:start] in startCodons and stop:
                     result.append((start-3, stop))
+    filter(lambda x: x[1]-x[0] > minLength, result)
                     
-def writePotentialGenes(genome, genes):
-    output = open("intergenics.fas", "a")
-    for location in genes:
-        output.write("intergenic~" +
-                     "-".join([location[0]+1, location[1]]) + "\n")
-        proteins = translate(genome[location[0]:location[1]])
-        for i in xrange(location[0], location[1], 50):
-            output.write(genome[i:min(i+50, location[1])] + "\n")
+def writePotentialGenes(genome, locations):
+    output = open("intergenics.fas", "w")
+    for location in locations:
+        if location[0] < location[1]:
+            output.write("intergenic~" +
+                         "-".join([location[0]+1, location[1]]) + "\n")
+            proteins = translate(genome[location[0]:location[1]])
+            for i in xrange(0, len(proteins), 50):
+                output.write(genome[i:min(i+50, len(proteins))] + "\n")
+        else:
+            output.write("intergenic~" +
+                         "-".join([location[0]+1, location[1]]) + "\n")
+            proteins = translate(genome[location[1]:location[0]])
+            for i in xrange(0, len(proteins), 50):
+                output.write(genome[i:min(i+50, len(proteins))] + "\n")
     output.close()
 
 def findIntergenics(query, genes, name, minLength, eValue):
     genome = utils.loadGenome(query)
     reverseComplementGenome = utils.reverseComplement(genome)
-    openLocations = deleteLocations(genome.length, genes, minLength)
+    openForwardLocations, openReverseLocations = deleteLocations(genome.length, genes, minLength)
+    openForwardLocations = filter(lambda x: x[1]-x[0] > minLength, openForwardLocations)
+    openReverseLocations = filter(lambda x: x[1]-x[0] > minLength, openReverseLocations)
 
-    potentialForwardGenes = findPotentialGenes(genome, openForwardLocations)
-    potentialReverseGenes = map(lambda x: (len(genome) - x[0], len(genome) - x[1]), findPotentialGenes(reverseComplementGenome, openReverseLocations))
+    potentialGenes = findPotentialGenes(genome, openForwardLocations)
+    potentialGenes += map(lambda x: (genome.length-x[1], genome.length-x[0]), findPotentialGenes(reverseComplementGenome, openReverseLocations))
 
-    os.remove("intergenics.fas")
-    writePotentialGenes(genome, potentialForwardGenes)
-    writePotentialGenes(reverseComplementGenome, potentialReverseGenes)
+    writePotentialGenes(genome, potentialGenes)
 
     result = utils.cachedBlast("intergenicBlasts/" + name + ".blastp.xml", blast, database, eValue, "intergenics.fas")
     os.remove("intergenics.fas")

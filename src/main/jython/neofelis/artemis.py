@@ -39,15 +39,25 @@ def writeTerminators(output, terminators):
             output.write("terminator\tcomplement(" + "..".join(map(str, terminator.location)) + ")\n")
         output.write("\t\t/note=\"confidence:" + str(terminator.confidence) + "\thp_score:" + terminator.hpScore + "\ttail_score:" + terminator.tailScore + "\t" + sequence + "\n")
 
+def writeGenes(output, genes):
+    for gene in genes:
+        if gene.location[0] < gene.location[1]:
+            output.write("     CDS             " + str(gene.location[0]) + ".." + str(gene.location[1]) + "\n")
+        else:
+            output.write("     CDS             complement(" + str(gene.location[0]) + ".." + str(gene.location[1]) + ")\n")
+        output.write("                     /gene=\"" + gene.title + "\"\n")
+        output.write("                     /note=\"" + gene.title + "\"\n")
+
 def writeGenome(output, genome):
     output.write("\nORIGIN\n\n")
     for i in xrange(0, len(genome), 50):
         output.write(genome[i:min(i+50, len(genome))] + "\n")
 
-def writeArtemis(fileName, genome, genes=[], promoters=[], terminators=[]):
+def writeArtemisFile(fileName, genome, genes=[], promoters=[], terminators=[]):
     output = open(fileName, "w")
     writePromoters(output, promoters)
     writeTerminators(output, terminators)
+    writeGenes(output, genes)
     writeGenome(output, genome)
 
     output.close()

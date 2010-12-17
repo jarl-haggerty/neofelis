@@ -28,6 +28,8 @@ from neofelis import extend
 from neofelis import intergenic
 from neofelis import promoters
 from neofelis import terminators
+from neofelis import artemis
+from neofelis import utils
 
 if __name__ == "__main__":
   print sys.argv
@@ -37,6 +39,7 @@ if __name__ == "__main__":
 -d --database      :Database to use when running blast
 -g --genemark      :Location of genemark
 -b --blast         :Location of blast
+-l --min-length    :Minimum length of any genes discovered
 -e --eValue        :Minimal evalue for any genes detected
 -h --help          :Print help documentation
 """
@@ -46,6 +49,7 @@ if __name__ == "__main__":
   genemarkLocation = "~/genemark"
   eValue = 0.1
   matrix = None
+  minLength = 100
 	
   queries = []
   for arg in sys.argv:
@@ -63,7 +67,9 @@ if __name__ == "__main__":
       if opt in ("-m", "--matrix"):
         matrix = arg
       if opt in ("-e", "--eValue"):
-        eValue = arg
+        eValue = float(arg)
+      elif opt in ("-l", "--min-length"):
+        minLength = int(arg)
                         
   for query in queries:
     if not os.path.split(query)[1]:
@@ -73,11 +79,19 @@ if __name__ == "__main__":
   for query in queries:
     name = os.path.splitext(query)[0]
     name = os.path.split(name)[1]
+    genome = utils.loadGenome(query)
     
     initialGenes = genemark.findGenes(query, name, blastLocation, database, eValue, genemarkLocation, matrix)
+    artemis.writeArtemisFile(name + ".art", genome, initialGenes.values())
     extendedGenes = extend.extendGenes(query, initialGenes, name, blastLocation, database, eValue)
+    artemis.writeArtemisFile(name + "extended.art", genome, extendedGenes.values())
+    for k in initialGenes.keys():
+      if initialGenes[k].location[1] < initialGenes[k].location[0] and initialGenes[k].location != extendedGenes[k].location:
+        print
+        print initialGenes[k]
+        print extendedGenes[k]
+    intergenicGenes = intergenic.findIntergenics(query, extendedGenes, name, minLength, eValue)
     sys.exit(0)
-    intergenicGenes = intergenics.findIntergenics(query, extendedGenes, name, minLength, eValue)
     
     genes = {}
     for k, v in extendedGenes.items() + intergenicGenes.items():
