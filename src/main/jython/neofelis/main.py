@@ -85,11 +85,6 @@ if __name__ == "__main__":
     artemis.writeArtemisFile(name + ".art", genome, initialGenes.values())
     extendedGenes = extend.extendGenes(query, initialGenes, name, blastLocation, database, eValue)
     artemis.writeArtemisFile(name + "extended.art", genome, extendedGenes.values())
-    for k in initialGenes.keys():
-      if initialGenes[k].location[1] < initialGenes[k].location[0] and initialGenes[k].location != extendedGenes[k].location:
-        print
-        print initialGenes[k]
-        print extendedGenes[k]
     intergenicGenes = intergenic.findIntergenics(query, extendedGenes, name, minLength, eValue)
     sys.exit(0)
     

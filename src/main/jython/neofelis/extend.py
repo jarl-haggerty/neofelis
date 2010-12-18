@@ -99,11 +99,8 @@ def applyExtensions(genome, genes, extendedGenes):
 def extendGenes(query, genes, name, blast, database, eValue):
         genome = utils.loadGenome(query)
         extensions = getExtensions(genome, genes.values())
-        for k, v in extensions.items():
-          if k.location[1] == 136000:
-            print v
+
         writeExtensions(genome, extensions)
         extendedGenes = utils.cachedBlast("extendedBlasts/" + name + ".blastp.xml", blast, database, eValue, "extensions.fas")
-        for e in extendedGenes.values():
-          print e
+
         return applyExtensions(genome, genes, extendedGenes)

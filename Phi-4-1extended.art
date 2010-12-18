@@ -16,7 +16,7 @@
      CDS             108267..109811
                      /gene="DNA polymerase"
                      /note="DNA polymerase"
-     CDS             complement(134139..133843)
+     CDS             complement(134154..133843)
                      /gene="None"
                      /note="None"
      CDS             82341..83321
@@ -37,7 +37,7 @@
      CDS             101188..101592
                      /gene="None"
                      /note="None"
-     CDS             complement(135415..134108)
+     CDS             complement(135475..134108)
                      /gene="None"
                      /note="None"
      CDS             86850..87152
@@ -76,19 +76,19 @@
      CDS             111718..111978
                      /gene="None"
                      /note="None"
-     CDS             complement(137461..137141)
+     CDS             complement(137521..137141)
                      /gene="None"
                      /note="None"
      CDS             100781..100993
                      /gene="hypothetical protein Vdis_1536"
                      /note="hypothetical protein Vdis_1536"
-     CDS             complement(137199..137020)
+     CDS             complement(137289..137020)
                      /gene="None"
                      /note="None"
-     CDS             102782..102959
+     CDS             102783..102959
                      /gene="None"
                      /note="None"
-     CDS             92460..92985
+     CDS             92461..92985
                      /gene="None"
                      /note="None"
      CDS             complement(123265..123089)
@@ -121,10 +121,10 @@
      CDS             74149..74316
                      /gene="None"
                      /note="None"
-     CDS             complement(144358..143648)
+     CDS             complement(144436..143648)
                      /gene="None"
                      /note="None"
-     CDS             complement(128537..125682)
+     CDS             complement(128732..125682)
                      /gene="None"
                      /note="None"
      CDS             complement(118619..117507)
@@ -142,7 +142,7 @@
      CDS             complement(119402..118800)
                      /gene="Gp30 DNA ligase"
                      /note="Gp30 DNA ligase"
-     CDS             89046..89307
+     CDS             89047..89307
                      /gene="None"
                      /note="None"
      CDS             complement(117198..116770)
@@ -163,7 +163,7 @@
      CDS             77727..78383
                      /gene="None"
                      /note="None"
-     CDS             98620..98896
+     CDS             98621..98896
                      /gene="None"
                      /note="None"
      CDS             complement(144979..144851)
@@ -193,10 +193,10 @@
      CDS             complement(133961..133557)
                      /gene="None"
                      /note="None"
-     CDS             73690..74113
+     CDS             73691..74113
                      /gene="None"
                      /note="None"
-     CDS             79692..79866
+     CDS             79693..79866
                      /gene="None"
                      /note="None"
      CDS             complement(125319..124249)
@@ -208,7 +208,7 @@
      CDS             112697..113458
                      /gene="DNA (cytosine-5-)-methyltransferase"
                      /note="DNA (cytosine-5-)-methyltransferase"
-     CDS             complement(120213..119377)
+     CDS             complement(120243..119377)
                      /gene="gp30 DNA ligase"
                      /note="gp30 DNA ligase"
      CDS             complement(133510..132254)
@@ -229,7 +229,7 @@
      CDS             76571..77155
                      /gene="hypothetical protein Rpal_1033"
                      /note="hypothetical protein Rpal_1033"
-     CDS             complement(136422..136000)
+     CDS             complement(136563..136000)
                      /gene="None"
                      /note="None"
      CDS             78380..78574
@@ -253,7 +253,7 @@
      CDS             100218..100406
                      /gene="conserved uncharacterised protein"
                      /note="conserved uncharacterised protein"
-     CDS             106193..106700
+     CDS             106194..106700
                      /gene="hypothetical protein PMI0461"
                      /note="hypothetical protein PMI0461"
      CDS             74940..75659
@@ -301,7 +301,7 @@
      CDS             complement(140830..140513)
                      /gene="None"
                      /note="None"
-     CDS             99332..99506
+     CDS             99333..99506
                      /gene="None"
                      /note="None"
      CDS             complement(120538..120215)
@@ -325,7 +325,7 @@
      CDS             99119..99358
                      /gene="None"
                      /note="None"
-     CDS             91846..92068
+     CDS             91847..92068
                      /gene="ribonucleoside-diphosphate reductase large chain"
                      /note="ribonucleoside-diphosphate reductase large chain"
      CDS             105511..105750
@@ -349,7 +349,7 @@
      CDS             complement(122590..122066)
                      /gene="tRNA nucleotidyltransferase"
                      /note="tRNA nucleotidyltransferase"
-     CDS             97196..97448
+     CDS             97197..97448
                      /gene="None"
                      /note="None"
      CDS             72600..72986
@@ -361,7 +361,7 @@
      CDS             85483..86466
                      /gene="OmpA/MotB domain-containing protein"
                      /note="OmpA/MotB domain-containing protein"
-     CDS             complement(135731..135432)
+     CDS             complement(135734..135432)
                      /gene="None"
                      /note="None"
      CDS             84583..85362
@@ -406,7 +406,7 @@
      CDS             67887..68060
                      /gene="None"
                      /note="None"
-     CDS             complement(15360..14356)
+     CDS             complement(15429..14356)
                      /gene="None"
                      /note="None"
      CDS             complement(33875..33543)
@@ -454,7 +454,7 @@
      CDS             complement(13418..12195)
                      /gene="polymorphic outer membrane protein"
                      /note="polymorphic outer membrane protein"
-     CDS             complement(6392..5667)
+     CDS             complement(6494..5667)
                      /gene="None"
                      /note="None"
      CDS             54874..55911
@@ -463,13 +463,13 @@
      CDS             51210..51431
                      /gene="None"
                      /note="None"
-     CDS             complement(14121..13324)
+     CDS             complement(14124..13324)
                      /gene="None"
                      /note="None"
      CDS             complement(33460..32384)
                      /gene="None"
                      /note="None"
-     CDS             complement(39144..38998)
+     CDS             complement(39186..38998)
                      /gene="None"
                      /note="None"
      CDS             68710..69237
@@ -478,7 +478,7 @@
      CDS             69695..69877
                      /gene="None"
                      /note="None"
-     CDS             63574..63784
+     CDS             63575..63784
                      /gene="None"
                      /note="None"
      CDS             complement(14353..13895)
@@ -496,16 +496,16 @@
      CDS             complement(42431..41466)
                      /gene="conserved hypothetical protein"
                      /note="conserved hypothetical protein"
-     CDS             complement(12214..11552)
+     CDS             complement(12223..11552)
                      /gene="None"
                      /note="None"
      CDS             59229..59486
                      /gene="hypothetical protein FP0821"
                      /note="hypothetical protein FP0821"
-     CDS             complement(39652..39155)
+     CDS             complement(39658..39155)
                      /gene="None"
                      /note="None"
-     CDS             complement(29987..28605)
+     CDS             complement(30557..28605)
                      /gene="None"
                      /note="None"
      CDS             54433..54699
@@ -529,7 +529,7 @@
      CDS             69314..69490
                      /gene="None"
                      /note="None"
-     CDS             69437..69656
+     CDS             69438..69656
                      /gene="None"
                      /note="None"
      CDS             53395..54258
@@ -538,13 +538,13 @@
      CDS             complement(27741..27259)
                      /gene="N-acetylmuramoyl alanine amidase"
                      /note="N-acetylmuramoyl alanine amidase"
-     CDS             complement(19698..18847)
+     CDS             complement(19944..18847)
                      /gene="putative outer membrane protein"
                      /note="putative outer membrane protein"
      CDS             61970..62362
                      /gene="None"
                      /note="None"
-     CDS             19537..19792
+     CDS             19538..19792
                      /gene="None"
                      /note="None"
      CDS             complement(28241..27741)
@@ -556,7 +556,7 @@
      CDS             complement(1498..425)
                      /gene="None"
                      /note="None"
-     CDS             51549..51921
+     CDS             51550..51921
                      /gene="None"
                      /note="None"
      CDS             complement(4387..3038)
@@ -574,25 +574,25 @@
      CDS             45295..45486
                      /gene="None"
                      /note="None"
-     CDS             70665..71259
+     CDS             70666..71259
                      /gene="hypothetical protein BA3_0002"
                      /note="hypothetical protein BA3_0002"
      CDS             66267..66578
                      /gene="None"
                      /note="None"
-     CDS             44328..44478
+     CDS             44329..44478
                      /gene="None"
                      /note="None"
      CDS             complement(10950..9205)
                      /gene="tail fiber like protein"
                      /note="tail fiber like protein"
-     CDS             64114..64813
+     CDS             64115..64813
                      /gene="hypothetical protein Ava_D0020"
                      /note="hypothetical protein Ava_D0020"
      CDS             complement(37512..35383)
                      /gene="unknown"
                      /note="unknown"
-     CDS             complement(27017..26904)
+     CDS             complement(27041..26904)
                      /gene="None"
                      /note="None"
      CDS             66571..66918
@@ -625,13 +625,13 @@
      CDS             complement(17912..16989)
                      /gene="None"
                      /note="None"
-     CDS             66932..67193
+     CDS             66933..67193
                      /gene="None"
                      /note="None"
-     CDS             49501..50542
+     CDS             49502..50542
                      /gene="hypothetical protein BACCOP_01174"
                      /note="hypothetical protein BACCOP_01174"
-     CDS             68211..68445
+     CDS             68212..68445
                      /gene="None"
                      /note="None"
      CDS             65703..66149
@@ -649,7 +649,7 @@
      CDS             58629..58844
                      /gene="None"
                      /note="None"
-     CDS             58107..58308
+     CDS             58108..58308
                      /gene="None"
                      /note="None"
      CDS             complement(25581..25186)
@@ -661,7 +661,7 @@
      CDS             complement(18826..18137)
                      /gene="None"
                      /note="None"
-     CDS             50650..51007
+     CDS             50651..51007
                      /gene="None"
                      /note="None"
      CDS             complement(25883..25581)
