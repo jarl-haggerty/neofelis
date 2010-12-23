@@ -51,7 +51,7 @@ def modifyFastaHeader(fileName, name):
   output.write(swap)
   output.close()
 
-def findGenes(query, name, blast, database, eValue, genemark, matrix = None):
+def findGenes(query, name, blast, database, eValue, genemark, matrix, remote):
   """
   Uses genemark to predict genes in query and then uses blast with the given eValue
   to find annotations for those genes.  If a matrix is not specified the GC program in
@@ -63,7 +63,7 @@ def findGenes(query, name, blast, database, eValue, genemark, matrix = None):
     matrix = genemark + "/" + "heuristic_mat/heu_11_" + str(gc) + ".mat"
   subprocess.Popen([genemark + "/gm", "-opq", "-m", matrix, query]).wait()
   modifyFastaHeader(query + ".orf", name)
-  result = utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blast, database, eValue, query + ".orf")
+  result = utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blast, database, eValue, query + ".orf", remote)
   #os.remove(query + ".orf")
   os.remove(query + ".lst")
   return result

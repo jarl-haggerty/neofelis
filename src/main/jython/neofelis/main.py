@@ -33,7 +33,7 @@ from neofelis import utils
 
 if __name__ == "__main__":
   print sys.argv
-  opts, args = getopt(sys.argv, "m:d:g:b:e:h", ["matrix=", "database=", "genemark=", "blast=", "eValue=", "help"])
+  opts, args = getopt(sys.argv, "m:d:g:b:e:rq:h", ["matrix=", "database=", "genemark=", "blast=", "eValue=", "remote", "query=", "help"])
   documentation = """
 -m --matrix        :Matrix with which to run genemark
 -d --database      :Database to use when running blast
@@ -41,7 +41,9 @@ if __name__ == "__main__":
 -b --blast         :Location of blast
 -l --min-length    :Minimum length of any genes discovered
 -e --eValue        :Minimal evalue for any genes detected
+-r --remote        :Run blast with remote NCBI servers.
 -h --help          :Print help documentation
+-q --query         :Genome or directory of genomes to run pipeline on
 """
   
   blastLocation = "~/blast"
@@ -50,50 +52,65 @@ if __name__ == "__main__":
   eValue = 0.1
   matrix = None
   minLength = 100
+  remote = False
 	
+  for opt, arg in opts:
+    if opt in ("-q", "--query"):
+      sources = [arg]
+    elif opt in ("-g", "--genemark"):
+      genemarkLocation = arg
+    elif opt in ("-b", "--blast"):
+      blastLocation = arg
+    elif opt in ("-d", "--database"):
+      database = arg
+    elif opt in ("-m", "--matrix"):
+      matrix = arg
+    elif opt in ("-e", "--eValue"):
+      eValue = float(arg)
+    elif opt in ("-l", "--min-length"):
+      minLength = int(arg)
+    elif opt in ("-r", "--remote"):
+      remote = True
+    elif opt in ("-h", "--help"):
+      print documentation
+      sys.exit(0)
+
   queries = []
-  for arg in sys.argv:
-    if arg.find('-') != 0:
-      queries.append(arg)
-    for opt, arg in opts:
-      if arg in queries:
-        quieries.remove(arg)
-      if opt in ("-g", "--genemark"):
-        genemarkLocation = arg
-      if opt in ("-b", "--blast"):
-        blastLocation = arg
-      if opt in ("-d", "--database"):
-        database = arg
-      if opt in ("-m", "--matrix"):
-        matrix = arg
-      if opt in ("-e", "--eValue"):
-        eValue = float(arg)
-      elif opt in ("-l", "--min-length"):
-        minLength = int(arg)
-                        
-  for query in queries:
-    if not os.path.split(query)[1]:
-      queries.remove(query)
-      queries.extend([os.path.split(query)[0] + '/' + file for file in os.listdir(query) if file[0] != '.'])
+  while sources:
+    source = sources.pop()
+    if os.path.isdir(source):
+      newSources = filter(lambda x: x[0] != ".", os.listdir(query))
+      newSources = map(lambda x: os.path.join(source, x), newSources)
+      sources.extend(newSources)
+    else:
+      queries.append(source)
+  print queries
 
   for query in queries:
     name = os.path.splitext(query)[0]
     name = os.path.split(name)[1]
     genome = utils.loadGenome(query)
     
-    initialGenes = genemark.findGenes(query, name, blastLocation, database, eValue, genemarkLocation, matrix)
+    initialGenes = genemark.findGenes(query, name, blastLocation, database, eValue, genemarkLocation, matrix, remote)
     artemis.writeArtemisFile(name + ".art", genome, initialGenes.values())
-    extendedGenes = extend.extendGenes(query, initialGenes, name, blastLocation, database, eValue)
+    extendedGenes = extend.extendGenes(query, initialGenes, name, blastLocation, database, eValue, remote)
     artemis.writeArtemisFile(name + "extended.art", genome, extendedGenes.values())
-    intergenicGenes = intergenic.findIntergenics(query, extendedGenes, name, minLength, eValue)
-    sys.exit(0)
-    
+    intergenicGenes = intergenic.findIntergenics(query, extendedGenes, name, minLength, blastLocation, database, eValue, remote)
+    """
+    for k, v in intergenicGenes.items():
+      print k
+      print v
+    """
     genes = {}
     for k, v in extendedGenes.items() + intergenicGenes.items():
       genes[k] = v
-        
-    initialTerminators = terminators.findTerminators(query, transterm)
+    artemis.writeArtemisFile(name + "intergenic.art", genome, genes.values())
+    scaffolds = scaffolds.extractScaffolds(genes)
+    artemis.writeArtemisFile(name + "scaffolds.art", genome, scaffolds.values())
+
     initialPromoters = promoters.findPromoters(query)
+    initialTerminators = terminators.findTerminators(query, transterm)
+    
                 
     writeArtemisFile(genes, promoters, terminators)
                 

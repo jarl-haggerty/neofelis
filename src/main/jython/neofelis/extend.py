@@ -27,9 +27,20 @@ if not os.path.isdir("extendedBlasts"):
   os.mkdir("extendedBlasts")
   
 def getStops(genes):
-  return map(lambda x: x.location[1], filter(lambda x: x.location[0] < x.location[1], genes)), map(lambda x: x.location[1], filter(lambda x: x.location[1] < x.location[0], genes))
+  """
+  Given a list of genes this function returns two lists, one for the forward strand and one for the
+  reverse strand, consisting of number marking where all the genes stop encoding.
+  """
+  forwardStops = map(lambda x: x.location[1], filter(lambda x: x.location[0] < x.location[1], genes))
+  reverseStops = map(lambda x: x.location[1], filter(lambda x: x.location[1] < x.location[0], genes))
+  return forwardStops, reverseStops
 
 def getExtensions(genome, genes):
+  """
+  Given a genome and a list of genes in that genome this function returns a map.  The keys of the map
+  are the genes, and the values are lists of all the possible alternative starts in the genome for that
+  gene.
+  """
   forwardStops, reverseStops = getStops(genes)
   forwardStops.append(1)
   reverseStops.append(len(genome))
@@ -53,6 +64,10 @@ def getExtensions(genome, genes):
   return results
 
 def writeExtensions(genome, extensions):
+  """
+  Given a genome and a dictionary mapping genes to lists of their alternative starts(extensions)
+  this function will write the translation of each possible extension to the file extensions.fas.
+  """
   output = open("extensions.fas", "w")
   q = 0
   for gene, extensionList in extensions.items():
@@ -72,14 +87,20 @@ def writeExtensions(genome, extensions):
   output.close()
 
 def applyExtensions(genome, genes, extendedGenes):
+  """
+  This function takes a genome, and two dictionaries of genes.  The result of this function
+  is essentially a merging of the two dictionaries of genomes.  The merging is done by iterating
+  over the dictionary genes, for each entry in genes extendedGenes is iterated over.  If an entry
+  in extendedGenes has a query name that starts with the query name of the original gene then that
+  entry is an extension of the original gene.  This extension will replace the gene in the new
+  dictionary if it either has an eValue that is lower than the original gene or the extension places
+  it within 100 bps of the preceeding gene.
+  """
   forwardStops, reverseStops = getStops(genes.values())
   forwardStops.append(1)
   reverseStops.append(len(genome))
   def reduceFunction(gene, x, y):
-    if gene.location[1] == 136000 and y.location[1] == 136000:
-      print gene.query, y.query, re.sub(r"(~\d+)~\d+", r"\1", y.query)
     if re.sub(r"(~\d+)~\d+", r"\1", y.query) == gene.query:
-      
       if gene.location[0] < gene.location[1]:
         gapSize = y.location[0] - max(filter(lambda z: z <= gene.location[0], forwardStops))
       else:
@@ -94,13 +115,23 @@ def applyExtensions(genome, genes, extendedGenes):
   result = {}
   for gene, geneData in genes.items():
     result[gene] = reduce(functools.partial(reduceFunction, geneData), extendedGenes.values(), geneData)
+    if result[gene] != geneData:
+      result[gene].color = "0 255 0"
+      result[gene].note = "Extended"
   return result
 
-def extendGenes(query, genes, name, blast, database, eValue):
-        genome = utils.loadGenome(query)
-        extensions = getExtensions(genome, genes.values())
-
-        writeExtensions(genome, extensions)
-        extendedGenes = utils.cachedBlast("extendedBlasts/" + name + ".blastp.xml", blast, database, eValue, "extensions.fas")
-
-        return applyExtensions(genome, genes, extendedGenes)
+def extendGenes(query, genes, name, blast, database, eValue, remote):
+  """
+  This function will search for any possible extensions of the genes in the fasta file query.  These extensions will
+  be blasted using the blast installation located at blast with the database database and the eValue.  If remote is
+  true then the blast search is run remotely.  An extension will replace the original gene in the resulting
+  dictionary if it either brings the start of the gene sufficiently close to the end of a previous gene or it has
+  a lower eValue.
+  """
+  genome = utils.loadGenome(query)
+  extensions = getExtensions(genome, genes.values())
+  
+  writeExtensions(genome, extensions)
+  extendedGenes = utils.cachedBlast("extendedBlasts/" + name + ".blastp.xml", blast, database, eValue, "extensions.fas", remote)
+  
+  return applyExtensions(genome, genes, extendedGenes)

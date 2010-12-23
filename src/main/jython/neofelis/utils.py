@@ -130,7 +130,6 @@ def loadGenome(fileName):
   """
   Loads the genome from a fasta file containing a single genome.
   """
-  print fileName
   input = open(fileName, "r")
   result = ""
   for line in input:
@@ -172,6 +171,8 @@ class Iteration:
     self.id =              "None"
     self.title =           "None"
     self.organism =        "None"
+    self.note =            ""
+    self.color =           "0 255 255"
 
   def __str__(self):
     result = "<"
@@ -310,20 +311,26 @@ def parseBlast(fileName):
 
   return dict(map(lambda iteration: (iteration.query, iteration), reader.getContentHandler().iterations))
 
-def cachedBlast(fileName, blastLocation, database, eValue, query):
+def cachedBlast(fileName, blastLocation, database, eValue, query, remote):
   """
   Performs a blast search using the blastp executable and database in blastLocation on
   the query with the eValue.  The result is an XML file saved to fileName.  If fileName
-  already exists the search is skipped.
+  already exists the search is skipped.  If remote is true then the search is done remotely.
   """
   if not os.path.isfile(fileName):
     output = open(fileName, "w")
-    subprocess.Popen([blastLocation + "/bin/blastp",
-                      "-db", blastLocation + "/db/" + database,
-                      "-num_threads", str(Runtime.getRuntime().availableProcessors()),
-                      "-evalue", str(eValue),
-                      "-outfmt", "5",
-                      "-query", query],
+    command = [blastLocation + "/bin/blastp",
+               "-evalue", str(eValue),
+               "-outfmt", "5",
+               "-query", query]
+    if remote:
+      command += ["-remote",
+                  "-db", database]
+    else:
+      command += ["-num_threads", str(Runtime.getRuntime().availableProcessors()),
+                  "-db", blastLocation + "/db/" + database]
+    print command
+    subprocess.Popen(command,
                      stdout = output).wait()
     output.close()
   return parseBlast(fileName)
@@ -332,8 +339,10 @@ def getGCContent(genome):
   """
   A function for calculating the GC content of a genome.
   """
-  print len(genome)
   return reduce(lambda x, y: x+int(y in ("G", "C")), genome, 0)/float(len(genome))*100
 
 def isNaN(number):
+  """
+  Returns true if number actually is a number.
+  """
   return number == number

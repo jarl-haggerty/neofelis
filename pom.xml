@@ -21,7 +21,7 @@
             <param>--genemark=/Users/mbsulli/genemark</param>
             <param>--blast=/Users/mbsulli/blast</param>
             <param>--eValue=0.1</param>
-            <param>Phi-4-1.fas</param>
+            <param>--query=Phi-4-1.fas</param>
           </pythonArgs>
         </configuration>
       </plugin>

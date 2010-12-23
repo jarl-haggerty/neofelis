@@ -62,17 +62,39 @@ def findPotentialGenes(genome, openLocations, minLength = 3):
                     
 def writePotentialGenes(genome, locations):
     output = open("intergenics.fas", "w")
+    q = 0
     for location in locations:
-        output.write("intergenic:" + str(location[0]+1) + "-" + str(location[1]) + "\n")
-        if location[0] < location[1]:    
+        q += 1
+        if location[0] < location[1]:
+            output.write(">intergenic~" + str(q) + ":" + str(location[0]+1) + "-" + str(location[1]) + "\n")
             proteins = utils.translate(genome[location[0]:location[1]])
         else:
+            output.write(">intergenic~" + str(q) + ":" + str(location[0]) + "-" + str(location[1]+1) + "\n")
             proteins = utils.translate(utils.reverseComplement(genome[location[1]:location[0]]))
         for i in xrange(0, len(proteins), 50):
             output.write(proteins[i:min(i+50, len(proteins))] + "\n")
     output.close()
 
-def findIntergenics(query, genes, name, minLength, eValue):
+def removeCommonStops(genes):
+    stopDictionary = {}
+    for gene in genes.values():
+        if gene.location[1] in stopDictionary:
+            stopDictionary[gene.location[1]].append(gene)
+        else:
+            stopDictionary[gene.location[1]] = [gene]
+
+    def reduceFunction(x, y):
+        if utils.isNaN(x.eValue - y.eValue):
+            return max(x, y, key = lambda z: abs(z.location[1] - z.location[0]))
+        else:
+            return min(x, y, key = lambda z: z.eValue)            
+    result = {}
+    for stoppedGenes in stopDictionary.values():
+        temp = reduce(reduceFunction, stoppedGenes)
+        result[temp.query] = temp
+    return result
+
+def findIntergenics(query, genes, name, minLength, blast, database, eValue, remote):
     genome = utils.loadGenome(query)
     reverseComplementGenome = utils.reverseComplement(genome)
     openForwardLocations, openReverseLocations = deleteGenes(len(genome), genes.values(), minLength)
@@ -83,6 +105,9 @@ def findIntergenics(query, genes, name, minLength, eValue):
 
     writePotentialGenes(genome, potentialGenes)
 
-    result = utils.cachedBlast("intergenicBlasts/" + name + ".blastp.xml", blast, database, eValue, "intergenics.fas")
-
+    result = utils.cachedBlast("intergenicBlasts/" + name + ".blastp.xml", blast, database, eValue, "intergenics.fas", remote)
+    result = removeCommonStops(result)
+    for r in result.values():
+        r.note = "Intergenic"
+        r.color = "160 32 240"
     return result

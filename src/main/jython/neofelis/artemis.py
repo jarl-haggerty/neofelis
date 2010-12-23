@@ -22,13 +22,13 @@ def writePromoters(file, promoters):
             output.write("-10_signal\t" + "..".join(map(str, promoter.signal10.location)) + "\n")
         else:
             output.write("-10_signal\tcomplement(" + "..".join(map(str, promoter.signal10.location)) + ")\n")
-        output.write("\t\t/note=Promoter Position:" + str(promoter.position) + "\tIDF:" + str(promoter.IDF) + "\n")
+        output.write("\t\t/note=Promoter Position:" + str(promoter.position) + "\tIDF:" + str(promoter.LDF) + "\n")
         output.write("\t\t/colour=255 0 255\n")
         if promoter.signal35.location[0] < promoter.signal35.location[1]:
             output.write("-35_signal\t" + "..".join(map(str, promoter.signal35.location)) + "\n")
         else:
             output.write("-35_signal\tcomplement(" + "..".join(map(str, promoter.signal35.location)) + ")\n")
-        output.write("\t\t/note=Promoter Position:" + str(promoter.position) + "\tIDF:" + str(promoter.IDF) + "\n")
+        output.write("\t\t/note=Promoter Position:" + str(promoter.position) + "\tIDF:" + str(promoter.LDF) + "\n")
         output.write("\t\t/colour=255 0 255\n")
 
 def writeTerminators(output, terminators):
@@ -46,7 +46,8 @@ def writeGenes(output, genes):
         else:
             output.write("     CDS             complement(" + str(gene.location[0]) + ".." + str(gene.location[1]) + ")\n")
         output.write("                     /gene=\"" + gene.title + "\"\n")
-        output.write("                     /note=\"" + gene.title + "\"\n")
+        output.write("                     /note=\"" + gene.note + "\"\n")
+        output.write("                     /colour=" + gene.color + "\n")
 
 def writeGenome(output, genome):
     output.write("\nORIGIN\n\n")
