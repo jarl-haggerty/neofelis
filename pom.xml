@@ -4,9 +4,32 @@
   <groupId>org.curious</groupId>
   <artifactId>neofelis</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>Neofelis Genome Annotator</name>
-  <url>http://maven.apache.org</url>
+  <name>Neofelis</name>
+  <description>An automated genome annotator</description>
+  <url></url>
   <packaging>jar</packaging>
+  <licenses>
+    <license>
+      <name>Apache 2</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A business-friendly OSS license</comments>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>jarl-haggerty</id>
+      <name>Jarl Haggerty</name>
+      <email>jarlh@email.arizona.edu</email>
+      <url></url>
+      <organization>Curious Cat</organization>
+      <organizationUrl></organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>-7</timezone>
+    </developer>
+  </developers>
   <build>
     <plugins>
       <plugin>

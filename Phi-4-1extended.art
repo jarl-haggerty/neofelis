@@ -22,10 +22,10 @@
                      /gene="DNA polymerase"
                      /note=""
                      /colour=0 255 255
-     CDS             complement(134154..133843)
+     CDS             complement(134139..133843)
                      /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
+                     /note=""
+                     /colour=0 255 255
      CDS             82341..83321
                      /gene="conserved hypothetical protein"
                      /note=""
@@ -50,10 +50,10 @@
                      /gene="None"
                      /note=""
                      /colour=0 255 255
-     CDS             complement(135475..134108)
+     CDS             complement(135415..134108)
                      /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
+                     /note=""
+                     /colour=0 255 255
      CDS             86850..87152
                      /gene="None"
                      /note=""
@@ -110,10 +110,10 @@
                      /gene="hypothetical protein Vdis_1536"
                      /note=""
                      /colour=0 255 255
-     CDS             complement(137289..137020)
+     CDS             complement(137199..137020)
                      /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
+                     /note=""
+                     /colour=0 255 255
      CDS             102783..102959
                      /gene="None"
                      /note="Extended"
@@ -166,10 +166,10 @@
                      /gene="None"
                      /note="Extended"
                      /colour=0 255 0
-     CDS             complement(128732..125682)
+     CDS             complement(128537..125682)
                      /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
+                     /note=""
+                     /colour=0 255 255
      CDS             complement(118619..117507)
                      /gene="putative C-5 cytosine-specific DNA methylase"
                      /note=""
@@ -278,10 +278,10 @@
                      /gene="DNA (cytosine-5-)-methyltransferase"
                      /note=""
                      /colour=0 255 255
-     CDS             complement(120243..119377)
+     CDS             complement(120213..119377)
                      /gene="gp30 DNA ligase"
-                     /note="Extended"
-                     /colour=0 255 0
+                     /note=""
+                     /colour=0 255 255
      CDS             complement(133510..132254)
                      /gene="None"
                      /note=""
@@ -402,10 +402,10 @@
                      /gene="None"
                      /note=""
                      /colour=0 255 255
-     CDS             99333..99506
+     CDS             99336..99506
                      /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
+                     /note=""
+                     /colour=0 255 255
      CDS             complement(120538..120215)
                      /gene="None"
                      /note=""
@@ -434,10 +434,10 @@
                      /gene="None"
                      /note=""
                      /colour=0 255 255
-     CDS             91847..92068
+     CDS             91877..92068
                      /gene="ribonucleoside-diphosphate reductase large chain"
-                     /note="Extended"
-                     /colour=0 255 0
+                     /note=""
+                     /colour=0 255 255
      CDS             105511..105750
                      /gene="None"
                      /note=""
@@ -466,10 +466,10 @@
                      /gene="tRNA nucleotidyltransferase"
                      /note=""
                      /colour=0 255 255
-     CDS             97197..97448
+     CDS             97212..97448
                      /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
+                     /note=""
+                     /colour=0 255 255
      CDS             72600..72986
                      /gene="None"
                      /note=""
@@ -542,10 +542,10 @@
                      /gene="None"
                      /note=""
                      /colour=0 255 255
-     CDS             complement(15429..14356)
+     CDS             complement(15360..14356)
                      /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
+                     /note=""
+                     /colour=0 255 255
      CDS             complement(33875..33543)
                      /gene="None"
                      /note=""
@@ -618,18 +618,18 @@
                      /gene="None"
                      /note=""
                      /colour=0 255 255
-     CDS             complement(14124..13324)
+     CDS             complement(14121..13324)
                      /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
+                     /note=""
+                     /colour=0 255 255
      CDS             complement(33460..32384)
                      /gene="None"
                      /note=""
                      /colour=0 255 255
-     CDS             complement(39186..38998)
+     CDS             complement(39144..38998)
                      /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
+                     /note=""
+                     /colour=0 255 255
      CDS             68710..69237
                      /gene="conserved hypothetical protein"
                      /note=""
@@ -662,10 +662,10 @@
                      /gene="conserved hypothetical protein"
                      /note=""
                      /colour=0 255 255
-     CDS             complement(12223..11552)
+     CDS             complement(12214..11552)
                      /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
+                     /note=""
+                     /colour=0 255 255
      CDS             59229..59486
                      /gene="hypothetical protein FP0821"
                      /note=""
@@ -706,10 +706,10 @@
                      /gene="None"
                      /note=""
                      /colour=0 255 255
-     CDS             69438..69656
+     CDS             69474..69656
                      /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
+                     /note=""
+                     /colour=0 255 255
      CDS             53395..54258
                      /gene="RecA"
                      /note=""
