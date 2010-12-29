@@ -22,9 +22,61 @@ import os
 import sys
 from getopt import getopt
 from neofelis import pipeline
+from javax.swing import JFrame
+from javax.swing import JPanel
+from javax.swing import JFileChooser
+from javax.swing import JButton
+from javax.swing import JTextField
+from javax.swing import AbstractAction
+from javax.swing import JLabel
+from java.awt import GridBagLayout
+from java.awt import GridBagConstraints
+
+class BlastAction(AbstractAction):
+  def __init__(self):
+    AbstractAction.__init__(self, "...")
+
+  def actionPerformed(self, event):
+    fileChooser = JFileChooser()
+    fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
+    if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
+      blastField.setText(fileChooser.getSelectedFile().getAbsolutePath())
+
+class GenemarkAction(AbstractAction):
+  def __init__(self):
+    AbstractAction.__init__(self, "...")
+
+  def actionPerformed(self, event):
+    fileChooser = JFileChooser()
+    fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
+    if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
+      genemarkField.setText(fileChooser.getSelectedFile().getAbsolutePath())
+
+class QueryAction(AbstractAction):
+  def __init__(self):
+    AbstractAction.__init__(self, "...")
+
+  def actionPerformed(self, event):
+    fileChooser = JFileChooser()
+    fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES)
+    if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
+      queryField.setText(fileChooser.getSelectedFile().getAbsolutePath())
+
+class OKAction(AbstractAction):
+  def __init__(self):
+    AbstractAction.__init__(self, "Ok")
+
+  def actionPerformed(self, event):
+    frame.setVisible(False)
+
+class CancelAction(AbstractAction):
+  def __init__(self):
+    AbstractAction.__init__(self, "Cancel")
+
+  def actionPerformed(self, event):
+    sys.exit(0)
 
 if __name__ == "__main__":
-  opts, args = getopt(sys.argv, "m:d:g:b:e:rq:h", ["matrix=", "database=", "genemark=", "blast=", "eValue=", "remote", "query=", "help"])
   documentation = """
 -m --matrix               :Matrix with which to run genemark
 -d --database             :Database to use when running blast
@@ -37,12 +89,17 @@ if __name__ == "__main__":
 -h --help                 :Print help documentation
 -q --query                :Genome or directory of genomes to run pipeline on
 """
+  try:
+    opts, args = getopt(sys.argv, "m:d:g:b:e:rq:h", ["matrix=", "database=", "genemark=", "blast=", "eValue=", "remote", "query=", "help"])
+  except GetoptError:
+    print documentation
+    sys.exit(0)
   
-  blastLocation = "~/blast"
-  database = "nr"
-  genemarkLocation = "~/genemark"
+  blastLocation = ""
+  database = ""
+  genemarkLocation = ""
   eValue = 0.1
-  matrix = None
+  matrix = ""
   minLength = 100
   scaffoldingDistance = 100
   remote = False
@@ -70,6 +127,89 @@ if __name__ == "__main__":
       print documentation
       sys.exit(0)
 
+  if not blastLocation or not database or not genemarkLocation:
+    frame = JFrame("Neofelis")
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
+    constraints = GridBagConstraints()
+    contentPane = JPanel(GridBagLayout())
+    frame.setContentPane(contentPane)
+    blastField = JTextField(blastLocation)
+    genemarkField = JTextField(genemarkLocation)
+    queryField = JTextField(sources[0])
+    
+    constraints.gridx = 0
+    constraints.gridy = 0
+    constraints.gridwidth = 1
+    constraints.gridheight = 1
+    constraints.fill = GridBagConstraints.HORIZONTAL
+    constraints.weightx = 0
+    constraints.weighty = 0
+    contentPane.add(JLabel("Blast Location"), constraints)
+    constraints.gridy = 1
+    contentPane.add(JLabel("Genemark Label"), constraints)
+    constraints.gridy = 2
+    contentPane.add(JLabel("Database"), constraints)
+    constraints.gridy = 3
+    contentPane.add(JLabel("Matrix(Leave blank to use heuristic matrix)"), constraints)
+    constraints.gridy = 4
+    contentPane.add(JLabel("E Value"), constraints)
+    constraints.gridy = 5
+    contentPane.add(JLabel("Minimum Intergenic Length"), constraints)
+    constraints.gridy = 6
+    contentPane.add(JLabel("Scaffold Distance"), constraints)
+    constraints.gridy = 7
+    contentPane.add(JLabel("Query"), constraints)
+    constraints.gridx = 1
+    constraints.gridy = 0
+    constraints.weightx = 1
+    contentPane.add(blastField, constraints)
+    constraints.gridy = 1
+    contentPane.add(genemarkField, constraints)
+    constraints.gridy = 2
+    contentPane.add(JTextField(database), constraints)
+    constraints.gridy = 3
+    contentPane.add(JTextField(str(matrix)), constraints)
+    constraints.gridy = 4
+    contentPane.add(JTextField(str(eValue)), constraints)
+    constraints.gridy = 5
+    contentPane.add(JTextField(str(minLength)), constraints)
+    constraints.gridy = 6
+    contentPane.add(JTextField(str(scaffoldingDistance)), constraints)
+    constraints.gridy = 7
+    contentPane.add(queryField, constraints)
+    constraints.gridx = 2
+    constraints.gridy = 0
+    constraints.weightx = 0
+    contentPane.add(JButton(BlastAction()), constraints)
+    constraints.gridy = 1
+    contentPane.add(JButton(GenemarkAction()), constraints)
+    constraints.gridy = 7
+    contentPane.add(JButton(QueryAction()), constraints)
+
+    constraints.gridx = 1
+    constraints.gridy = 8
+    constraints.weightx = 1
+    constraints.fill = GridBagConstraints.NONE
+    constraints.anchor = GridBagConstraints.LINE_END
+    contentPane.add(JButton(OKAction()), constraints)
+    constraints.gridx = 2
+    contentPane.add(JButton(CancelAction()), constraints)
+    
+    frame.pack()
+    frame.setLocationRelativeTo(None)
+    frame.setVisible(True)
+
+    while frame.isVisible():
+      pass
+
+    blastLocation = blastField.getText()
+    genemarkLocation = genemarkField.getText()
+    database = databaseField.getText()
+    matrix = matrixField.getText()
+    eValue = float(eValueField.getText())
+    minLength = int(minLengthField.getText())
+    scaffoldingDistance = int(scaffoldDistanceField.getText())
+
   queries = []
   while sources:
     source = sources.pop()
@@ -79,6 +219,9 @@ if __name__ == "__main__":
       sources.extend(newSources)
     else:
       queries.append(source)
+      
+  print blastLocation, genemarkLocation, database, queries
+  sys.exit(0)
 
   pipeline.run(blastLocation, genemarkLocation, database, eValue, matrix, minLength, scaffoldingDistance, remote, queries)
 
