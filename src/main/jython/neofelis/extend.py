@@ -131,5 +131,5 @@ def extendGenes(query, genes, name, blast, database, eValue, remote):
   
   writeExtensions(genome, extensions)
   extendedGenes = utils.cachedBlast("extendedBlasts/" + name + ".blastp.xml", blast, database, eValue, "extensions.fas", remote)
-  
+  os.remove("extensions.fas")
   return applyExtensions(genome, genes, extendedGenes)

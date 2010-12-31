@@ -137,6 +137,18 @@ def loadGenome(fileName):
   input.close()
   return result
 
+def isGenome(fileName):
+  """
+  Returns true if the file represented by fileName is a fasta file containing one genome.
+  """
+  input = open(fileName, "r")
+  if not re.match(">.+", input.next()):
+    return False
+  for line in input:
+    if line.strip() and not re.match("[ACGT]+", line.upper()):
+      return False
+  return True
+
 def getGeneLocations(genes):
   """
   Takes a a map with GeneStructs as values and returns a two Dictionaries.

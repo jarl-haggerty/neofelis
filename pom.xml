@@ -60,9 +60,11 @@ limitations under the License.
           <pythonPath>/Users/mbsulli/jython2.5.1/Lib</pythonPath>
           <pythonArgs>
             <param>--genemark=/Users/mbsulli/genemark</param>
-
+            <param>--blast=/Users/mbsulli/blast</param>
+            <param>--swing</param>
+            <param>--database=nr</param>
             <param>--eValue=0.1</param>
-            <param>--query=Phi-4-1.fas</param>
+            <param>--query=genomes</param>
           </pythonArgs>
         </configuration>
       </plugin>

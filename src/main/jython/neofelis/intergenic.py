@@ -16,6 +16,7 @@ limitations under the License.
 
 import copy
 import sys
+import os
 from neofelis import utils
 
 def deleteGenes(genomeLength, genes, minLength = 3):
@@ -104,6 +105,7 @@ def findIntergenics(query, genes, name, minLength, blast, database, eValue, remo
     writePotentialGenes(genome, potentialGenes)
 
     result = utils.cachedBlast("intergenicBlasts/" + name + ".blastp.xml", blast, database, eValue, "intergenics.fas", remote)
+    os.remove("intergenics.fas")
     result = removeCommonStops(result)
     for r in result.values():
         r.note = "Intergenic"
