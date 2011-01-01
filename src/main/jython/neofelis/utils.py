@@ -24,6 +24,7 @@ from java.lang import Double
 from java.lang import Runtime
 from org.xml.sax.helpers import XMLReaderFactory
 from org.xml.sax import XMLReader
+from org.xml.sax import InputSource
 from org.xml.sax.helpers import DefaultHandler
 import os
 import subprocess
@@ -309,7 +310,10 @@ class BlastHandler(DefaultHandler):
     tag of the parent.
     """
     self.text += raw[start:start+length].tostring()
-    
+
+  def resolveHandler(self, publicId, systemId):
+    print publicId, systemId
+    return InputSource(ClassLoader.getSystemResourceAsStream(systemId))
 
 def parseBlast(fileName):
   """

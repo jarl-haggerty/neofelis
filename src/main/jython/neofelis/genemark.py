@@ -60,6 +60,7 @@ def findGenes(query, name, blast, database, eValue, genemark, matrix, remote):
     gc = int(utils.getGCContent(utils.loadGenome(query)))
     matrix = genemark + "/" + "heuristic_mat/heu_11_" + str(gc) + ".mat"
   subprocess.Popen([genemark + "/gm", "-opq", "-m", matrix, query]).wait()
+  print
   modifyFastaHeader(query + ".orf", name)
   result = utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blast, database, eValue, query + ".orf", remote)
   os.remove(query + ".orf")
