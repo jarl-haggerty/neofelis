@@ -63,6 +63,6 @@ def findGenes(query, name, blast, database, eValue, genemark, matrix, remote):
   print
   modifyFastaHeader(query + ".orf", name)
   result = utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blast, database, eValue, query + ".orf", remote)
-  os.remove(query + ".orf")
+  #os.remove(query + ".orf")
   os.remove(query + ".lst")
   return result

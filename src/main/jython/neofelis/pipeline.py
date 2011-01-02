@@ -34,7 +34,6 @@ from java.awt import GridBagLayout
 from java.awt import GridBagConstraints
 
 frame = None
-steps = 4
 jobCount = 0
 currentJob = ""
 message = 0
@@ -63,7 +62,7 @@ def initializeDisplay(queries, swing):
     globalLabel = JLabel(max(queries, key = len))
     globalProgress = JProgressBar(0, numJobs)
     currentLabel = JLabel(max(messages, key = len))
-    currentProgress = JProgressBar(0, steps)
+    currentProgress = JProgressBar(0, len(messages))
     doneButton = JButton(DoneAction())
     doneButton.setEnabled(False)
 
@@ -138,7 +137,7 @@ def run(blastLocation, genemarkLocation, database, eValue, matrix, minLength, sc
 
     updateProgress(query)
     initialGenes = genemark.findGenes(query, name, blastLocation, database, eValue, genemarkLocation, matrix, remote)
-    artemis.writeArtemisFile(name + ".art", genome, initialGenes.values())
+    artemis.writeArtemisFile(name + "genemark.art", genome, initialGenes.values())
     updateProgress(query)
     extendedGenes = extend.extendGenes(query, initialGenes, name, blastLocation, database, eValue, remote)
     artemis.writeArtemisFile(name + "extended.art", genome, extendedGenes.values())
@@ -151,6 +150,8 @@ def run(blastLocation, genemarkLocation, database, eValue, matrix, minLength, sc
     updateProgress(query)
     scaffolded = scaffolds.refineScaffolds(genes, scaffoldingDistance)
     artemis.writeArtemisFile(name + "scaffolds.art", genome, scaffolded.values())
+    artemis.writeArtemisFile(os.path.splitext(query)[0] + ".art", genome, scaffolded.values())
+    
   finished()
   """
     initialPromoters = promoters.findPromoters(query)

@@ -17,26 +17,39 @@ limitations under the License.
 import sys
 import copy
 
+class Scaffold():
+    def __init__(self, start, stop, containsGenemarkGene):
+        self.start = start
+        self.stop = stop
+        self.containsGenemarkGene = containsGenemarkGene
+
+    def __eq__(self, that):
+        return self.start == that.start and \
+               self.stop == that.stop and \
+               self.containsGenemarkGene  == that.containsGenemarkGene
+
 def extractScaffolds(genes, scaffoldingDistance = 100):
     forwardScaffolds, reverseScaffolds = [], []
     for gene in genes:
         if gene.location[0] < gene.location[1]:
-            newScaffold = [gene.location[0], gene.location[1]]
+            newScaffold = Scaffold(gene.location[0], gene.location[1], gene.note != "Intergenic")
             scaffolds = forwardScaffolds
         else:
-            newScaffold = [gene.location[1], gene.location[0]]
+            newScaffold = Scaffold(gene.location[1], gene.location[0], gene.note != "Intergenic")
             scaffolds = reverseScaffolds
         running = True
         while running:
             running = False
             for scaffold in scaffolds:
-                if abs(newScaffold[1] - scaffold[0]) < scaffoldingDistance:
-                    newScaffold[1] = scaffold[1]
+                if abs(newScaffold.stop - scaffold.start) < scaffoldingDistance:
+                    newScaffold.stop = scaffold.stop
+                    newScaffold.containsGenemarkGene = newScaffold.containsGenemarkGene or scaffold.containsGenemarkGene
                     scaffolds.remove(scaffold)
                     running = True
                     break
-                elif abs(newScaffold[0] - scaffold[1]) < scaffoldingDistance:
-                    newScaffold[0] = scaffold[0]
+                elif abs(newScaffold.start - scaffold.stop) < scaffoldingDistance:
+                    newScaffold.start = scaffold.start
+                    newScaffold.containsGenemarkGene = newScaffold.containsGenemarkGene or scaffold.containsGenemarkGene
                     scaffolds.remove(scaffold)
                     running = True
                     break
@@ -44,14 +57,14 @@ def extractScaffolds(genes, scaffoldingDistance = 100):
     return forwardScaffolds, reverseScaffolds
 
 def overlap(intervalOne, intervalTwo):
-    if intervalOne[0] < intervalTwo[0] and intervalTwo[0] <= intervalOne[1] and intervalOne[1] < intervalTwo[1]:
-        return intervalOne[1] - intervalTwo[0]
-    elif intervalTwo[0] < intervalOne[0] and intervalOne[0] <= intervalTwo[1] and intervalTwo[1] < intervalOne[1]:
-        return intervalTwo[1] - intervalOne[0]
-    elif intervalOne[0] <= intervalTwo[0] and intervalTwo[1] <= intervalOne[1]:
-        return intervalTwo[1] - intervalTwo[0]
-    elif intervalTwo[0] <= intervalOne[0] and intervalOne[1] <= intervalTwo[1]:
-        return intervalOne[1] - intervalOne[0]
+    if intervalOne.start < intervalTwo.start and intervalTwo.start <= intervalOne.stop and intervalOne.stop < intervalTwo.stop:
+        return intervalOne.stop - intervalTwo.start
+    elif intervalTwo.start < intervalOne.start and intervalOne.start <= intervalTwo.stop and intervalTwo.stop < intervalOne.stop:
+        return intervalTwo.stop - intervalOne.start
+    elif intervalOne.start <= intervalTwo.start and intervalTwo.stop <= intervalOne.stop:
+        return intervalTwo.stop - intervalTwo.start
+    elif intervalTwo.start <= intervalOne.start and intervalOne.stop <= intervalTwo.stop:
+        return intervalOne.stop - intervalOne.start
     else:
         return -1
     
@@ -60,7 +73,13 @@ def filterScaffolds(forwardScaffolds, reverseScaffolds):
     for forwardScaffold in forwardScaffolds:
         for reverseScaffold in reverseScaffolds:
             if overlap(forwardScaffold, reverseScaffold) > 3:
-                if forwardScaffold[1] - forwardScaffold[0] < reverseScaffold[1] - reverseScaffold[0]:
+                if not forwardScaffold.containsGenemarkGene and reverseScaffold.containsGenemarkGene:
+                    newForwardScaffolds.remove(forwardScaffold)
+                    break
+                elif forwardScaffold.containsGenemarkGene and not reverseScaffold.containsGenemarkGene \
+                     and reverseScaffold in newReverseScaffolds:
+                    newReverseScaffolds.remove(reverseScaffold)
+                elif forwardScaffold.stop - forwardScaffold.start < reverseScaffold.stop - reverseScaffold.start:
                     newForwardScaffolds.remove(forwardScaffold)
                     break
                 elif reverseScaffold in newReverseScaffolds:
@@ -72,7 +91,7 @@ def maskedGenes(genes, masks):
     for gene in genes:
         for mask in masks:
             center = (gene.location[0] + gene.location[1])/2
-            if mask[0] < center and center < mask[1]:
+            if mask.start < center and center < mask.stop:
                 result.append(gene)
     return result
 
