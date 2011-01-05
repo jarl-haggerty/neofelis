@@ -14,5 +14,17 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-def findTerminators(query, transterm):
-  pass
+import subprocess
+from neofelis import utils
+
+def writeCoords(name, genes):
+  output = open(name + ".crd", "w")
+  for gene in genes:
+    output.write("gene\t%d\t%d\t%s\n" %  (gene.location[0], gene.location[1], name))
+  output.close()
+
+def findTerminators(query, name, genes, transterm):
+  writeCoords(name, genes)
+  output = open("terms", "w")
+  subprocess.Popen([transterm + "/transterm", "-p", transterm + "/expterm.dat", query, name + ".crd"], stdout=output).wait()
+  output.close()

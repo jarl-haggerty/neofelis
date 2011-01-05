@@ -15,46 +15,60 @@ limitations under the License.
 """
 
 from neofelis import utils
-from HTMLParser import HTMLParser
 import re
+import urllib
+import functools
+import os.path
+
+if not os.path.isdir("bpromResults"):
+  os.mkdir("bpromResults")
 
 class Promoter():
   def __init__(self):
-    self.LDF = 0
+    self.ldf = 0
     self.position = None
     self.signal10Location = None
     self.signal35Location = None
-    
 
-class MyHTMLParser(HTMLParser):
-  def __init__(self):
-    self.recording = False
-    self.text = ""
-    self.promoters = []
-  def handle_starttag(self, tag, attrs):
-    self.recording = tag == "pre"
-  def handle_endtag(self, tag):
-    if tag == "pre":
-      self.recording = False
-      promoters = re.findall(r"\s+Promoter\s+Pos:\s+(\d+)\s+LDF-\s+(\d+\.?\d*)", self.text)
-      tenBoxes = re.findall(r"\s+-10\s+box\s+as\s+pos.\s+(\d+)\s+([ACGT]+)\s+Score\s+\d+", self.text)
-      thiryFiveBoxes = re.findall(r"\s+-35\s+box\s+as\s+pos.\s+(\d+)\s+([ACGT]+)\s+Score\s+\d+", self.text)
-      def parsePromoter(promoter, tenBox, thiryFiveBox):
-        result = Promoter()
-        result.LDF = float(promoter[1])
-        result.position = int(promoter[0])
-        result.signal10Location = [int(tenBox[0]), int(tenBox[0])+len(tenBox[1])]
-        result.signal35Location = [int(thirtyFiveBox[0]), int(thirtyFiveBox[0])+len(thirtyFiveBox[1])]
-      self.promoters = map(parsePromoter, promoters, tenBoxes, thirtyFiveBoxes)
-  def handle_data(self, text):
-    if self.recording:
-      self.text += text
-    
+def parseBPROM(bpromData):
+  promoters = re.findall(r"\s+Promoter\s+Pos:\s+(\d+)\s+LDF-\s+(\d+\.?\d*)", bpromData)
+  tenBoxes = re.findall(r"\s+-10\s+box\s+at\s+pos.\s+(\d+)\s+([ACGT]+)\s+Score\s+-?\d+", bpromData)
+  thirtyFiveBoxes = re.findall(r"\s+-35\s+box\s+at\s+pos.\s+(\d+)\s+([ACGT]+)\s+Score\s+-?\d+", bpromData)
+  def parsePromoter(promoter, tenBox, thirtyFiveBox):
+    result = Promoter()
+    result.ldf = float(promoter[1])
+    result.position = int(promoter[0])
+    result.signal10Location = [int(tenBox[0]), int(tenBox[0])+len(tenBox[1])]
+    result.signal35Location = [int(thirtyFiveBox[0]), int(thirtyFiveBox[0])+len(thirtyFiveBox[1])]
+    return result
+  return map(parsePromoter, promoters, tenBoxes, thirtyFiveBoxes)
 
-def findPromoters(query, LDFCutoff):
-  results = urllib.urlopen("http://linux1.softberry.com/cgi-bin/programs/gfindb/bprom.pl",
-                           urllib.urlencode({"DATA" : utils.loadGenome(query)}))
-  parser = BPROMParser()
-  parser.feed(results.read())
-  results.close()
-  return filter(lambda x: x.LDF > LDFCutoff, parser.promoters)
+def cachedBPROM(genome, fileName):
+  if not os.path.isfile(fileName):
+    results = urllib.urlopen("http://linux1.softberry.com/cgi-bin/programs/gfindb/bprom.pl",
+                             urllib.urlencode({"DATA" : genome}))
+    resultString = results.read()
+    resultString = resultString[resultString.find("<pre>"):resultString.find("</pre>")]
+    results.close()
+    output = open(fileName, "w")
+    output.write(re.sub("<+.+>+", "", resultString))
+    output.close()
+  input = open(fileName, "r")
+  results = parseBPROM(input.read())
+  input.close()
+  return results
+
+def reverseCoordinates(genomeLength, promoter):
+  newPromoter = Promoter()
+  newPromoter.ldf = promoter.ldf
+  newPromoter.position = genomeLength+1 - promoter.position
+  newPromoter.signal10Location = map(lambda x: genomeLength+1 - x, promoter.signal10Location)
+  newPromoter.signal35Location = map(lambda x: genomeLength+1 - x, promoter.signal35Location)
+  return newPromoter
+
+def findPromoters(query, name, ldfCutoff):
+  genome = utils.loadGenome(query)
+  forwardResults = cachedBPROM(genome, "bpromResults/" + name + ".forward.bprom")
+  reverseResults = cachedBPROM(utils.reverseComplement(genome), "bpromResults/" + name + ".reverse.bprom")
+  map(functools.partial(reverseCoordinates, len(genome)), reverseResults)
+  return filter(lambda x: x.ldf > ldfCutoff, forwardResults + reverseResults)

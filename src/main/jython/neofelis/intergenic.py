@@ -19,6 +19,11 @@ import sys
 import os
 from neofelis import utils
 
+"""Have to make sure that a directory to store the blasts this module creates exists."""
+if not os.path.isdir("intergenicBlasts"):
+  os.mkdir("intergenicBlasts")
+  
+
 def deleteGenes(genomeLength, genes, minLength = 3):
     forwardResult, reverseResult = [(0, genomeLength)], [(0, genomeLength)]
     for gene in genes:

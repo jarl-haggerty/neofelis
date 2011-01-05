@@ -27,6 +27,7 @@ from org.xml.sax import XMLReader
 from org.xml.sax import InputSource
 from org.xml.sax.helpers import DefaultHandler
 import os
+import os.path
 import subprocess
 import re
 
@@ -138,10 +139,22 @@ def loadGenome(fileName):
   input.close()
   return result
 
+def getHeader(fileName):
+  input = open(fileName, "r")
+  for line in input:
+    match = re.match(">(.+)", line.upper())
+    if match:
+      input.close()
+      return match.group(1)
+  input.close()
+  return None
+
 def isGenome(fileName):
   """
   Returns true if the file represented by fileName is a fasta file containing one genome.
   """
+  if os.path.isdir(fileName):
+    return False
   input = open(fileName, "r")
   if not re.match(">.+", input.next()):
     return False

@@ -40,7 +40,9 @@ message = 0
 messages = ["Searching for genes via genemark",
             "Extending genes found via genemark",
             "Searching for intergenic genes",
-            "Removing overlapping genes"]
+            "Removing overlapping genes",
+            "Using BPROM to find promoters",
+            "Using transterm to find terminators"]
 
 class DoneAction(AbstractAction):
   def __init__(self):
@@ -48,7 +50,7 @@ class DoneAction(AbstractAction):
 
   def actionPerformed(self, event):
     global frame
-    frame.setVisible(False)
+    sys.exit(0)
 
 def initializeDisplay(queries, swing):
   global numJobs, frame, currentLabel, currentProgress, globalLabel, globalProgress, doneButton, messages
@@ -127,22 +129,27 @@ def finished():
   else:
     print "Processing 100.00% done"
 
-def run(blastLocation, genemarkLocation, database, eValue, matrix, minLength, scaffoldingDistance, remote, queries, swing = False):
+def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, remote, ldfCutoff, queries, swing = False):
   initializeDisplay(queries, swing)
     
   for query in queries:
     name = os.path.splitext(query)[0]
     name = os.path.split(name)[1]
     genome = utils.loadGenome(query)
+    queryFile = open("query.fas", "w")
+    queryFile.write(">" + name + "\n")
+    for i in range(0, len(genome), 50):
+      queryFile.write(genome[i:min(i+50, len(genome))] + "\n")
+    queryFile.close()
 
     updateProgress(query)
-    initialGenes = genemark.findGenes(query, name, blastLocation, database, eValue, genemarkLocation, matrix, remote)
+    initialGenes = genemark.findGenes("query.fas", name, blastLocation, database, eValue, genemarkLocation, matrix, remote)
     artemis.writeArtemisFile(name + "genemark.art", genome, initialGenes.values())
     updateProgress(query)
-    extendedGenes = extend.extendGenes(query, initialGenes, name, blastLocation, database, eValue, remote)
+    extendedGenes = extend.extendGenes("query.fas", initialGenes, name, blastLocation, database, eValue, remote)
     artemis.writeArtemisFile(name + "extended.art", genome, extendedGenes.values())
     updateProgress(query)
-    intergenicGenes = intergenic.findIntergenics(query, extendedGenes, name, minLength, blastLocation, database, eValue, remote)
+    intergenicGenes = intergenic.findIntergenics("query.fas", extendedGenes, name, minLength, blastLocation, database, eValue, remote)
     genes = {}
     for k, v in extendedGenes.items() + intergenicGenes.items():
       genes[k] = v
@@ -151,12 +158,14 @@ def run(blastLocation, genemarkLocation, database, eValue, matrix, minLength, sc
     scaffolded = scaffolds.refineScaffolds(genes, scaffoldingDistance)
     artemis.writeArtemisFile(name + "scaffolds.art", genome, scaffolded.values())
     artemis.writeArtemisFile(os.path.splitext(query)[0] + ".art", genome, scaffolded.values())
+ 
+    updateProgress(query)
+    initialPromoters = promoters.findPromoters("query.fas", name, ldfCutoff)
+
+    updateProgress(query)
+    initialTerminators = terminators.findTerminators("query.fas", name, genes.values(), transtermLocation)
+
+    #updateProgress(query)
+    
     
   finished()
-  """
-    initialPromoters = promoters.findPromoters(query)
-    initialTerminators = terminators.findTerminators(query, transterm)
-    
-                
-    writeArtemisFile(genes, promoters, terminators)
-  """

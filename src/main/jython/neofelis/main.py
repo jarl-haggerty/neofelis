@@ -34,7 +34,7 @@ from java.awt import GridBagLayout
 from java.awt import GridBagConstraints
 
 def getParameters():
-  global blastLocation, genemarkLocation, database, matrix, eValue, minLength, scaffoldingDistance, sources
+  global blastLocation, genemarkLocation, transtermLocation, database, matrix, eValue, minLength, scaffoldingDistance, ldfCutoff, sources
 
   class BlastAction(AbstractAction):
     def __init__(self):
@@ -55,6 +55,16 @@ def getParameters():
       fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
       if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
         genemarkField.setText(fileChooser.getSelectedFile().getAbsolutePath())
+
+  class TranstermAction(AbstractAction):
+    def __init__(self):
+      AbstractAction.__init__(self, "...")
+
+    def actionPerformed(self, event):
+      fileChooser = JFileChooser()
+      fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
+      if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
+        transtermField.setText(fileChooser.getSelectedFile().getAbsolutePath())
 
   class QueryAction(AbstractAction):
     def __init__(self):
@@ -87,11 +97,13 @@ def getParameters():
   frame.setContentPane(contentPane)
   blastField = JTextField(blastLocation)
   genemarkField = JTextField(genemarkLocation)
+  transtermField = JTextField(transtermLocation)
   databaseField = JTextField(database)
   matrixField = JTextField(str(matrix))
   eValueField = JTextField(str(eValue))
   minLengthField = JTextField(str(minLength))
   scaffoldingDistanceField = JTextField(str(scaffoldingDistance))
+  ldfField = JTextField(str(ldfCutoff))
   queryField = JTextField(sources[0])
 
   constraints.gridx = 0
@@ -103,18 +115,22 @@ def getParameters():
   constraints.weighty = 0
   contentPane.add(JLabel("Blast Location"), constraints)
   constraints.gridy = 1
-  contentPane.add(JLabel("Genemark Label"), constraints)
+  contentPane.add(JLabel("Genemark Location"), constraints)
   constraints.gridy = 2
-  contentPane.add(JLabel("Database"), constraints)
+  contentPane.add(JLabel("Transterm Location"), constraints)
   constraints.gridy = 3
-  contentPane.add(JLabel("Matrix(Leave blank to use heuristic matrix)"), constraints)
+  contentPane.add(JLabel("Database"), constraints)
   constraints.gridy = 4
-  contentPane.add(JLabel("E Value"), constraints)
+  contentPane.add(JLabel("Matrix(Leave blank to use heuristic matrix)"), constraints)
   constraints.gridy = 5
-  contentPane.add(JLabel("Minimum Intergenic Length"), constraints)
+  contentPane.add(JLabel("E Value"), constraints)
   constraints.gridy = 6
-  contentPane.add(JLabel("Scaffold Distance"), constraints)
+  contentPane.add(JLabel("Minimum Intergenic Length"), constraints)
   constraints.gridy = 7
+  contentPane.add(JLabel("Scaffold Distance"), constraints)
+  constraints.gridy = 8
+  contentPane.add(JLabel("LDF Cutoff"), constraints)
+  constraints.gridy = 9
   contentPane.add(JLabel("Query"), constraints)
   constraints.gridx = 1
   constraints.gridy = 0
@@ -123,16 +139,20 @@ def getParameters():
   constraints.gridy = 1
   contentPane.add(genemarkField, constraints)
   constraints.gridy = 2
-  contentPane.add(databaseField, constraints)
+  contentPane.add(transtermField, constraints)
   constraints.gridy = 3
-  contentPane.add(matrixField, constraints)
+  contentPane.add(databaseField, constraints)
   constraints.gridy = 4
-  contentPane.add(eValueField, constraints)
+  contentPane.add(matrixField, constraints)
   constraints.gridy = 5
-  contentPane.add(minLengthField, constraints)
+  contentPane.add(eValueField, constraints)
   constraints.gridy = 6
-  contentPane.add(scaffoldingDistanceField, constraints)
+  contentPane.add(minLengthField, constraints)
   constraints.gridy = 7
+  contentPane.add(scaffoldingDistanceField, constraints)
+  constraints.gridy = 8
+  contentPane.add(ldfField, constraints)
+  constraints.gridy = 9
   contentPane.add(queryField, constraints)
   constraints.gridx = 2
   constraints.gridy = 0
@@ -142,11 +162,13 @@ def getParameters():
   contentPane.add(JButton(BlastAction()), constraints)
   constraints.gridy = 1
   contentPane.add(JButton(GenemarkAction()), constraints)
-  constraints.gridy = 7
+  constraints.gridy = 2
+  contentPane.add(JButton(TranstermAction()), constraints)
+  constraints.gridy = 9
   contentPane.add(JButton(QueryAction()), constraints)
 
   constraints.gridx = 1
-  constraints.gridy = 8
+  constraints.gridy = 10
   contentPane.add(JButton(OKAction()), constraints)
   constraints.gridx = 2
   contentPane.add(JButton(CancelAction()), constraints)
@@ -161,11 +183,14 @@ def getParameters():
 
   blastLocation = blastField.getText()
   genemarkLocation = genemarkField.getText()
+  transtermLocation = transtermField.getText()
   database = databaseField.getText()
   matrix = matrixField.getText()
   eValue = float(eValueField.getText())
   minLength = int(minLengthField.getText())
   scaffoldingDistance = int(scaffoldingDistanceField.getText())
+  ldfCutoff = float(ldfField.getText())
+  sources = [queryField.getText()]
 
 if __name__ == "__main__":
   documentation = """
@@ -182,7 +207,7 @@ if __name__ == "__main__":
 -s --swing                :Use a swing interface
 """
   try:
-    opts, args = getopt(sys.argv, "m:d:g:b:e:rq:hs", ["matrix=", "database=", "genemark=", "blast=", "eValue=", "remote", "query=", "help", "swing"])
+    opts, args = getopt(sys.argv, "m:d:g:b:e:rl:t:q:hs", ["matrix=", "database=", "genemark=", "blast=", "eValue=", "remote", "ldf-cutoff=", "transterm=", "query=", "help", "swing"])
   except GetoptError:
     print documentation
     sys.exit(0)
@@ -190,12 +215,14 @@ if __name__ == "__main__":
   blastLocation = ""
   database = ""
   genemarkLocation = ""
+  transtermLocation = ""
   eValue = 0.1
   matrix = ""
   minLength = 100
   scaffoldingDistance = 100
   sources = [""]
   remote = False
+  ldfCutoff = 0
   swingInterface = False
 	
   for opt, arg in opts:
@@ -215,6 +242,10 @@ if __name__ == "__main__":
       minLength = int(arg)
     elif opt in ("-r", "--remote"):
       remote = True
+    elif opt in ("-l", "--ldf-cutoff"):
+      ldfCutoff = float(arg)
+    elif opt in ("-t", "--transterm"):
+      transtermLocation = arg
     elif opt in ("-c", "--scaffolding-distance"):
       scaffoldingDistance = int(arg)
     elif opt in ("-s", "--swing"):
@@ -223,7 +254,7 @@ if __name__ == "__main__":
       print documentation
       sys.exit(0)
 
-  if not blastLocation or not database or not genemarkLocation:
+  if not blastLocation or not database or not genemarkLocation or not transtermLocation:
     getParameters()
     swingInterface = True
 
@@ -231,15 +262,12 @@ if __name__ == "__main__":
   while sources:
     source = sources.pop()
     if os.path.isdir(source):
-      newSources = filter(lambda x: utils.isGenome(os.path.join(source, x)), os.listdir(source))
-      newSources = map(lambda x: os.path.join(source, x), newSources)
+      newSources = map(lambda x: os.path.join(source, x), os.listdir(source))
       sources.extend(newSources)
-    else:
+    elif utils.isGenome(source):
       queries.append(source)
 
-  print queries
-
-  pipeline.run(blastLocation, genemarkLocation, database, eValue, matrix, minLength, scaffoldingDistance, remote, queries, swingInterface)
+  pipeline.run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, remote, ldfCutoff, queries, swingInterface)
 
   """
 		#remove all signals inside orfs
