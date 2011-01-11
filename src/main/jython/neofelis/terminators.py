@@ -16,6 +16,14 @@ limitations under the License.
 
 import subprocess
 from neofelis import utils
+import re
+
+class Terminator():
+  def __init__(self):
+    self.location = None
+    self.confidence = None
+    self.hpScore = None
+    self.tailScore = None
 
 def writeCoords(name, genes):
   output = open(name + ".crd", "w")
@@ -23,8 +31,24 @@ def writeCoords(name, genes):
     output.write("gene\t%d\t%d\t%s\n" %  (gene.location[0], gene.location[1], name))
   output.close()
 
+def parseTransterm(input):
+  matches = re.findall(r"\s+TERM\s+\d+\s+(\d+)\s+-\s+(\d+)\s+[+-]\s+\S+\s+(\d+)\s+(-?\d+.?\d+)\s+(-?\d+.?\d+)", input)
+  def buildTerminator(pieces):
+    result = Terminator()
+    result.location = [int(pieces[0]), int(pieces[1])]
+    result.confidence = int(pieces[2])
+    result.hpScore = float(pieces[3])
+    result.tailScore = float(pieces[4])
+    return result
+
+  return map(buildTerminator, matches)
+
 def findTerminators(query, name, genes, transterm):
   writeCoords(name, genes)
-  output = open("terms", "w")
+  output = open(name + ".tt", "w")
   subprocess.Popen([transterm + "/transterm", "-p", transterm + "/expterm.dat", query, name + ".crd"], stdout=output).wait()
   output.close()
+  input = open(name + ".tt", "r")
+  result = parseTransterm(input.read())
+  input.close()
+  return result

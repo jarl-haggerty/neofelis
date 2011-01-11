@@ -23,7 +23,6 @@ from neofelis import utils
 if not os.path.isdir("intergenicBlasts"):
   os.mkdir("intergenicBlasts")
   
-
 def deleteGenes(genomeLength, genes, minLength = 3):
     forwardResult, reverseResult = [(0, genomeLength)], [(0, genomeLength)]
     for gene in genes:
@@ -57,11 +56,15 @@ def findPotentialGenes(genome, openLocations, minLength = 3):
     stop = None
     for region in openLocations:
         for frame in xrange(3):
-            for start in xrange(region[1]+frame, region[0]-2, -3):
+            for start in xrange(region[1]+frame, 0, -3):
                 if genome[start-3:start] in utils.stopCodons:
                     stop = start
+                    if start <= region[0]:
+                        break
                 if genome[start-3:start] in utils.startCodons and stop:
                     result.append((start-3, stop))
+                    if start <= region[0]:
+                        break
     return filter(lambda x: x[1]-x[0] > minLength, result)
                     
 def writePotentialGenes(genome, locations):

@@ -298,7 +298,7 @@
                      /gene="None"
                      /note=""
                      /colour=0 255 255
-     CDS             6995..7411
+     CDS             6962..7411
                      /gene="None"
                      /note="Extended"
                      /colour=0 255 0
@@ -310,10 +310,10 @@
                      /gene="None"
                      /note="Extended"
                      /colour=0 255 0
-     CDS             29957..30454
+     CDS             29954..30454
                      /gene="envelope glycoprotein"
-                     /note=""
-                     /colour=0 255 255
+                     /note="Extended"
+                     /colour=0 255 0
      CDS             complement(76510..76292)
                      /gene="None"
                      /note=""

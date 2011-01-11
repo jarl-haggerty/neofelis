@@ -22,6 +22,7 @@ from javax.xml.parsers import DocumentBuilderFactory
 from org.python.core.util import FileUtil
 from java.lang import Double
 from java.lang import Runtime
+from java.lang import ClassLoader
 from org.xml.sax.helpers import XMLReaderFactory
 from org.xml.sax import XMLReader
 from org.xml.sax import InputSource
@@ -324,9 +325,8 @@ class BlastHandler(DefaultHandler):
     """
     self.text += raw[start:start+length].tostring()
 
-  def resolveHandler(self, publicId, systemId):
-    print publicId, systemId
-    return InputSource(ClassLoader.getSystemResourceAsStream(systemId))
+  def resolveEntity(self, publicId, systemId):
+    return InputSource(ClassLoader.getSystemResourceAsStream("dtds/" + os.path.split(systemId)[1]))
 
 def parseBlast(fileName):
   """
@@ -334,6 +334,7 @@ def parseBlast(fileName):
   """
   reader = XMLReaderFactory.createXMLReader()
   reader.setContentHandler(BlastHandler())
+  reader.setEntityResolver(BlastHandler())
   reader.parse(fileName)
 
   return dict(map(lambda iteration: (iteration.query, iteration), reader.getContentHandler().iterations))
@@ -356,7 +357,6 @@ def cachedBlast(fileName, blastLocation, database, eValue, query, remote):
     else:
       command += ["-num_threads", str(Runtime.getRuntime().availableProcessors()),
                   "-db", blastLocation + "/db/" + database]
-    print command
     subprocess.Popen(command,
                      stdout = output).wait()
     output.close()

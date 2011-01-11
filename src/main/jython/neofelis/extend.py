@@ -47,16 +47,20 @@ def getExtensions(genome, genes):
     results[gene] = []
     if gene.location[0] < gene.location[1]:
       bound = max(filter(lambda x: x < gene.location[1], forwardStops))
-      for i in xrange(gene.location[0]-1, bound-1, -3):
+      for i in xrange(gene.location[0]-1, 0, -3):
         if genome[i-3:i] in utils.startCodons:
           results[gene].append(i-3)
+          if i <= bound-1:
+            break
         elif genome[i-3:i] in utils.stopCodons:
           break
     else:
       bound = min(filter(lambda x: x > gene.location[1], reverseStops))
-      for i in xrange(gene.location[0], bound-1, 3):
+      for i in xrange(gene.location[0], len(genome), 3):
         if utils.reverseComplement(genome[i:i+3]) in utils.startCodons:
           results[gene].append(i+3)
+          if i >= bound-1:
+            break
         elif utils.reverseComplement(genome[i:i+3]) in utils.stopCodons:
           break
   return results
@@ -100,9 +104,9 @@ def applyExtensions(genome, genes, extendedGenes):
   def reduceFunction(gene, x, y):
     if re.sub(r"(~\d+)~\d+", r"\1", y.query) == gene.query:
       if gene.location[0] < gene.location[1]:
-        gapSize = y.location[0] - max(filter(lambda z: z < gene.location[1], forwardStops))
+        gapSize = abs(y.location[0] - max(filter(lambda z: z < gene.location[1], forwardStops)))
       else:
-        gapSize = min(filter(lambda z: z > gene.location[1], reverseStops)) - y.location[0]
+        gapSize = abs(min(filter(lambda z: z > gene.location[1], reverseStops)) - y.location[0])
       if gapSize < 100 or abs(x.eValue - y.eValue) < 10e-5 or utils.isNaN(x.eValue-y.eValue):
         return max(x, y, key = lambda z: abs(z.location[1] - z.location[0]))
       else:

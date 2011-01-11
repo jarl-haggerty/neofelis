@@ -57,14 +57,14 @@ limitations under the License.
         <extensions>true</extensions>
         <configuration>
           <pythonMain>neofelis.main</pythonMain>
-          <pythonPath>/Users/mbsulli/jython2.5.1/Lib</pythonPath>
+          <pythonPath>/Users/mbsulli/jython/Lib</pythonPath>
           <pythonArgs>
             <param>--genemark=/Users/mbsulli/genemark</param>
             <param>--blast=/Users/mbsulli/blast</param>
             <param>--transterm=/Users/mbsulli/transterm</param>
             <param>--database=nr</param>
             <param>--eValue=0.1</param>
-            <param>--query=genomes</param>
+            <param>--query=genomes/Phi-4-1.fas</param>
           </pythonArgs>
         </configuration>
       </plugin>

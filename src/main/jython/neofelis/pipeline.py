@@ -24,6 +24,7 @@ from neofelis import terminators
 from neofelis import artemis
 from neofelis import utils
 from neofelis import scaffolds
+from neofelis import signals
 from javax.swing import JFrame
 from javax.swing import JPanel
 from javax.swing import JLabel
@@ -134,7 +135,7 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
     
   for query in queries:
     name = os.path.splitext(query)[0]
-    name = os.path.split(name)[1]
+    queryDirectory, name = os.path.split(name)
     genome = utils.loadGenome(query)
     queryFile = open("query.fas", "w")
     queryFile.write(">" + name + "\n")
@@ -161,10 +162,17 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
  
     updateProgress(query)
     initialPromoters = promoters.findPromoters("query.fas", name, ldfCutoff)
-
+    artemis.writeArtemisFile(name + "promoters.art", genome, scaffolded.values(), initialPromoters)
+    
     updateProgress(query)
     initialTerminators = terminators.findTerminators("query.fas", name, genes.values(), transtermLocation)
+    artemis.writeArtemisFile(name + "promoters-and-terminators.art", genome, scaffolded.values(), initialPromoters, initialTerminators)
 
+    filteredSignals = signals.filterSignals(genes.values(), initialPromoters + initialTerminators)
+    filteredPromoters = filter(lambda x: isinstance(x, promoters.Promoter), filteredSignals)
+    filteredTerminators = filter(lambda x: isinstance(x, terminators.Terminator), filteredSignals)
+
+    artemis.writeArtemisFile(name + "final.art", genome, scaffolded.values(), filteredPromoters, filteredTerminators)
     #updateProgress(query)
     
     

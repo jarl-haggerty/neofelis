@@ -14,28 +14,28 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-def writePromoters(file, promoters):
+def writePromoters(output, promoters):
     for promoter in promoters:
-        if promoter.signal10.location[0] < promoter.signal10.location[1]:
-            output.write("-10_signal\t" + "..".join(map(str, promoter.signal10.location)) + "\n")
+        if promoter.signal10Location[0] < promoter.signal10Location[1]:
+            output.write("     -10_signal             " + "..".join(map(str, promoter.signal10Location)) + "\n")
         else:
-            output.write("-10_signal\tcomplement(" + "..".join(map(str, promoter.signal10.location)) + ")\n")
-        output.write("\t\t/note=Promoter Position:" + str(promoter.position) + "\tIDF:" + str(promoter.LDF) + "\n")
-        output.write("\t\t/colour=255 0 255\n")
-        if promoter.signal35.location[0] < promoter.signal35.location[1]:
-            output.write("-35_signal\t" + "..".join(map(str, promoter.signal35.location)) + "\n")
+            output.write("     -10_signal             complement(" + "..".join(map(str, promoter.signal10Location)) + ")\n")
+        output.write("                            /note=Promoter Position:" + str(promoter.position) + "\tLDF:" + str(promoter.ldf) + "\n")
+        output.write("                            /colour=255 0 255\n")
+        if promoter.signal35Location[0] < promoter.signal35Location[1]:
+            output.write("     -35_signal             " + "..".join(map(str, promoter.signal35Location)) + "\n")
         else:
-            output.write("-35_signal\tcomplement(" + "..".join(map(str, promoter.signal35.location)) + ")\n")
-        output.write("\t\t/note=Promoter Position:" + str(promoter.position) + "\tIDF:" + str(promoter.LDF) + "\n")
-        output.write("\t\t/colour=255 0 255\n")
+            output.write("     -35_signal             complement(" + "..".join(map(str, promoter.signal35Location)) + ")\n")
+        output.write("                            /note=Promoter Position:" + str(promoter.position) + "\tLDF:" + str(promoter.ldf) + "\n")
+        output.write("                            /colour=255 0 255\n")
 
 def writeTerminators(output, terminators):
     for terminator in terminators:
         if terminator.location[0] < terminator.location[1]:
-            output.write("terminator\t" + "..".join(map(str, terminator.location)) + "\n")
+            output.write("     terminator             " + "..".join(map(str, terminator.location)) + "\n")
         else:
-            output.write("terminator\tcomplement(" + "..".join(map(str, terminator.location)) + ")\n")
-        output.write("\t\t/note=\"confidence:" + str(terminator.confidence) + "\thp_score:" + terminator.hpScore + "\ttail_score:" + terminator.tailScore + "\t" + sequence + "\n")
+            output.write("     terminator             complement(" + "..".join(map(str, terminator.location)) + ")\n")
+        output.write("                            /note=\"confidence:" + str(terminator.confidence) + "\thp_score:" + str(terminator.hpScore) + "\ttail_score:" + str(terminator.tailScore) + "\"\n")
 
 def writeGenes(output, genes):
     for gene in genes:

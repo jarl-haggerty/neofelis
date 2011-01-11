@@ -27,8 +27,18 @@ class Promoter():
   def __init__(self):
     self.ldf = 0
     self.position = None
+    self.location = None
     self.signal10Location = None
     self.signal35Location = None
+
+  def __str__(self):
+    result = "<"
+    result += "LDF = " + str(self.ldf) + ", "
+    result += "Position = " + str(self.position) + ", "
+    result += "Signal10Location = " + str(self.signal10Location) + ", "
+    result += "Signal35Location = " + str(self.signal35Location)
+    result += ">"
+    return result
 
 def parseBPROM(bpromData):
   promoters = re.findall(r"\s+Promoter\s+Pos:\s+(\d+)\s+LDF-\s+(\d+\.?\d*)", bpromData)
@@ -40,6 +50,7 @@ def parseBPROM(bpromData):
     result.position = int(promoter[0])
     result.signal10Location = [int(tenBox[0]), int(tenBox[0])+len(tenBox[1])]
     result.signal35Location = [int(thirtyFiveBox[0]), int(thirtyFiveBox[0])+len(thirtyFiveBox[1])]
+    result.location = [min(result.signal10Location + result.signal35Location), max(result.signal10Location + result.signal35Location)]
     return result
   return map(parsePromoter, promoters, tenBoxes, thirtyFiveBoxes)
 
@@ -62,6 +73,7 @@ def reverseCoordinates(genomeLength, promoter):
   newPromoter = Promoter()
   newPromoter.ldf = promoter.ldf
   newPromoter.position = genomeLength+1 - promoter.position
+  newPromoter.location = map(lambda x: genomeLength+1 - x, promoter.location)
   newPromoter.signal10Location = map(lambda x: genomeLength+1 - x, promoter.signal10Location)
   newPromoter.signal35Location = map(lambda x: genomeLength+1 - x, promoter.signal35Location)
   return newPromoter
@@ -70,5 +82,5 @@ def findPromoters(query, name, ldfCutoff):
   genome = utils.loadGenome(query)
   forwardResults = cachedBPROM(genome, "bpromResults/" + name + ".forward.bprom")
   reverseResults = cachedBPROM(utils.reverseComplement(genome), "bpromResults/" + name + ".reverse.bprom")
-  map(functools.partial(reverseCoordinates, len(genome)), reverseResults)
+  reverseResults = map(functools.partial(reverseCoordinates, len(genome)), reverseResults)
   return filter(lambda x: x.ldf > ldfCutoff, forwardResults + reverseResults)
