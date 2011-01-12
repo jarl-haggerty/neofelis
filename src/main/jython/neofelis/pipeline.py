@@ -43,7 +43,8 @@ messages = ["Searching for genes via genemark",
             "Searching for intergenic genes",
             "Removing overlapping genes",
             "Using BPROM to find promoters",
-            "Using transterm to find terminators"]
+            "Using transterm to find terminators",
+            "Removing transcriptionsignals which conflict with genes"]
 
 class DoneAction(AbstractAction):
   def __init__(self):
@@ -146,15 +147,18 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
     updateProgress(query)
     initialGenes = genemark.findGenes("query.fas", name, blastLocation, database, eValue, genemarkLocation, matrix, remote)
     artemis.writeArtemisFile(name + "genemark.art", genome, initialGenes.values())
+    
     updateProgress(query)
     extendedGenes = extend.extendGenes("query.fas", initialGenes, name, blastLocation, database, eValue, remote)
     artemis.writeArtemisFile(name + "extended.art", genome, extendedGenes.values())
+    
     updateProgress(query)
     intergenicGenes = intergenic.findIntergenics("query.fas", extendedGenes, name, minLength, blastLocation, database, eValue, remote)
     genes = {}
     for k, v in extendedGenes.items() + intergenicGenes.items():
       genes[k] = v
     artemis.writeArtemisFile(name + "intergenic.art", genome, genes.values())
+    
     updateProgress(query)
     scaffolded = scaffolds.refineScaffolds(genes, scaffoldingDistance)
     artemis.writeArtemisFile(name + "scaffolds.art", genome, scaffolded.values())
@@ -168,12 +172,11 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
     initialTerminators = terminators.findTerminators("query.fas", name, genes.values(), transtermLocation)
     artemis.writeArtemisFile(name + "promoters-and-terminators.art", genome, scaffolded.values(), initialPromoters, initialTerminators)
 
+    updateProgress(query)
     filteredSignals = signals.filterSignals(genes.values(), initialPromoters + initialTerminators)
     filteredPromoters = filter(lambda x: isinstance(x, promoters.Promoter), filteredSignals)
     filteredTerminators = filter(lambda x: isinstance(x, terminators.Terminator), filteredSignals)
 
     artemis.writeArtemisFile(name + "final.art", genome, scaffolded.values(), filteredPromoters, filteredTerminators)
-    #updateProgress(query)
-    
     
   finished()
