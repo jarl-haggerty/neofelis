@@ -1,3 +1,1025 @@
+     -10_signal             5177..5186
+                            /note=Promoter Position:5192	LDF:12.02
+                            /colour=255 0 255
+     -35_signal             5158..5164
+                            /note=Promoter Position:5192	LDF:12.02
+                            /colour=255 0 255
+     -10_signal             18162..18171
+                            /note=Promoter Position:18177	LDF:11.95
+                            /colour=255 0 255
+     -35_signal             18141..18147
+                            /note=Promoter Position:18177	LDF:11.95
+                            /colour=255 0 255
+     -10_signal             9484..9493
+                            /note=Promoter Position:9499	LDF:10.85
+                            /colour=255 0 255
+     -35_signal             9460..9466
+                            /note=Promoter Position:9499	LDF:10.85
+                            /colour=255 0 255
+     -10_signal             19842..19851
+                            /note=Promoter Position:19857	LDF:10.78
+                            /colour=255 0 255
+     -35_signal             19825..19831
+                            /note=Promoter Position:19857	LDF:10.78
+                            /colour=255 0 255
+     -10_signal             58469..58478
+                            /note=Promoter Position:58484	LDF:10.02
+                            /colour=255 0 255
+     -35_signal             58450..58456
+                            /note=Promoter Position:58484	LDF:10.02
+                            /colour=255 0 255
+     -10_signal             2292..2301
+                            /note=Promoter Position:2307	LDF:9.76
+                            /colour=255 0 255
+     -35_signal             2268..2274
+                            /note=Promoter Position:2307	LDF:9.76
+                            /colour=255 0 255
+     -10_signal             37757..37766
+                            /note=Promoter Position:37772	LDF:9.69
+                            /colour=255 0 255
+     -35_signal             37735..37741
+                            /note=Promoter Position:37772	LDF:9.69
+                            /colour=255 0 255
+     -10_signal             36408..36417
+                            /note=Promoter Position:36427	LDF:9.37
+                            /colour=255 0 255
+     -35_signal             36393..36399
+                            /note=Promoter Position:36427	LDF:9.37
+                            /colour=255 0 255
+     -10_signal             76483..76492
+                            /note=Promoter Position:76498	LDF:9.33
+                            /colour=255 0 255
+     -35_signal             76463..76469
+                            /note=Promoter Position:76498	LDF:9.33
+                            /colour=255 0 255
+     -10_signal             70338..70347
+                            /note=Promoter Position:70353	LDF:8.74
+                            /colour=255 0 255
+     -35_signal             70321..70327
+                            /note=Promoter Position:70353	LDF:8.74
+                            /colour=255 0 255
+     -10_signal             67060..67069
+                            /note=Promoter Position:67075	LDF:8.65
+                            /colour=255 0 255
+     -35_signal             67035..67041
+                            /note=Promoter Position:67075	LDF:8.65
+                            /colour=255 0 255
+     -10_signal             54405..54414
+                            /note=Promoter Position:54420	LDF:8.56
+                            /colour=255 0 255
+     -35_signal             54381..54387
+                            /note=Promoter Position:54420	LDF:8.56
+                            /colour=255 0 255
+     -10_signal             831..840
+                            /note=Promoter Position:846	LDF:8.37
+                            /colour=255 0 255
+     -35_signal             810..816
+                            /note=Promoter Position:846	LDF:8.37
+                            /colour=255 0 255
+     -10_signal             2951..2960
+                            /note=Promoter Position:2966	LDF:8.17
+                            /colour=255 0 255
+     -35_signal             2932..2938
+                            /note=Promoter Position:2966	LDF:8.17
+                            /colour=255 0 255
+     -10_signal             41148..41157
+                            /note=Promoter Position:41163	LDF:7.78
+                            /colour=255 0 255
+     -35_signal             41129..41135
+                            /note=Promoter Position:41163	LDF:7.78
+                            /colour=255 0 255
+     -10_signal             75399..75408
+                            /note=Promoter Position:75414	LDF:7.76
+                            /colour=255 0 255
+     -35_signal             75381..75387
+                            /note=Promoter Position:75414	LDF:7.76
+                            /colour=255 0 255
+     -10_signal             496..505
+                            /note=Promoter Position:511	LDF:7.52
+                            /colour=255 0 255
+     -35_signal             472..478
+                            /note=Promoter Position:511	LDF:7.52
+                            /colour=255 0 255
+     -10_signal             74193..74202
+                            /note=Promoter Position:74208	LDF:7.22
+                            /colour=255 0 255
+     -35_signal             74172..74178
+                            /note=Promoter Position:74208	LDF:7.22
+                            /colour=255 0 255
+     -10_signal             35212..35221
+                            /note=Promoter Position:35227	LDF:7.16
+                            /colour=255 0 255
+     -35_signal             35192..35198
+                            /note=Promoter Position:35227	LDF:7.16
+                            /colour=255 0 255
+     -10_signal             75823..75832
+                            /note=Promoter Position:75838	LDF:7.13
+                            /colour=255 0 255
+     -35_signal             75803..75809
+                            /note=Promoter Position:75838	LDF:7.13
+                            /colour=255 0 255
+     -10_signal             64945..64954
+                            /note=Promoter Position:64960	LDF:7.09
+                            /colour=255 0 255
+     -35_signal             64921..64927
+                            /note=Promoter Position:64960	LDF:7.09
+                            /colour=255 0 255
+     -10_signal             59772..59781
+                            /note=Promoter Position:59787	LDF:7.04
+                            /colour=255 0 255
+     -35_signal             59755..59761
+                            /note=Promoter Position:59787	LDF:7.04
+                            /colour=255 0 255
+     -10_signal             31254..31263
+                            /note=Promoter Position:31269	LDF:6.62
+                            /colour=255 0 255
+     -35_signal             31233..31239
+                            /note=Promoter Position:31269	LDF:6.62
+                            /colour=255 0 255
+     -10_signal             19189..19198
+                            /note=Promoter Position:19204	LDF:6.25
+                            /colour=255 0 255
+     -35_signal             19168..19174
+                            /note=Promoter Position:19204	LDF:6.25
+                            /colour=255 0 255
+     -10_signal             1276..1285
+                            /note=Promoter Position:1291	LDF:5.89
+                            /colour=255 0 255
+     -35_signal             1256..1262
+                            /note=Promoter Position:1291	LDF:5.89
+                            /colour=255 0 255
+     -10_signal             52330..52339
+                            /note=Promoter Position:52345	LDF:5.89
+                            /colour=255 0 255
+     -35_signal             52307..52313
+                            /note=Promoter Position:52345	LDF:5.89
+                            /colour=255 0 255
+     -10_signal             38731..38740
+                            /note=Promoter Position:38746	LDF:5.8
+                            /colour=255 0 255
+     -35_signal             38708..38714
+                            /note=Promoter Position:38746	LDF:5.8
+                            /colour=255 0 255
+     -10_signal             72188..72197
+                            /note=Promoter Position:72203	LDF:5.67
+                            /colour=255 0 255
+     -35_signal             72166..72172
+                            /note=Promoter Position:72203	LDF:5.67
+                            /colour=255 0 255
+     -10_signal             60920..60929
+                            /note=Promoter Position:60935	LDF:5.16
+                            /colour=255 0 255
+     -35_signal             60901..60907
+                            /note=Promoter Position:60935	LDF:5.16
+                            /colour=255 0 255
+     -10_signal             65346..65355
+                            /note=Promoter Position:65361	LDF:5.1
+                            /colour=255 0 255
+     -35_signal             65322..65328
+                            /note=Promoter Position:65361	LDF:5.1
+                            /colour=255 0 255
+     -10_signal             41728..41737
+                            /note=Promoter Position:41743	LDF:4.93
+                            /colour=255 0 255
+     -35_signal             41711..41717
+                            /note=Promoter Position:41743	LDF:4.93
+                            /colour=255 0 255
+     -10_signal             1921..1930
+                            /note=Promoter Position:1936	LDF:4.73
+                            /colour=255 0 255
+     -35_signal             1902..1908
+                            /note=Promoter Position:1936	LDF:4.73
+                            /colour=255 0 255
+     -10_signal             70038..70047
+                            /note=Promoter Position:70052	LDF:4.65
+                            /colour=255 0 255
+     -35_signal             70017..70023
+                            /note=Promoter Position:70052	LDF:4.65
+                            /colour=255 0 255
+     -10_signal             73885..73894
+                            /note=Promoter Position:73900	LDF:4.46
+                            /colour=255 0 255
+     -35_signal             73862..73868
+                            /note=Promoter Position:73900	LDF:4.46
+                            /colour=255 0 255
+     -10_signal             74990..74999
+                            /note=Promoter Position:75005	LDF:3.94
+                            /colour=255 0 255
+     -35_signal             74965..74971
+                            /note=Promoter Position:75005	LDF:3.94
+                            /colour=255 0 255
+     -10_signal             74533..74542
+                            /note=Promoter Position:74548	LDF:3.38
+                            /colour=255 0 255
+     -35_signal             74516..74522
+                            /note=Promoter Position:74548	LDF:3.38
+                            /colour=255 0 255
+     -10_signal             2637..2646
+                            /note=Promoter Position:2653	LDF:3.24
+                            /colour=255 0 255
+     -35_signal             2616..2622
+                            /note=Promoter Position:2653	LDF:3.24
+                            /colour=255 0 255
+     -10_signal             1607..1616
+                            /note=Promoter Position:1622	LDF:1.22
+                            /colour=255 0 255
+     -35_signal             1590..1596
+                            /note=Promoter Position:1622	LDF:1.22
+                            /colour=255 0 255
+     -10_signal             complement(2320..2311)
+                            /note=Promoter Position:2305	LDF:13.41
+                            /colour=255 0 255
+     -35_signal             complement(2341..2335)
+                            /note=Promoter Position:2305	LDF:13.41
+                            /colour=255 0 255
+     -10_signal             complement(55376..55367)
+                            /note=Promoter Position:55361	LDF:12.01
+                            /colour=255 0 255
+     -35_signal             complement(55397..55391)
+                            /note=Promoter Position:55361	LDF:12.01
+                            /colour=255 0 255
+     -10_signal             complement(9455..9446)
+                            /note=Promoter Position:9440	LDF:11.71
+                            /colour=255 0 255
+     -35_signal             complement(9477..9471)
+                            /note=Promoter Position:9440	LDF:11.71
+                            /colour=255 0 255
+     -10_signal             complement(31245..31236)
+                            /note=Promoter Position:31231	LDF:11.47
+                            /colour=255 0 255
+     -35_signal             complement(31270..31264)
+                            /note=Promoter Position:31231	LDF:11.47
+                            /colour=255 0 255
+     -10_signal             complement(72512..72503)
+                            /note=Promoter Position:72497	LDF:11.42
+                            /colour=255 0 255
+     -35_signal             complement(72531..72525)
+                            /note=Promoter Position:72497	LDF:11.42
+                            /colour=255 0 255
+     -10_signal             complement(59108..59099)
+                            /note=Promoter Position:59096	LDF:11.35
+                            /colour=255 0 255
+     -35_signal             complement(59132..59126)
+                            /note=Promoter Position:59096	LDF:11.35
+                            /colour=255 0 255
+     -10_signal             complement(45063..45054)
+                            /note=Promoter Position:45048	LDF:10.99
+                            /colour=255 0 255
+     -35_signal             complement(45083..45077)
+                            /note=Promoter Position:45048	LDF:10.99
+                            /colour=255 0 255
+     -10_signal             complement(503..494)
+                            /note=Promoter Position:488	LDF:10.82
+                            /colour=255 0 255
+     -35_signal             complement(528..522)
+                            /note=Promoter Position:488	LDF:10.82
+                            /colour=255 0 255
+     -10_signal             complement(7593..7584)
+                            /note=Promoter Position:7578	LDF:10.18
+                            /colour=255 0 255
+     -35_signal             complement(7613..7607)
+                            /note=Promoter Position:7578	LDF:10.18
+                            /colour=255 0 255
+     -10_signal             complement(10398..10389)
+                            /note=Promoter Position:10382	LDF:10.09
+                            /colour=255 0 255
+     -35_signal             complement(10421..10415)
+                            /note=Promoter Position:10382	LDF:10.09
+                            /colour=255 0 255
+     -10_signal             complement(5104..5095)
+                            /note=Promoter Position:5089	LDF:10.05
+                            /colour=255 0 255
+     -35_signal             complement(5121..5115)
+                            /note=Promoter Position:5089	LDF:10.05
+                            /colour=255 0 255
+     -10_signal             complement(67249..67240)
+                            /note=Promoter Position:67234	LDF:9.67
+                            /colour=255 0 255
+     -35_signal             complement(67266..67260)
+                            /note=Promoter Position:67234	LDF:9.67
+                            /colour=255 0 255
+     -10_signal             complement(63588..63579)
+                            /note=Promoter Position:63573	LDF:9.58
+                            /colour=255 0 255
+     -35_signal             complement(63609..63603)
+                            /note=Promoter Position:63573	LDF:9.58
+                            /colour=255 0 255
+     -10_signal             complement(26033..26024)
+                            /note=Promoter Position:26019	LDF:9.52
+                            /colour=255 0 255
+     -35_signal             complement(26059..26053)
+                            /note=Promoter Position:26019	LDF:9.52
+                            /colour=255 0 255
+     -10_signal             complement(60322..60313)
+                            /note=Promoter Position:60307	LDF:9.5
+                            /colour=255 0 255
+     -35_signal             complement(60346..60340)
+                            /note=Promoter Position:60307	LDF:9.5
+                            /colour=255 0 255
+     -10_signal             complement(3493..3484)
+                            /note=Promoter Position:3478	LDF:9.49
+                            /colour=255 0 255
+     -35_signal             complement(3510..3504)
+                            /note=Promoter Position:3478	LDF:9.49
+                            /colour=255 0 255
+     -10_signal             complement(55919..55910)
+                            /note=Promoter Position:55904	LDF:9.48
+                            /colour=255 0 255
+     -35_signal             complement(55942..55936)
+                            /note=Promoter Position:55904	LDF:9.48
+                            /colour=255 0 255
+     -10_signal             complement(68909..68900)
+                            /note=Promoter Position:68894	LDF:9.44
+                            /colour=255 0 255
+     -35_signal             complement(68929..68923)
+                            /note=Promoter Position:68894	LDF:9.44
+                            /colour=255 0 255
+     -10_signal             complement(69412..69403)
+                            /note=Promoter Position:69397	LDF:9.13
+                            /colour=255 0 255
+     -35_signal             complement(69432..69426)
+                            /note=Promoter Position:69397	LDF:9.13
+                            /colour=255 0 255
+     -10_signal             complement(60893..60884)
+                            /note=Promoter Position:60878	LDF:9.03
+                            /colour=255 0 255
+     -35_signal             complement(60910..60904)
+                            /note=Promoter Position:60878	LDF:9.03
+                            /colour=255 0 255
+     -10_signal             complement(71914..71905)
+                            /note=Promoter Position:71899	LDF:8.87
+                            /colour=255 0 255
+     -35_signal             complement(71937..71931)
+                            /note=Promoter Position:71899	LDF:8.87
+                            /colour=255 0 255
+     -10_signal             complement(70380..70371)
+                            /note=Promoter Position:70365	LDF:8.81
+                            /colour=255 0 255
+     -35_signal             complement(70401..70395)
+                            /note=Promoter Position:70365	LDF:8.81
+                            /colour=255 0 255
+     -10_signal             complement(16131..16122)
+                            /note=Promoter Position:16116	LDF:8.78
+                            /colour=255 0 255
+     -35_signal             complement(16155..16149)
+                            /note=Promoter Position:16116	LDF:8.78
+                            /colour=255 0 255
+     -10_signal             complement(49244..49235)
+                            /note=Promoter Position:49229	LDF:8.64
+                            /colour=255 0 255
+     -35_signal             complement(49262..49256)
+                            /note=Promoter Position:49229	LDF:8.64
+                            /colour=255 0 255
+     -10_signal             complement(19978..19969)
+                            /note=Promoter Position:19963	LDF:8.56
+                            /colour=255 0 255
+     -35_signal             complement(20002..19996)
+                            /note=Promoter Position:19963	LDF:8.56
+                            /colour=255 0 255
+     -10_signal             complement(47076..47067)
+                            /note=Promoter Position:47061	LDF:8.55
+                            /colour=255 0 255
+     -35_signal             complement(47094..47088)
+                            /note=Promoter Position:47061	LDF:8.55
+                            /colour=255 0 255
+     -10_signal             complement(24460..24451)
+                            /note=Promoter Position:24445	LDF:8.45
+                            /colour=255 0 255
+     -35_signal             complement(24481..24475)
+                            /note=Promoter Position:24445	LDF:8.45
+                            /colour=255 0 255
+     -10_signal             complement(69802..69793)
+                            /note=Promoter Position:69787	LDF:8.4
+                            /colour=255 0 255
+     -35_signal             complement(69822..69816)
+                            /note=Promoter Position:69787	LDF:8.4
+                            /colour=255 0 255
+     -10_signal             complement(31692..31683)
+                            /note=Promoter Position:31677	LDF:8.28
+                            /colour=255 0 255
+     -35_signal             complement(31715..31709)
+                            /note=Promoter Position:31677	LDF:8.28
+                            /colour=255 0 255
+     -10_signal             complement(9963..9954)
+                            /note=Promoter Position:9948	LDF:8.25
+                            /colour=255 0 255
+     -35_signal             complement(9987..9981)
+                            /note=Promoter Position:9948	LDF:8.25
+                            /colour=255 0 255
+     -10_signal             complement(35075..35066)
+                            /note=Promoter Position:35060	LDF:8.2
+                            /colour=255 0 255
+     -35_signal             complement(35094..35088)
+                            /note=Promoter Position:35060	LDF:8.2
+                            /colour=255 0 255
+     -10_signal             complement(27411..27402)
+                            /note=Promoter Position:27396	LDF:8.16
+                            /colour=255 0 255
+     -35_signal             complement(27433..27427)
+                            /note=Promoter Position:27396	LDF:8.16
+                            /colour=255 0 255
+     -10_signal             complement(51633..51624)
+                            /note=Promoter Position:51618	LDF:8.14
+                            /colour=255 0 255
+     -35_signal             complement(51652..51646)
+                            /note=Promoter Position:51618	LDF:8.14
+                            /colour=255 0 255
+     -10_signal             complement(32467..32458)
+                            /note=Promoter Position:32452	LDF:7.97
+                            /colour=255 0 255
+     -35_signal             complement(32485..32479)
+                            /note=Promoter Position:32452	LDF:7.97
+                            /colour=255 0 255
+     -10_signal             complement(75986..75977)
+                            /note=Promoter Position:75971	LDF:7.79
+                            /colour=255 0 255
+     -35_signal             complement(76005..75999)
+                            /note=Promoter Position:75971	LDF:7.79
+                            /colour=255 0 255
+     -10_signal             complement(59891..59882)
+                            /note=Promoter Position:59876	LDF:7.76
+                            /colour=255 0 255
+     -35_signal             complement(59911..59905)
+                            /note=Promoter Position:59876	LDF:7.76
+                            /colour=255 0 255
+     -10_signal             complement(36163..36154)
+                            /note=Promoter Position:36148	LDF:7.62
+                            /colour=255 0 255
+     -35_signal             complement(36181..36175)
+                            /note=Promoter Position:36148	LDF:7.62
+                            /colour=255 0 255
+     -10_signal             complement(11508..11499)
+                            /note=Promoter Position:11493	LDF:7.54
+                            /colour=255 0 255
+     -35_signal             complement(11532..11526)
+                            /note=Promoter Position:11493	LDF:7.54
+                            /colour=255 0 255
+     -10_signal             complement(74692..74683)
+                            /note=Promoter Position:74677	LDF:7.53
+                            /colour=255 0 255
+     -35_signal             complement(74713..74707)
+                            /note=Promoter Position:74677	LDF:7.53
+                            /colour=255 0 255
+     -10_signal             complement(54369..54360)
+                            /note=Promoter Position:54354	LDF:7.5
+                            /colour=255 0 255
+     -35_signal             complement(54386..54380)
+                            /note=Promoter Position:54354	LDF:7.5
+                            /colour=255 0 255
+     -10_signal             complement(64607..64598)
+                            /note=Promoter Position:64592	LDF:7.47
+                            /colour=255 0 255
+     -35_signal             complement(64627..64621)
+                            /note=Promoter Position:64592	LDF:7.47
+                            /colour=255 0 255
+     -10_signal             complement(14202..14193)
+                            /note=Promoter Position:14187	LDF:7.41
+                            /colour=255 0 255
+     -35_signal             complement(14222..14216)
+                            /note=Promoter Position:14187	LDF:7.41
+                            /colour=255 0 255
+     -10_signal             complement(52140..52131)
+                            /note=Promoter Position:52125	LDF:7.4
+                            /colour=255 0 255
+     -35_signal             complement(52158..52152)
+                            /note=Promoter Position:52125	LDF:7.4
+                            /colour=255 0 255
+     -10_signal             complement(22793..22784)
+                            /note=Promoter Position:22778	LDF:7.34
+                            /colour=255 0 255
+     -35_signal             complement(22817..22811)
+                            /note=Promoter Position:22778	LDF:7.34
+                            /colour=255 0 255
+     -10_signal             complement(4369..4360)
+                            /note=Promoter Position:4354	LDF:7.28
+                            /colour=255 0 255
+     -35_signal             complement(4387..4381)
+                            /note=Promoter Position:4354	LDF:7.28
+                            /colour=255 0 255
+     -10_signal             complement(33117..33108)
+                            /note=Promoter Position:33102	LDF:7.21
+                            /colour=255 0 255
+     -35_signal             complement(33136..33130)
+                            /note=Promoter Position:33102	LDF:7.21
+                            /colour=255 0 255
+     -10_signal             complement(47649..47640)
+                            /note=Promoter Position:47634	LDF:7.14
+                            /colour=255 0 255
+     -35_signal             complement(47669..47663)
+                            /note=Promoter Position:47634	LDF:7.14
+                            /colour=255 0 255
+     -10_signal             complement(37609..37600)
+                            /note=Promoter Position:37594	LDF:7.12
+                            /colour=255 0 255
+     -35_signal             complement(37631..37625)
+                            /note=Promoter Position:37594	LDF:7.12
+                            /colour=255 0 255
+     -10_signal             complement(33751..33742)
+                            /note=Promoter Position:33736	LDF:7.12
+                            /colour=255 0 255
+     -35_signal             complement(33771..33765)
+                            /note=Promoter Position:33736	LDF:7.12
+                            /colour=255 0 255
+     -10_signal             complement(28216..28207)
+                            /note=Promoter Position:28201	LDF:7.02
+                            /colour=255 0 255
+     -35_signal             complement(28239..28233)
+                            /note=Promoter Position:28201	LDF:7.02
+                            /colour=255 0 255
+     -10_signal             complement(70738..70729)
+                            /note=Promoter Position:70722	LDF:7.02
+                            /colour=255 0 255
+     -35_signal             complement(70754..70748)
+                            /note=Promoter Position:70722	LDF:7.02
+                            /colour=255 0 255
+     -10_signal             complement(8542..8533)
+                            /note=Promoter Position:8527	LDF:6.93
+                            /colour=255 0 255
+     -35_signal             complement(8561..8555)
+                            /note=Promoter Position:8527	LDF:6.93
+                            /colour=255 0 255
+     -10_signal             complement(29112..29103)
+                            /note=Promoter Position:29096	LDF:6.93
+                            /colour=255 0 255
+     -35_signal             complement(29135..29129)
+                            /note=Promoter Position:29096	LDF:6.93
+                            /colour=255 0 255
+     -10_signal             complement(39797..39788)
+                            /note=Promoter Position:39782	LDF:6.89
+                            /colour=255 0 255
+     -35_signal             complement(39818..39812)
+                            /note=Promoter Position:39782	LDF:6.89
+                            /colour=255 0 255
+     -10_signal             complement(49915..49906)
+                            /note=Promoter Position:49900	LDF:6.89
+                            /colour=255 0 255
+     -35_signal             complement(49932..49926)
+                            /note=Promoter Position:49900	LDF:6.89
+                            /colour=255 0 255
+     -10_signal             complement(38947..38938)
+                            /note=Promoter Position:38932	LDF:6.88
+                            /colour=255 0 255
+     -35_signal             complement(38967..38961)
+                            /note=Promoter Position:38932	LDF:6.88
+                            /colour=255 0 255
+     -10_signal             complement(42341..42332)
+                            /note=Promoter Position:42326	LDF:6.85
+                            /colour=255 0 255
+     -35_signal             complement(42362..42356)
+                            /note=Promoter Position:42326	LDF:6.85
+                            /colour=255 0 255
+     -10_signal             complement(26957..26948)
+                            /note=Promoter Position:26942	LDF:6.84
+                            /colour=255 0 255
+     -35_signal             complement(26977..26971)
+                            /note=Promoter Position:26942	LDF:6.84
+                            /colour=255 0 255
+     -10_signal             complement(17599..17590)
+                            /note=Promoter Position:17584	LDF:6.76
+                            /colour=255 0 255
+     -35_signal             complement(17619..17613)
+                            /note=Promoter Position:17584	LDF:6.76
+                            /colour=255 0 255
+     -10_signal             complement(19157..19148)
+                            /note=Promoter Position:19142	LDF:6.66
+                            /colour=255 0 255
+     -35_signal             complement(19179..19173)
+                            /note=Promoter Position:19142	LDF:6.66
+                            /colour=255 0 255
+     -10_signal             complement(18584..18575)
+                            /note=Promoter Position:18569	LDF:6.58
+                            /colour=255 0 255
+     -35_signal             complement(18609..18603)
+                            /note=Promoter Position:18569	LDF:6.58
+                            /colour=255 0 255
+     -10_signal             complement(36576..36567)
+                            /note=Promoter Position:36561	LDF:6.46
+                            /colour=255 0 255
+     -35_signal             complement(36597..36591)
+                            /note=Promoter Position:36561	LDF:6.46
+                            /colour=255 0 255
+     -10_signal             complement(56225..56216)
+                            /note=Promoter Position:56210	LDF:6.45
+                            /colour=255 0 255
+     -35_signal             complement(56247..56241)
+                            /note=Promoter Position:56210	LDF:6.45
+                            /colour=255 0 255
+     -10_signal             complement(73724..73715)
+                            /note=Promoter Position:73709	LDF:6.24
+                            /colour=255 0 255
+     -35_signal             complement(73743..73737)
+                            /note=Promoter Position:73709	LDF:6.24
+                            /colour=255 0 255
+     -10_signal             complement(48201..48192)
+                            /note=Promoter Position:48186	LDF:6.23
+                            /colour=255 0 255
+     -35_signal             complement(48221..48215)
+                            /note=Promoter Position:48186	LDF:6.23
+                            /colour=255 0 255
+     -10_signal             complement(2845..2836)
+                            /note=Promoter Position:2830	LDF:6.15
+                            /colour=255 0 255
+     -35_signal             complement(2869..2863)
+                            /note=Promoter Position:2830	LDF:6.15
+                            /colour=255 0 255
+     -10_signal             complement(67637..67628)
+                            /note=Promoter Position:67622	LDF:6.13
+                            /colour=255 0 255
+     -35_signal             complement(67661..67655)
+                            /note=Promoter Position:67622	LDF:6.13
+                            /colour=255 0 255
+     -10_signal             complement(7166..7157)
+                            /note=Promoter Position:7151	LDF:6.12
+                            /colour=255 0 255
+     -35_signal             complement(7186..7180)
+                            /note=Promoter Position:7151	LDF:6.12
+                            /colour=255 0 255
+     -10_signal             complement(12979..12970)
+                            /note=Promoter Position:12964	LDF:6.1
+                            /colour=255 0 255
+     -35_signal             complement(12998..12992)
+                            /note=Promoter Position:12964	LDF:6.1
+                            /colour=255 0 255
+     -10_signal             complement(53410..53401)
+                            /note=Promoter Position:53395	LDF:6.07
+                            /colour=255 0 255
+     -35_signal             complement(53429..53423)
+                            /note=Promoter Position:53395	LDF:6.07
+                            /colour=255 0 255
+     -10_signal             complement(65047..65038)
+                            /note=Promoter Position:65032	LDF:6.06
+                            /colour=255 0 255
+     -35_signal             complement(65064..65058)
+                            /note=Promoter Position:65032	LDF:6.06
+                            /colour=255 0 255
+     -10_signal             complement(48688..48679)
+                            /note=Promoter Position:48673	LDF:6.05
+                            /colour=255 0 255
+     -35_signal             complement(48705..48699)
+                            /note=Promoter Position:48673	LDF:6.05
+                            /colour=255 0 255
+     -10_signal             complement(16975..16966)
+                            /note=Promoter Position:16960	LDF:6.02
+                            /colour=255 0 255
+     -35_signal             complement(16995..16989)
+                            /note=Promoter Position:16960	LDF:6.02
+                            /colour=255 0 255
+     -10_signal             complement(8229..8220)
+                            /note=Promoter Position:8214	LDF:6.01
+                            /colour=255 0 255
+     -35_signal             complement(8249..8243)
+                            /note=Promoter Position:8214	LDF:6.01
+                            /colour=255 0 255
+     -10_signal             complement(13464..13455)
+                            /note=Promoter Position:13449	LDF:5.83
+                            /colour=255 0 255
+     -35_signal             complement(13481..13475)
+                            /note=Promoter Position:13449	LDF:5.83
+                            /colour=255 0 255
+     -10_signal             complement(21933..21924)
+                            /note=Promoter Position:21918	LDF:5.8
+                            /colour=255 0 255
+     -35_signal             complement(21954..21948)
+                            /note=Promoter Position:21918	LDF:5.8
+                            /colour=255 0 255
+     -10_signal             complement(34692..34683)
+                            /note=Promoter Position:34677	LDF:5.8
+                            /colour=255 0 255
+     -35_signal             complement(34714..34708)
+                            /note=Promoter Position:34677	LDF:5.8
+                            /colour=255 0 255
+     -10_signal             complement(23609..23600)
+                            /note=Promoter Position:23594	LDF:5.72
+                            /colour=255 0 255
+     -35_signal             complement(23629..23623)
+                            /note=Promoter Position:23594	LDF:5.72
+                            /colour=255 0 255
+     -10_signal             complement(14638..14629)
+                            /note=Promoter Position:14623	LDF:5.7
+                            /colour=255 0 255
+     -35_signal             complement(14659..14653)
+                            /note=Promoter Position:14623	LDF:5.7
+                            /colour=255 0 255
+     -10_signal             complement(71560..71551)
+                            /note=Promoter Position:71545	LDF:5.68
+                            /colour=255 0 255
+     -35_signal             complement(71579..71573)
+                            /note=Promoter Position:71545	LDF:5.68
+                            /colour=255 0 255
+     -10_signal             complement(53964..53955)
+                            /note=Promoter Position:53949	LDF:5.65
+                            /colour=255 0 255
+     -35_signal             complement(53988..53982)
+                            /note=Promoter Position:53949	LDF:5.65
+                            /colour=255 0 255
+     -10_signal             complement(66799..66790)
+                            /note=Promoter Position:66784	LDF:5.64
+                            /colour=255 0 255
+     -35_signal             complement(66816..66810)
+                            /note=Promoter Position:66784	LDF:5.64
+                            /colour=255 0 255
+     -10_signal             complement(61858..61849)
+                            /note=Promoter Position:61842	LDF:5.53
+                            /colour=255 0 255
+     -35_signal             complement(61879..61873)
+                            /note=Promoter Position:61842	LDF:5.53
+                            /colour=255 0 255
+     -10_signal             complement(64297..64288)
+                            /note=Promoter Position:64282	LDF:5.52
+                            /colour=255 0 255
+     -35_signal             complement(64316..64310)
+                            /note=Promoter Position:64282	LDF:5.52
+                            /colour=255 0 255
+     -10_signal             complement(25361..25352)
+                            /note=Promoter Position:25346	LDF:5.45
+                            /colour=255 0 255
+     -35_signal             complement(25379..25373)
+                            /note=Promoter Position:25346	LDF:5.45
+                            /colour=255 0 255
+     -10_signal             complement(62351..62342)
+                            /note=Promoter Position:62336	LDF:5.42
+                            /colour=255 0 255
+     -35_signal             complement(62373..62367)
+                            /note=Promoter Position:62336	LDF:5.42
+                            /colour=255 0 255
+     -10_signal             complement(43257..43248)
+                            /note=Promoter Position:43242	LDF:5.33
+                            /colour=255 0 255
+     -35_signal             complement(43278..43272)
+                            /note=Promoter Position:43242	LDF:5.33
+                            /colour=255 0 255
+     -10_signal             complement(65399..65390)
+                            /note=Promoter Position:65384	LDF:5.33
+                            /colour=255 0 255
+     -35_signal             complement(65420..65414)
+                            /note=Promoter Position:65384	LDF:5.33
+                            /colour=255 0 255
+     -10_signal             complement(63162..63153)
+                            /note=Promoter Position:63147	LDF:5.28
+                            /colour=255 0 255
+     -35_signal             complement(63181..63175)
+                            /note=Promoter Position:63147	LDF:5.28
+                            /colour=255 0 255
+     -10_signal             complement(44255..44246)
+                            /note=Promoter Position:44240	LDF:5.21
+                            /colour=255 0 255
+     -35_signal             complement(44277..44271)
+                            /note=Promoter Position:44240	LDF:5.21
+                            /colour=255 0 255
+     -10_signal             complement(30286..30277)
+                            /note=Promoter Position:30271	LDF:5.17
+                            /colour=255 0 255
+     -35_signal             complement(30307..30301)
+                            /note=Promoter Position:30271	LDF:5.17
+                            /colour=255 0 255
+     -10_signal             complement(50291..50282)
+                            /note=Promoter Position:50276	LDF:5.13
+                            /colour=255 0 255
+     -35_signal             complement(50308..50302)
+                            /note=Promoter Position:50276	LDF:5.13
+                            /colour=255 0 255
+     -10_signal             complement(45963..45954)
+                            /note=Promoter Position:45948	LDF:5.11
+                            /colour=255 0 255
+     -35_signal             complement(45980..45974)
+                            /note=Promoter Position:45948	LDF:5.11
+                            /colour=255 0 255
+     -10_signal             complement(56673..56664)
+                            /note=Promoter Position:56658	LDF:5.06
+                            /colour=255 0 255
+     -35_signal             complement(56696..56690)
+                            /note=Promoter Position:56658	LDF:5.06
+                            /colour=255 0 255
+     -10_signal             complement(29980..29971)
+                            /note=Promoter Position:29964	LDF:5.04
+                            /colour=255 0 255
+     -35_signal             complement(30001..29995)
+                            /note=Promoter Position:29964	LDF:5.04
+                            /colour=255 0 255
+     -10_signal             complement(15329..15320)
+                            /note=Promoter Position:15314	LDF:5.03
+                            /colour=255 0 255
+     -35_signal             complement(15354..15348)
+                            /note=Promoter Position:15314	LDF:5.03
+                            /colour=255 0 255
+     -10_signal             complement(24097..24088)
+                            /note=Promoter Position:24082	LDF:4.92
+                            /colour=255 0 255
+     -35_signal             complement(24121..24115)
+                            /note=Promoter Position:24082	LDF:4.92
+                            /colour=255 0 255
+     -10_signal             complement(41525..41516)
+                            /note=Promoter Position:41510	LDF:4.78
+                            /colour=255 0 255
+     -35_signal             complement(41548..41542)
+                            /note=Promoter Position:41510	LDF:4.78
+                            /colour=255 0 255
+     -10_signal             complement(40270..40261)
+                            /note=Promoter Position:40255	LDF:4.7
+                            /colour=255 0 255
+     -35_signal             complement(40290..40284)
+                            /note=Promoter Position:40255	LDF:4.7
+                            /colour=255 0 255
+     -10_signal             complement(58139..58130)
+                            /note=Promoter Position:58124	LDF:4.69
+                            /colour=255 0 255
+     -35_signal             complement(58160..58154)
+                            /note=Promoter Position:58124	LDF:4.69
+                            /colour=255 0 255
+     -10_signal             complement(54721..54712)
+                            /note=Promoter Position:54706	LDF:4.61
+                            /colour=255 0 255
+     -35_signal             complement(54742..54736)
+                            /note=Promoter Position:54706	LDF:4.61
+                            /colour=255 0 255
+     -10_signal             complement(13781..13772)
+                            /note=Promoter Position:13766	LDF:4.45
+                            /colour=255 0 255
+     -35_signal             complement(13801..13795)
+                            /note=Promoter Position:13766	LDF:4.45
+                            /colour=255 0 255
+     -10_signal             complement(9043..9034)
+                            /note=Promoter Position:9028	LDF:4.33
+                            /colour=255 0 255
+     -35_signal             complement(9067..9061)
+                            /note=Promoter Position:9028	LDF:4.33
+                            /colour=255 0 255
+     -10_signal             complement(3986..3977)
+                            /note=Promoter Position:3971	LDF:4.26
+                            /colour=255 0 255
+     -35_signal             complement(4004..3998)
+                            /note=Promoter Position:3971	LDF:4.26
+                            /colour=255 0 255
+     -10_signal             complement(25694..25685)
+                            /note=Promoter Position:25679	LDF:4.25
+                            /colour=255 0 255
+     -35_signal             complement(25714..25708)
+                            /note=Promoter Position:25679	LDF:4.25
+                            /colour=255 0 255
+     -10_signal             complement(61271..61262)
+                            /note=Promoter Position:61256	LDF:4.19
+                            /colour=255 0 255
+     -35_signal             complement(61289..61283)
+                            /note=Promoter Position:61256	LDF:4.19
+                            /colour=255 0 255
+     -10_signal             complement(53074..53065)
+                            /note=Promoter Position:53059	LDF:4.0
+                            /colour=255 0 255
+     -35_signal             complement(53094..53088)
+                            /note=Promoter Position:53059	LDF:4.0
+                            /colour=255 0 255
+     -10_signal             complement(58793..58784)
+                            /note=Promoter Position:58778	LDF:3.9
+                            /colour=255 0 255
+     -35_signal             complement(58814..58808)
+                            /note=Promoter Position:58778	LDF:3.9
+                            /colour=255 0 255
+     -10_signal             complement(72825..72816)
+                            /note=Promoter Position:72809	LDF:3.66
+                            /colour=255 0 255
+     -35_signal             complement(72847..72841)
+                            /note=Promoter Position:72809	LDF:3.66
+                            /colour=255 0 255
+     -10_signal             complement(23273..23264)
+                            /note=Promoter Position:23258	LDF:3.55
+                            /colour=255 0 255
+     -35_signal             complement(23297..23291)
+                            /note=Promoter Position:23258	LDF:3.55
+                            /colour=255 0 255
+     -10_signal             complement(35861..35852)
+                            /note=Promoter Position:35846	LDF:3.4
+                            /colour=255 0 255
+     -35_signal             complement(35883..35877)
+                            /note=Promoter Position:35846	LDF:3.4
+                            /colour=255 0 255
+     -10_signal             complement(5435..5426)
+                            /note=Promoter Position:5420	LDF:3.34
+                            /colour=255 0 255
+     -35_signal             complement(5454..5448)
+                            /note=Promoter Position:5420	LDF:3.34
+                            /colour=255 0 255
+     -10_signal             complement(75036..75027)
+                            /note=Promoter Position:75021	LDF:3.15
+                            /colour=255 0 255
+     -35_signal             complement(75056..75050)
+                            /note=Promoter Position:75021	LDF:3.15
+                            /colour=255 0 255
+     -10_signal             complement(63922..63913)
+                            /note=Promoter Position:63907	LDF:3.1
+                            /colour=255 0 255
+     -35_signal             complement(63940..63934)
+                            /note=Promoter Position:63907	LDF:3.1
+                            /colour=255 0 255
+     -10_signal             complement(27848..27839)
+                            /note=Promoter Position:27833	LDF:3.08
+                            /colour=255 0 255
+     -35_signal             complement(27872..27866)
+                            /note=Promoter Position:27833	LDF:3.08
+                            /colour=255 0 255
+     -10_signal             complement(6833..6824)
+                            /note=Promoter Position:6818	LDF:3.08
+                            /colour=255 0 255
+     -35_signal             complement(6851..6845)
+                            /note=Promoter Position:6818	LDF:3.08
+                            /colour=255 0 255
+     -10_signal             complement(7911..7902)
+                            /note=Promoter Position:7896	LDF:3.01
+                            /colour=255 0 255
+     -35_signal             complement(7934..7928)
+                            /note=Promoter Position:7896	LDF:3.01
+                            /colour=255 0 255
+     -10_signal             complement(19546..19537)
+                            /note=Promoter Position:19531	LDF:2.94
+                            /colour=255 0 255
+     -35_signal             complement(19565..19559)
+                            /note=Promoter Position:19531	LDF:2.94
+                            /colour=255 0 255
+     -10_signal             complement(46760..46751)
+                            /note=Promoter Position:46745	LDF:2.47
+                            /colour=255 0 255
+     -35_signal             complement(46781..46775)
+                            /note=Promoter Position:46745	LDF:2.47
+                            /colour=255 0 255
+     -10_signal             complement(49606..49597)
+                            /note=Promoter Position:49591	LDF:2.41
+                            /colour=255 0 255
+     -35_signal             complement(49626..49620)
+                            /note=Promoter Position:49591	LDF:2.41
+                            /colour=255 0 255
+     -10_signal             complement(32813..32804)
+                            /note=Promoter Position:32798	LDF:2.33
+                            /colour=255 0 255
+     -35_signal             complement(32833..32827)
+                            /note=Promoter Position:32798	LDF:2.33
+                            /colour=255 0 255
+     -10_signal             complement(15003..14994)
+                            /note=Promoter Position:14988	LDF:1.44
+                            /colour=255 0 255
+     -35_signal             complement(15021..15015)
+                            /note=Promoter Position:14988	LDF:1.44
+                            /colour=255 0 255
+     terminator             5035..5070
+                            /note="confidence:100	hp_score:-12.8	tail_score:-5.8187"
+     terminator             19184..19207
+                            /note="confidence:93	hp_score:-9.7	tail_score:-4.4267"
+     terminator             19812..19833
+                            /note="confidence:91	hp_score:-5.1	tail_score:-5.98781"
+     terminator             35225..35264
+                            /note="confidence:100	hp_score:-12.5	tail_score:-5.15381"
+     terminator             35227..35262
+                            /note="confidence:100	hp_score:-15.1	tail_score:-4.19215"
+     terminator             38699..38720
+                            /note="confidence:84	hp_score:-8.8	tail_score:-4.23434"
+     terminator             41682..41705
+                            /note="confidence:100	hp_score:-6.8	tail_score:-6.14618"
+     terminator             47531..47557
+                            /note="confidence:100	hp_score:-11.0	tail_score:-5.1417"
+     terminator             54371..54397
+                            /note="confidence:100	hp_score:-10.3	tail_score:-5.60689"
+     terminator             59123..59146
+                            /note="confidence:95	hp_score:-5.3	tail_score:-6.14618"
+     terminator             63348..63375
+                            /note="confidence:100	hp_score:-11.5	tail_score:-4.85918"
+     terminator             69359..69380
+                            /note="confidence:100	hp_score:-8.8	tail_score:-6.07969"
+     terminator             complement(5077..5028)
+                            /note="confidence:100	hp_score:-10.3	tail_score:-5.79595"
+     terminator             complement(5075..5030)
+                            /note="confidence:100	hp_score:-12.9	tail_score:-4.53077"
+     terminator             complement(5070..5035)
+                            /note="confidence:100	hp_score:-12.8	tail_score:-5.08086"
+     terminator             complement(6550..6540)
+                            /note="confidence:78	hp_score:-6.8	tail_score:-4.5493"
+     terminator             complement(19207..19184)
+                            /note="confidence:78	hp_score:-9.7	tail_score:-2.98189"
+     terminator             complement(34052..34038)
+                            /note="confidence:77	hp_score:-7.2	tail_score:-4.2416"
+     terminator             complement(35262..35227)
+                            /note="confidence:100	hp_score:-15.1	tail_score:-3.19442"
+     terminator             complement(35259..35230)
+                            /note="confidence:95	hp_score:-11.0	tail_score:-3.73302"
+     terminator             complement(40657..40643)
+                            /note="confidence:77	hp_score:-7.2	tail_score:-4.3208"
+     terminator             complement(41705..41682)
+                            /note="confidence:87	hp_score:-6.8	tail_score:-5.28755"
+     terminator             complement(47562..47526)
+                            /note="confidence:100	hp_score:-11.1	tail_score:-4.72333"
+     terminator             complement(47557..47531)
+                            /note="confidence:100	hp_score:-11.0	tail_score:-5.2853"
+     terminator             complement(54397..54371)
+                            /note="confidence:100	hp_score:-8.1	tail_score:-5.42164"
+     terminator             complement(59146..59123)
+                            /note="confidence:81	hp_score:-5.3	tail_score:-5.42259"
+     terminator             complement(63375..63348)
+                            /note="confidence:100	hp_score:-11.5	tail_score:-4.09827"
+     terminator             complement(64662..64636)
+                            /note="confidence:85	hp_score:-8.1	tail_score:-4.4518"
+     terminator             complement(65135..65118)
+                            /note="confidence:87	hp_score:-7.1	tail_score:-5.10154"
+     terminator             complement(66601..66572)
+                            /note="confidence:76	hp_score:-7.9	tail_score:-3.88541"
+     terminator             complement(66599..66574)
+                            /note="confidence:91	hp_score:-10.5	tail_score:-3.50721"
      CDS             complement(75979..75818)
                      /gene="None"
                      /note="Intergenic"

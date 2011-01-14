@@ -198,7 +198,8 @@ class Iteration:
     self.organism =        "None"
     self.note =            ""
     self.color =           "0 255 255"
-
+    self.intergenic =      False
+    
   def __str__(self):
     result = "<"
     result += "Query = " + str(self.query) + ", "
@@ -210,7 +211,8 @@ class Iteration:
     result += "AlignmentLength = " + str(self.alignmentLength) + ", "
     result += "ID = " + str(self.id) + ", "
     result += "Title = " + str(self.title) + ", "
-    result += "Organism = " + str(self.organism)
+    result += "Organism = " + str(self.organism) + ", "
+    result += "Intergenic = " + str(self.intergenic)
     result += ">"
     return result
 
@@ -372,4 +374,4 @@ def isNaN(number):
   """
   Returns true if number actually is a number.
   """
-  return number == number
+  return number != number

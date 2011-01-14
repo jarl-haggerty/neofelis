@@ -101,13 +101,18 @@ def applyExtensions(genome, genes, extendedGenes):
   forwardStops, reverseStops = getStops(genes.values())
   forwardStops.append(1)
   reverseStops.append(len(genome))
+  
   def reduceFunction(gene, x, y):
     if re.sub(r"(~\d+)~\d+", r"\1", y.query) == gene.query:
       if gene.location[0] < gene.location[1]:
-        gapSize = abs(y.location[0] - max(filter(lambda z: z < gene.location[1], forwardStops)))
+        stop = max(filter(lambda z: z < gene.location[1], forwardStops))
+        gapSize = y.location[0] - stop
       else:
-        gapSize = abs(min(filter(lambda z: z > gene.location[1], reverseStops)) - y.location[0])
-      if gapSize < 100 or abs(x.eValue - y.eValue) < 10e-5 or utils.isNaN(x.eValue-y.eValue):
+        stop = min(filter(lambda z: z > gene.location[1], reverseStops))
+        gapSize = stop - y.location[0]
+      if gapSize < 0:
+        return min(x, y, key = lambda z: abs(z.location[0] - stop))
+      elif gapSize < 100 or abs(x.eValue - y.eValue) < 10e-5 or utils.isNaN(x.eValue-y.eValue):
         return max(x, y, key = lambda z: abs(z.location[1] - z.location[0]))
       else:
         return min(x, y, key = lambda z: z.eValue)

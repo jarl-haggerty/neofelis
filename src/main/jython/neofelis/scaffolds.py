@@ -18,25 +18,26 @@ import sys
 import copy
 
 class Scaffold():
-    def __init__(self, start, stop, genes, containsGenemarkGene):
+    def __init__(self, start, stop, genes):
         self.start = start
         self.stop = stop
-        self.genes = initialGene
-        self.containsGenemarkGene = containsGenemarkGene
-
-    def __eq__(self, that):
-        return self.start == that.start and \
-               self.stop == that.stop and \
-               self.containsGenemarkGene  == that.containsGenemarkGene
+        self.genes = genes
+        
+    def __str__(self):
+        result = "<"
+        result += "start = " + str(self.start) + ", "
+        result += "stop = " + str(self.stop) + ", "
+        result += "genes = " + str(self.genes) + ">"
+        return result
 
 def extractScaffolds(genes, scaffoldingDistance = 100):
     forwardScaffolds, reverseScaffolds = [], []
     for gene in genes:
         if gene.location[0] < gene.location[1]:
-            newScaffold = Scaffold(gene.location[0], gene.location[1], [gene], gene.note != "Intergenic")
+            newScaffold = Scaffold(gene.location[0], gene.location[1], [gene])
             scaffolds = forwardScaffolds
         else:
-            newScaffold = Scaffold(gene.location[1], gene.location[0], [gene], gene.note != "Intergenic")
+            newScaffold = Scaffold(gene.location[1], gene.location[0], [gene])
             scaffolds = reverseScaffolds
         running = True
         while running:
@@ -45,20 +46,18 @@ def extractScaffolds(genes, scaffoldingDistance = 100):
                 if abs(newScaffold.stop - scaffold.start) < scaffoldingDistance:
                     newScaffold.stop = scaffold.stop
                     newScaffold.genes += scaffold.genes
-                    newScaffold.containsGenemarkGene = newScaffold.containsGenemarkGene or scaffold.containsGenemarkGene
                     scaffolds.remove(scaffold)
                     running = True
                     break
                 elif abs(newScaffold.start - scaffold.stop) < scaffoldingDistance:
                     newScaffold.start = scaffold.start
                     newScaffold.genes += scaffold.genes
-                    newScaffold.containsGenemarkGene = newScaffold.containsGenemarkGene or scaffold.containsGenemarkGene
                     scaffolds.remove(scaffold)
                     running = True
                     break
         scaffolds.append(newScaffold)
-    map(lambda x: x.genes.sort(x.genes, key = lambda x: (x.location[0] + x.location[1])/2), forwardScaffolds)
-    map(lambda x: x.genes.sort(x.genes, key = lambda x: (x.location[0] + x.location[1])/2), reverseScaffolds)
+    map(lambda x: x.genes.sort(key = lambda y: (y.location[0] + y.location[1])/2), forwardScaffolds)
+    map(lambda x: x.genes.sort(key = lambda y: (y.location[0] + y.location[1])/2), reverseScaffolds)
     return forwardScaffolds, reverseScaffolds
 
 def overlap(intervalOne, intervalTwo):
@@ -73,55 +72,71 @@ def overlap(intervalOne, intervalTwo):
     else:
         return -1
     
-def filterScaffolds(forwardScaffolds, reverseScaffolds):
+def filterScaffolds(originalForwardScaffolds, originalReverseScaffolds):
+    forwardScaffolds, reverseScaffolds = copy.deepcopy(originalForwardScaffolds), copy.deepcopy(originalReverseScaffolds)
     newForwardScaffolds, newReverseScaffolds = copy.copy(forwardScaffolds), copy.copy(reverseScaffolds)
     for forwardScaffold in forwardScaffolds:
-        for reverseScaffold in reverseScaffolds:
+        for reverseScaffold in copy.copy(newReverseScaffolds):
+            debug = (forwardScaffold.start, forwardScaffold.stop) == (100218, 100653) \
+                    and (reverseScaffold.start, reverseScaffold.stop) == (99869, 100330)
+            if debug:
+                print "debug"
             forwardScaffoldRemoved = False
             while overlap(forwardScaffold, reverseScaffold) > 3:
-                removable = []
-                forwardCenter, reverseCenter = (forwardScaffold.start + forwardScaffold.stop)/2, (reverseScaffold.start + reverseScaffold.stop)/2
+                forwardHasGenemark = reduce(lambda x, y: x or not y.intergenic, forwardScaffold.genes, False)
+                reverseHasGenemark = reduce(lambda x, y: x or not y.intergenic, reverseScaffold.genes, False)
+                forwardCenter = (forwardScaffold.start + forwardScaffold.stop)/2
+                reverseCenter = (reverseScaffold.start + reverseScaffold.stop)/2
                 if forwardCenter < reverseCenter:
-                    removable = filter(lambda x: x.note == "Intergenic", [forwardScaffold.genes[-1], reverseScaffold.genes[0]])
+                    if forwardHasGenemark and not reverseHasGenemark:
+                        removable = [reverseScaffold.genes[0]]
+                    elif not forwardHasGenemark and reverseHasGenemark:
+                        removable = [forwardScaffold.genes[-1]]
+                    else:
+                        removable = [forwardScaffold.genes[-1], reverseScaffold.genes[0]]
                 else:
-                    removable = filter(lambda x: x.note == "Intergenic", [reverseScaffold.genes[-1], forwardScaffold.genes[0]])
+                    if forwardHasGenemark and not reverseHasGenemark:
+                        removable = [reverseScaffold.genes[-1]]
+                    elif not forwardHasGenemark and reverseHasGenemark:
+                        removable = [forwardScaffold.genes[0]]
+                    else:
+                        removable = [reverseScaffold.genes[-1], forwardScaffold.genes[0]]
+                removable = filter(lambda x: x.intergenic, removable)
                 if removable:
                     toRemove = min(removable, key = lambda x: abs(x.location[1] - x.location[0]))
                     if toRemove.location[0] < toRemove.location[1]:
                         forwardScaffold.genes.remove(toRemove)
-                        if forwardCenter < reverseCenter:
+                        if not forwardScaffold.genes:
+                            newForwardScaffolds.remove(forwardScaffold)
+                            forwardScaffoldRemoved = True
+                            break
+                        elif forwardCenter < reverseCenter:
                             forwardScaffold.stop = forwardScaffold.genes[-1].location[1]
                         else:
                             forwardScaffold.start = forwardScaffold.genes[0].location[0]
                     else:
                         reverseScaffold.genes.remove(toRemove)
-                        if forwardCenter < reverseCenter:
-                            reverseScaffold.stop = reverseScaffold.genes[0].location[0]
+                        if not reverseScaffold.genes:
+                            newReverseScaffolds.remove(reverseScaffold)
+                            break
+                        elif forwardCenter < reverseCenter:
+                            reverseScaffold.start = reverseScaffold.genes[0].location[1]
                         else:
-                            reverseScaffold.start = reverseScaffold.genes[-1].location[1]
+                            reverseScaffold.stop = reverseScaffold.genes[-1].location[0]
                 elif forwardScaffold.stop - forwardScaffold.start < reverseScaffold.stop - reverseScaffold.start:
                     newForwardScaffolds.remove(forwardScaffold)
                     forwardScaffoldRemoved = True
                     break
-                elif reverseScaffold in newReverseScaffolds:
+                else:
                     newReverseScaffolds.remove(reverseScaffold)
                     break
             if forwardScaffoldRemoved:
                 break
     return newForwardScaffolds, newReverseScaffolds
 
-def maskedGenes(genes, masks):
-    result = []
-    for gene in genes:
-        for mask in masks:
-            center = (gene.location[0] + gene.location[1])/2
-            if mask.start < center and center < mask.stop:
-                result.append(gene)
-    return result
-
 def refineScaffolds(genes, scaffoldingDistance):
     forwardScaffolds, reverseScaffolds = extractScaffolds(genes.values(), scaffoldingDistance)
     forwardFiltered, reverseFiltered = filterScaffolds(forwardScaffolds, reverseScaffolds)
-    masked = maskedGenes(filter(lambda x: x.location[0] < x.location[1], genes.values()), forwardFiltered)
-    masked.extend(maskedGenes(filter(lambda x: x.location[0] > x.location[1], genes.values()), reverseFiltered))
-    return dict(map(lambda x: (x.query, x), masked))
+    remainingGenes = reduce(lambda x, y: x + y, map(lambda x: x.genes, forwardFiltered), [])
+    remainingGenes.extend(reduce(lambda x, y: x + y, map(lambda x: x.genes, reverseFiltered), []))
+    return dict(map(lambda x: (x.query, x), remainingGenes))

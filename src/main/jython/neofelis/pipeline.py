@@ -44,7 +44,7 @@ messages = ["Searching for genes via genemark",
             "Removing overlapping genes",
             "Using BPROM to find promoters",
             "Using transterm to find terminators",
-            "Removing transcriptionsignals which conflict with genes"]
+            "Removing transcription signals which conflict with genes"]
 
 class DoneAction(AbstractAction):
   def __init__(self):

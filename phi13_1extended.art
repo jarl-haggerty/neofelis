@@ -310,10 +310,10 @@
                      /gene="None"
                      /note="Extended"
                      /colour=0 255 0
-     CDS             29954..30454
+     CDS             29957..30454
                      /gene="envelope glycoprotein"
-                     /note="Extended"
-                     /colour=0 255 0
+                     /note=""
+                     /colour=0 255 255
      CDS             complement(76510..76292)
                      /gene="None"
                      /note=""

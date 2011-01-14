@@ -22,9 +22,28 @@ from neofelis import utils
 """Have to make sure that a directory to store the blasts this module creates exists."""
 if not os.path.isdir("intergenicBlasts"):
   os.mkdir("intergenicBlasts")
+
+class Region():
+  def __init__(self, startGene, start, stop, stopGene):
+    self.startGene = startGene
+    self.start = start
+    self.stop = stop
+    self.stopGene = stopGene
+
+  def __str__(self):
+    result = ">"
+    result += "StartGene = " + str(self.startGene) + ", "
+    result += "Start = " + str(self.start) + ", "
+    result += "StopGene = " + str(self.stopGene) + ", "
+    result += "Stop = " + str(self.stop) + ">"
+    return result
   
 def deleteGenes(genomeLength, genes, minLength = 3):
-    forwardResult, reverseResult = [(0, genomeLength)], [(0, genomeLength)]
+    def filterFunction(region):
+        inset = abs(region.stopGene.location[1] - region.stopGene.location[0])/2 if region.stopGene else 0
+        return region.stop + inset - region.start > minLength
+
+    forwardResult, reverseResult = [Region(None, 0, genomeLength, None)], [Region(None, 0, genomeLength, None)]
     for gene in genes:
         intermediate = []
         if gene.location[0] < gene.location[1]:
@@ -34,36 +53,49 @@ def deleteGenes(genomeLength, genes, minLength = 3):
             result = reverseResult
             bottom, top = genomeLength-gene.location[0]+1, genomeLength-gene.location[1]+1
         for region in result:
-            if bottom < region[1] and region[1] <= top:
-                intermediate += [(region[0], bottom)]
-            elif bottom <= region[0] and region[0] < top:
-                intermediate += [(top, region[1])]
-            elif region[0] < bottom and top < region[1]:
-                intermediate += [(region[0], bottom), (top, region[1])]
+            if bottom < region.stop and region.stop <= top:
+                intermediate += [Region(region.startGene, region.start, bottom, gene)]
+            elif bottom <= region.start and region.start < top:
+                intermediate += [Region(gene, top, region.stop, region.stopGene)]
+            elif region.start < bottom and top < region.stop:
+                intermediate += [Region(region.startGene, region.start, bottom, gene), Region(gene, top, region.stop, region.stopGene)]
             else:
                 intermediate += [region]
         if gene.location[0] < gene.location[1]:
-            forwardResult = filter(lambda x: x[1]-x[0] > minLength, intermediate)
+            forwardResult = filter(filterFunction, intermediate)
         else:
-            reverseResult = filter(lambda x: x[1]-x[0] > minLength, intermediate)
+            reverseResult = filter(filterFunction, intermediate)
     
-    forwardResult = filter(lambda x: x[1]-x[0] > minLength, forwardResult)
-    reverseResult = filter(lambda x: x[1]-x[0] > minLength, reverseResult)
+    forwardResult = filter(filterFunction, forwardResult)
+    reverseResult = filter(filterFunction, reverseResult)
     return forwardResult, reverseResult
 
 def findPotentialGenes(genome, openLocations, minLength = 3):
     result = []
     stop = None
     for region in openLocations:
+        debug = False
+        if (region.start, region.stop) == (79616, 79693):
+            debug = True
+        inset = abs(region.stopGene.location[1] - region.stopGene.location[0])/2 if region.stopGene else 0
+        if debug:
+            print "Debug"
+            print region.stop, inset
+            print region.stopGene
         for frame in xrange(3):
-            for start in xrange(region[1]+frame, 0, -3):
+            if debug: print ""
+            for start in xrange(region.stop+frame+inset, 0, -3):
+                if debug:
+                  print start - 3, genome[start-3:start]
                 if genome[start-3:start] in utils.stopCodons:
                     stop = start
-                    if start <= region[0]:
+                    if debug: print "stop", stop
+                    if start <= region.start:
                         break
-                if genome[start-3:start] in utils.startCodons and stop:
+                if genome[start-3:start] in utils.startCodons and stop and start < region.stop:
+                    if debug: print "start", start-3
                     result.append((start-3, stop))
-                    if start <= region[0]:
+                    if start <= region.start:
                         break
     return filter(lambda x: x[1]-x[0] > minLength, result)
                     
@@ -113,9 +145,10 @@ def findIntergenics(query, genes, name, minLength, blast, database, eValue, remo
     writePotentialGenes(genome, potentialGenes)
 
     result = utils.cachedBlast("intergenicBlasts/" + name + ".blastp.xml", blast, database, eValue, "intergenics.fas", remote)
-    os.remove("intergenics.fas")
+    #os.remove("intergenics.fas")
     result = removeCommonStops(result)
     for r in result.values():
+        r.intergenic = True
         r.note = "Intergenic"
         r.color = "160 32 240"
     return result
