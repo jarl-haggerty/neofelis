@@ -1,5 +1,7 @@
 """
-This Module is the main file for the Neofelis Genome Annotator
+This Module is the entry point for Neofelis when used on the desktop.  It parses any command line arguments and if any required arguments
+are missing a window is displayed to collect the remaining arguments.  If a directory is specified as the query then that directory and all subdirectories
+will be searched for fasta files with a single genome, these files will then be used as queries.  All the arguments are then passed onto the pipeline.
 """
 
 """
@@ -33,10 +35,17 @@ from javax.swing import JLabel
 from java.awt import GridBagLayout
 from java.awt import GridBagConstraints
 
-def getParameters():
+def getArguments():
+  """
+  This function brings up a window to retreive any required arguments.  This function brings up a window with fields for each argument, filled with any arguments already given.
+  While this window is visible the program will wait, once it is no longer visible all the arguments will be filled with the entries in the fields.
+  """
   global blastLocation, genemarkLocation, transtermLocation, database, matrix, eValue, minLength, scaffoldingDistance, ldfCutoff, sources
 
   class BlastAction(AbstractAction):
+    """
+    Action for selecting the location of Blast+.  Brings up a file selection dialog and fills the text field for blast with the selection.
+    """
     def __init__(self):
       AbstractAction.__init__(self, "...")
 
@@ -47,6 +56,9 @@ def getParameters():
         blastField.setText(fileChooser.getSelectedFile().getAbsolutePath())
 
   class GenemarkAction(AbstractAction):
+    """
+    Action for selecting the location of Genemark.  Brings up a file selection dialog and fills the text field for genemark with the selection.
+    """
     def __init__(self):
       AbstractAction.__init__(self, "...")
 
@@ -57,6 +69,9 @@ def getParameters():
         genemarkField.setText(fileChooser.getSelectedFile().getAbsolutePath())
 
   class TranstermAction(AbstractAction):
+    """
+    Action for selecting the location of Transterm.  Brings up a file selection dialog and fills the text field for transterm with the selection.
+    """
     def __init__(self):
       AbstractAction.__init__(self, "...")
 
@@ -67,6 +82,9 @@ def getParameters():
         transtermField.setText(fileChooser.getSelectedFile().getAbsolutePath())
 
   class QueryAction(AbstractAction):
+    """
+    Action for selecting the query file or directory.  Brings up a file selection dialog and fills the text field for the query with the selection.
+    """
     def __init__(self):
       AbstractAction.__init__(self, "...")
 
@@ -77,6 +95,9 @@ def getParameters():
         queryField.setText(fileChooser.getSelectedFile().getAbsolutePath())
 
   class OKAction(AbstractAction):
+    """
+    Action for starting the pipeline.  This action will simply make the window invisible.
+    """
     def __init__(self):
       AbstractAction.__init__(self, "Ok")
 
@@ -84,6 +105,9 @@ def getParameters():
       frame.setVisible(False)
 
   class CancelAction(AbstractAction):
+    """
+    Action for canceling the pipeline.  Exits the program.
+    """
     def __init__(self):
       AbstractAction.__init__(self, "Cancel")
 
@@ -194,36 +218,37 @@ def getParameters():
 
 if __name__ == "__main__":
   documentation = """
--m --matrix               :Matrix with which to run genemark
--d --database             :Database to use when running blast
--g --genemark             :Location of genemark
--b --blast                :Location of blast
--l --min-length           :Minimum length of any genes discovered
--e --eValue               :Minimal evalue for any genes detected
--r --remote               :Run blast with remote NCBI servers.
--c --scaffolding-distance :Distance to allow between genes when determining scaffolds
--h --help                 :Print help documentation
--q --query                :Genome or directory of genomes to run pipeline on
--s --swing                :Use a swing interface
+-m --matrix               Matrix with which to run genemark
+-d --database             Database to use when running blast
+-g --genemark             Location of Genemark
+-b --blast                Location of Blast+
+-e --e-value               Minimal evalue for any genes detected
+-l --min-length           Minimum length of any genes discovered
+-t --transterm            Location of Transterm
+-d --ldf-cutoff           Minimum LDF value of any promoters selected from a BPROM search
+-c --scaffolding-distance Distance to allow between genes when determining scaffolds
+-q --query                Genome or directory of genomes to run pipeline on
+-h --help                 Print help documentation
+-s --swing                Use a swing interface
 """
   try:
-    opts, args = getopt(sys.argv, "m:d:g:b:e:rl:t:q:hs", ["matrix=", "database=", "genemark=", "blast=", "eValue=", "remote", "ldf-cutoff=", "transterm=", "query=", "help", "swing"])
+    opts, args = getopt(sys.argv, "m:d:g:b:e:l:t:c:q:hs", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "ldf-cutoff=", "scaffolding-distance=", "query=", "help", "swing"])
   except GetoptError:
     print documentation
     sys.exit(0)
-  
-  blastLocation = ""
-  database = ""
-  genemarkLocation = ""
-  transtermLocation = ""
-  eValue = 0.1
+
   matrix = ""
-  minLength = 100
+  database = ""
+  genemarkLocation = ""  
+  blastLocation = ""
+  eValue = 0.1
+  minLength = 100  
+  transtermLocation = ""
+  ldfCutoff = 0
   scaffoldingDistance = 100
   sources = [""]
-  remote = False
-  ldfCutoff = 0
   swingInterface = False
+  remote = False
 	
   for opt, arg in opts:
     if opt in ("-q", "--query"):
@@ -236,12 +261,10 @@ if __name__ == "__main__":
       database = arg
     elif opt in ("-m", "--matrix"):
       matrix = arg
-    elif opt in ("-e", "--eValue"):
+    elif opt in ("-e", "--e-value"):
       eValue = float(arg)
     elif opt in ("-l", "--min-length"):
       minLength = int(arg)
-    elif opt in ("-r", "--remote"):
-      remote = True
     elif opt in ("-l", "--ldf-cutoff"):
       ldfCutoff = float(arg)
     elif opt in ("-t", "--transterm"):
@@ -255,7 +278,7 @@ if __name__ == "__main__":
       sys.exit(0)
 
   if not blastLocation or not database or not genemarkLocation or not transtermLocation:
-    getParameters()
+    getArguments()
     swingInterface = True
 
   queries = []
@@ -268,22 +291,3 @@ if __name__ == "__main__":
       queries.append(source)
 
   pipeline.run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, remote, ldfCutoff, queries, swingInterface)
-
-  """
-		#remove all signals inside orfs
-		for f in os.listdir("artemis_complete/"):
-			for c in cut_offs:
-				print name + "_" + c
-				print f
-				if name + "_" + c in f:
-					signal_command_now = signal_command_now + "artemis_complete/" + f + " "
-					
-		print signal_command_now
-					
-		os.system(signal_command_now)
-		
-		#build fasta file of all orfs
-		fasta_command_now = "python make_fasta.py " + q
-		print fasta_command_now
-		os.system(fasta_command_now)
-"""	

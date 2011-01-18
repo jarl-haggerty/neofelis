@@ -1,4 +1,9 @@
 """
+This module use used to extend genes predicted with Genemark and then annotate them using
+the function extendGenes.
+"""
+
+"""
 Copyright 2010 Jarl Haggerty
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,14 +25,14 @@ import sys
 import functools
 from neofelis import utils
 
-"""Have to make sure that a directory to store the blasts this module creates exists."""
+#Have to make sure that a directory to store the blasts this module creates exists.
 if not os.path.isdir("extendedBlasts"):
   os.mkdir("extendedBlasts")
   
 def getStops(genes):
   """
   Given a list of genes this function returns two lists, one for the forward strand and one for the
-  reverse strand, consisting of number marking where all the genes stop encoding.
+  reverse strand, consisting of numbers marking where all the genes stop.
   """
   forwardStops = map(lambda x: x.location[1], filter(lambda x: x.location[0] < x.location[1], genes))
   reverseStops = map(lambda x: x.location[1], filter(lambda x: x.location[1] < x.location[0], genes))
@@ -35,9 +40,11 @@ def getStops(genes):
 
 def getExtensions(genome, genes):
   """
-  Given a genome and a list of genes in that genome this function returns a map.  The keys of the map
+  Given a genome and a list of genes in that genome this function returns a dictionary.  The keys of the dictionary
   are the genes, and the values are lists of all the possible alternative starts in the genome for that
-  gene.
+  gene.  The alternate starts are calculated by starting at the original start of the gene and iterating backwards.
+  When a start codon is found the start of that start codon is added to the list of alternate starts.  If this start
+  codon comes before the start of the previous gene then is it still added to the list but the search terminates.
   """
   forwardStops, reverseStops = getStops(genes)
   forwardStops.append(1)
@@ -96,7 +103,7 @@ def applyExtensions(genome, genes, extendedGenes):
   in extendedGenes has a query name that starts with the query name of the original gene then that
   entry is an extension of the original gene.  This extension will replace the gene in the new
   dictionary if it either has an eValue that is lower than the original gene or the extension places
-  it within 100 bps of the preceeding gene.
+  it within 100 bps of the preceeding gene and is closer to the stop of the preceding gene.
   """
   forwardStops, reverseStops = getStops(genes.values())
   forwardStops.append(1)
@@ -130,7 +137,7 @@ def applyExtensions(genome, genes, extendedGenes):
 def extendGenes(query, genes, name, blast, database, eValue, remote):
   """
   This function will search for any possible extensions of the genes in the fasta file query.  These extensions will
-  be blasted using the blast installation located at blast with the database database and the eValue.  If remote is
+  be blasted using the blast installation located at blast with database and eValue.  If remote is
   true then the blast search is run remotely.  An extension will replace the original gene in the resulting
   dictionary if it either brings the start of the gene sufficiently close to the end of a previous gene or it has
   a lower eValue.

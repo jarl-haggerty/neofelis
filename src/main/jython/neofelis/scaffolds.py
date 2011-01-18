@@ -18,6 +18,10 @@ import sys
 import copy
 
 class Scaffold():
+    """
+    This structure contains the information that describes a scaffold,
+    where it starts, where is stops, and the genes contained in it.
+    """
     def __init__(self, start, stop, genes):
         self.start = start
         self.stop = stop
@@ -77,10 +81,6 @@ def filterScaffolds(originalForwardScaffolds, originalReverseScaffolds):
     newForwardScaffolds, newReverseScaffolds = copy.copy(forwardScaffolds), copy.copy(reverseScaffolds)
     for forwardScaffold in forwardScaffolds:
         for reverseScaffold in copy.copy(newReverseScaffolds):
-            debug = (forwardScaffold.start, forwardScaffold.stop) == (100218, 100653) \
-                    and (reverseScaffold.start, reverseScaffold.stop) == (99869, 100330)
-            if debug:
-                print "debug"
             forwardScaffoldRemoved = False
             while overlap(forwardScaffold, reverseScaffold) > 3:
                 forwardHasGenemark = reduce(lambda x, y: x or not y.intergenic, forwardScaffold.genes, False)

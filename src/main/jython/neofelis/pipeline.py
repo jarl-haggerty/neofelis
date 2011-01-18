@@ -1,4 +1,8 @@
 """
+The central component of the Neofelis pipeline.
+"""
+
+"""
 Copyright 2010 Jarl Haggerty
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,10 +38,15 @@ from javax.swing import AbstractAction
 from java.awt import GridBagLayout
 from java.awt import GridBagConstraints
 
+#If a swing interface is asked for this will be the JFrame.
 frame = None
+#Keeps track of the number of queries processed.
 jobCount = 0
+#Keeps track of the query currently being processed.
 currentJob = ""
+#Keeps track of the massage to be displayed.
 message = 0
+#Messages to be displayed at each stage in the processing of a single query.
 messages = ["Searching for genes via genemark",
             "Extending genes found via genemark",
             "Searching for intergenic genes",
@@ -47,6 +56,9 @@ messages = ["Searching for genes via genemark",
             "Removing transcription signals which conflict with genes"]
 
 class DoneAction(AbstractAction):
+  """
+  Action for finishing the pipeline.  Simply exits the program.
+  """
   def __init__(self):
     AbstractAction.__init__(self, "Done")
 
@@ -55,6 +67,11 @@ class DoneAction(AbstractAction):
     sys.exit(0)
 
 def initializeDisplay(queries, swing):
+  """
+  Initializes the interface for telling the user about progress in the pipeline.  Queries is used to count the
+  number of queries the pipeline will process and to size the swing display(if it is used) so that text
+  isn't cutoff at the edge of the window.  The swing display is setup if swing is true.
+  """
   global numJobs, frame, currentLabel, currentProgress, globalLabel, globalProgress, doneButton, messages
   
   numJobs = len(queries)
@@ -97,6 +114,11 @@ def initializeDisplay(queries, swing):
     frame.setVisible(True)
 
 def updateProgress(job):
+  """
+  This function use used for updating the progress shown in the interface.  If job is not equal to currentJob then
+  global progress is incremented and shown and the currentProgress is reset and shown.  If job is equal to currentJob
+  then the globalProgress does not change and currentProgress is incremented.
+  """
   global numJobs, currentJob, jobCount, message, messages, frame, currentLabel, currentProgress, globalLabel, globalProgress
   if frame:
     if job != currentJob:
@@ -119,6 +141,10 @@ def updateProgress(job):
     print "    %s, %.2f%% done" % (messages[message], 100.0*message/len(messages))
 
 def finished():
+  """
+  This function is to be called at the end of the pipeline.  Informs the user that the pipeline is finished
+  and if a swing interface is being used the Done button is enabled.
+  """
   global frame, currentLabel, currentProgress, globalLabel, globalProgress, doneButton
   if frame:
     globalLabel.setText("Finished")
@@ -132,6 +158,13 @@ def finished():
     print "Processing 100.00% done"
 
 def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, remote, ldfCutoff, queries, swing = False):
+  """
+  The main pipeline function.  For every query genemark is used to predict genes, these genes are then extended to any preferable starts.  Then the pipeline searches
+  for any intergenic genes(genes between those found by genemark) and these are combined with the extended genemark genes.  Then the genes are pruned to remove
+  any undesirable genes found in the intergenic stage.  Then BPROM and Transterm are used to find promoters and terminators, which are then pruned to remove any
+  signals which are inside or too far away from any genes.  Finally, all the remaining genes, promoters, and terminators and written to an artemis file in the directory
+  of the query with the same name but with a .art extension.
+  """
   initializeDisplay(queries, swing)
     
   for query in queries:
@@ -146,37 +179,30 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
 
     updateProgress(query)
     initialGenes = genemark.findGenes("query.fas", name, blastLocation, database, eValue, genemarkLocation, matrix, remote)
-    artemis.writeArtemisFile(name + "genemark.art", genome, initialGenes.values())
     
     updateProgress(query)
     extendedGenes = extend.extendGenes("query.fas", initialGenes, name, blastLocation, database, eValue, remote)
-    artemis.writeArtemisFile(name + "extended.art", genome, extendedGenes.values())
     
     updateProgress(query)
     intergenicGenes = intergenic.findIntergenics("query.fas", extendedGenes, name, minLength, blastLocation, database, eValue, remote)
     genes = {}
     for k, v in extendedGenes.items() + intergenicGenes.items():
       genes[k] = v
-    artemis.writeArtemisFile(name + "intergenic.art", genome, genes.values())
     
     updateProgress(query)
     scaffolded = scaffolds.refineScaffolds(genes, scaffoldingDistance)
-    artemis.writeArtemisFile(name + "scaffolds.art", genome, scaffolded.values())
-    artemis.writeArtemisFile(os.path.splitext(query)[0] + ".art", genome, scaffolded.values())
  
     updateProgress(query)
     initialPromoters = promoters.findPromoters("query.fas", name, ldfCutoff)
-    artemis.writeArtemisFile(name + "promoters.art", genome, scaffolded.values(), initialPromoters)
     
     updateProgress(query)
     initialTerminators = terminators.findTerminators("query.fas", name, genes.values(), transtermLocation)
-    artemis.writeArtemisFile(name + "promoters-and-terminators.art", genome, scaffolded.values(), initialPromoters, initialTerminators)
 
     updateProgress(query)
     filteredSignals = signals.filterSignals(genes.values(), initialPromoters + initialTerminators)
     filteredPromoters = filter(lambda x: isinstance(x, promoters.Promoter), filteredSignals)
     filteredTerminators = filter(lambda x: isinstance(x, terminators.Terminator), filteredSignals)
 
-    artemis.writeArtemisFile(name + "final.art", genome, scaffolded.values(), filteredPromoters, filteredTerminators)
+    artemis.writeArtemisFile(os.path.splitext(query)[0] + ".art", genome, scaffolded.values(), filteredPromoters, filteredTerminators)
     
   finished()

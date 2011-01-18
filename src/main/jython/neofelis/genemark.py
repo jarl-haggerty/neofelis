@@ -1,6 +1,6 @@
 """
-This Module contains findGenes, the function used to predict genes inside a genome
-using genemark and then use blast to seach for annotations for those ganes.
+This module use used to predict genes with Genemark and then annotate them using
+the function findGenes.
 """
 
 """
@@ -26,7 +26,7 @@ import os
 import subprocess
 
 
-"""Have to make sure that a directory to store the blasts this module creates exists."""
+#Have to make sure that a directory to store the blasts this module creates exists.
 if not os.path.isdir("initialBlasts"):
   os.mkdir("initialBlasts")
 
@@ -49,12 +49,13 @@ def modifyFastaHeader(fileName, name):
   output.write(swap)
   output.close()
 
-def findGenes(query, name, blast, database, eValue, genemark, matrix, remote):
+def findGenes(query, name, blastLocation, database, eValue, genemark, matrix, remote):
   """
   Uses genemark to predict genes in query and then uses blast with the given eValue
   to find annotations for those genes.  If a matrix is not specified the GC program in
-  genemark will be used to select a heuristic matrix.  Name is simply a name used
-  to refer to the genome(typically query without the file extension).
+  genemark will be used to select a heuristic matrix.  Name is a name used
+  to refer to the genome(typically query without the file extension), and for retrieving any
+  cached blast results.
   """
   if not matrix:
     gc = int(utils.getGCContent(utils.loadGenome(query)))
@@ -62,7 +63,7 @@ def findGenes(query, name, blast, database, eValue, genemark, matrix, remote):
   subprocess.Popen([genemark + "/gm", "-opq", "-m", matrix, query]).wait()
   print
   modifyFastaHeader(query + ".orf", name)
-  result = utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blast, database, eValue, query + ".orf", remote)
-  #os.remove(query + ".orf")
+  result = utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blastLocation, database, eValue, query + ".orf", remote)
+  os.remove(query + ".orf")
   os.remove(query + ".lst")
   return result
