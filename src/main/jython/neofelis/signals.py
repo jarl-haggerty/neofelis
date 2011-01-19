@@ -19,12 +19,18 @@ import copy
 
 def removeSignals(genes, signals):
     remainingSignals = copy.copy(signals)
+    
     for signal in signals:
+        nearStart = False
         for gene in genes:
             center = (signal.location[0] + signal.location[1])/2
+            nearStart = nearStart or abs(gene.location[0] - center) < 100
             if min(gene.location) < center and center < max(gene.location):
                 remainingSignals.remove(signal)
                 break
+        if not nearStart and signal in remainingSignals:
+            remainingSignals.remove(signal)
+            
     return remainingSignals
 
 def filterSignals(genes, signals):

@@ -199,7 +199,7 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
     initialTerminators = terminators.findTerminators("query.fas", name, genes.values(), transtermLocation)
 
     updateProgress(query)
-    filteredSignals = signals.filterSignals(genes.values(), initialPromoters + initialTerminators)
+    filteredSignals = signals.filterSignals(scaffolded.values(), initialPromoters + initialTerminators)
     filteredPromoters = filter(lambda x: isinstance(x, promoters.Promoter), filteredSignals)
     filteredTerminators = filter(lambda x: isinstance(x, terminators.Terminator), filteredSignals)
 

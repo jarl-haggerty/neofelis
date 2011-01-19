@@ -63,7 +63,7 @@ limitations under the License.
             <param>--blast=/Users/mbsulli/blast</param>
             <param>--transterm=/Users/mbsulli/transterm</param>
             <param>--database=nr</param>
-            <param>--eValue=0.1</param>
+            <param>--e-value=0.1</param>
             <param>--query=genomes/Phi-4-1.fas</param>
           </pythonArgs>
         </configuration>

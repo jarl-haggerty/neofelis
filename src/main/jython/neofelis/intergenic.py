@@ -152,17 +152,17 @@ def removeCommonStops(genes):
     else:
       stopDictionary[gene.location[1]] = [gene]
 
-def reduceFunction(x, y):
-  """
-  Function for determining the more favorable gene.  If both genes have
-  infinite e values(no blast hits) then the difference of the e values is NaN
-  and the longest gene will be the more favorable one and the one returned.
-  Otherwise, the gene with the lower e value will be returned.
-  """
-  if utils.isNaN(x.eValue - y.eValue):
-    return max(x, y, key = lambda z: abs(z.location[1] - z.location[0]))
-  else:
-    return min(x, y, key = lambda z: z.eValue)
+  def reduceFunction(x, y):
+    """
+    Function for determining the more favorable gene.  If both genes have
+    infinite e values(no blast hits) then the difference of the e values is NaN
+    and the longest gene will be the more favorable one and the one returned.
+    Otherwise, the gene with the lower e value will be returned.
+    """
+    if utils.isNaN(x.eValue - y.eValue):
+      return max(x, y, key = lambda z: abs(z.location[1] - z.location[0]))
+    else:
+      return min(x, y, key = lambda z: z.eValue)
   result = {}
   for stoppedGenes in stopDictionary.values():
     temp = reduce(reduceFunction, stoppedGenes)
