@@ -64,7 +64,8 @@ limitations under the License.
             <param>--transterm=/Users/mbsulli/transterm</param>
             <param>--database=nr</param>
             <param>--e-value=0.1</param>
-            <param>--query=genomes/Phi-4-1.fas</param>
+            <param>--query=genomes</param>
+            <param>--swing</param>
           </pythonArgs>
         </configuration>
       </plugin>

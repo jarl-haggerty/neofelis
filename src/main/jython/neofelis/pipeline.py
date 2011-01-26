@@ -29,6 +29,7 @@ from neofelis import artemis
 from neofelis import utils
 from neofelis import scaffolds
 from neofelis import signals
+from neofelis import xmltotext
 from javax.swing import JFrame
 from javax.swing import JPanel
 from javax.swing import JLabel
@@ -109,7 +110,7 @@ def initializeDisplay(queries, swing):
     frame.pack()
     frame.setResizable(False)
     globalLabel.setText(" ")
-    globalLabel.setText(" ")
+    currentLabel.setText(" ")
     frame.setLocationRelativeTo(None)
     frame.setVisible(True)
 
@@ -170,6 +171,7 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
   for query in queries:
     name = os.path.splitext(query)[0]
     queryDirectory, name = os.path.split(name)
+    
     genome = utils.loadGenome(query)
     queryFile = open("query.fas", "w")
     queryFile.write(">" + name + "\n")
@@ -204,5 +206,9 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
     filteredTerminators = filter(lambda x: isinstance(x, terminators.Terminator), filteredSignals)
 
     artemis.writeArtemisFile(os.path.splitext(query)[0] + ".art", genome, scaffolded.values(), filteredPromoters, filteredTerminators)
+    
+    xmltotext.xmlToText("initialBlasts/" + name + ".blastp.xml", os.path.splitext(query)[0] + ".genemark.dat")
+    xmltotext.xmlToText("extendedBlasts/" + name + ".blastp.xml", os.path.splitext(query)[0] + ".extended.dat")
+    xmltotext.xmlToText("intergenicBlasts/" + name + ".blastp.xml", os.path.splitext(query)[0] + ".intergenic.dat")
     
   finished()

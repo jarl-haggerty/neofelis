@@ -18,7 +18,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-from javax.xml.parsers import DocumentBuilderFactory
 from org.python.core.util import FileUtil
 from java.lang import Double
 from java.lang import Runtime

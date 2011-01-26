@@ -198,7 +198,6 @@ def getArguments():
   contentPane.add(JButton(CancelAction()), constraints)
 
   frame.pack()
-  frame.setResizable(False)
   frame.setLocationRelativeTo(None)
   frame.setVisible(True)
 
