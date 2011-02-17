@@ -20,6 +20,9 @@ limitations under the License.
 
 import os
 import sys
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from neofelis import genemark
 from neofelis import extend
 from neofelis import intergenic
@@ -158,7 +161,7 @@ def finished():
   else:
     print "Processing 100.00% done"
 
-def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, remote, ldfCutoff, queries, swing = False):
+def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, remote, ldfCutoff, queries, swing = False, email = ""):
   """
   The main pipeline function.  For every query genemark is used to predict genes, these genes are then extended to any preferable starts.  Then the pipeline searches
   for any intergenic genes(genes between those found by genemark) and these are combined with the extended genemark genes.  Then the genes are pruned to remove
@@ -181,12 +184,15 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
 
     updateProgress(query)
     initialGenes = genemark.findGenes("query.fas", name, blastLocation, database, eValue, genemarkLocation, matrix, remote)
+    artemis.writeArtemisFile(os.path.splitext(query)[0] + ".genemark.art", genome, initialGenes.values())
     
     updateProgress(query)
     extendedGenes = extend.extendGenes("query.fas", initialGenes, name, blastLocation, database, eValue, remote)
+    artemis.writeArtemisFile(os.path.splitext(query)[0] + ".extended.art", genome, extendedGenes.values())
     
     updateProgress(query)
     intergenicGenes = intergenic.findIntergenics("query.fas", extendedGenes, name, minLength, blastLocation, database, eValue, remote)
+    artemis.writeArtemisFile(os.path.splitext(query)[0] + ".intergenic.art", genome, intergenicGenes.values())
     genes = {}
     for k, v in extendedGenes.items() + intergenicGenes.items():
       genes[k] = v
@@ -210,5 +216,20 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
     xmltotext.xmlToText("initialBlasts/" + name + ".blastp.xml", os.path.splitext(query)[0] + ".genemark.dat")
     xmltotext.xmlToText("extendedBlasts/" + name + ".blastp.xml", os.path.splitext(query)[0] + ".extended.dat")
     xmltotext.xmlToText("intergenicBlasts/" + name + ".blastp.xml", os.path.splitext(query)[0] + ".intergenic.dat")
+
+  if email:
+    message = MIMEText("Your genome has been annotated.")
+    message["Subject"] = "Annotation complete"
+    message["From"] = "Neofelis"
+    message["To"] = email
+    
+
+    smtp = smtplib.SMTP("tmpl.arizona.edu", 587)
+    smtp.ehlo()
+    smtp.starttls()
+    smtp.ehlo
+    smtp.login("tmpl", "gobanana23")
+    smtp.sendmail("Neofelis", [email], message.as_string())
+    smtp.close()
     
   finished()

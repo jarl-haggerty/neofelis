@@ -21,7 +21,7 @@ from org.xml.sax import InputSource
 from org.xml.sax.helpers import DefaultHandler
 from java.lang import ClassLoader
 
-class BlastTranslater(DefaultHandler):
+class BlastTranslater(DefaultHandler, genesToWrite):
   def __init__(self, output):
     self.output = open(output, "w")
     self.depth = 0
@@ -32,11 +32,20 @@ class BlastTranslater(DefaultHandler):
     self.previousStop = ""
     self.nodes = []
     self.endTags = 0
+    self.genesToWrite = genesToWrite
+    self.recording = False
 
   def endDocument(self):
     self.output.close()
   
   def startElement(self, uri, tag, name, attributes):
+    if tag == "Iteration":
+      self.previousStart = ""
+      self.previousStop = ""
+      self.nodes = []
+      self.buffer = ""
+      self.depth = 0
+      
     if self.previousStart:
       maxLength = max(map(lambda x: len(x[0]), self.nodes)) if self.nodes else None
       for key, value in self.nodes:
@@ -50,6 +59,9 @@ class BlastTranslater(DefaultHandler):
     self.depth += 1
 
   def endElement(self, uri, tag, name):
+    if tag == "Iteration_query-def":
+      self.currentGene = self.buffer
+      
     if self.previousStop:
       maxLength = max(map(lambda x: len(x[0]), self.nodes)) if self.nodes else None
       for key, value in self.nodes:

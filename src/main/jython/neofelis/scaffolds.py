@@ -123,6 +123,8 @@ def filterScaffolds(originalForwardScaffolds, originalReverseScaffolds):
                             reverseScaffold.start = reverseScaffold.genes[0].location[1]
                         else:
                             reverseScaffold.stop = reverseScaffold.genes[-1].location[0]
+                elif forwardHasGenemark and reverseHasGenemark:
+                    break
                 elif forwardScaffold.stop - forwardScaffold.start < reverseScaffold.stop - reverseScaffold.start:
                     newForwardScaffolds.remove(forwardScaffold)
                     forwardScaffoldRemoved = True
@@ -136,6 +138,8 @@ def filterScaffolds(originalForwardScaffolds, originalReverseScaffolds):
 
 def refineScaffolds(genes, scaffoldingDistance):
     forwardScaffolds, reverseScaffolds = extractScaffolds(genes.values(), scaffoldingDistance)
+    for s in forwardScaffolds:
+        print s
     forwardFiltered, reverseFiltered = filterScaffolds(forwardScaffolds, reverseScaffolds)
     remainingGenes = reduce(lambda x, y: x + y, map(lambda x: x.genes, forwardFiltered), [])
     remainingGenes.extend(reduce(lambda x, y: x + y, map(lambda x: x.genes, reverseFiltered), []))

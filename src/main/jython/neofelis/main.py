@@ -40,7 +40,7 @@ def getArguments():
   This function brings up a window to retreive any required arguments.  This function brings up a window with fields for each argument, filled with any arguments already given.
   While this window is visible the program will wait, once it is no longer visible all the arguments will be filled with the entries in the fields.
   """
-  global blastLocation, genemarkLocation, transtermLocation, database, matrix, eValue, minLength, scaffoldingDistance, ldfCutoff, sources
+  global blastLocation, genemarkLocation, transtermLocation, database, matrix, eValue, minLength, scaffoldingDistance, ldfCutoff, sources, email
 
   class BlastAction(AbstractAction):
     """
@@ -129,6 +129,7 @@ def getArguments():
   scaffoldingDistanceField = JTextField(str(scaffoldingDistance))
   ldfField = JTextField(str(ldfCutoff))
   queryField = JTextField(sources[0])
+  emailField = JTextField(email)
 
   constraints.gridx = 0
   constraints.gridy = 0
@@ -156,6 +157,8 @@ def getArguments():
   contentPane.add(JLabel("LDF Cutoff"), constraints)
   constraints.gridy = 9
   contentPane.add(JLabel("Query"), constraints)
+  constraints.gridy = 10
+  contentPane.add(JLabel("Email"), constraints)
   constraints.gridx = 1
   constraints.gridy = 0
   constraints.weightx = 1
@@ -178,6 +181,8 @@ def getArguments():
   contentPane.add(ldfField, constraints)
   constraints.gridy = 9
   contentPane.add(queryField, constraints)
+  constraints.gridy = 10
+  contentPane.add(emailField)
   constraints.gridx = 2
   constraints.gridy = 0
   constraints.weightx = 0
@@ -192,7 +197,7 @@ def getArguments():
   contentPane.add(JButton(QueryAction()), constraints)
 
   constraints.gridx = 1
-  constraints.gridy = 10
+  constraints.gridy = 11
   contentPane.add(JButton(OKAction()), constraints)
   constraints.gridx = 2
   contentPane.add(JButton(CancelAction()), constraints)
@@ -215,13 +220,13 @@ def getArguments():
   ldfCutoff = float(ldfField.getText())
   sources = [queryField.getText()]
 
-if __name__ == "__main__":
+def main(arguments):
   documentation = """
 -m --matrix               Matrix with which to run genemark
 -d --database             Database to use when running blast
 -g --genemark             Location of Genemark
 -b --blast                Location of Blast+
--e --e-value               Minimal evalue for any genes detected
+-e --e-value              Minimal evalue for any genes detected
 -l --min-length           Minimum length of any genes discovered
 -t --transterm            Location of Transterm
 -d --ldf-cutoff           Minimum LDF value of any promoters selected from a BPROM search
@@ -229,9 +234,12 @@ if __name__ == "__main__":
 -q --query                Genome or directory of genomes to run pipeline on
 -h --help                 Print help documentation
 -s --swing                Use a swing interface
+-p --pipe                 Neofelis will be set to read lines of command line arguments from the pipe, "neofelis_pipe".  For each line read a new thread will be spawned to process the query.
+-n --no-swing             If any required arguments are missing then the program will exit instead of using a Swing interface to get the missing arguments
+-a --email                Email address that results will be sent to.
 """
   try:
-    opts, args = getopt(sys.argv, "m:d:g:b:e:l:t:c:q:hs", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "ldf-cutoff=", "scaffolding-distance=", "query=", "help", "swing"])
+    opts, args = getopt(arguments, "m:d:g:b:e:l:t:c:q:hsna:", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "ldf-cutoff=", "scaffolding-distance=", "query=", "help", "swing", "no-swing", "email="])
   except GetoptError:
     print documentation
     sys.exit(0)
@@ -247,7 +255,10 @@ if __name__ == "__main__":
   scaffoldingDistance = 100
   sources = [""]
   swingInterface = False
+  noSwing = False
+  email = ""
   remote = False
+  pipe = False
 	
   for opt, arg in opts:
     if opt in ("-q", "--query"):
@@ -272,13 +283,30 @@ if __name__ == "__main__":
       scaffoldingDistance = int(arg)
     elif opt in ("-s", "--swing"):
       swingInterface = True
+    elif opt in ("-n", "--no-swing"):
+      noSwing = True
+    elif opt in ("-a", "--email"):
+      email = arg
+    elif opt in ("-p", "--pipe"):
+      pipe = True
     elif opt in ("-h", "--help"):
       print documentation
       sys.exit(0)
 
+  if pipe:
+    os.mkfifo("neofelis_pipe", "r")
+    pipe = open("neofelis_pipe", "r")
+    while True:
+      line = pipe.readLine()
+      if line:
+        threading.Thread(target = main, args = re.split(r"\s+", line))
+        
   if not blastLocation or not database or not genemarkLocation or not transtermLocation:
-    getArguments()
-    swingInterface = True
+    if noSwing:
+      sys.exit(1)
+    else:
+      getArguments()
+      swingInterface = True
 
   queries = []
   while sources:
@@ -289,4 +317,7 @@ if __name__ == "__main__":
     elif utils.isGenome(source):
       queries.append(source)
 
-  pipeline.run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, remote, ldfCutoff, queries, swingInterface)
+  pipeline.run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, remote, ldfCutoff, queries, swingInterface, email)
+
+if __name__ == "__main__":
+  main(sys.argv)

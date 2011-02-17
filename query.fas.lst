@@ -1,0 +1,387 @@
+                              GENEMARK PREDICTIONS
+
+Sequence: phiSM
+Sequence file: query.fas
+Sequence length: 50487
+GC Content:  33.63%
+Window length: 96
+Window step: 12
+Threshold value: 0.500
+---
+Matrix: Heuristic, GC = 33
+Matrix author: Borodovsky Laboratory - Georgia Tech, School of Biology, Atlanta, GA, USA
+Matrix order: 2
+
+List of Open reading frames predicted as CDSs, shown with alternate starts
+(regions from start to stop codon w/ coding function >0.50)
+
+Left      Right     DNA         Coding Avg   Start
+end       end       Strand      Frame  Prob  Prob
+--------  --------  ----------  -----  ----  ----
+
+     228       473  direct      fr 3   0.51  0.14  
+
+     559      1011  direct      fr 1   0.78  0.01  
+     685      1011  direct      fr 1   0.85  0.07  
+     784      1011  direct      fr 1   0.79  0.07  
+     826      1011  direct      fr 1   0.76  0.16  
+
+    1169      1537  direct      fr 2   0.74  0.46  
+    1277      1537  direct      fr 2   0.81  0.10  
+    1361      1537  direct      fr 2   0.72  0.02  
+    1406      1537  direct      fr 2   0.62  0.36  
+
+    1769      2002  direct      fr 2   0.53  0.53  
+
+    2237      3238  direct      fr 2   0.93  0.94  
+    2426      3238  direct      fr 2   0.94  0.27  
+    2444      3238  direct      fr 2   0.94  0.11  
+    2453      3238  direct      fr 2   0.94  0.09  
+
+    3389      4432  direct      fr 2   0.84  0.57  
+    3410      4432  direct      fr 2   0.85  0.46  
+    3467      4432  direct      fr 2   0.84  0.21  
+
+    4456      4650  direct      fr 1   0.64  0.95  
+
+    4651      5877  direct      fr 1   0.71  0.21  
+    4816      5877  direct      fr 1   0.75  0.16  
+    4870      5877  direct      fr 1   0.74  0.14  
+    5056      5877  direct      fr 1   0.72  0.65  
+
+    6259      6918  direct      fr 1   0.82  0.40  
+    6403      6918  direct      fr 1   0.82  0.30  
+    6469      6918  direct      fr 1   0.80  0.17  
+    6541      6918  direct      fr 1   0.78  0.77  
+
+    7193      7801  direct      fr 2   0.86  0.94  
+    7232      7801  direct      fr 2   0.91  0.10  
+    7262      7801  direct      fr 2   0.91  0.13  
+    7595      7801  direct      fr 2   0.77  0.04  
+
+    7803      8204  direct      fr 3   0.60  0.94  
+    7869      8204  direct      fr 3   0.64  0.05  
+
+    8257      8910  direct      fr 1   0.62  0.91  
+    8335      8910  direct      fr 1   0.64  0.00  
+    8476      8910  direct      fr 1   0.73  0.24  
+    8641      8910  direct      fr 1   0.82  0.24  
+    8671      8910  direct      fr 1   0.80  0.13  
+
+    8920      9582  direct      fr 1   0.72  0.45  
+    8959      9582  direct      fr 1   0.76  0.48  
+    9028      9582  direct      fr 1   0.75  0.20  
+    9265      9582  direct      fr 1   0.62  0.51  
+
+    9629     10093  direct      fr 2   0.76  0.91  
+
+   10103     10813  direct      fr 2   0.77  0.90  
+   10124     10813  direct      fr 2   0.80  0.13  
+   10556     10813  direct      fr 2   0.71  0.28  
+   10586     10813  direct      fr 2   0.68  0.85  
+   10613     10813  direct      fr 2   0.64  0.16  
+
+   10806     11297  direct      fr 3   0.60  0.47  
+   10836     11297  direct      fr 3   0.63  0.16  
+   10962     11297  direct      fr 3   0.81  0.27  
+   10965     11297  direct      fr 3   0.81  0.39  
+   11001     11297  direct      fr 3   0.79  0.31  
+
+   11224     11997  direct      fr 1   0.66  0.46  
+   11281     11997  direct      fr 1   0.68  0.57  
+   11554     11997  direct      fr 1   0.71  0.70  
+   11653     11997  direct      fr 1   0.64  0.01  
+
+   11925     12173  direct      fr 3   0.55  0.09  
+   11997     12173  direct      fr 3   0.70  0.67  
+   12027     12173  direct      fr 3   0.68  0.17  
+   12054     12173  direct      fr 3   0.62  0.26  
+
+   12163     13245  direct      fr 1   0.74  0.21  
+   12373     13245  direct      fr 1   0.81  0.77  
+   12445     13245  direct      fr 1   0.81  0.34  
+   12487     13245  direct      fr 1   0.80  0.62  
+
+   13232     14131  direct      fr 2   0.63  0.89  
+   13541     14131  direct      fr 2   0.67  0.08  
+   13562     14131  direct      fr 2   0.69  0.04  
+   13625     14131  direct      fr 2   0.71  0.21  
+
+   14204     14377  direct      fr 2   0.69  0.70  
+
+   14313     14657  direct      fr 3   0.59  0.17  
+   14514     14657  direct      fr 3   0.62  0.84  
+
+   14518     14877  direct      fr 1   0.60  0.22  
+   14542     14877  direct      fr 1   0.64  0.23  
+
+   14870     15424  direct      fr 2   0.68  0.98  
+   14903     15424  direct      fr 2   0.71  0.84  
+
+   15425     16543  direct      fr 2   0.84  0.29  
+   15596     16543  direct      fr 2   0.87  0.26  
+   15746     16543  direct      fr 2   0.85  0.05  
+   15809     16543  direct      fr 2   0.84  0.22  
+
+   16638     18290  direct      fr 3   0.87  0.81  
+   16770     18290  direct      fr 3   0.88  0.02  
+   16881     18290  direct      fr 3   0.89  0.02  
+   16947     18290  direct      fr 3   0.90  0.15  
+
+   18290     18955  direct      fr 2   0.83  0.39  
+   18452     18955  direct      fr 2   0.87  0.41  
+   18623     18955  direct      fr 2   0.84  0.32  
+   18626     18955  direct      fr 2   0.83  0.23  
+
+   18962     19390  direct      fr 2   0.74  0.92  
+   19232     19390  direct      fr 2   0.62  0.00  
+   19256     19390  direct      fr 2   0.56  0.11  
+
+   19372     19641  direct      fr 1   0.68  0.59  
+   19447     19641  direct      fr 1   0.75  0.19  
+
+   19714     20478  direct      fr 1   0.78  0.68  
+   19843     20478  direct      fr 1   0.83  0.75  
+   19858     20478  direct      fr 1   0.83  0.82  
+   20023     20478  direct      fr 1   0.80  0.19  
+
+   20465     20968  complement  fr 1   0.71  0.24  
+   20465     20836  complement  fr 1   0.72  0.71  
+
+   20970     21989  complement  fr 2   0.73  0.54  
+   20970     21782  complement  fr 2   0.74  0.20  
+   20970     21737  complement  fr 2   0.73  0.26  
+   20970     21578  complement  fr 2   0.69  0.52  
+
+   21989     23200  complement  fr 1   0.70  0.81  
+   21989     23008  complement  fr 1   0.70  0.18  
+   21989     22942  complement  fr 1   0.68  0.17  
+   21989     22588  complement  fr 1   0.67  0.07  
+
+   23197     23940  complement  fr 3   0.70  0.45  
+   23197     23853  complement  fr 3   0.74  0.20  
+   23197     23709  complement  fr 3   0.78  0.05  
+   23197     23466  complement  fr 3   0.71  0.09  
+
+   23941     25119  complement  fr 3   0.72  0.45  
+   23941     24792  complement  fr 3   0.62  0.07  
+   23941     24594  complement  fr 3   0.56  0.00  
+   23941     24549  complement  fr 3   0.59  0.42  
+   23941     24507  complement  fr 3   0.60  0.14  
+
+   25130     26161  complement  fr 1   0.75  0.78  
+   25130     26008  complement  fr 1   0.75  0.17  
+   25130     25870  complement  fr 1   0.75  0.51  
+   25130     25858  complement  fr 1   0.75  0.82  
+
+   26166     26927  complement  fr 2   0.83  0.48  
+   26166     26585  complement  fr 2   0.82  0.39  
+   26166     26489  complement  fr 2   0.81  0.12  
+
+   26927     28102  complement  fr 1   0.80  0.76  
+   26927     27796  complement  fr 1   0.81  0.09  
+   26927     27742  complement  fr 1   0.84  0.49  
+   26927     27658  complement  fr 1   0.86  0.72  
+   26927     27607  complement  fr 1   0.85  0.06  
+
+   28102     28584  complement  fr 3   0.65  0.48  
+
+   28599     30545  complement  fr 2   0.86  0.31  
+   28599     30488  complement  fr 2   0.89  0.37  
+   28599     30476  complement  fr 2   0.89  0.32  
+   28599     30389  complement  fr 2   0.89  0.15  
+   28599     30338  complement  fr 2   0.89  0.04  
+
+   29056     29187  direct      fr 1   0.57  0.80  
+   29098     29187  direct      fr 1   0.52  0.26  
+
+   30716     31144  complement  fr 1   0.75  0.91  
+   30716     31129  complement  fr 1   0.77  0.87  
+   30716     31051  complement  fr 1   0.82  0.35  
+   30716     30991  complement  fr 1   0.78  0.01  
+   30716     30859  complement  fr 1   0.62  0.43  
+
+   31210     31620  complement  fr 3   0.78  0.64  
+   31210     31521  complement  fr 3   0.81  0.71  
+   31210     31413  complement  fr 3   0.71  0.42  
+   31210     31386  complement  fr 3   0.68  0.04  
+
+   31643     33169  complement  fr 1   0.90  0.38  
+   31643     32938  complement  fr 1   0.91  0.06  
+   31643     32791  complement  fr 1   0.90  0.02  
+   31643     32653  complement  fr 1   0.90  0.26  
+
+   33189     33785  complement  fr 2   0.70  0.90  
+   33189     33614  complement  fr 2   0.68  0.14  
+
+   33769     34164  complement  fr 3   0.72  0.84  
+
+   34165     34590  complement  fr 3   0.81  0.10  
+   34165     34497  complement  fr 3   0.83  0.01  
+   34165     34461  complement  fr 3   0.81  0.28  
+
+   34642     35751  complement  fr 3   0.85  0.12  
+   34642     35718  complement  fr 3   0.87  0.60  
+   34642     35685  complement  fr 3   0.87  0.73  
+   34642     35592  complement  fr 3   0.86  0.80  
+
+   35720     36160  complement  fr 1   0.67  0.35  
+   35720     36001  complement  fr 1   0.75  0.01  
+   35720     35971  complement  fr 1   0.71  0.10  
+
+   36164     37429  complement  fr 1   0.86  0.52  
+   36164     37123  complement  fr 1   0.89  0.22  
+   36164     37114  complement  fr 1   0.90  0.60  
+   36164     37051  complement  fr 1   0.90  0.83  
+
+   37494     37829  complement  fr 2   0.54  0.07  
+   37494     37814  complement  fr 2   0.56  0.10  
+   37494     37811  complement  fr 2   0.58  0.17  
+   37494     37808  complement  fr 2   0.58  0.11  
+
+   37765     38046  complement  fr 3   0.64  0.10  
+   37765     38034  complement  fr 3   0.67  0.08  
+
+   38043     38669  complement  fr 2   0.76  0.07  
+   38043     38435  complement  fr 2   0.76  0.13  
+
+   38656     39291  complement  fr 3   0.61  0.01  
+   38656     39159  complement  fr 3   0.74  0.15  
+   38656     39066  complement  fr 3   0.75  0.35  
+   38656     38865  complement  fr 3   0.67  0.66  
+
+   39376     39750  complement  fr 3   0.56  0.85  
+   39376     39702  complement  fr 3   0.61  0.01  
+   39376     39693  complement  fr 3   0.60  0.01  
+   39376     39657  complement  fr 3   0.59  0.34  
+
+   39852     43136  complement  fr 2   0.87  0.03  
+   39852     43133  complement  fr 2   0.87  0.02  
+   39852     43067  complement  fr 2   0.88  0.28  
+   39852     42692  complement  fr 2   0.88  0.61  
+   39852     42488  complement  fr 2   0.89  0.01  
+
+   43160     44383  complement  fr 1   0.76  0.01  
+   43160     44149  complement  fr 1   0.78  0.02  
+   43160     43849  complement  fr 1   0.76  0.39  
+   43160     43783  complement  fr 1   0.78  0.70  
+   43160     43741  complement  fr 1   0.76  0.16  
+
+   44562     44672  direct      fr 3   0.51  0.67  
+
+   44718     46328  complement  fr 2   0.81  0.85  
+   44718     46133  complement  fr 2   0.83  0.17  
+   44718     46106  complement  fr 2   0.83  0.63  
+   44718     45998  complement  fr 2   0.82  0.13  
+
+   46332     46619  complement  fr 2   0.63  0.26  
+   46332     46538  complement  fr 2   0.69  0.09  
+   46332     46460  complement  fr 2   0.61  0.12  
+
+   46765     48810  complement  fr 3   0.84  0.23  
+   46765     48585  complement  fr 3   0.85  0.82  
+   46765     48537  complement  fr 3   0.85  0.00  
+   46765     48438  complement  fr 3   0.86  0.04  
+   46765     48270  complement  fr 3   0.87  0.62  
+
+   48953     49357  complement  fr 1   0.67  0.00  
+   48953     49195  complement  fr 1   0.72  0.46  
+   48953     49084  complement  fr 1   0.53  0.63  
+
+   49513     50190  complement  fr 3   0.80  0.21  
+   49513     49941  complement  fr 3   0.81  0.04  
+   49513     49896  complement  fr 3   0.79  0.01  
+   49513     49638  complement  fr 3   0.55  0.20  
+
+   50409     50489  direct      fr 3   0.74  ....  
+
+List of Regions of interest
+(regions from stop to stop codon w/ a signal in between)
+
+   LEnd      REnd    Strand      Frame
+ --------  --------  ----------- -----
+      141       473  direct      fr 3
+      544      1011  direct      fr 1
+     1163      1537  direct      fr 2
+     1446      1715  direct      fr 3
+     1691      2002  direct      fr 2
+     1977      2186  direct      fr 3
+     2204      3238  direct      fr 2
+     3320      4432  direct      fr 2
+     4426      4650  direct      fr 1
+     4648      5877  direct      fr 1
+     5954      6124  direct      fr 2
+     6214      6918  direct      fr 1
+     6912      7103  direct      fr 3
+     7166      7801  direct      fr 2
+     7788      8204  direct      fr 3
+     8230      8910  direct      fr 1
+     8908      9582  direct      fr 1
+     9617     10093  direct      fr 2
+    10091     10813  direct      fr 2
+    10791     11297  direct      fr 3
+    11200     11997  direct      fr 1
+    11268     11519  complement  fr 2
+    11919     12173  direct      fr 3
+    12118     13245  direct      fr 1
+    13229     14131  direct      fr 2
+    14153     14377  direct      fr 2
+    14310     14657  direct      fr 3
+    14515     14877  direct      fr 1
+    14858     15424  direct      fr 2
+    15199     15363  complement  fr 3
+    15422     16543  direct      fr 2
+    16611     18290  direct      fr 3
+    18281     18955  direct      fr 2
+    18959     19390  direct      fr 2
+    19354     19641  direct      fr 1
+    19699     20478  direct      fr 1
+    20465     20986  complement  fr 1
+    20970     22019  complement  fr 2
+    21989     23215  complement  fr 1
+    23197     23943  complement  fr 3
+    23941     25200  complement  fr 3
+    25130     26179  complement  fr 1
+    26166     26933  complement  fr 2
+    26927     28114  complement  fr 1
+    28102     28596  complement  fr 3
+    28599     30548  complement  fr 2
+    28909     29187  direct      fr 1
+    30373     30597  direct      fr 1
+    30546     30740  complement  fr 2
+    30716     31150  complement  fr 1
+    31210     31641  complement  fr 3
+    31643     33184  complement  fr 1
+    33189     33794  complement  fr 2
+    33769     34167  complement  fr 3
+    34165     34620  complement  fr 3
+    34642     35769  complement  fr 3
+    35720     36166  complement  fr 1
+    36164     37471  complement  fr 1
+    37494     37868  complement  fr 2
+    37765     38061  complement  fr 3
+    38043     38678  complement  fr 2
+    38656     39306  complement  fr 3
+    39376     39762  complement  fr 3
+    39852     43145  complement  fr 2
+    43160     44389  complement  fr 1
+    44387     44752  complement  fr 1
+    44481     44672  direct      fr 3
+    44718     46334  complement  fr 2
+    46332     46622  complement  fr 2
+    46765     48843  complement  fr 3
+    48953     49498  complement  fr 1
+    49513     50199  complement  fr 3
+    50322     50489  direct      fr 3
+
+
+--------------------
+ABOUT THE MATRIX USED:
+
+
+
+For details on the model building procedure see:
+   Besemer J. and Borodovsky M.
+   "Heuristic approach to deriving models for gene finding"
+   NAR, 1999, Vol. 27, No. 19, pp. 3911-3920
+

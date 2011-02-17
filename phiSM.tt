@@ -1,0 +1,273 @@
+TransTermHP v2.07 (built on Jan  4 2011)
+25 bins; sample size is 20000000
+--pval-conf=/Users/mbsulli/transterm/expterm.dat
+
+--gc=-2.3 --au=-0.9 --gu=1.3 --mm=3.5 --gap=6
+--max-len=59 --min-stem=4 --max-loop=13 --min-loop=3
+--uwin-length=6 --uwin-require=3 --max-hp-score=-2 --max-tail-score=-2.5
+--loop-penalty=1,2,3,4,5,6,7,8,9,10,11
+--start-cut=0 --end-cut=25
+
+Genes: 0.658527 %AT, 48323 nt, 159 terms.
+Intergenic: 0.783575 %AT, H2T: 31397 nt, 41 terms; T2T: 14373 nt, 40 terms; H2H: 11795 nt, 43 terms. 
+
+Each terminator entry starts in column 3 and is of the form:
+  term #       start - end      +/-  regionconf   hp     tail | notes
+Followed by the sequence of the 5' tail, 5' stem, loop, 3' stem, and 3' tail.
+Genes are interspersed, and start the first column.
+
+
+SEQUENCE phiSM  (length 50487)
+
+gene              161 - 42       - | 
+gene              228 - 61       - | 
+gene               12 - 128      + | 
+gene              358 - 215      - | 
+gene              458 - 261      - | 
+gene              156 - 473      + | 
+gene              559 - 1011     + | 
+gene             1015 - 1188     + | 
+gene             1278 - 1159     - | 
+gene             1599 - 1330     - | 
+gene             1169 - 1537     + | 
+gene             1512 - 1715     + | 
+gene             1712 - 2002     + | 
+gene             2004 - 2186     + | 
+gene             2526 - 2203     - | 
+gene             3165 - 2560     - | 
+gene             2237 - 3238     + | 
+gene             3697 - 3503     - | 
+gene             3654 - 3553     - | 
+gene             3900 - 3763     - | 
+gene             4407 - 4285     - | 
+gene             4444 - 4322     - | 
+gene             3389 - 4432     + | 
+gene             4535 - 4404     - | 
+gene             4611 - 4507     - | 
+gene             4456 - 4650     + | 
+gene             4871 - 4734     - | 
+gene             5190 - 5083     - | 
+gene             5324 - 5205     - | 
+gene             5756 - 5544     - | 
+gene             5952 - 5722     - | 
+gene             4651 - 5877     + | 
+gene             6226 - 6047     - | 
+gene             5969 - 6124     + | 
+gene             6137 - 6253     + | 
+gene             6885 - 6439     - | 
+gene             6947 - 6801     - | 
+gene             6259 - 6918     + | 
+gene             7194 - 7033     - | 
+gene             6918 - 7103     + | 
+gene             6991 - 7134     + | 
+  TERM 1         7572 - 7523     - gTRH  88 -10.1 -3.97674 | opp_overlap 7522, overlap 7472 7505 7524
+  CCAGTAGCTAAAGAA GCTCCAGTAGCTAAAGAAGCT AAGAAGAA AGCTCCTGTAGCTACTGGCGA ATATCCTTACAAAGT
+  TERM 2         7571 - 7524     - gTRH  95 -13.6 -2.98122 | opp_overlap 7522, overlap 7472 7505 7523
+  CAGTAGCTAAAGAAG CTCCAGTAGCTAAAGAAGCT AAGAAGAA AGCTCCTGTAGCTACTGGCG AATATCCTTACAAAG
+gene             7877 - 7728     - | 
+gene             7193 - 7801     + | 
+gene             7930 - 7820     - | 
+gene             7803 - 8204     + | 
+  TERM 3         8238 - 8208     - TfRH 100 -14.2 -3.93216 | opp_overlap 8210 8214, overlap 8210
+  GGCAAATTATAATAA       GATTAATCAGCTGC ATT GCAGCTGATTAATT       CAGTTAAAACAAAAA
+  TERM 4         8236 - 8210     - TfRH 100 -16.8 -3.54602 | opp_overlap 8210 8214, overlap 8208
+  CAAATTATAATAAGA         TTAATCAGCTGC ATT GCAGCTGATTAA         TTCAGTTAAAACAAA
+  TERM 5         8210 - 8236     + TFrH 100 -16.8 -3.17075 | opp_overlap 8210 8208, overlap 8214
+  CAAATTATAATAAGA         TTAATCAGCTGC ATT GCAGCTGATTAA         TTCAGTTAAAACAAA
+  TERM 6         8214 - 8232     + TFrH 100 -13.2  -3.4052 | opp_overlap 8210 8208, overlap 8210
+  TTATAATAAGATTAA             TCAGCTGC ATT GCAGCTGA             TTAATTCAGTTAAAA
+gene             8870 - 8634     - | 
+gene             8257 - 8910     + | 
+gene             8920 - 9582     + | 
+gene             9723 - 9568     - | 
+gene             9629 - 10093    + | 
+gene            10103 - 10813    + | 
+gene            11002 - 10823    - | 
+gene            11060 - 10911    - | 
+  TERM 7        11244 - 11222    - gRH  80    -7 -4.49314 | 
+  TATTAGCAAAAATAA           CGATGCAAAA ATT CTTTGCGTCG           AGTGTATTGAAAACG
+gene            10806 - 11297    + | 
+gene            11765 - 11517    - | 
+gene            11629 - 11528    - | 
+gene            11925 - 11812    - | 
+gene            11224 - 11997    + | 
+gene            12221 - 12081    - | 
+gene            11925 - 12173    + | 
+gene            12716 - 12507    - | 
+  TERM 8        12860 - 12850    - gR   82  -5.4 -5.24796 | 
+  GTTATACAACAAAAA                 GGAA CTT TTCC                 GATTAAGATGTTTTC
+gene            13106 - 12927    - | 
+gene            13226 - 13107    - | 
+gene            12163 - 13245    + | 
+gene            13560 - 13354    - | 
+gene            13658 - 13557    - | 
+gene            13740 - 13615    - | 
+gene            13870 - 13745    - | 
+gene            14198 - 14004    - | 
+gene            13232 - 14131    + | 
+gene            14200 - 14087    - | 
+  TERM 9        14134 - 14155    + gTr  78  -8.9 -3.48924 | opp_overlap 14134 14133
+  CATAAGGTATTAAAT           TTATGCAAA AACA TTTGCATAA            TTCTATAAAGCATCG
+gene            14304 - 14158    - | 
+gene            14426 - 14298    - | 
+gene            14204 - 14377    + | 
+gene            14602 - 14480    - | 
+gene            14313 - 14657    + | 
+gene            14909 - 14742    - | 
+gene            14920 - 14792    - | 
+gene            14518 - 14877    + | 
+gene            14958 - 14848    - | 
+gene            15312 - 15199    - | 
+gene            14870 - 15424    + | 
+gene            15867 - 15682    - | 
+gene            16033 - 15899    - | 
+gene            16425 - 16288    - | 
+gene            15425 - 16543    + | 
+gene            16672 - 16514    - | 
+gene            16964 - 16842    - | 
+gene            17053 - 16937    - | 
+gene            17292 - 17191    - | 
+gene            17564 - 17460    - | 
+gene            17803 - 17561    - | 
+gene            17913 - 17779    - | 
+gene            17923 - 17822    - | 
+gene            16638 - 18290    + | 
+gene            18519 - 18361    - | 
+gene            18544 - 18434    - | 
+gene            18756 - 18541    - | 
+gene            18918 - 18781    - | 
+gene            18290 - 18955    + | 
+gene            19484 - 19338    - | 
+gene            18962 - 19390    + | 
+gene            19372 - 19641    + | 
+gene            20448 - 20233    - | 
+gene            19714 - 20478    + | 
+gene            20968 - 20465    - | 
+  TERM 10       20571 - 20592    + gFH  78  -8.9 -3.42395 | overlap 20569
+  GCTGAGTGTACGTGA           CTATTGTAT CTAG ATACAATAG            TATTTAAATCATCCC
+gene            20574 - 20681    + | 
+gene            21989 - 20970    - | 
+gene            21001 - 21423    + | 
+gene            23200 - 21989    - | 
+gene            22246 - 22359    + | 
+gene            22704 - 22868    + | 
+gene            22925 - 23056    + | 
+gene            23940 - 23197    - | 
+gene            23500 - 23613    + | 
+gene            23675 - 23944    + | 
+gene            25119 - 23941    - | 
+gene            24119 - 24226    + | 
+gene            24570 - 24683    + | 
+gene            26161 - 25130    - | 
+gene            25182 - 25343    + | 
+gene            25356 - 25487    + | 
+gene            25770 - 25877    + | 
+gene            26927 - 26166    - | 
+gene            26324 - 26446    + | 
+gene            26527 - 26757    + | 
+gene            28102 - 26927    - | 
+gene            27210 - 27404    + | 
+gene            27512 - 27673    + | 
+gene            27696 - 27935    + | 
+gene            27838 - 27972    + | 
+gene            28584 - 28102    - | 
+gene            28487 - 28597    + | 
+gene            30545 - 28599    - | 
+gene            28654 - 28911    + | 
+gene            28933 - 29187    + | 
+gene            29302 - 29427    + | 
+gene            29585 - 29686    + | 
+gene            29673 - 29804    + | 
+gene            29980 - 30198    + | 
+gene            30731 - 30546    - | 
+gene            30394 - 30597    + | 
+gene            31144 - 30716    - | 
+gene            30971 - 31078    + | 
+gene            31232 - 31107    - | 
+  TERM 11       31197 - 31163    - GgRH  82  -7.4 -4.59853 | opp_overlap 31167, overlap 31167
+  TCAAGTTGTTAAAAA     TAAAGCTGCATT GGTTTGTTATT AATGCAGCTTTA     AATAGATTAATATTA
+gene            31620 - 31210    - | 
+gene            31111 - 31365    + | 
+gene            31457 - 31576    + | 
+gene            31573 - 31680    + | 
+gene            33169 - 31643    - | 
+gene            31665 - 31772    + | 
+gene            32265 - 32378    + | 
+gene            32577 - 32720    + | 
+gene            32717 - 32869    + | 
+gene            33026 - 33166    + | 
+gene            33785 - 33189    - | 
+gene            34164 - 33769    - | 
+gene            34590 - 34165    - | 
+gene            34174 - 34281    + | 
+gene            34106 - 34468    + | 
+gene            34297 - 34491    + | 
+  TERM 12       34610 - 34627    + TFrH  77  -5.5 -4.93547 | opp_overlap 34610, overlap 34603
+  TTTTGTTTTAAAAAA             GAGCGCT TTTA AACGCTC              TTTTTAATTAATTAC
+  TERM 13       34627 - 34610    - TfRH  86  -7.7 -5.00616 | opp_overlap 34603 34610
+  TTTTGTTTTAAAAAA             GAGCGCT TTTA AACGCTC              TTTTTAATTAATTAC
+gene            35751 - 34642    - | 
+gene            35296 - 35409    + | 
+gene            36160 - 35720    - | 
+gene            35751 - 35879    + | 
+gene            35818 - 35979    + | 
+gene            37429 - 36164    - | 
+  TERM 14       36291 - 36311    + gFH  89  -8.5  -4.4078 | overlap 36270
+  GAACCACTTTCAAGC            TTCTTTAAA ACG TTTAAAGAA            TTTTGCTTAACAAAG
+gene            36364 - 36474    + | 
+gene            36437 - 36550    + | 
+gene            36507 - 36755    + | 
+gene            36785 - 36922    + | 
+gene            37176 - 37403    + | 
+gene            37829 - 37494    - | 
+gene            37655 - 37768    + | 
+gene            38046 - 37765    - | 
+gene            38669 - 38043    - | 
+gene            38118 - 38240    + | 
+gene            39291 - 38656    - | 
+gene            38732 - 38878    + | 
+gene            38865 - 38984    + | 
+gene            39750 - 39376    - | 
+  TERM 15       39836 - 39800    - RH  100 -16.1  -5.5353 | opp_overlap 39800 39795
+  TATAGTAATAAAAAA    CACACAAACTCCAAAAC AAA ATATTGGAGTTTGTGTG    TTTTAGTTTTTGCAA
+gene            43136 - 39852    - | 
+gene            39915 - 40037    + | 
+  TERM 16       40064 - 40086    + gF  100 -13.6 -3.67792 | 
+  AACCACCTATGTCTG           CGGGTTTATT CAT AATAAACCCG           TTTCCGTGAGTATAA
+gene            40240 - 40341    + | 
+gene            40554 - 40661    + | 
+gene            40683 - 40784    + | 
+gene            41263 - 41439    + | 
+gene            41617 - 41784    + | 
+  TERM 17       42790 - 42807    + gTF  76  -2.8  -5.4477 | 
+  TCACTGCTAACATTG             TAAATC GTATTA GATTTA              TTTTTTTGCGAATTT
+gene            44383 - 43160    - | 
+gene            43603 - 43767    + | 
+gene            44749 - 44387    - | 
+gene            44496 - 44672    + | 
+gene            46328 - 44718    - | 
+gene            45069 - 45269    + | 
+gene            45418 - 45555    + | 
+gene            45736 - 45891    + | 
+gene            45940 - 46113    + | 
+gene            46134 - 46253    + | 
+gene            46619 - 46332    - | 
+gene            46522 - 46623    + | 
+  TERM 18       46676 - 46653    - TfRH 100  -8.3 -5.46657 | opp_overlap 46653
+  TATTTCAATAAAAAA          GCTCAAATA AATAAA TATTTGAGC           TTTTAAACAAAACAA
+  TERM 19       46653 - 46676    + TFrH  77  -8.3 -4.07568 | opp_overlap 46653
+  TATTTCAATAAAAAA          GCTCAAATA AATAAA TATTTGAGC           TTTTAAACAAAACAA
+gene            48810 - 46765    - | 
+gene            47549 - 47650    + | 
+  TERM 20       47684 - 47694    + gF   84  -6.8 -5.06414 | 
+  AACTGCATCATTTTA                 GGTG CTT CACC                 TTTTTCTTCAAAAGG
+gene            48254 - 48559    + | 
+gene            48950 - 48807    - | 
+gene            49471 - 48953    - | 
+gene            50190 - 49513    - | 
+gene            49449 - 49571    + | 
+gene            49498 - 49614    + | 
+gene            49807 - 49971    + | 
+gene            49964 - 50104    + | 
+gene            50224 - 50418    + | 
+

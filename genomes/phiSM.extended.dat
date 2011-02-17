@@ -1,0 +1,633 @@
+BlastOutput
+    BlastOutput_program   = blastp
+    BlastOutput_version   = BLASTP 2.2.24+
+    BlastOutput_reference = Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of protein database search programs", Nucleic Acids Res. 25:3389-3402.
+    BlastOutput_db        = /Users/mbsulli/blast/db/nr
+    BlastOutput_query-ID  = Query_1
+    BlastOutput_query-def = phiSM~58~1:44496-44672
+    BlastOutput_query-len = 59
+    BlastOutput_param
+        Parameters
+            Parameters_matrix     = BLOSUM62
+            Parameters_expect     = 0.1
+            Parameters_gap-open   = 11
+            Parameters_gap-extend = 1
+            Parameters_filter     = F
+    BlastOutput_iterations
+        Iteration
+            Iteration_iter-num  = 1
+            Iteration_query-ID  = Query_1
+            Iteration_query-def = phiSM~58~1:44496-44672
+            Iteration_query-len = 59
+            Iteration_hits      = 
+            Iteration_stat
+                Statistics
+                    Statistics_db-num    = 12348165
+                    Statistics_db-len    = -73362562
+                    Statistics_hsp-len   = 0
+                    Statistics_eff-space = 103314513258
+                    Statistics_kappa     = 0.041
+                    Statistics_lambda    = 0.267
+                    Statistics_entropy   = 0.14
+            Iteration_message = No hits found
+        Iteration
+            Iteration_iter-num  = 2
+            Iteration_query-ID  = Query_2
+            Iteration_query-def = phiSM~51~2:37841-37494
+            Iteration_query-len = 116
+            Iteration_hits      = 
+            Iteration_stat
+                Statistics
+                    Statistics_db-num    = 12348165
+                    Statistics_db-len    = -73362562
+                    Statistics_hsp-len   = 0
+                    Statistics_eff-space = 105491332287
+                    Statistics_kappa     = 0.041
+                    Statistics_lambda    = 0.267
+                    Statistics_entropy   = 0.14
+            Iteration_message = No hits found
+        Iteration
+            Iteration_iter-num  = 3
+            Iteration_query-ID  = Query_3
+            Iteration_query-def = phiSM~4~3:1712-2002
+            Iteration_query-len = 97
+            Iteration_hits      = 
+            Iteration_stat
+                Statistics
+                    Statistics_db-num    = 12348165
+                    Statistics_db-len    = -73362562
+                    Statistics_hsp-len   = 0
+                    Statistics_eff-space = 105605401164
+                    Statistics_kappa     = 0.041
+                    Statistics_lambda    = 0.267
+                    Statistics_entropy   = 0.14
+            Iteration_message = No hits found
+        Iteration
+            Iteration_iter-num  = 4
+            Iteration_query-ID  = Query_4
+            Iteration_query-def = phiSM~62~4:49381-48953
+            Iteration_query-len = 143
+            Iteration_hits      = 
+            Iteration_stat
+                Statistics
+                    Statistics_db-num    = 12348165
+                    Statistics_db-len    = -73362562
+                    Statistics_hsp-len   = 0
+                    Statistics_eff-space = 104412638844
+                    Statistics_kappa     = 0.041
+                    Statistics_lambda    = 0.267
+                    Statistics_entropy   = 0.14
+            Iteration_message = No hits found
+        Iteration
+            Iteration_iter-num  = 5
+            Iteration_query-ID  = Query_5
+            Iteration_query-def = phiSM~62~5:49471-48953
+            Iteration_query-len = 173
+            Iteration_hits      = 
+            Iteration_stat
+                Statistics
+                    Statistics_db-num    = 12348165
+                    Statistics_db-len    = -73362562
+                    Statistics_hsp-len   = 0
+                    Statistics_eff-space = 118846782630
+                    Statistics_kappa     = 0.041
+                    Statistics_lambda    = 0.267
+                    Statistics_entropy   = 0.14
+            Iteration_message = No hits found
+        Iteration
+            Iteration_iter-num  = 6
+            Iteration_query-ID  = Query_6
+            Iteration_query-def = phiSM~31~6:20977-20465
+            Iteration_query-len = 171
+            Iteration_hits
+                Hit
+                    Hit_num       = 1
+                    Hit_id        = gi|37626110|gb|AAQ96486.1|
+                    Hit_def       = hypothetical protein [Vibrio phage VP16T]
+                    Hit_accession = AAQ96486
+                    Hit_len       = 214
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 45.8245869032008
+                            Hsp_score       = 107
+                            Hsp_evalue      = 0.00203130694703871
+                            Hsp_query-from  = 4
+                            Hsp_query-to    = 109
+                            Hsp_hit-from    = 1
+                            Hsp_hit-to      = 111
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 31
+                            Hsp_positive    = 50
+                            Hsp_gaps        = 5
+                            Hsp_align-len   = 111
+                            Hsp_qseq        = MISFSRVSEVIIKNYN-KILKVTEHGTKTPDV--ASSFGDDSSPLKDMVAIFAKTQVSGEDVVIGYL--NQHQIAEAGEKRIFSVNQDNTLSAEIHLKSDNQIVINKGEDW
+                            Hsp_hseq        = MGRFAKITNFIRRAAGVSDVRCNPGGGATVDAYHAQPAGDDCHPLPTDTAVLVETPRSNNYAAVGVVDPNNRQTAGPGERRVYSRNADGEQVAEVFLHDDGQVRVSNDEGF
+                            Hsp_midline     = M  F++++  I +      ++    G  T D   A   GDD  PL    A+  +T  S     +G +  N  Q A  GE+R++S N D    AE+ L  D Q+ ++  E +
+            Iteration_stat
+                Statistics
+                    Statistics_db-num    = 12348165
+                    Statistics_db-len    = -73362562
+                    Statistics_hsp-len   = 0
+                    Statistics_eff-space = 113564703402
+                    Statistics_kappa     = 0.041
+                    Statistics_lambda    = 0.267
+                    Statistics_entropy   = 0.14
+        Iteration
+            Iteration_iter-num  = 7
+            Iteration_query-ID  = Query_7
+            Iteration_query-def = phiSM~1~7:156-473
+            Iteration_query-len = 106
+            Iteration_hits      = 
+            Iteration_stat
+                Statistics
+                    Statistics_db-num    = 12348165
+                    Statistics_db-len    = -73362562
+                    Statistics_hsp-len   = 0
+                    Statistics_eff-space = 105850896768
+                    Statistics_kappa     = 0.041
+                    Statistics_lambda    = 0.267
+                    Statistics_entropy   = 0.14
+            Iteration_message = No hits found
+        Iteration
+            Iteration_iter-num  = 8
+            Iteration_query-ID  = Query_8
+            Iteration_query-def = phiSM~48~8:35760-34642
+            Iteration_query-len = 373
+            Iteration_hits
+                Hit
+                    Hit_num       = 1
+                    Hit_id        = gi|37626164|gb|AAQ96539.1|
+                    Hit_def       = hypothetical protein [Vibrio phage VP16C]
+                    Hit_accession = AAQ96539
+                    Hit_len       = 364
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 82.4185466153494
+                            Hsp_score       = 202
+                            Hsp_evalue      = 9.52719110041187e-14
+                            Hsp_query-from  = 58
+                            Hsp_query-to    = 370
+                            Hsp_hit-from    = 40
+                            Hsp_hit-to      = 362
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 89
+                            Hsp_positive    = 154
+                            Hsp_gaps        = 34
+                            Hsp_align-len   = 335
+                            Hsp_qseq        = VDVEVQRDNDTIAVDVTRFTDGNKSKSTRHSEHTYKPPFYKEEYDFSQDEIYMNTVALGALEVAGANQAIAKNAVKEVAKNRLK----IERAIRKQQADVLQTGIVSLINGDS-----IDYRRKAASMVDVGAAQYWGASTSTPLVQFAAAGKFLREIGNSSGNTLNITMRSDAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGN--TKYYLDKGNVIILPNDFMGKTIFGGLPFMRSGSVNGVAARMPGVI------EKDYL-----LRALSDEKTISSTLELTSAPLVVPFTIDKVYTLKV
+                            Hsp_hseq        = VEIDVKRFSENVAVVITKLSGPNFNDASLISTKEFEPPEYGEAFATDVDDLLQRLIGVNPYD--DANIAYSSKLVGRLMDYFMEANDMIMRGVEIQASQILQTGRLNLLDRDGETAYEIDYAPKATHFPTVTTA--WSDDGADPIDDLRALFEVIRADGKVNPDM--IIMGEQALRWALRNANFQEELDNRRIDTGMID-PRMMAS-GATLYGNVWVGSYMAQIWTYPEGYSHPQTRAFTKYVNDD-SVIVLSSQTRLDRVSAIVP-LPLGPDQRVSQMLPDLVPGRMVSEGDDLDVTPNLYPTPNGRTIIA--ELLSRILLVPVQIDGFGCLDV
+                            Hsp_midline     = V+++V+R ++ +AV +T+ +  N + ++  S   ++PP Y E +    D++    + +   +   AN A +   V  +    ++    I R +  Q + +LQTG ++L++ D      IDY  KA     V  A  W    + P+    A  + +R  G  + +   I M   A+   L N + Q+ L++RR+D   ID P+  AS G T +G +  G ++  +WTY E Y+       TKY  D  +VI+L +      +   +P +  G    V+  +P ++      E D L     L    + +TI +  EL S  L+VP  ID    L V
+                Hit
+                    Hit_num       = 2
+                    Hit_id        = gi|37626099|gb|AAQ96475.1|
+                    Hit_def       = hypothetical protein [Vibrio phage VP16T]
+                    Hit_accession = AAQ96475
+                    Hit_len       = 364
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 73.9441559451676
+                            Hsp_score       = 180
+                            Hsp_evalue      = 3.14338706715099e-11
+                            Hsp_query-from  = 58
+                            Hsp_query-to    = 298
+                            Hsp_hit-from    = 40
+                            Hsp_hit-to      = 282
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 70
+                            Hsp_positive    = 114
+                            Hsp_gaps        = 20
+                            Hsp_align-len   = 252
+                            Hsp_qseq        = VDVEVQRDNDTIAVDVTRFTDGNKSKSTRHSEHTYKPPFYKEEYDFSQDEIYMNTVALGALEVAGANQAIAKNAVKEVAKNRLK----IERAIRKQQADVLQTGIVSLIN--GD---SIDYRRKAASMVDVGAAQYWGASTSTPLVQFAAAGKFLREIGNSSGNTLNITMRSDAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGN--TKYYLDKGNVIIL
+                            Hsp_hseq        = VEIDVKRFAENVAVVVTKLSGPNFNDASLISTKEFEPPEYGEAFATDVDDLLQRL--LGVNPYDDANIAYSSKLVGRLMDYFMEANDMIMRGIELQASQILQTGRLSLIDRAGEVAYEIDYSPKATHFPTTATA--WSDDGADPLADLESLFGVIRADGKVNPDM--IIMGESSLRWARDNTKFRNAFDNRRMQIGELN-PRMMES-GATFQGVVWVGSYEAQIWTYPEGYSHPQTNAFTKYVLDD-KVIVL
+                            Hsp_midline     = V+++V+R  + +AV VT+ +  N + ++  S   ++PP Y E +    D++      LG      AN A +   V  +    ++    I R I  Q + +LQTG +SLI+  G+    IDY  KA        A  W    + PL    +    +R  G  + +   I M   ++     N   +   ++RRM   +++ P+   S G TF G +  G +   +WTY E Y+    N  TKY LD   VI+L
+                Hit
+                    Hit_num       = 3
+                    Hit_id        = gi|154482768|ref|ZP_02025216.1|
+                    Hit_def       = hypothetical protein EUBVEN_00445 [Eubacterium ventriosum ATCC 27560] >gi|149736363|gb|EDM52249.1| hypothetical protein EUBVEN_00445 [Eubacterium ventriosum ATCC 27560]
+                    Hit_accession = ZP_02025216
+                    Hit_len       = 352
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 64.3141665472338
+                            Hsp_score       = 155
+                            Hsp_evalue      = 2.59675963462761e-08
+                            Hsp_query-from  = 45
+                            Hsp_query-to    = 371
+                            Hsp_hit-from    = 28
+                            Hsp_hit-to      = 352
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 77
+                            Hsp_positive    = 146
+                            Hsp_gaps        = 32
+                            Hsp_align-len   = 342
+                            Hsp_qseq        = SAFFPR-ETTATLMVDVEVQRDNDTIAVDVTRFTDGNKSKSTRHSEHTYKPPFYKEEYDFSQDEIYMNTVALGALEVAGANQAIAKNAVKEVAKNRLKIERAIRKQQ----ADVLQTGIVSLINGD------SIDYRRKAASMVDVGAAQYWGASTSTPLVQFAAAGKFLREIGNSSGNTLNITMRSDAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGNTKYYLDK----GNVIILPNDFMGKTIFGGLPFMRSGSVNGVAARMPGVIEKDYLLRALSDEKTISSTLELTSAPLVVPFTIDKVYTLKVL
+                            Hsp_hseq        = STFFRNVETFDTQKIDVDFKKGNRQLAPFVHKKIGGVTIDNEGYETNTYEPPLVAPNKITTVDDILKRTPGESLYGGKSPNQ----RAVEKMQRDFTELDEMITRREEWMCCQALFTGKIPILDKDGKELQAEIDF--QFTNKVTLSGANAWNKKTGGKIKQLKEWRKQVQKKGFVNCNVC--LMGADALEAFLIDEEVLKVLDTRRFEAAVITPKEL--PNGATYIGTIH--EIAMDIYTYNEWYLDNWTNKEEPEDKPLLPANIVVLLSTEANYSMYYG-----AVGVTDEAGKTIEVVEGSRIPEQWVERRPPRRFLQLNSAPLCVPHEVDSWYVATVC
+                            Hsp_midline     = S FF   ET  T  +DV+ ++ N  +A  V +   G    +  +  +TY+PP        + D+I   T           NQ     AV+++ ++  +++  I +++       L TG + +++ D       ID+  +  + V +  A  W   T   + Q     K +++ G  + N     M +DA+   L ++ + ++L++RR + A I   +     G T+ G I   +  ++++TY E Y D   N +   DK     N+++L +     +++ G     +  V   A +   V+E   +     + +     L+L SAPL VP  +D  Y   V 
+                Hit
+                    Hit_num       = 4
+                    Hit_id        = gi|116333734|ref|YP_795261.1|
+                    Hit_def       = hypothetical protein LVIS_1098 [Lactobacillus brevis ATCC 367] >gi|116099081|gb|ABJ64230.1| hypothetical protein LVIS_1098 [Lactobacillus brevis ATCC 367]
+                    Hit_accession = YP_795261
+                    Hit_len       = 373
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 59.6917716362255
+                            Hsp_score       = 143
+                            Hsp_evalue      = 6.72439380153108e-07
+                            Hsp_query-from  = 81
+                            Hsp_query-to    = 312
+                            Hsp_hit-from    = 71
+                            Hsp_hit-to      = 290
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 66
+                            Hsp_positive    = 110
+                            Hsp_gaps        = 42
+                            Hsp_align-len   = 247
+                            Hsp_qseq        = KSKSTRHSEHTYKPPFYKEEYDFSQDEIYMNTVALGALEVAGANQAIAKNAVKEVAKNRL-----------KIERAIRKQQADVLQTGIVSLI-NGDSI--DYRRKAASMVDVGAAQYWGASTSTPLVQFAAAGKFLREIGNSSGNTLN-ITMRSDAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGNTKYYLDKGNVIILPNDFMGKTIFGGLP
+                            Hsp_hseq        = RSGFDRVSDHTR---YFKEGY-------YIDEAIRQQLLRVGAN---ATQAEKDMINNHIFQDSMELLKGAQLTREIMRNQ--IIQTGKINVIGNGQTITADYQMKASHRVVNDKA--WGTTGSTPFEDIQKARDL---VGDDSDQVITRAVMNKATFNALMSDTNVKSTMLYDNGKLANVTIPQ---SELLNF----LVTNYGLTVQIYDKRYMDIDGTKKKWIPDGRVIFLPDGELGKTIMSTTP
+                            Hsp_midline     = +S   R S+HT    ++KE Y       Y++      L   GAN   A  A K++  N +           ++ R I + Q  ++QTG +++I NG +I  DY+ KA+  V    A  WG + STP      A      +G+ S   +    M       L+S+ +++  +       A + +PQ   SE + F       ++ + +  Y+++Y D DG  K ++  G VI LP+  +GKTI    P
+                Hit
+                    Hit_num       = 5
+                    Hit_id        = gi|213971972|ref|ZP_03400070.1|
+                    Hit_def       = major capsid protein E [Pseudomonas syringae pv. tomato T1] >gi|301385638|ref|ZP_07234056.1| major capsid protein E [Pseudomonas syringae pv. tomato Max13] >gi|302061400|ref|ZP_07252941.1| major capsid protein E [Pseudomonas syringae pv. tomato K40] >gi|213923287|gb|EEB56884.1| major capsid protein E [Pseudomonas syringae pv. tomato T1]
+                    Hit_accession = ZP_03400070
+                    Hit_len       = 342
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 55.0693767252173
+                            Hsp_score       = 131
+                            Hsp_evalue      = 1.53645504545208e-05
+                            Hsp_query-from  = 42
+                            Hsp_query-to    = 371
+                            Hsp_hit-from    = 30
+                            Hsp_hit-to      = 342
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 75
+                            Hsp_positive    = 145
+                            Hsp_gaps        = 41
+                            Hsp_align-len   = 342
+                            Hsp_qseq        = AGFSAFFPRETTATLMVDVEVQRDNDTIAVDVTRFTDGNKSKSTRHSEHTYKPPFYKEEYDFSQDEIYMNTVALGALEVAGANQAIAKNAVKEVAKNRLKIER-----AIRKQQ---ADVLQTGIVSLING---DSIDYRRKAASMVDVGAAQYWGASTSTPLVQFAAAGKFLREIGNSSGNTLNIT-MRSDAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGNTKYYLDKGNVIILPNDFMGKTIFGGLPFMRSGSVNGVAARMPGVIEKDYLLRALSDEKTISSTLELTSAPLVVPFTIDKVYTLKVL
+                            Hsp_hseq        = GGSPVTFPTKT-----VDIDIVKGQRKMAPFVHPRLPGSISLRDGYRTDSYAPPYIQPKRE--------TTAELVLKRSAGDNPFSSRSPLERAGQMLGKDLRDLDDEIIRREEWMCAQALTTGKVRVLGDGVDDTIDFLMANDHKITLGTGQ-WGSDDSDPIGNLRA---WKRKIAKDSGRTANTAALSGEALDAFQSNLTVIKQLNTRRVDMGLIKPEEL--PDGVTYLGYL--NDPGVDLYGYDEWYLDDEGDEQPMIPAGGLILGATSTRNAMLY--------GAIQDLEAIESGLVEAARFPKSWTTQEPSARWLKLQSAALAGLLEPDAFIYAKVV
+                            Hsp_midline     =  G    FP +T     VD+++ +    +A  V     G+ S    +   +Y PP+ + + +         T  L     AG N   +++ ++   +   K  R      IR+++   A  L TG V ++     D+ID+       + +G  Q WG+  S P+    A   + R+I   SG T N   +  +A+    SN ++ + L +RR+D   I   +    +G+T+ G +   D  ++L+ Y+E Y D +G+ +  +  G +I+         ++        G++  + A   G++E     ++ + ++  +  L+L SA L      D     KV+
+                Hit
+                    Hit_num       = 6
+                    Hit_id        = gi|289679270|ref|ZP_06500160.1|
+                    Hit_def       = major capsid protein E [Pseudomonas syringae pv. syringae FF5]
+                    Hit_accession = ZP_06500160
+                    Hit_len       = 313
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 55.0693767252173
+                            Hsp_score       = 131
+                            Hsp_evalue      = 1.62886604433575e-05
+                            Hsp_query-from  = 42
+                            Hsp_query-to    = 327
+                            Hsp_hit-from    = 1
+                            Hsp_hit-to      = 278
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 70
+                            Hsp_positive    = 132
+                            Hsp_gaps        = 38
+                            Hsp_align-len   = 301
+                            Hsp_qseq        = AGFSAFFPRETTATLMVDVEVQRDNDTIAVDVTRFTDGNKSKSTRHSEHTYKPPFYKEEYDFSQDEIYMNTVALGALEVAGANQAIAKNAVKEVAKNRLKIER-----AIRKQQ---ADVLQTGIVSLING---DSIDYRRKAASMVDVGAAQYWGASTSTPLVQFAAAGKFLREIGNSSGNTLNIT-MRSDAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGNTKYYLDKGNVIILPNDFMGKTIFGG---LPFMRSGSVNGVAARMP
+                            Hsp_hseq        = GGSPVTFPTKT-----VDIDIVKGQRKMAPFVHPRLPGSISLRDGYRTDSYAPPYIQPKRETTAELVLKRS--------AGDNPFSSRSPLERAGQMLGKDLRDLDDEIIRREEWMCAQALTTGKVRVLGDGVDDTIDFLMANDHKITLGTGQ-WGSDDSDPIGNLRA---WKRKIAKDSGRTANTAALSGEALDAFQSNLTVIKQLNTRRVDMGLIKPEEL--PDGVTYLGYL--NDPGVDLYGYDEWYLDDEGDEQPMIPAGGLILGATSTRNAMLYGAIQDLEAIESGLVE--AARFP
+                            Hsp_midline     =  G    FP +T     VD+++ +    +A  V     G+ S    +   +Y PP+ + + + + + +   +        AG N   +++ ++   +   K  R      IR+++   A  L TG V ++     D+ID+       + +G  Q WG+  S P+    A   + R+I   SG T N   +  +A+    SN ++ + L +RR+D   I   +    +G+T+ G +   D  ++L+ Y+E Y D +G+ +  +  G +I+         ++G    L  + SG V   AAR P
+                Hit
+                    Hit_num       = 7
+                    Hit_id        = gi|83645662|ref|YP_434097.1|
+                    Hit_def       = type II secretory pathway pullulanase PulA [Hahella chejuensis KCTC 2396] >gi|83633705|gb|ABC29672.1| Type II secretory pathway, pullulanase PulA and related Glycosidase [Hahella chejuensis KCTC 2396]
+                    Hit_accession = YP_434097
+                    Hit_len       = 335
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 54.6841771492999
+                            Hsp_score       = 130
+                            Hsp_evalue      = 1.9570663551408e-05
+                            Hsp_query-from  = 142
+                            Hsp_query-to    = 371
+                            Hsp_hit-from    = 122
+                            Hsp_hit-to      = 335
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 55
+                            Hsp_positive    = 102
+                            Hsp_gaps        = 30
+                            Hsp_align-len   = 237
+                            Hsp_qseq        = IERAIRKQQADVLQTGIVSLINGDS-----IDYRRKAASMVDV-GAAQYWGASTSTPLVQFAAAGKFLREIGNSSGNTLNITMRSDAMTQLLSNDSMQQILESRRMDRAKIDM-PQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGNTKYYLDKGNVIILPNDFMGKTIFGGLPFMRSGSVNGVAARMPGVIEKDYLLRALSDEKTISSTLELTSAPLVVPFTIDKVYTLKVL
+                            Hsp_hseq        = IDRRMEWMAASALRTGQI-IVSGEKYPTSVVDFGRDPNLTVDVSGGAAAWDQSTSTPKEDLEDIFALMKAPCNY------VIGGRGAINAFMKHADIKELMETRRGSSTQLETAPTVNLAD---YKGRL--GSAGPEVWSYQGYYTDESGTQQLYIPDDEIILVSMAVEGVQAFGAI-------LDGEAGYMPA----RYFPKNWPEKDPPLEYLMTQSSPLTVPKRINGTAKIKVL
+                            Hsp_midline     = I+R +    A  L+TG + +++G+      +D+ R     VDV G A  W  STSTP          ++   N       +     A+   + +  +++++E+RR    +++  P  N ++   + G++  G     +W+Y+  YTD  G  + Y+    +I++     G   FG +       ++G A  MP      Y  +   ++      L   S+PL VP  I+    +KVL
+                Hit
+                    Hit_num       = 8
+                    Hit_id        = gi|310779734|ref|YP_003968066.1|
+                    Hit_def       = hypothetical protein Ilyop_1947 [Ilyobacter polytropus DSM 2926] >gi|309749057|gb|ADO83718.1| hypothetical protein Ilyop_1947 [Ilyobacter polytropus DSM 2926]
+                    Hit_accession = YP_003968066
+                    Hit_len       = 338
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 51.9877801178785
+                            Hsp_score       = 123
+                            Hsp_evalue      = 0.00012268948943786
+                            Hsp_query-from  = 47
+                            Hsp_query-to    = 316
+                            Hsp_hit-from    = 29
+                            Hsp_hit-to      = 279
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 66
+                            Hsp_positive    = 113
+                            Hsp_gaps        = 25
+                            Hsp_align-len   = 273
+                            Hsp_qseq        = FFPR-ETTATLMVDVEVQRDNDTIAVDVTRFTDGNKSKSTRHSEHTYKPPFYKEEYDFSQDEIYMNTVALGALEVAGANQAIAKNAVKEVAKNRLKIERAIRKQQADVLQTGIVSLINGDS-IDYRRKAASMVDVGAAQYWGASTSTPLVQFAAAGKFLREIGNSSGNTLN-ITMRSDAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGNTKYYLDKGNVIILPNDFMGKTIFGGLPFMRS
+                            Hsp_hseq        = FFPNDEIVYTEQVVLDLKNMGKSMAVFVSPIVGGKAQTENGQSTKIIENPPYVESRKVISAETLFKREAGEAVET-GAAGALQRKQAKLLGQEEAEVKNKIEYMVGQFLQTGKINSLDGESQWEYDYAMSNKVTLTGEDLWNTSTSDPVADIETAINTAEE----SGEKVEVIVLGQNAANDFINNTKAQALLDNRRIKLGEIDPKKL--APGFKYLGTINYSG--VDIYSYNRSVTAPDGS--------NVKILADNAM----VGG-PIDRS
+                            Hsp_midline     = FFP  E   T  V ++++    ++AV V+    G        S    + P Y E       E      A  A+E  GA  A+ +   K + +   +++  I       LQTG ++ ++G+S  +Y    ++ V +     W  STS P+     A     E    SG  +  I +  +A    ++N   Q +L++RR+   +ID  +   + G  + G I      +++++Y    T  DG+        NV IL ++ M     GG P  RS
+                Hit
+                    Hit_num       = 9
+                    Hit_id        = gi|188588631|ref|YP_001921110.1|
+                    Hit_def       = hypothetical protein CLH_1724 [Clostridium botulinum E3 str. Alaska E43] >gi|188498912|gb|ACD52048.1| conserved hypothetical protein [Clostridium botulinum E3 str. Alaska E43]
+                    Hit_accession = YP_001921110
+                    Hit_len       = 348
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 51.9877801178785
+                            Hsp_score       = 123
+                            Hsp_evalue      = 0.000140212157660845
+                            Hsp_query-from  = 47
+                            Hsp_query-to    = 371
+                            Hsp_hit-from    = 29
+                            Hsp_hit-to      = 348
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 75
+                            Hsp_positive    = 139
+                            Hsp_gaps        = 33
+                            Hsp_align-len   = 339
+                            Hsp_qseq        = FFPR-ETTATLMVDVEVQRDNDTIAVDVTRFTDGNKSKSTRHSEHTYKPPFYKEEYDFSQDEIYMNTVALGALEVAGANQAIAKNAVKEVAKNRLKIERAIRKQQADVLQTGIVSLINGDSIDYR-------RKAASMVDVGAAQYWGASTSTPLVQFAAAGKFLREIGNSSGNTLNITMRSDAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGNTKYYLDKGNVIILPNDFMGKTIFGGLPFMRSGSVNGVAAR------MPGVIEKDYLLRALSDEKTISSTLELTSAPLVVPFTIDKVYTLKVL
+                            Hsp_hseq        = FFGRVETFDTKKVDVDFMKGNRKLAPFVHEKIGGKTVENTGYRTNTYTPVLIAPDTITTTDDILSRVAGESLYNGYTPEERAVQKMVKDFAKLEDMITRREEWMCSKAIFTGKIPII-GDSLNYEIDFEFENKEIKSGDDL-----WSNAKSNPINQLEEMVETVQKKGMTTPDVC--IMATDAARAFINNANVQKVLDVKNIQLARIEPKQL--PNGATYIGTIPH--LGLDIYKYNEWFLDDFTNPEKPTTEP---MVPEGYVGLLSTEADFFMAYGAVTIIDGKTERFVTVEGTRTPDTWIK----KKPARRFFQLNSRPLPCPVEVDSWYVAKVL
+                            Hsp_midline     = FF R ET  T  VDV+  + N  +A  V     G   ++T +  +TY P     +   + D+I                +   +  VK+ AK    I R      +  + TG + +I GDS++Y        ++  S  D+     W  + S P+ Q     + +++ G ++ +     M +DA    ++N ++Q++L+ + +  A+I+  Q     G T+ G I      ++++ Y E + D   N +    +    ++P  ++G        FM  G+V  +  +      + G    D  ++    +K      +L S PL  P  +D  Y  KVL
+                Hit
+                    Hit_num       = 10
+                    Hit_id        = gi|311694853|gb|ADP97726.1|
+                    Hit_def       = capsid protein of prophage [marine bacterium HP15]
+                    Hit_accession = ADP97726
+                    Hit_len       = 339
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 51.2173809660437
+                            Hsp_score       = 121
+                            Hsp_evalue      = 0.000229393286179484
+                            Hsp_query-from  = 52
+                            Hsp_query-to    = 297
+                            Hsp_hit-from    = 32
+                            Hsp_hit-to      = 272
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 53
+                            Hsp_positive    = 101
+                            Hsp_gaps        = 21
+                            Hsp_align-len   = 254
+                            Hsp_qseq        = TTATLMVDVEVQRDNDTIAVDVTRFTDGNKSKSTRHSEHTYKPPFYKEEYDFSQDEIYMNTVALGALEVAGANQAIAKNAVKEVAKNRLKIERAIRKQQADVLQTGIVSLINGDS-----IDYRRKAASMVDV-GAAQYWGASTSTPLVQFAAAGKFLREIGNSSGNTLNITMRSDAMTQLLSNDSMQQILESRRMDRAKIDMP--QFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGNTKYYLDKGNVII
+                            Hsp_hseq        = TFGTKEIAFDAWDEDFKLAPFVSPYVPGQVSQQPGGELRKFIPPYLKPKDVVSPDRVLERRPGEGFSGPLTPEERADAIRMDLLATHRKKIRRREEWILSQVLLTGQV-VVSGPRYPEKLLDFRRDPNLTIDISGGAGAWNQTTAKPVEDFQDWFELLESPAT------HVFFGPGTLRAAFRDEEFKDLAETRRGSESRFEMAPAELDASYAGRFRENGA------ELWEYKGWYKDAQGNKQYFIPYGHIVI
+                            Hsp_midline     = T  T  +  +   ++  +A  V+ +  G  S+        + PP+ K +   S D +       G        +      +  +A +R KI R      + VL TG V +++G       +D+RR     +D+ G A  W  +T+ P+  F    + L           ++      +     ++  + + E+RR   ++ +M   + +AS    F    A       LW Y+  Y DA GN +Y++  G+++I
+                Hit
+                    Hit_num       = 11
+                    Hit_id        = gi|227485895|ref|ZP_03916211.1|
+                    Hit_def       = capsid protein of prophage [Anaerococcus lactolyticus ATCC 51172] >gi|227236128|gb|EEI86143.1| capsid protein of prophage [Anaerococcus lactolyticus ATCC 51172]
+                    Hit_accession = ZP_03916211
+                    Hit_len       = 348
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 51.2173809660437
+                            Hsp_score       = 121
+                            Hsp_evalue      = 0.000229393286179484
+                            Hsp_query-from  = 25
+                            Hsp_query-to    = 295
+                            Hsp_hit-from    = 4
+                            Hsp_hit-to      = 273
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 65
+                            Hsp_positive    = 123
+                            Hsp_gaps        = 21
+                            Hsp_align-len   = 281
+                            Hsp_qseq        = LMAKKVVGKFKEIIDVKAGF--SAFFPR-ETTATLMVDVEVQRDNDTIAVDVTRFTDGNKSKSTRHSEHTYKPPFYKEEYDFSQDEIYMNTVALGALEVAGANQAIAKNAVKEVAKNRLKIERAIRKQQ----ADVLQTGIVSLINGD---SIDYRRKAASMVDVGAAQYWGASTSTPLVQFAAAGKFLREIGNSSGNTLNITMRSDAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGNTKYYLDKGNV
+                            Hsp_hseq        = LFETKTLGTLVERLPRTSTFIRDTFFRNIETFPTKRIDIDFVKGNRRLAPFVHPMIGGKTVPNAGYQTASYEPPLMAPNKITTAEEL-LNRLA-GENPYSG--KTAAERAVEKLGKDMAELEDMITRREEWMATQAIFTGKIPVIGAGVEAEIDFAFENKEVIS-KAAEKWNAETADPIADIRKWRLKVQRTGHVNCNVM--IMSSDVVNYFLNNKKVQALLDTKAYDLAAITPKEL--PNGATYVGTI--NEFGLDIYEYNEFYLDDWTNPDKPEDKALV
+                            Hsp_midline     = L   K +G   E +   + F    FF   ET  T  +D++  + N  +A  V     G    +  +   +Y+PP        + +E+ +N +A G    +G  +  A+ AV+++ K+  ++E  I +++       + TG + +I       ID+  +   ++   AA+ W A T+ P+         ++  G+ + N +   M SD +   L+N  +Q +L+++  D A I   +     G T+ G I   +F ++++ Y E Y D   N     DK  V
+                Hit
+                    Hit_num       = 12
+                    Hit_id        = gi|303245384|ref|ZP_07331668.1|
+                    Hit_def       = major capsid protein E [Desulfovibrio fructosovorans JJ] >gi|302493233|gb|EFL53095.1| major capsid protein E [Desulfovibrio fructosovorans JJ]
+                    Hit_accession = ZP_07331668
+                    Hit_len       = 342
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 48.9061835105396
+                            Hsp_score       = 115
+                            Hsp_evalue      = 0.00101295333535171
+                            Hsp_query-from  = 51
+                            Hsp_query-to    = 306
+                            Hsp_hit-from    = 36
+                            Hsp_hit-to      = 281
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 64
+                            Hsp_positive    = 120
+                            Hsp_gaps        = 38
+                            Hsp_align-len   = 270
+                            Hsp_qseq        = ETTATLMVDVEVQRDNDTIAVDVTRFTDGNKSKSTRHSEHTYKPPFYKEEYDFSQDEIYM----NTVALGALEVAGANQAIAKNAVKEVAKNRLKIERAIRKQQADVLQTGIVSLINGD----SIDYRRKAASMVDVGAAQYWGASTSTPLVQFAAAGKFL--RE-IGNSSGNTLNI-TMRSDAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGNTKYYLDKGNVIILPND--FMGKT
+                            Hsp_hseq        = KTHDTKHVDIDIVRRGRKMAAFVSPRREGRVVDREGYRTATFTPPYIKEKKVTTAEHVLTRRPGETIYAKPMT---PDQRAGEILGEDMTELRDRILRREAWMAAQLLKTGVV-VCQGDGIDVTIDFGMPSDHKIILSEVDKWTADTSDP------SGNLVTWRELIARDSGLVPNVAVLGSDVAAAVRRNELLMKQLDSRRVTLGQIDPQQL--PDGVIYLGQLEATD----LYSFSDYYEDDDGDLQ--------PMVPEDYIFLGST
+                            Hsp_midline     = +T  T  VD+++ R    +A  V+   +G       +   T+ PP+ KE+   + + +       T+    +     +Q   +   +++ + R +I R      A +L+TG+V +  GD    +ID+   +   + +     W A TS P      +G  +  RE I   SG   N+  + SD    +  N+ + + L+SRR+   +ID  Q    +G+ + GQ+ A D    L+++ + Y D DG+ +         ++P D  F+G T
+                Hit
+                    Hit_num       = 13
+                    Hit_id        = gi|167768865|ref|ZP_02440918.1|
+                    Hit_def       = hypothetical protein ANACOL_00182 [Anaerotruncus colihominis DSM 17241] >gi|167669037|gb|EDS13167.1| hypothetical protein ANACOL_00182 [Anaerotruncus colihominis DSM 17241]
+                    Hit_accession = ZP_02440918
+                    Hit_len       = 357
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 46.2097864791182
+                            Hsp_score       = 108
+                            Hsp_evalue      = 0.00667625804983092
+                            Hsp_query-from  = 87
+                            Hsp_query-to    = 359
+                            Hsp_hit-from    = 74
+                            Hsp_hit-to      = 343
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 64
+                            Hsp_positive    = 122
+                            Hsp_gaps        = 39
+                            Hsp_align-len   = 291
+                            Hsp_qseq        = HSEHTYKPPFYKEEYDFSQDEIYMNTVALGALEVAGANQAIAKNAVKEVAKNRLKIE-RAIRKQQ----------ADVLQTGIVSLINGDS--IDYRRKAASMVDVGAAQYWGASTSTPLVQFAAAGKFLREIGNSSGNTLNITMRSDAMTQLLSNDSMQQILESRR-MDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDA-DGNTKYYLDKGNVIILPNDFMGKTIFGGLPFMRSGSVN---GVAARMPGVIEKDYLLRALSDEKTISSTLELTSAPLVVP
+                            Hsp_hseq        = YSIHEYQPAFIAPSRLLTVDELHKR--GFGEALYPGMDKA--ARAARLILEDQTDMDLRITRREEWMAAQTMINNACTMQEYIDDKTKGDTLYVKFFDNASEHLYVPAAKW-----TTWAIMRADVIAMCRQLSKRGLPATDLVMGSDVAEAVLEFEELQRLLDKNSGIITGKID-EELSPYDGVVYMGTVNFGGFRLNLISVDETYVDENDQEQKYFPAASAMVTAPN--CGRTMYGQITQIDYGSTNFTDHAGIRVPKF--------TLDQDKDIRK-LRLGTRPLCAP
+                            Hsp_midline     = +S H Y+P F       + DE++      G     G ++A    A + + +++  ++ R  R+++          A  +Q  I     GD+  + +   A+  + V AA++     +T  +  A      R++        ++ M SD    +L  + +Q++L+    +   KID  + +  +G+ + G +  G F +NL + +E Y D  D   KY+     ++  PN   G+T++G +  +  GS N       R+P           L  +K I   L L + PL  P
+                Hit
+                    Hit_num       = 14
+                    Hit_id        = gi|307546773|ref|YP_003899252.1|
+                    Hit_def       = major capsid protein E [Halomonas elongata DSM 2581] >gi|307218797|emb|CBV44067.1| major capsid protein E [Halomonas elongata DSM 2581]
+                    Hit_accession = YP_003899252
+                    Hit_len       = 343
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 46.2097864791182
+                            Hsp_score       = 108
+                            Hsp_evalue      = 0.00713710804374682
+                            Hsp_query-from  = 201
+                            Hsp_query-to    = 356
+                            Hsp_hit-from    = 184
+                            Hsp_hit-to      = 328
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 44
+                            Hsp_positive    = 76
+                            Hsp_gaps        = 17
+                            Hsp_align-len   = 159
+                            Hsp_qseq        = KFLREIGNSSGNTLNITMRS-DAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGNTKYYLDKGNVIILPNDFMGKTIFGGLPFMRS--GSVNGVAARMPGVIEKDYLLRALSDEKTISSTLELTSAPL
+                            Hsp_hseq        = KYKRLIAKDSGRTGAAAVLSVEAADAMLDNEDFRKKLDTRRIDLGMIRPEEL--PDGVTYLGYLR--DPGIDLYTYEEWYLDDNGVEQPMIPAGGLVVGPTTSRCSMLYGAIQDVRAIEGALFDVDRYPKSWIEDDEGVRFLS----------MQSAPL
+                            Hsp_midline     = K+ R I   SG T    + S +A   +L N+  ++ L++RR+D   I   +    +G+T+ G +   D  I+L+TYEE Y D +G  +  +  G +++ P       ++G +  +R+  G++  V       IE D  +R LS          + SAPL
+                Hit
+                    Hit_num       = 15
+                    Hit_id        = gi|167771989|ref|ZP_02444042.1|
+                    Hit_def       = hypothetical protein ANACOL_03362 [Anaerotruncus colihominis DSM 17241] >gi|167665787|gb|EDS09917.1| hypothetical protein ANACOL_03362 [Anaerotruncus colihominis DSM 17241]
+                    Hit_accession = ZP_02444042
+                    Hit_len       = 362
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 43.5133894476967
+                            Hsp_score       = 101
+                            Hsp_evalue      = 0.0478314158234064
+                            Hsp_query-from  = 185
+                            Hsp_query-to    = 359
+                            Hsp_hit-from    = 188
+                            Hsp_hit-to      = 350
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 41
+                            Hsp_positive    = 78
+                            Hsp_gaps        = 16
+                            Hsp_align-len   = 177
+                            Hsp_qseq        = WGASTSTPLVQFAAAGKFLREIGNSSGNTLNITMRSDAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGNTKYYLDKGNVIILPNDFMGKTIFGGLPFMRS--GSVNGVAARMPGVIEKDYLLRALSDEKTISSTLELTSAPLVVP
+                            Hsp_hseq        = WNQEGAHILADGAAMARLLTSRGLPAADLL---VAPDVADTILADPDILKKLDNNNYKLGGVDPATLPA--GVTKIARLNFKGRMIDILSYEDTYEDDDGTVKQYIPAGYVVMT-APAAGRTLYGAVTQVEQADGQTHTYAARR--------VPKYLADANNNTRSLTLTSCPLLIP
+                            Hsp_midline     = W    +  L   AA  + L   G  + + L   +  D    +L++  + + L++       +D     A  G+T   ++     +I++ +YE+ Y D DG  K Y+  G V++      G+T++G +  +    G  +  AAR         + + L+D    + +L LTS PL++P
+                Hit
+                    Hit_num       = 16
+                    Hit_id        = gi|306830673|ref|ZP_07463838.1|
+                    Hit_def       = phage protein [Streptococcus gallolyticus subsp. gallolyticus TX20005] >gi|304427181|gb|EFM30288.1| phage protein [Streptococcus gallolyticus subsp. gallolyticus TX20005]
+                    Hit_accession = ZP_07463838
+                    Hit_len       = 349
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 42.742990295862
+                            Hsp_score       = 99
+                            Hsp_evalue      = 0.074433150096147
+                            Hsp_query-from  = 95
+                            Hsp_query-to    = 312
+                            Hsp_hit-from    = 81
+                            Hsp_hit-to      = 287
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 57
+                            Hsp_positive    = 95
+                            Hsp_gaps        = 37
+                            Hsp_align-len   = 231
+                            Hsp_qseq        = PFYKEEYDF-SQDEIYMNTVALGALEVAGANQAIAKNAVKEV----------AKNRLKIERAIRKQQADVLQTGIVSLI-NGDSIDYRRKAASMVDVGAAQYW-GASTSTPLVQFAAAGKFLREIGNSSGNTLNITMRSDAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGNTKYYLDKGNVIILPNDFMGKTIFGGLP
+                            Hsp_hseq        = PFFKESLLVKEQDRQQLNVIA------QTGNQALIDTIVSGIFDDNAALLAGAHARLE---AMRMQ---VLATGKIAVISNGVPQDFDYHVADDHKGTVKTAWTDLATSTPLADIEAAVSALENLGSTPEV---IILNPKTLSQIKNAKSTLALI--------KPTAPDASAVKKSELYDYLES-ELGLKVVVKNQTYKDSDGVVKKYYPDGHITLAPNAELGETVFGTTP
+                            Hsp_midline     = PF+KE      QD   +N +A         NQA+    V  +          A  RL+   A+R Q   VL TG +++I NG   D+    A          W   +TSTPL    AA   L  +G++      I +    ++Q+ +  S   ++        K   P  +A +    +  + + +  + +    + Y D+DG  K Y   G++ + PN  +G+T+FG  P
+                Hit
+                    Hit_num       = 17
+                    Hit_id        = gi|226940572|ref|YP_002795646.1|
+                    Hit_def       = Putative capsid protein of prophage [Laribacter hongkongensis HLHK9] >gi|226715499|gb|ACO74637.1| Putative capsid protein of prophage [Laribacter hongkongensis HLHK9]
+                    Hit_accession = YP_002795646
+                    Hit_len       = 339
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 42.742990295862
+                            Hsp_score       = 99
+                            Hsp_evalue      = 0.0857765070515111
+                            Hsp_query-from  = 50
+                            Hsp_query-to    = 371
+                            Hsp_hit-from    = 33
+                            Hsp_hit-to      = 339
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 74
+                            Hsp_positive    = 125
+                            Hsp_gaps        = 29
+                            Hsp_align-len   = 329
+                            Hsp_qseq        = RETTATLMVDVEVQRDNDTIAVDVTRFTDGNKSKSTRHSEHTYKPPFYKEEYDFSQDEIYMNTVALGALEVAGANQAIAKNAVKEVAKNRLKIERAIRKQQADVLQTGIVSLINGDS-----IDYRRKAASMVDVGAAQYWGASTSTPLVQFAAAGKFLREIGNSSGNTLNITMRSDAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEKYTDADGNT-KYYLDKGNVIILPNDFM-GKTIFGGLPFMRSGSVNGVAARMPGVIEKDYLLRALSDEKTISSTLELTSAPLVVPFTIDKVYTLKVL
+                            Hsp_hseq        = RETTEEIHFEVEHGRRR--IAPFVSPLRAGQIVTSDGRTVTSLKPAYIKDKRQFDANAPMRRAVGEKIGGALSPEQRMQANLARDLLDQVSMVDRRLEWMAAQAMLHGRY-VIKGEGYPEKMIDFQRSPKLRIVKGQGARWTDANVNPLDDLQDWA--LLAAQESGVYTSEVTMDPAAWKAFRSNPHVEKRWTS--LNGNINGLTPAAAGDGGKFMGSIDGFD----IYTYADWFVDPDDNTEKPFLPAGSVLLSSTSGLEGYRAFGAIRDEKAGY-----QALP------YFSKSWVEEDPAVRWLLMQSAPLVVPYRINASVSATVL
+                            Hsp_midline     = RETT  +  +VE  R    IA  V+    G    S   +  + KP + K++  F  +      V           Q +  N  +++      ++R +    A  +  G   +I G+      ID++R     +  G    W  +   PL         L     S   T  +TM   A     SN  +++   S  ++     +    A +G  F G I   D    ++TY + + D D NT K +L  G+V++     + G   FG +   ++G        +P      Y  ++  +E      L + SAPLVVP+ I+   +  VL
+                Hit
+                    Hit_num       = 18
+                    Hit_id        = gi|157362827|ref|YP_001471686.1|
+                    Hit_def       = major capsid protein E [Serratia proteamaculans 568] >gi|157324914|gb|ABV44010.1| major capsid protein E [Serratia proteamaculans 568]
+                    Hit_accession = YP_001471686
+                    Hit_len       = 348
+                    Hit_hsps
+                        Hsp
+                            Hsp_num         = 1
+                            Hsp_bit-score   = 42.742990295862
+                            Hsp_score       = 99
+                            Hsp_evalue      = 0.0901799986851364
+                            Hsp_query-from  = 47
+                            Hsp_query-to    = 311
+                            Hsp_hit-from    = 30
+                            Hsp_hit-to      = 293
+                            Hsp_query-frame = 0
+                            Hsp_hit-frame   = 0
+                            Hsp_identity    = 58
+                            Hsp_positive    = 125
+                            Hsp_gaps        = 27
+                            Hsp_align-len   = 278
+                            Hsp_qseq        = FFPR-ETTATLMVDVEVQRDNDTIAVDVTRFTDGNKSKSTRHSEHTYKPPFYKEEYDFSQDEIYMNTVALGALEVAGANQAIAKNAVKEVAKNRLKIERAIRKQQ----ADVLQTGIVSLING---DSIDYRRKAAS---MVDVGAAQYWGASTSTPLVQFAAAGKFLREIGNSSGNTLN-ITMRSDAMTQLLSNDSMQQILESRRMDRAKIDMPQFNASEGMTFHGQIAAGDFVINLWTYEEK-YTDADGNTKYYLDKGNVIILPNDFMGKTIFGGL
+                            Hsp_hseq        = FFPGVKTFGTKHVDLDFVRGSRTMAPFVGNGYGSKTVEKRGFTTKTFEPPLVAPDLVTTADQMLERRPG----ETVYAAKSPEERAAEQLGQDLSDLDDMVSRTEEWMAAQTLFTGQVRVLGAGVDETIYYWPENPADQPVVTLTGDDLWTADKSDPLANIRG---WKRKVSLQSGFTPRMVVMGAKVVDAFMKNKAINEALDNRRKEQGKIE-PK-DLDEGVTFYGTLEGVDF----YGYDEQSYNDVSGKLEVLVPE-DKLLLGAPGRGRMLYGAV
+                            Hsp_midline     = FFP  +T  T  VD++  R + T+A  V         +    +  T++PP    +   + D++          E   A ++  + A +++ ++   ++  + + +    A  L TG V ++     ++I Y  +  +   +V +     W A  S PL        + R++   SG T   + M +  +   + N ++ + L++RR ++ KI+ P+ +  EG+TF+G +   DF    + Y+E+ Y D  G  +  + + + ++L     G+ ++G +
+            Iteration_stat
+                Statistics
+                    Statistics_db-num    = 12348165
+                    Statistics_db-len    = -73362562
+                    Statistics_hsp-len   = 0
+                    Statistics_eff-space = 580836760722
+                    Statistics_kappa     = 0.041
+                    Statistics_lambda    = 0.267
+                    Statistics_entropy   = 0.14
+        Iteration
+            Iteration_iter-num  = 9
+            Iteration_query-ID  = Query_9
+            Iteration_query-def = phiSM~41~9:28933-29187
+            Iteration_query-len = 85
+            Iteration_hits      = 
+            Iteration_stat
+                Statistics
+                    Statistics_db-num    = 12348165
+                    Statistics_db-len    = -73362562
+                    Statistics_hsp-len   = 0
+                    Statistics_eff-space = 106273669770
+                    Statistics_kappa     = 0.041
+                    Statistics_lambda    = 0.267
+                    Statistics_entropy   = 0.14
+            Iteration_message = No hits found
