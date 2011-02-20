@@ -129,7 +129,7 @@ def getArguments():
   scaffoldingDistanceField = JTextField(str(scaffoldingDistance))
   ldfField = JTextField(str(ldfCutoff))
   queryField = JTextField(sources[0])
-  emailField = JTextField(email)
+  #emailField = JTextField(email)
 
   constraints.gridx = 0
   constraints.gridy = 0
@@ -157,8 +157,8 @@ def getArguments():
   contentPane.add(JLabel("LDF Cutoff"), constraints)
   constraints.gridy = 9
   contentPane.add(JLabel("Query"), constraints)
-  constraints.gridy = 10
-  contentPane.add(JLabel("Email"), constraints)
+  #constraints.gridy = 10
+  #contentPane.add(JLabel("Email"), constraints)
   constraints.gridx = 1
   constraints.gridy = 0
   constraints.weightx = 1
@@ -181,8 +181,8 @@ def getArguments():
   contentPane.add(ldfField, constraints)
   constraints.gridy = 9
   contentPane.add(queryField, constraints)
-  constraints.gridy = 10
-  contentPane.add(emailField)
+  #constraints.gridy = 10
+  #contentPane.add(emailField, constraints)
   constraints.gridx = 2
   constraints.gridy = 0
   constraints.weightx = 0
@@ -221,6 +221,8 @@ def getArguments():
   sources = [queryField.getText()]
 
 def main(arguments):
+  global blastLocation, genemarkLocation, transtermLocation, database, matrix, eValue, minLength, scaffoldingDistance, ldfCutoff, sources, email
+  
   documentation = """
 -m --matrix               Matrix with which to run genemark
 -d --database             Database to use when running blast
@@ -317,7 +319,7 @@ def main(arguments):
     elif utils.isGenome(source):
       queries.append(source)
 
-  pipeline.run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, remote, ldfCutoff, queries, swingInterface, email)
+  pipeline.run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, ldfCutoff, queries, swingInterface, email)
 
 if __name__ == "__main__":
   main(sys.argv)

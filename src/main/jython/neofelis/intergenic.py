@@ -211,7 +211,7 @@ def findIntergenics(query, genes, name, minLength, blast, database, eValue):
   
   writePotentialGenes(genome, potentialGenes)
   
-  result = utils.cachedBlast("intergenicBlasts/" + name + ".blastp.xml", blast, database, eValue, "intergenics.fas", remote)
+  result = utils.cachedBlast("intergenicBlasts/" + name + ".blastp.xml", blast, database, eValue, "intergenics.fas")
   os.remove("intergenics.fas")
   result = removeCommonStops(result)
   for r in result.values():
