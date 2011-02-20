@@ -374,3 +374,71 @@ def isNaN(number):
   Returns true if number actually is a number.
   """
   return number != number
+
+class Node():
+  def __init__(self, tag, attributes, parent):
+    self.tag = tag
+    self.parent = parent
+    self.children = {}
+    if parent:
+      if tag in parent.children:
+        parent.children[tag].append(self)
+      else:
+        parent.children[tag] = [self]
+    self.text = None
+
+  def __str__(self):
+    content  = self.content+">" if isinstance(self.content, str) else str(map(str, self.content))+">"
+    return "<tag = " + self.tag + ", content = " + content
+
+  def __getitem__(self, index):
+    return self.children[index]
+
+class XMLHandler(DefaultHandler):
+  """
+  A SAX handler for parsing Blast XML output.
+  """
+  def startDocument(self):
+    self.root = None
+    self.text = ""
+  
+  def startElement(self, uri, tag, name, attributes):
+    """
+    Records the tag of the current node and generates a new
+    object to store the information in the iteration,
+    hit, and hsp nodes.
+    """
+    self.root = Node(tag, attributes, self.root)
+    self.text = ""
+
+  def endElement(self, uri, tag, name):
+    """
+    Calculates the contents of a Hit structure once the end of a Hit node has been reached,
+    and calculates the contents of a Iteration structure once the end of an Iteration node
+    has been reached.
+    """
+    if not self.root.children:
+      self.root.text = self.text
+    if self.root.parent:
+      self.root = self.root.parent
+
+  def characters(self, raw, start, length):
+    """
+    Pulls the character information from the current node depending on the
+    tag of the parent.
+    """
+    self.text += raw[start:start+length].tostring()
+
+  def resolveEntity(self, publicId, systemId):
+    return InputSource(ClassLoader.getSystemResourceAsStream("dtds/" + os.path.split(systemId)[1]))
+
+def parseXML(fileName):
+  """
+  A function for parsing general XML files.
+  """
+  reader = XMLReaderFactory.createXMLReader()
+  reader.setContentHandler(XMLHandler())
+  reader.setEntityResolver(XMLHandler())
+  reader.parse(fileName)
+  return reader.getContentHandler().root
+  

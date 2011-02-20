@@ -138,8 +138,6 @@ def filterScaffolds(originalForwardScaffolds, originalReverseScaffolds):
 
 def refineScaffolds(genes, scaffoldingDistance):
     forwardScaffolds, reverseScaffolds = extractScaffolds(genes.values(), scaffoldingDistance)
-    for s in forwardScaffolds:
-        print s
     forwardFiltered, reverseFiltered = filterScaffolds(forwardScaffolds, reverseScaffolds)
     remainingGenes = reduce(lambda x, y: x + y, map(lambda x: x.genes, forwardFiltered), [])
     remainingGenes.extend(reduce(lambda x, y: x + y, map(lambda x: x.genes, reverseFiltered), []))

@@ -32,7 +32,7 @@ from neofelis import artemis
 from neofelis import utils
 from neofelis import scaffolds
 from neofelis import signals
-from neofelis import xmltotext
+from neofelis import report
 from javax.swing import JFrame
 from javax.swing import JPanel
 from javax.swing import JLabel
@@ -213,9 +213,7 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
 
     artemis.writeArtemisFile(os.path.splitext(query)[0] + ".art", genome, scaffolded.values(), filteredPromoters, filteredTerminators)
     
-    xmltotext.xmlToText("initialBlasts/" + name + ".blastp.xml", os.path.splitext(query)[0] + ".genemark.dat")
-    xmltotext.xmlToText("extendedBlasts/" + name + ".blastp.xml", os.path.splitext(query)[0] + ".extended.dat")
-    xmltotext.xmlToText("intergenicBlasts/" + name + ".blastp.xml", os.path.splitext(query)[0] + ".intergenic.dat")
+    report.report(name, scaffolded, os.path.splitext(query)[0])
 
   if email:
     message = MIMEText("Your genome has been annotated.")
