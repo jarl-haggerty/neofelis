@@ -1,4 +1,9 @@
 """
+This module contains functions and Classes for finding contiguous regions
+of genes and removing conflicting genes.
+"""
+
+"""
 Copyright 2010 Jarl Haggerty
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,6 +40,13 @@ class Scaffold():
         return result
 
 def extractScaffolds(genes, scaffoldingDistance = 100):
+    """
+    genes:               A list of Iteration objects.
+    scaffoldingDistance: Maximum distance between neighboring genes in a scaffold.
+
+    return:              A 2-tuple, first object is a list of Scaffold objects for the forward genes,
+                         and the second a list of scaffold objects for the reverse genes.
+    """
     forwardScaffolds, reverseScaffolds = [], []
     for gene in genes:
         if gene.location[0] < gene.location[1]:
@@ -65,6 +77,12 @@ def extractScaffolds(genes, scaffoldingDistance = 100):
     return forwardScaffolds, reverseScaffolds
 
 def overlap(intervalOne, intervalTwo):
+    """
+    intervalOne: A 2-tuple of integers.
+    intervalTwo: A 2-tuple of integers.
+
+    return:      Amount of overlap between the intervals or -1 for no overlap.
+    """
     if intervalOne.start < intervalTwo.start and intervalTwo.start <= intervalOne.stop and intervalOne.stop < intervalTwo.stop:
         return intervalOne.stop - intervalTwo.start
     elif intervalTwo.start < intervalOne.start and intervalOne.start <= intervalTwo.stop and intervalTwo.stop < intervalOne.stop:
@@ -77,6 +95,17 @@ def overlap(intervalOne, intervalTwo):
         return -1
     
 def filterScaffolds(originalForwardScaffolds, originalReverseScaffolds):
+    """
+    originalForwardScaffolds: List of Scaffold objects for the forward genes.
+    originalReverseScaffolds: List of Scaffold objects for the reverse genes.
+
+    return:                   A 2-tuple, first object is a list of Scaffold objects for the forward genes,
+                              and the second a list of scaffold objects for the reverse genes.
+
+    For each forward scaffold this function iterates over each reverse scaffold.  If any two scaffolds conflict with each other
+    then any intergenic genes on the conflicting edges are removed, and if this fails to resolve the conflict then both scaffolds are
+    kept.  The result of this product is what is returned.
+    """
     forwardScaffolds, reverseScaffolds = copy.deepcopy(originalForwardScaffolds), copy.deepcopy(originalReverseScaffolds)
     newForwardScaffolds, newReverseScaffolds = copy.copy(forwardScaffolds), copy.copy(reverseScaffolds)
     for forwardScaffold in forwardScaffolds:
@@ -137,6 +166,17 @@ def filterScaffolds(originalForwardScaffolds, originalReverseScaffolds):
     return newForwardScaffolds, newReverseScaffolds
 
 def refineScaffolds(genes, scaffoldingDistance):
+    """
+    genes:               A dictionary that maps query names to Iteration objects.
+    scaffoldingDistance: Maximum distance between neighboring genes in a scaffold.
+
+    return:              A dictionary that maps query names to Iteration objects.
+
+    This function will organize genes into scaffolds, which are contiguous regions of genes.  Any
+    scaffolds which conflict will have intergenic genes removed in order to try and resolve the
+    conflict, failing this both Scaffolds are kept.  The returned dictionary will contain the
+    remaining genes after this process.
+    """
     forwardScaffolds, reverseScaffolds = extractScaffolds(genes.values(), scaffoldingDistance)
     forwardFiltered, reverseFiltered = filterScaffolds(forwardScaffolds, reverseScaffolds)
     remainingGenes = reduce(lambda x, y: x + y, map(lambda x: x.genes, forwardFiltered), [])

@@ -1,4 +1,8 @@
 """
+This module contains functions for writing artemis files.
+"""
+
+"""
 Copyright 2010 Jarl Haggerty
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,6 +19,12 @@ limitations under the License.
 """
 
 def writePromoters(output, promoters):
+    """
+    output:    File object to write to.
+    promoters: List of Promoter objects.
+
+    Writes promoters to the file.
+    """
     for promoter in promoters:
         if promoter.signal10Location[0] < promoter.signal10Location[1]:
             output.write("     -10_signal             " + "..".join(map(str, promoter.signal10Location)) + "\n")
@@ -30,6 +40,12 @@ def writePromoters(output, promoters):
         output.write("                            /colour=255 0 255\n")
 
 def writeTerminators(output, terminators):
+    """
+    output:      File object to write to.
+    terminators: List of Terminator objects.
+
+    Writes terminators to the file.
+    """
     for terminator in terminators:
         if terminator.location[0] < terminator.location[1]:
             output.write("     terminator             " + "..".join(map(str, terminator.location)) + "\n")
@@ -38,6 +54,12 @@ def writeTerminators(output, terminators):
         output.write("                            /note=\"confidence:" + str(terminator.confidence) + "\thp_score:" + str(terminator.hpScore) + "\ttail_score:" + str(terminator.tailScore) + "\"\n")
 
 def writeGenes(output, genes):
+    """
+    output: File object to write to.
+    genes:  List of Iteration objects.
+
+    Writes genes to the file.
+    """
     for gene in genes:
         if gene.location[0] < gene.location[1]:
             output.write("     CDS             " + str(gene.location[0]) + ".." + str(gene.location[1]) + "\n")
@@ -48,11 +70,26 @@ def writeGenes(output, genes):
         output.write("                     /colour=" + gene.color + "\n")
 
 def writeGenome(output, genome):
+    """
+    output: File object to write to.
+    genome: Genome as a string.
+
+    Writes genome to the file.
+    """
     output.write("\nORIGIN\n\n")
     for i in xrange(0, len(genome), 50):
         output.write(genome[i:min(i+50, len(genome))] + "\n")
 
 def writeArtemisFile(fileName, genome, genes=[], promoters=[], terminators=[]):
+    """
+    fileName:    Name of the artemis file to write.
+    genome:      Genome as a string.
+    genes:       List of Iteration objects.
+    promoters:   List of Promoter objects.
+    terminators: List of Terminator objects.
+
+    Writes an artemis file consisting of the genome, genes, promoters, and terminators.
+    """
     output = open(fileName, "w")
     writePromoters(output, promoters)
     writeTerminators(output, terminators)

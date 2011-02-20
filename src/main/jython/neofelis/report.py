@@ -1,4 +1,8 @@
 """
+This module is for writing files that summarize the results of the pipeline.
+"""
+
+"""
 Copyright 2010 Jarl Haggerty
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,7 +28,18 @@ from org.xml.sax.helpers import DefaultHandler
 from java.lang import ClassLoader
 
 class Node():
+  """
+  Class for storing the information of an XML node.
+  """
   def __init__(self, tag, attributes, parent):
+    """
+    tag:        A string.
+    attributes: A dictionary mapping strings to strings.
+    parent:     A Node or None.
+    
+    Initializes the node with the tag as it's tag, attributes as attribute, and parent as the parent.
+    If parent is not None then this Node is added to the parent's list of children
+    """
     self.tag = tag
     self.parent = parent
     self.children = {}
@@ -45,10 +60,20 @@ class Node():
     return self.children[index]
 
   def clearChildren(self):
+    """
+    Clears the list and dictionary of children.
+    """
     self.children = {}
     self.childrenList = []
 
 def writeNode(root, output, depth = 0):
+  """
+  root:   A Node object to write.
+  output: A file object to write into.
+  depth:  Amount of indentation.
+  
+  Writes root into output.
+  """
   maxLength = reduce(lambda x, y: max(x, len(y)), root.children.keys(), 0)
   for node in root.childrenList:
     if node.text:
@@ -58,6 +83,12 @@ def writeNode(root, output, depth = 0):
       writeNode(node, output, depth+1)
 
 def writeSpreadsheet(genes, output):
+  """
+  genes:  A list of Iteration objects.
+  output: File object to write to.
+
+  Writes a summary of genes into output.
+  """
   output.write("Id\tLocation\tHits\tBest bit score\tBest evalue\tBest identity\tAlignment Length\tBest hit gi\tDefinition\tOrganism\n")
   for gene in genes:
     output.write(gene.query + "\t")
@@ -79,6 +110,10 @@ class Collector(DefaultHandler):
   A SAX handler for parsing Blast XML output.
   """
   def __init__(self, genes, output):
+    """
+    genes:  List of gene names.
+    output: File object for writing to.
+    """
     self.genes = genes
     self.output = output
     self.root = None
@@ -86,18 +121,18 @@ class Collector(DefaultHandler):
   
   def startElement(self, uri, tag, name, attributes):
     """
-    Records the tag of the current node and generates a new
-    object to store the information in the iteration,
-    hit, and hsp nodes.
+    Move down the tree and add the new root to the children of the old root,
+    and clear the text.
     """
     self.root = Node(tag, attributes, self.root)
     self.text = ""
 
   def endElement(self, uri, tag, name):
     """
-    Calculates the contents of a Hit structure once the end of a Hit node has been reached,
-    and calculates the contents of a Iteration structure once the end of an Iteration node
-    has been reached.
+    If the root is a leaf node then the text is add to the root and then the
+    root moves to the current root's parent.  Also, if the current root is an
+    Iteration node then it is written to a file if it's name(without the coordinates)
+    is in genes and removed from the tree.
     """
     if not self.root.children:
       self.root.text = self.text
@@ -113,8 +148,7 @@ class Collector(DefaultHandler):
 
   def characters(self, raw, start, length):
     """
-    Pulls the character information from the current node depending on the
-    tag of the parent.
+    Pulls the character information from the current node.
     """
     self.text += raw[start:start+length].tostring()
 
@@ -122,6 +156,14 @@ class Collector(DefaultHandler):
     return InputSource(ClassLoader.getSystemResourceAsStream("dtds/" + os.path.split(systemId)[1]))
 
 def report(name, genes, output):
+  """
+  name:   Name of the genome.
+  genes:  A dictionary that maps query names to Iteration objects.
+  output: Output file name without an extension.
+
+  Writes a report of the contents of the blast searchs for the queries in
+  genes into "<name>.dat" and "<name>.xls".
+  """
   dataOutput = open(output + ".dat", "w")
   spreadsheetOutput = open(output + ".xls", "w")
   

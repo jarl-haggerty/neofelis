@@ -72,6 +72,9 @@ class DoneAction(AbstractAction):
 
 def initializeDisplay(queries, swing):
   """
+  queries: A list of the fasts files to be processed.
+  swing:   If true then updates about progress will be displayed in a swing window, otherwise they will be written to stdout.
+  
   Initializes the interface for telling the user about progress in the pipeline.  Queries is used to count the
   number of queries the pipeline will process and to size the swing display(if it is used) so that text
   isn't cutoff at the edge of the window.  The swing display is setup if swing is true.
@@ -119,6 +122,8 @@ def initializeDisplay(queries, swing):
 
 def updateProgress(job):
   """
+  query: Name of the query currently being processed.
+  
   This function use used for updating the progress shown in the interface.  If job is not equal to currentJob then
   global progress is incremented and shown and the currentProgress is reset and shown.  If job is equal to currentJob
   then the globalProgress does not change and currentProgress is incremented.
@@ -161,13 +166,27 @@ def finished():
   else:
     print "Processing 100.00% done"
 
-def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, remote, ldfCutoff, queries, swing = False, email = ""):
+def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, ldfCutoff, queries, swing = False, email = ""):
   """
+  blastLocation:       Directory blast was installed in.
+  genemarkLocation:    Directory genemark was installed in.
+  transtermLocation:   Directory transterm was installed in.
+  database:            Name of the blast database to use.
+  eValue:              The e value used whenever a blast search is done.
+  matrix:              The matrix to use when running genemark.  If None then genemark is run heuristically.
+  minLength:           Minimum length of any genes included in the resulting annotation.
+  scaffoldingDistance: The maximum length allowed between genes when contiguous regions of genes are being identified
+  ldfCutoff:           Minimum LDF allowed for any promoters included in the resulting annotation
+  queries:             A list of faster files to process.
+  swing:               If true a swing window will be used to updated the user about the pipeline's progress.
+  email:               If this is a non-empty string an email will be sent to the address in the string when the pipeline is done.  The local machine will be used as
+                       an SMTP server and this will not work if it isn't.
+  
   The main pipeline function.  For every query genemark is used to predict genes, these genes are then extended to any preferable starts.  Then the pipeline searches
   for any intergenic genes(genes between those found by genemark) and these are combined with the extended genemark genes.  Then the genes are pruned to remove
-  any undesirable genes found in the intergenic stage.  Then BPROM and Transterm are used to find promoters and terminators, which are then pruned to remove any
-  signals which are inside or too far away from any genes.  Finally, all the remaining genes, promoters, and terminators and written to an artemis file in the directory
-  of the query with the same name but with a .art extension.
+  any undesirable genes found in the intergenic stage.  BPROM and Transterm are used to find promoters and terminators, which are then pruned to remove any
+  signals which are inside or too far away from any genes.  Finally, all the remaining genes, promoters, and terminators ar written to an artemis file in the directory
+  of the query with the same name but with a .art extension, and .dat and .xls files will be generating describing the blast results of the final genes.
   """
   initializeDisplay(queries, swing)
     
@@ -183,16 +202,16 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
     queryFile.close()
 
     updateProgress(query)
-    initialGenes = genemark.findGenes("query.fas", name, blastLocation, database, eValue, genemarkLocation, matrix, remote)
-    artemis.writeArtemisFile(os.path.splitext(query)[0] + ".genemark.art", genome, initialGenes.values())
+    initialGenes = genemark.findGenes("query.fas", name, blastLocation, database, eValue, genemarkLocation, matrix)
+    #artemis.writeArtemisFile(os.path.splitext(query)[0] + ".genemark.art", genome, initialGenes.values())
     
     updateProgress(query)
-    extendedGenes = extend.extendGenes("query.fas", initialGenes, name, blastLocation, database, eValue, remote)
-    artemis.writeArtemisFile(os.path.splitext(query)[0] + ".extended.art", genome, extendedGenes.values())
+    extendedGenes = extend.extendGenes("query.fas", initialGenes, name, blastLocation, database, eValue)
+    #artemis.writeArtemisFile(os.path.splitext(query)[0] + ".extended.art", genome, extendedGenes.values())
     
     updateProgress(query)
-    intergenicGenes = intergenic.findIntergenics("query.fas", extendedGenes, name, minLength, blastLocation, database, eValue, remote)
-    artemis.writeArtemisFile(os.path.splitext(query)[0] + ".intergenic.art", genome, intergenicGenes.values())
+    intergenicGenes = intergenic.findIntergenics("query.fas", extendedGenes, name, minLength, blastLocation, database, eValue)
+    #artemis.writeArtemisFile(os.path.splitext(query)[0] + ".intergenic.art", genome, intergenicGenes.values())
     genes = {}
     for k, v in extendedGenes.items() + intergenicGenes.items():
       genes[k] = v

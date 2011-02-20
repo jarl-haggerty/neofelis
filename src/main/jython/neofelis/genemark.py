@@ -25,15 +25,14 @@ import re
 import os
 import subprocess
 
-
 #Have to make sure that a directory to store the blasts this module creates exists.
 if not os.path.isdir("initialBlasts"):
   os.mkdir("initialBlasts")
 
 def modifyFastaHeader(fileName, name):
   """
-  Modify the headers of the genes in the fasta file named by fileName so that
-  they contain name.
+  fileName: The name of the file to modify.
+  name:     The name of the genome that will be included in the header of each sequence
   """
   input = open(fileName, "r")
   swap = ""
@@ -51,6 +50,9 @@ def modifyFastaHeader(fileName, name):
 
 def removeInvalidGenes(fileName, genomeLength):
   """
+  fileName:     Name of the file to modify.
+  genomeLength: Length of the genome that the sequences in fileName came from
+  
   This function exists because there was a case where genemark predicted a gene that terminated
   2 base pairs after the end of the genome.  This function will remove any genes that
   start or stop outside the genome.
@@ -70,13 +72,20 @@ def removeInvalidGenes(fileName, genomeLength):
   output.write(swap)
   output.close()
 
-def findGenes(query, name, blastLocation, database, eValue, genemark, matrix, remote):
+def findGenes(query, name, blastLocation, database, eValue, genemark, matrix):
   """
+  query:         File name of the query.
+  name:          Name of the genome in the query.
+  blastLocation: Location of blast installation.
+  database:      Name of the database to search.
+  eValue:        E value to use when searching.
+  genemark:      Location of the genemark installation.
+  matrix:        Name of the matrix to use, or None
+  
+  
   Uses genemark to predict genes in query and then uses blast with the given eValue
   to find annotations for those genes.  If a matrix is not specified the GC program in
-  genemark will be used to select a heuristic matrix.  Name is a name used
-  to refer to the genome(typically query without the file extension), and for retrieving any
-  cached blast results.
+  genemark will be used to select a heuristic matrix.
   """
   genome = utils.loadGenome(query)
   if not matrix:
@@ -87,8 +96,7 @@ def findGenes(query, name, blastLocation, database, eValue, genemark, matrix, re
   removeInvalidGenes(query + ".orf", len(genome))
   modifyFastaHeader(query + ".orf", name)
   
-  result = utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blastLocation, database, eValue, query + ".orf", remote)
-  print len(utils.loadGenome(query))
-  #os.remove(query + ".orf")
-  #os.remove(query + ".lst")
+  result = utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blastLocation, database, eValue, query + ".orf")
+  os.remove(query + ".orf")
+  os.remove(query + ".lst")
   return result

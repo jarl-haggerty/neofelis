@@ -31,8 +31,10 @@ if not os.path.isdir("extendedBlasts"):
   
 def getStops(genes):
   """
-  Given a list of genes this function returns two lists, one for the forward strand and one for the
-  reverse strand, consisting of numbers marking where all the genes stop.
+  genes:  A list of Iteration objects.
+
+  return: A 2-tuple, first object is a list of where all the forward coding genes stop,
+          second is a list of where all the reverse coding genes stop.
   """
   forwardStops = map(lambda x: x.location[1], filter(lambda x: x.location[0] < x.location[1], genes))
   reverseStops = map(lambda x: x.location[1], filter(lambda x: x.location[1] < x.location[0], genes))
@@ -40,9 +42,12 @@ def getStops(genes):
 
 def getExtensions(genome, genes):
   """
-  Given a genome and a list of genes in that genome this function returns a dictionary.  The keys of the dictionary
-  are the genes, and the values are lists of all the possible alternative starts in the genome for that
-  gene.  The alternate starts are calculated by starting at the original start of the gene and iterating backwards.
+  genome: The genome as a string.
+  genes:  A list of Iteration objects.
+
+  return: A dictionary mapping genes(Iteration objects) to alternative locations where that gene could start.
+  
+  The alternate starts are calculated by starting at the original start of the gene and iterating backwards.
   When a start codon is found the start of that start codon is added to the list of alternate starts.  If this start
   codon comes before the start of the previous gene then is it still added to the list but the search terminates.
   """
@@ -74,8 +79,10 @@ def getExtensions(genome, genes):
 
 def writeExtensions(genome, extensions):
   """
-  Given a genome and a dictionary mapping genes to lists of their alternative starts(extensions)
-  this function will write the translation of each possible extension to the file extensions.fas.
+  genome: The genome as a string.
+  extensions: A dictionary mapping genes(Iteration objects) to alternative locations where that gene could start.
+  
+  This function will write the translation of each possible extension to the file, "extensions.fas".
   """
   output = open("extensions.fas", "w")
   q = 0
@@ -97,12 +104,16 @@ def writeExtensions(genome, extensions):
 
 def applyExtensions(genome, genes, extendedGenes):
   """
-  This function takes a genome, and two dictionaries of genes.  The result of this function
-  is essentially a merging of the two dictionaries of genomes.  The merging is done by iterating
-  over the dictionary genes, for each entry in genes extendedGenes is iterated over.  If an entry
-  in extendedGenes has a query name that starts with the query name of the original gene then that
-  entry is an extension of the original gene.  This extension will replace the gene in the new
-  dictionary if it either has an eValue that is lower than the original gene or the extension places
+  genome:        The genome as a string.
+  genes:         A dictionary that maps query names to Iteration objects
+  extendedGenes: A dictionary that maps query names to Iteration objects, extended versions of genes
+
+  return:        A merging of genes with extendedGenes consisting of the, "better" gene in the event of a conflict
+  
+  The merging is done by iterating over the dictionary genes, for each entry in genes extendedGenes
+  is iterated over.  If an entry in extendedGenes has a query name that starts with the query name
+  of the original gene then that entry is an extension of the original gene.  This extension will replace
+  the gene in the new dictionary if it either has an eValue that is lower than the original gene or the extension places
   it within 100 bps of the preceeding gene and is closer to the stop of the preceding gene.
   """
   forwardStops, reverseStops = getStops(genes.values())
@@ -134,11 +145,18 @@ def applyExtensions(genome, genes, extendedGenes):
       result[gene].note = "Extended"
   return result
 
-def extendGenes(query, genes, name, blast, database, eValue, remote):
+def extendGenes(query, genes, name, blast, database, eValue):
   """
-  This function will search for any possible extensions of the genes in the fasta file query.  These extensions will
-  be blasted using the blast installation located at blast with database and eValue.  If remote is
-  true then the blast search is run remotely.  An extension will replace the original gene in the resulting
+  query:    File name of the query.
+  ganes:    A dictionary that maps query names to Iteration objects
+  name:     Name of the genome
+  blast:    Location of the installation of blast.
+  database: The database to use with blast.
+  eValue:   The E Value to use with blast.
+
+  return:   A new dictionary mapping query names to Iteration objects with any better extensions replacing the originals.
+  
+  This function will search for any possible extensions of the genes in the query.  An extension will replace the original gene in the resulting
   dictionary if it either brings the start of the gene sufficiently close to the end of a previous gene or it has
   a lower eValue.
   """
@@ -146,6 +164,6 @@ def extendGenes(query, genes, name, blast, database, eValue, remote):
   extensions = getExtensions(genome, genes.values())
   
   writeExtensions(genome, extensions)
-  extendedGenes = utils.cachedBlast("extendedBlasts/" + name + ".blastp.xml", blast, database, eValue, "extensions.fas", remote)
+  extendedGenes = utils.cachedBlast("extendedBlasts/" + name + ".blastp.xml", blast, database, eValue, "extensions.fas")
   os.remove("extensions.fas")
   return applyExtensions(genome, genes, extendedGenes)

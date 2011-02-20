@@ -49,8 +49,14 @@ class Region():
   
 def calculateIntergenicRegions(genomeLength, genes, minLength = 3):
   """
-  Calculates the intergenic regions of a genome.  Returns a tuple, the first element is is a list of the forward strands
-  intergenic regions and the second element is a list of the reverse strands intergenic regions.  The intergenic regions are
+  genomeLength: Length of the genome.
+  genes:        A list of Iteration objects representing genes.
+  minLength:    Minimum length of an intergenic region.
+
+  return:       A 2-tuple, the first element is is a list of the forward strands intergenic regions
+                and the second element is a list of the reverse strands intergenic regions.
+  
+  Calculates the intergenic regions of a genome.  The intergenic regions are
   calculated iteratively starting with a single intergenic region consisting of the entire genome.  For each gene the regions are
   either splitted or whittled down, then any regions which are smaller than minLength are filtered out, which includes regions of
   negative length which get generated.
@@ -92,6 +98,12 @@ def calculateIntergenicRegions(genomeLength, genes, minLength = 3):
 
 def findPotentialGenes(genome, regions, minLength = 3):
   """
+  genome:    The genome as a string.
+  region:    A list of intergenic regions.
+  minLength: Minimum length of an intergenic gene.
+
+  return:    A list of 2-tuples, each of which represents the start and stop of an intergenic gene.
+  
   Searches for potential genes in regions.  Potential genes are found by starting at the end of the
   region if the end is not bracketed by a gene or the end of the region plus one half the length of
   the end bracketing gene if it is.  This function then steps backwords recording the last stop codon
@@ -119,9 +131,10 @@ def findPotentialGenes(genome, regions, minLength = 3):
                     
 def writePotentialGenes(genome, locations):
   """
-  Writes all the genes in genome listed by tuples in the list locations to the file intergenics.fas.
-  The tuples should be in reverse order for genes on the reverse strand and the tuples are expected to be
-  in string coordinates(first nucleotide is at zero and the ending index is exclusive), and the written
+  genome:    The genome as a string.
+  locations: A list of 2-tuples representing the locations of genes in string coordinates(first nucleotide is at zero and the ending index is exclusive).
+  
+  Writes all the genes in genome listed locations to "intergenic.fas".  The written
   headers will contain fasta coordinates(first nucleotide is at one and the ending index is inclusive).
   """
   output = open("intergenics.fas", "w")
@@ -140,6 +153,8 @@ def writePotentialGenes(genome, locations):
 
 def removeCommonStops(genes):
   """
+  genes: A list of Iteration objects representing genes.
+  
   Returns a dictionary just like genes but with any mappings whos value is a gene which shares a stop
   with a more favorable gene in the dictionary removed.  A more favorable gene is any gene which has a higher
   e value or is longer.  First, stopDictionary is made which maps integers to lists of genes which stop
@@ -169,8 +184,18 @@ def removeCommonStops(genes):
     result[temp.query] = temp
   return result
 
-def findIntergenics(query, genes, name, minLength, blast, database, eValue, remote):
+def findIntergenics(query, genes, name, minLength, blast, database, eValue):
   """
+  query:     File name of the fasta file.
+  genes:     A dictionary that maps query names to Iteration objects
+  name:      Name of the genome.
+  minLength: Minimum length of any intergenic genes.
+  blast:     Location of the installation of blast.
+  database:  The database to use with blast.
+  eValue:    The e value to use with blast.
+
+  return:    A dictionary that maps query names to Iterations objects, only contains intergenic genes.
+  
   Searches for intergenic genes within a genome.  First, all the intergenic regions in the genome are calculated and
   any potential genes in those regions area extracted and written to "intergenics.fas".  This file is then blasted.
   Then the genes in the result of this blast are pruned so that only one intergenic gene may stop at any one
