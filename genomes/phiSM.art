@@ -1,50 +1,140 @@
-     -10_signal             4446..4455
-                            /note=Promoter Position:4461	LDF:10.95
+     promoter               118..167
+                            /note=Promoter Position:118	score:0.99
                             /colour=255 0 255
-     -35_signal             4425..4431
-                            /note=Promoter Position:4461	LDF:10.95
+     promoter               526..575
+                            /note=Promoter Position:526	score:0.95
                             /colour=255 0 255
-     -10_signal             5927..5936
-                            /note=Promoter Position:5942	LDF:10.81
+     promoter               3294..3343
+                            /note=Promoter Position:3294	score:0.97
                             /colour=255 0 255
-     -35_signal             5908..5914
-                            /note=Promoter Position:5942	LDF:10.81
+     promoter               3327..3376
+                            /note=Promoter Position:3327	score:0.99
                             /colour=255 0 255
-     -10_signal             28608..28617
-                            /note=Promoter Position:28623	LDF:9.78
+     promoter               4420..4469
+                            /note=Promoter Position:4420	score:0.96
                             /colour=255 0 255
-     -35_signal             28588..28594
-                            /note=Promoter Position:28623	LDF:9.78
+     promoter               5891..5940
+                            /note=Promoter Position:5891	score:1.0
                             /colour=255 0 255
-     -10_signal             7146..7155
-                            /note=Promoter Position:7161	LDF:7.94
+     promoter               5901..5950
+                            /note=Promoter Position:5901	score:0.99
                             /colour=255 0 255
-     -35_signal             7127..7133
-                            /note=Promoter Position:7161	LDF:7.94
+     promoter               5919..5968
+                            /note=Promoter Position:5919	score:0.96
                             /colour=255 0 255
-     -10_signal             19674..19683
-                            /note=Promoter Position:19689	LDF:6.09
+     promoter               5931..5980
+                            /note=Promoter Position:5931	score:0.96
                             /colour=255 0 255
-     -35_signal             19654..19660
-                            /note=Promoter Position:19689	LDF:6.09
+     promoter               6104..6153
+                            /note=Promoter Position:6104	score:0.91
                             /colour=255 0 255
-     -10_signal             14168..14177
-                            /note=Promoter Position:14183	LDF:5.36
+     promoter               7110..7159
+                            /note=Promoter Position:7110	score:1.0
                             /colour=255 0 255
-     -35_signal             14148..14154
-                            /note=Promoter Position:14183	LDF:5.36
+     promoter               7120..7169
+                            /note=Promoter Position:7120	score:0.99
                             /colour=255 0 255
-     -10_signal             complement(34607..34598)
-                            /note=Promoter Position:34588	LDF:6.64
+     promoter               7168..7217
+                            /note=Promoter Position:7168	score:0.91
                             /colour=255 0 255
-     -35_signal             complement(34622..34616)
-                            /note=Promoter Position:34588	LDF:6.64
+     promoter               14130..14179
+                            /note=Promoter Position:14130	score:0.96
                             /colour=255 0 255
-     -10_signal             complement(39783..39774)
-                            /note=Promoter Position:39768	LDF:6.63
+     promoter               14142..14191
+                            /note=Promoter Position:14142	score:0.99
                             /colour=255 0 255
-     -35_signal             complement(39806..39800)
-                            /note=Promoter Position:39768	LDF:6.63
+     promoter               16551..16600
+                            /note=Promoter Position:16551	score:0.92
+                            /colour=255 0 255
+     promoter               16600..16649
+                            /note=Promoter Position:16600	score:1.0
+                            /colour=255 0 255
+     promoter               19637..19686
+                            /note=Promoter Position:19637	score:0.98
+                            /colour=255 0 255
+     promoter               19648..19697
+                            /note=Promoter Position:19648	score:1.0
+                            /colour=255 0 255
+     promoter               19679..19728
+                            /note=Promoter Position:19679	score:1.0
+                            /colour=255 0 255
+     promoter               28377..28426
+                            /note=Promoter Position:28377	score:0.99
+                            /colour=255 0 255
+     promoter               28582..28631
+                            /note=Promoter Position:28582	score:1.0
+                            /colour=255 0 255
+     promoter               28594..28643
+                            /note=Promoter Position:28594	score:0.94
+                            /colour=255 0 255
+     promoter               28621..28670
+                            /note=Promoter Position:28621	score:0.94
+                            /colour=255 0 255
+     promoter               44381..44430
+                            /note=Promoter Position:44381	score:0.93
+                            /colour=255 0 255
+     promoter               44392..44441
+                            /note=Promoter Position:44392	score:0.9
+                            /colour=255 0 255
+     promoter               50111..50160
+                            /note=Promoter Position:50111	score:0.97
+                            /colour=255 0 255
+     promoter               complement(50287..50238)
+                            /note=Promoter Position:50287	score:0.94
+                            /colour=255 0 255
+     promoter               complement(50215..50166)
+                            /note=Promoter Position:50215	score:0.94
+                            /colour=255 0 255
+     promoter               complement(46743..46694)
+                            /note=Promoter Position:46743	score:0.99
+                            /colour=255 0 255
+     promoter               complement(46695..46646)
+                            /note=Promoter Position:46695	score:0.93
+                            /colour=255 0 255
+     promoter               complement(46675..46626)
+                            /note=Promoter Position:46675	score:0.9
+                            /colour=255 0 255
+     promoter               complement(46656..46607)
+                            /note=Promoter Position:46656	score:0.95
+                            /colour=255 0 255
+     promoter               complement(44411..44362)
+                            /note=Promoter Position:44411	score:0.97
+                            /colour=255 0 255
+     promoter               complement(43184..43135)
+                            /note=Promoter Position:43184	score:0.95
+                            /colour=255 0 255
+     promoter               complement(39861..39812)
+                            /note=Promoter Position:39861	score:0.95
+                            /colour=255 0 255
+     promoter               complement(39825..39776)
+                            /note=Promoter Position:39825	score:1.0
+                            /colour=255 0 255
+     promoter               complement(39814..39765)
+                            /note=Promoter Position:39814	score:0.99
+                            /colour=255 0 255
+     promoter               complement(39791..39742)
+                            /note=Promoter Position:39791	score:0.91
+                            /colour=255 0 255
+     promoter               complement(39776..39727)
+                            /note=Promoter Position:39776	score:0.93
+                            /colour=255 0 255
+     promoter               complement(37505..37456)
+                            /note=Promoter Position:37505	score:1.0
+                            /colour=255 0 255
+     promoter               complement(37493..37444)
+                            /note=Promoter Position:37493	score:0.99
+                            /colour=255 0 255
+     promoter               complement(37475..37426)
+                            /note=Promoter Position:37475	score:0.92
+                            /colour=255 0 255
+     promoter               complement(37467..37418)
+                            /note=Promoter Position:37467	score:0.97
+                            /colour=255 0 255
+     promoter               complement(34618..34569)
+                            /note=Promoter Position:34618	score:1.0
+                            /colour=255 0 255
+     promoter               complement(31658..31609)
+                            /note=Promoter Position:31658	score:0.99
                             /colour=255 0 255
      terminator             8210..8236
                             /note="confidence:100	hp_score:-16.8	tail_score:-3.17075"

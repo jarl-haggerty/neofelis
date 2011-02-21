@@ -55,7 +55,7 @@ messages = ["Searching for genes via genemark",
             "Extending genes found via genemark",
             "Searching for intergenic genes",
             "Removing overlapping genes",
-            "Using BPROM to find promoters",
+            "Searching for promoters",
             "Using transterm to find terminators",
             "Removing transcription signals which conflict with genes"]
 
@@ -220,7 +220,7 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
     scaffolded = scaffolds.refineScaffolds(genes, scaffoldingDistance)
  
     updateProgress(query)
-    initialPromoters = promoters.findPromoters("query.fas", name, ldfCutoff)
+    initialPromoters = promoters.findPromoters("query.fas", name)
     
     updateProgress(query)
     initialTerminators = terminators.findTerminators("query.fas", name, genes.values(), transtermLocation)

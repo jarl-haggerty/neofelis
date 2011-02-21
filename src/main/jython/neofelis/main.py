@@ -153,9 +153,9 @@ def getArguments():
   contentPane.add(JLabel("Minimum Intergenic Length"), constraints)
   constraints.gridy = 7
   contentPane.add(JLabel("Scaffold Distance"), constraints)
+  #constraints.gridy = 8
+  #contentPane.add(JLabel("LDF Cutoff"), constraints)
   constraints.gridy = 8
-  contentPane.add(JLabel("LDF Cutoff"), constraints)
-  constraints.gridy = 9
   contentPane.add(JLabel("Query"), constraints)
   #constraints.gridy = 10
   #contentPane.add(JLabel("Email"), constraints)
@@ -177,9 +177,9 @@ def getArguments():
   contentPane.add(minLengthField, constraints)
   constraints.gridy = 7
   contentPane.add(scaffoldingDistanceField, constraints)
+  #constraints.gridy = 8
+  #contentPane.add(ldfField, constraints)
   constraints.gridy = 8
-  contentPane.add(ldfField, constraints)
-  constraints.gridy = 9
   contentPane.add(queryField, constraints)
   #constraints.gridy = 10
   #contentPane.add(emailField, constraints)
@@ -193,7 +193,7 @@ def getArguments():
   contentPane.add(JButton(GenemarkAction()), constraints)
   constraints.gridy = 2
   contentPane.add(JButton(TranstermAction()), constraints)
-  constraints.gridy = 9
+  constraints.gridy = 8
   contentPane.add(JButton(QueryAction()), constraints)
 
   constraints.gridx = 1

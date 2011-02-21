@@ -26,17 +26,11 @@ def writePromoters(output, promoters):
     Writes promoters to the file.
     """
     for promoter in promoters:
-        if promoter.signal10Location[0] < promoter.signal10Location[1]:
-            output.write("     -10_signal             " + "..".join(map(str, promoter.signal10Location)) + "\n")
+        if promoter.location[0] < promoter.location[1]:
+            output.write("     promoter               " + "..".join(map(str, promoter.location)) + "\n")
         else:
-            output.write("     -10_signal             complement(" + "..".join(map(str, promoter.signal10Location)) + ")\n")
-        output.write("                            /note=Promoter Position:" + str(promoter.position) + "\tLDF:" + str(promoter.ldf) + "\n")
-        output.write("                            /colour=255 0 255\n")
-        if promoter.signal35Location[0] < promoter.signal35Location[1]:
-            output.write("     -35_signal             " + "..".join(map(str, promoter.signal35Location)) + "\n")
-        else:
-            output.write("     -35_signal             complement(" + "..".join(map(str, promoter.signal35Location)) + ")\n")
-        output.write("                            /note=Promoter Position:" + str(promoter.position) + "\tLDF:" + str(promoter.ldf) + "\n")
+            output.write("     promoter               complement(" + "..".join(map(str, promoter.location)) + ")\n")
+        output.write("                            /note=Promoter Position:" + str(promoter.location[0]) + "\tscore:" + str(promoter.score) + "\n")
         output.write("                            /colour=255 0 255\n")
 
 def writeTerminators(output, terminators):
