@@ -89,6 +89,7 @@ def writeSpreadsheet(genes, output):
 
   Writes a summary of genes into output.
   """
+  genes = sorted(filter(lambda x: x.numHits != 0, genes), key = lambda x: min(x.location)) + sorted(filter(lambda x: x.numHits == 0, genes), key = lambda x: min(x.location))
   output.write("Id\tLocation\tHits\tBest bit score\tBest evalue\tBest identity\tAlignment Length\tBest hit gi\tDefinition\tOrganism\n")
   for gene in genes:
     output.write(gene.query + "\t")
