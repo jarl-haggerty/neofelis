@@ -65,7 +65,7 @@ limitations under the License.
             <param>--database=nr</param>
             <param>--e-value=0.1</param>
             <param>--query=genomes/phiSM.fas</param>
-            <param>--swing</param>
+            <param>--server</param>
           </pythonArgs>
         </configuration>
       </plugin>

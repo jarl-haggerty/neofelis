@@ -90,10 +90,13 @@ def writeSpreadsheet(genes, output):
   Writes a summary of genes into output.
   """
   genes = sorted(filter(lambda x: x.numHits != 0, genes), key = lambda x: min(x.location)) + sorted(filter(lambda x: x.numHits == 0, genes), key = lambda x: min(x.location))
-  output.write("Id\tLocation\tHits\tBest bit score\tBest evalue\tBest identity\tAlignment Length\tBest hit gi\tDefinition\tOrganism\n")
+  output.write("Id\tStart\tStop\tHits\tBest bit score\tBest evalue\tBest identity\tAlignment Length\tBest hit gi\tDefinition\tOrganism\n")
   for gene in genes:
-    output.write(gene.query + "\t")
-    output.write("-".join(map(str, gene.location)) + "\t")
+    identification = int(re.search(r"\w+~(\d+)", gene.query).group(1))
+    identification = identification+(len(genes)) if gene.intergenic else identification
+    output.write(str(identification) + "\t")
+    output.write(str(gene.location[0]) + "\t")
+    output.write(str(gene.location[1]) + "\t")
     output.write(str(gene.numHits) + "\t")
     output.write(str(gene.bitScore) + "\t")
     output.write(str(gene.eValue) + "\t")

@@ -21,7 +21,10 @@ limitations under the License.
 """
 
 import os
+import re
 import sys
+import socket
+import threading
 from getopt import getopt
 from neofelis import pipeline
 from neofelis import utils
@@ -35,12 +38,11 @@ from javax.swing import JLabel
 from java.awt import GridBagLayout
 from java.awt import GridBagConstraints
 
-def getArguments():
+def getArguments(blastLocation, genemarkLocation, transtermLocation, database, matrix, eValue, minLength, scaffoldingDistance, promoterScoreCutoff, sources):
   """
   This function brings up a window to retreive any required arguments.  This function brings up a window with fields for each argument, filled with any arguments already given.
   While this window is visible the program will wait, once it is no longer visible all the arguments will be filled with the entries in the fields.
   """
-  global blastLocation, genemarkLocation, transtermLocation, database, matrix, eValue, minLength, scaffoldingDistance, ldfCutoff, sources, email
 
   class BlastAction(AbstractAction):
     """
@@ -127,9 +129,8 @@ def getArguments():
   eValueField = JTextField(str(eValue))
   minLengthField = JTextField(str(minLength))
   scaffoldingDistanceField = JTextField(str(scaffoldingDistance))
-  ldfField = JTextField(str(ldfCutoff))
+  promoterScoreField = JTextField(str(promoterScoreCutoff))
   queryField = JTextField(sources[0])
-  #emailField = JTextField(email)
 
   constraints.gridx = 0
   constraints.gridy = 0
@@ -153,12 +154,10 @@ def getArguments():
   contentPane.add(JLabel("Minimum Intergenic Length"), constraints)
   constraints.gridy = 7
   contentPane.add(JLabel("Scaffold Distance"), constraints)
-  #constraints.gridy = 8
-  #contentPane.add(JLabel("LDF Cutoff"), constraints)
   constraints.gridy = 8
+  contentPane.add(JLabel("LDF Cutoff"), constraints)
+  constraints.gridy = 9
   contentPane.add(JLabel("Query"), constraints)
-  #constraints.gridy = 10
-  #contentPane.add(JLabel("Email"), constraints)
   constraints.gridx = 1
   constraints.gridy = 0
   constraints.weightx = 1
@@ -177,12 +176,10 @@ def getArguments():
   contentPane.add(minLengthField, constraints)
   constraints.gridy = 7
   contentPane.add(scaffoldingDistanceField, constraints)
-  #constraints.gridy = 8
-  #contentPane.add(ldfField, constraints)
   constraints.gridy = 8
+  contentPane.add(promoterScoreField, constraints)
+  constraints.gridy = 9
   contentPane.add(queryField, constraints)
-  #constraints.gridy = 10
-  #contentPane.add(emailField, constraints)
   constraints.gridx = 2
   constraints.gridy = 0
   constraints.weightx = 0
@@ -209,19 +206,27 @@ def getArguments():
   while frame.isVisible():
     pass
 
-  blastLocation = blastField.getText()
-  genemarkLocation = genemarkField.getText()
-  transtermLocation = transtermField.getText()
-  database = databaseField.getText()
-  matrix = matrixField.getText()
-  eValue = float(eValueField.getText())
-  minLength = int(minLengthField.getText())
-  scaffoldingDistance = int(scaffoldingDistanceField.getText())
-  ldfCutoff = float(ldfField.getText())
-  sources = [queryField.getText()]
+  return (blastField.getText(),
+          genemarkField.getText(),
+          transtermField.getText(),
+          databaseField.getText(),
+          matrixField.getText(),
+          float(eValueField.getText()),
+          int(minLengthField.getText()),
+          int(scaffoldingDistanceField.getText()),
+          float(promoterScoreField.getText()),
+          [queryField.getText()])
+
+class NeofelisThread(threading.Thread):
+  def __init__(self, arguments):
+    threading.Thread.__init__(self)
+    self.arguments = arguments
+    
+  def run(self):
+    main(self.arguments)
 
 def main(arguments):
-  global blastLocation, genemarkLocation, transtermLocation, database, matrix, eValue, minLength, scaffoldingDistance, ldfCutoff, sources, email
+  print "Running"
   
   documentation = """
 -m --matrix               Matrix with which to run genemark
@@ -236,12 +241,12 @@ def main(arguments):
 -q --query                Genome or directory of genomes to run pipeline on
 -h --help                 Print help documentation
 -s --swing                Use a swing interface
--p --pipe                 Neofelis will be set to read lines of command line arguments from the pipe, "neofelis_pipe".  For each line read a new thread will be spawned to process the query.
+-v --server               Neofelis will be set to read lines of command line arguments from port 1122.  For each line read a new thread will be spawned to process the query.
 -n --no-swing             If any required arguments are missing then the program will exit instead of using a Swing interface to get the missing arguments
 -a --email                Email address that results will be sent to.
 """
   try:
-    opts, args = getopt(arguments, "m:d:g:b:e:l:t:c:q:hsna:", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "ldf-cutoff=", "scaffolding-distance=", "query=", "help", "swing", "no-swing", "email="])
+    opts, args = getopt(arguments, "m:d:g:b:e:l:t:c:q:hsna:v", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "ldf-cutoff=", "scaffolding-distance=", "query=", "help", "swing", "no-swing", "email=", "server"])
   except GetoptError:
     print documentation
     sys.exit(0)
@@ -253,14 +258,14 @@ def main(arguments):
   eValue = 0.1
   minLength = 100  
   transtermLocation = ""
-  ldfCutoff = 0
+  promoterScoreCutoff = 0
   scaffoldingDistance = 100
   sources = [""]
   swingInterface = False
   noSwing = False
   email = ""
   remote = False
-  pipe = False
+  server = False
 	
   for opt, arg in opts:
     if opt in ("-q", "--query"):
@@ -278,7 +283,7 @@ def main(arguments):
     elif opt in ("-l", "--min-length"):
       minLength = int(arg)
     elif opt in ("-l", "--ldf-cutoff"):
-      ldfCutoff = float(arg)
+      promoterScoreCutoff = float(arg)
     elif opt in ("-t", "--transterm"):
       transtermLocation = arg
     elif opt in ("-c", "--scaffolding-distance"):
@@ -289,25 +294,44 @@ def main(arguments):
       noSwing = True
     elif opt in ("-a", "--email"):
       email = arg
-    elif opt in ("-p", "--pipe"):
-      pipe = True
+    elif opt in ("-v", "--server"):
+      server = True
     elif opt in ("-h", "--help"):
       print documentation
       sys.exit(0)
 
-  if pipe:
-    os.mkfifo("neofelis_pipe", "r")
-    pipe = open("neofelis_pipe", "r")
+  if server:
+    s = socket.socket()
+    s.bind(("localhost", 1122))
+    s.listen(5)
     while True:
-      line = pipe.readLine()
-      if line:
-        threading.Thread(target = main, args = re.split(r"\s+", line))
-        
+      print "I'm Listening."
+      connection, address = s.accept()
+      arguments = ""
+      while not arguments or arguments[-1] != "\n":
+        arguments += connection.recv(4096)
+      arguments = re.split(r"\s+", arguments)
+      if "--server" in arguments or "-v" in arguments:
+        print "ERROR: Can't run neofelis server in neofelis server, you just had to try that didn't you."
+      else:
+        print "Threading"
+        NeofelisThread(arguments).start()
+      connection.close()
+      
   if not blastLocation or not database or not genemarkLocation or not transtermLocation:
     if noSwing:
       sys.exit(1)
     else:
-      getArguments()
+      blastLocation, genemarkLocation, transtermLocation, database, matrix, eValue, minLength, scaffoldingDistance, promoterScoreCutoff, sources = getArguments(blastLocation,
+                                                                                                                                                                genemarkLocation,
+                                                                                                                                                                transtermLocation,
+                                                                                                                                                                database,
+                                                                                                                                                                matrix,
+                                                                                                                                                                eValue,
+                                                                                                                                                                minLength,
+                                                                                                                                                                scaffoldingDistance,
+                                                                                                                                                                promoterScoreCutoff,
+                                                                                                                                                                sources)
       swingInterface = True
 
   queries = []
@@ -319,7 +343,8 @@ def main(arguments):
     elif utils.isGenome(source):
       queries.append(source)
 
-  pipeline.run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, ldfCutoff, queries, swingInterface, email)
+  pipeline.run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, promoterScoreCutoff, queries, swingInterface, email)
 
 if __name__ == "__main__":
+  print " ".join(sys.argv)
   main(sys.argv)
