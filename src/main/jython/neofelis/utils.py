@@ -26,6 +26,7 @@ from org.xml.sax.helpers import XMLReaderFactory
 from org.xml.sax import XMLReader
 from org.xml.sax import InputSource
 from org.xml.sax.helpers import DefaultHandler
+from org.xml.sax import SAXParseException
 import os
 import os.path
 import subprocess
@@ -340,13 +341,13 @@ def parseBlast(fileName):
 
   return dict(map(lambda iteration: (iteration.query, iteration), reader.getContentHandler().iterations))
 
-def cachedBlast(fileName, blastLocation, database, eValue, query, remote = False):
+def cachedBlast(fileName, blastLocation, database, eValue, query, remote = False, force = False):
   """
   Performs a blast search using the blastp executable and database in blastLocation on
   the query with the eValue.  The result is an XML file saved to fileName.  If fileName
   already exists the search is skipped.  If remote is true then the search is done remotely.
   """
-  if not os.path.isfile(fileName):
+  if not os.path.isfile(fileName) or force:
     output = open(fileName, "w")
     command = [blastLocation + "/bin/blastp",
                "-evalue", str(eValue),
@@ -357,11 +358,15 @@ def cachedBlast(fileName, blastLocation, database, eValue, query, remote = False
                   "-db", database]
     else:
       command += ["-num_threads", str(Runtime.getRuntime().availableProcessors()),
-                  "-db", blastLocation + "/db/" + database]
+                  "-db", database]
     subprocess.Popen(command,
                      stdout = output).wait()
     output.close()
-  return parseBlast(fileName)
+  try:
+    return parseBlast(fileName)
+  except SAXParseException:
+    print 'Retry'
+    return cachedBlast(fileName, blastLocation, database, eValue, query, remote, True)
 
 def getGCContent(genome):
   """

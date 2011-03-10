@@ -1,0 +1,142 @@
+Id	Location	Hits	Best bit score	Best evalue	Best identity	Alignment Length	Best hit gi	Definition	Organism
+phiST~17~23	9858-11525	62	145.591277066	1.35424485466e-32	117.0	319	298480073	prophage LambdaSa1, N-acetylmuramoyl-L-alanine amidase, family 4	Bacteroides sp. D22
+phiST~19	12598-13578	1	42.3577907199	0.0895037513104	33.0	136	256819738	hypothetical protein Coch_0901	Capnocytophaga ochracea DSM 7271
+phiST~21	16065-18113	5	56.224975453	1.4772120172e-05	122.0	525	297291764	PREDICTED: laminin subunit alpha-2-like	Macaca mulatta
+phiST~23	18116-20188	500	156.762064767	7.56067965409e-36	77.0	165	307564893	conserved hypothetical protein	Prevotella amnii CRIS 21A-A
+phiST~24	20256-21242	10	65.469765275	8.65791351062e-09	79.0	339	255008882	hypothetical protein Bfra3_07067	Bacteroides fragilis 3_1_12
+phiST~25	21313-21885	1	45.4393873273	0.00328971823279	39.0	172	256819694	hypothetical protein Coch_0856	Capnocytophaga ochracea DSM 7271
+phiST~27	22520-26266	500	159.073262223	3.80662411634e-36	139.0	414	261406668	hypothetical protein GYMC10_2831	Geobacillus sp. Y412MC10
+phiST~29	26603-27034	1	43.1281898718	0.0118544499718	24.0	79	312442583	Cupin 2 conserved barrel domain protein	Paludibacter propionicigenes WB4
+phiST~30	27049-27468	160	97.826529652	4.05656034787e-19	56.0	138	84393141	bacteriophage P7 related protein	Vibrio splendidus 12B01
+phiST~31~21	27513-28043	1	51.602580542	3.39484388112e-05	28.0	89	200003987	conserved phage protein	Bacteroides phage B40-8
+phiST~32	28150-29073	142	54.2989775734	1.93577951411e-05	26.0	56	226313025	DNA polymerase III alpha subunit	Brevibacillus brevis NBRC 100599
+phiST~33	29085-29714	45	127.101697422	1.18368508478e-27	65.0	153	301167814	conserved hypothetical protein	Bacteriovorax marinus SJ
+phiST~34	29683-30480	500	129.798094453	2.61248240855e-28	91.0	260	284164674	Radical SAM domain protein	Haloterrigena turkmenica DSM 5511
+phiST~35	30496-31200	500	283.107525668	1.40087030495e-74	134.0	223	37526683	hypothetical protein plu2793	Photorhabdus luminescens subsp. laumondii TTO1
+phiST~36	31163-31750	25	51.9877801179	4.05192553736e-05	25.0	87	288926640	protein 37 protein (Gp37)	Prevotella buccae D17
+phiST~37	31740-32087	2	59.3065720603	1.43108381065e-07	36.0	113	260174978	hypothetical protein BacD2_24185	Bacteroides sp. D2
+phiST~38	32047-32544	2	40.8169924163	0.0508141205977	35.0	110	75370543	envelope glycoprotein	Human immunodeficiency virus 1
+phiST~41	33696-35273	500	221.475593522	1.84655138128e-55	142.0	432	265763455	predicted protein	Bacteroides sp. 2_1_16
+phiST~42	35275-37296	500	357.45104382	3.34113684972e-96	220.0	674	237711879	DNA polymerase III alpha subunit	Bacteroides sp. 9_1_42FAA
+phiST~43~12	37350-38465	20	73.1737567933	5.04043346978e-11	66.0	209	157953848	hypothetical protein AR158_C658R	Paramecium bursaria Chlorella virus AR158
+phiST~49	41228-42253	134	106.686119898	3.49551000673e-21	90.0	348	237711870	predicted protein	Bacteroides sp. 9_1_42FAA
+phiST~50	42254-43225	500	301.211905736	1.00906939466e-79	150.0	318	189502646	recombinase A	Candidatus Amoebophilus asiaticus 5a2
+phiST~54	44407-46569	29	154.450867312	4.41870828369e-35	168.0	745	237711871	predicted protein	Bacteroides sp. 9_1_42FAA
+phiST~55	46570-47154	3	51.9877801179	3.95643858314e-05	50.0	184	168017937	predicted protein	Physcomitrella patens subsp. patens
+phiST~57	47461-49140	500	229.17958504	1.03168478125e-57	164.0	524	298376514	zinc finger Ran-binding domain-containing protein 3	Bacteroides sp. 3_1_19
+phiST~58	49145-49522	23	68.5513618823	2.36552595022e-10	48.0	130	90412703	hypothetical protein P3TCK_22385	Photobacterium profundum 3TCK
+phiST~59	49749-50282	500	90.1225381337	1.03029414088e-16	62.0	166	18655792	Chain A, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H >gi|18655793|pdb|1JL2|B Chain B, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H >gi|18655794|pdb|1JL2|C Chain C, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H >gi|18655795|pdb|1JL2|D Chain D, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H	
+phiST~60	50279-50707	500	80.1073491598	7.68988559605e-14	53.0	137	157413431	putative purine phosphoribosyltransferase-related protein	Prochlorococcus marinus str. MIT 9215
+phiST~61	50715-51323	2	52.3729796938	3.40800579227e-05	54.0	206	256767597	hypothetical protein StreC_13696	Streptomyces sp. C
+phiST~62	51355-52002	3	64.3141665472	1.00629974108e-08	40.0	152	169614728	hypothetical protein SNOG_10511	Phaeosphaeria nodorum SN15
+phiST~63	52006-54375	500	861.29208912	0.0	441.0	805	86134367	ribonucleoside-diphosphate reductase large subunit	Polaribacter sp. MED152
+phiST~64	54426-54806	21	47.7505847828	0.00044870642528	27.0	100	281357086	histone family protein DNA-binding protein	Victivallis vadensis ATCC BAA-548
+phiST~65	54806-56431	6	155.221266464	1.69307152383e-35	132.0	465	46401741	A1	Enterobacteria phage T5
+phiST~68	57477-58184	52	62.3881686676	4.91656983184e-08	35.0	86	304360700	hypothetical protein phiCTP1_gp38	Clostridium phage phiCTP1
+phiST~69	58224-58544	57	125.175699542	2.12292875008e-27	58.0	103	146340571	hypothetical protein BRADO3615	Bradyrhizobium sp. ORS278
+phiST~70	58551-60485	100	103.989722867	5.55282869258e-20	80.0	269	237713714	DNA primase/helicase	Bacteroides sp. D1
+phiST~76	63028-65397	440	185.266833385	2.3924841461e-44	163.0	586	145350935	predicted protein	Ostreococcus lucimarinus CCE9901
+phiST~78	65696-66700	13	167.547652893	2.07278756258e-39	106.0	322	22298699	hypothetical protein tll1156	Thermosynechococcus elongatus BP-1
+phiST~81	67473-68636	1	53.9137779975	4.16355025502e-05	58.0	259	256819696	hypothetical protein Coch_0858	Capnocytophaga ochracea DSM 7271
+phiST~85	69732-70988	308	175.251644411	1.32569835877e-41	129.0	395	261881105	conserved hypothetical protein	Prevotella bergensis DSM 17361
+phiST~88	72450-72725	2	51.217380966	3.83031741752e-05	26.0	70	15894494	hypothetical protein CA_C1211	Clostridium acetobutylicum ATCC 824
+phiST~90	73000-73425	1	42.3577907199	0.0205644132259	43.0	131	300775616	conserved hypothetical protein	Chryseobacterium gleum ATCC 35910
+phiST~94	74764-75315	1	75.8701538248	1.84737710183e-12	69.0	199	120436816	hypothetical protein GFO_2479	Gramella forsetii KT0803
+intergenic~446	157-50	0	0	inf	0	0	None	None	None
+intergenic~443	180-64	0	0	inf	0	0	None	None	None
+intergenic~445	390-226	0	0	inf	0	0	None	None	None
+intergenic~447	415-257	0	0	inf	0	0	None	None	None
+phiST~1	827-672	0	0	inf	0	0	None	None	None
+intergenic~442	992-861	0	0	inf	0	0	None	None	None
+phiST~2	1552-932	0	0	inf	0	0	None	None	None
+phiST~3	1814-1509	0	0	inf	0	0	None	None	None
+phiST~4	2251-1838	0	0	inf	0	0	None	None	None
+intergenic~441	2430-2287	0	0	inf	0	0	None	None	None
+phiST~5	2850-2554	0	0	inf	0	0	None	None	None
+intergenic~438	2996-2859	0	0	inf	0	0	None	None	None
+intergenic~422	3106-2933	0	0	inf	0	0	None	None	None
+intergenic~430	3234-3103	0	0	inf	0	0	None	None	None
+intergenic~439	3473-3336	0	0	inf	0	0	None	None	None
+intergenic~436	3672-3460	0	0	inf	0	0	None	None	None
+intergenic~428	3790-3524	0	0	inf	0	0	None	None	None
+phiST~6	4079-3777	0	0	inf	0	0	None	None	None
+intergenic~418	4319-4098	0	0	inf	0	0	None	None	None
+phiST~7~24	4759-4358	0	0	inf	0	0	None	None	None
+intergenic~416	4898-4788	0	0	inf	0	0	None	None	None
+intergenic~415	5019-4915	0	0	inf	0	0	None	None	None
+phiST~8	5250-5020	0	0	inf	0	0	None	None	None
+phiST~9~17	5531-5262	0	0	inf	0	0	None	None	None
+intergenic~414	6084-5758	0	0	inf	0	0	None	None	None
+phiST~10~7	6396-6094	0	0	inf	0	0	None	None	None
+intergenic~1	6463-6564	0	0	inf	0	0	None	None	None
+phiST~11	6577-7098	0	0	inf	0	0	None	None	None
+phiST~12	7394-8137	0	0	inf	0	0	None	None	None
+phiST~13	8155-8604	0	0	inf	0	0	None	None	None
+phiST~14	8601-9047	0	0	inf	0	0	None	None	None
+phiST~15~14	9044-9493	0	0	inf	0	0	None	None	None
+phiST~16~20	9506-9649	0	0	inf	0	0	None	None	None
+intergenic~39	9655-9783	0	0	inf	0	0	None	None	None
+phiST~18	11549-12601	0	0	inf	0	0	None	None	None
+phiST~20	13579-16062	0	0	inf	0	0	None	None	None
+phiST~22~19	18013-17771	0	0	inf	0	0	None	None	None
+intergenic~285	18036-17926	0	0	inf	0	0	None	None	None
+phiST~26	22021-22509	0	0	inf	0	0	None	None	None
+phiST~28	26311-26619	0	0	inf	0	0	None	None	None
+intergenic~41	27505-27675	0	0	inf	0	0	None	None	None
+phiST~39	32546-33325	0	0	inf	0	0	None	None	None
+phiST~40	33375-33578	0	0	inf	0	0	None	None	None
+intergenic~42	33598-33702	0	0	inf	0	0	None	None	None
+intergenic~43	38540-38647	0	0	inf	0	0	None	None	None
+phiST~44	38663-38887	0	0	inf	0	0	None	None	None
+phiST~45	38906-39445	0	0	inf	0	0	None	None	None
+phiST~46	39447-39773	0	0	inf	0	0	None	None	None
+phiST~47	39853-40770	0	0	inf	0	0	None	None	None
+phiST~48	40827-41228	0	0	inf	0	0	None	None	None
+intergenic~44	42184-42315	0	0	inf	0	0	None	None	None
+phiST~51~25	43237-43743	0	0	inf	0	0	None	None	None
+phiST~52~6	43843-44121	0	0	inf	0	0	None	None	None
+phiST~53	44114-44410	0	0	inf	0	0	None	None	None
+phiST~56	47157-47459	0	0	inf	0	0	None	None	None
+intergenic~45	49642-49752	0	0	inf	0	0	None	None	None
+phiST~66	56550-56978	0	0	inf	0	0	None	None	None
+intergenic~46	56983-57135	0	0	inf	0	0	None	None	None
+phiST~67	57192-57410	0	0	inf	0	0	None	None	None
+phiST~71	60555-60755	0	0	inf	0	0	None	None	None
+phiST~72	60755-61180	0	0	inf	0	0	None	None	None
+phiST~73~2	61225-61836	0	0	inf	0	0	None	None	None
+intergenic~47	61890-62015	0	0	inf	0	0	None	None	None
+phiST~74	62012-62440	0	0	inf	0	0	None	None	None
+phiST~75	62466-62921	0	0	inf	0	0	None	None	None
+phiST~77	65534-65677	0	0	inf	0	0	None	None	None
+phiST~79	66690-66971	0	0	inf	0	0	None	None	None
+phiST~80~18	67163-67423	0	0	inf	0	0	None	None	None
+phiST~82	68629-69129	0	0	inf	0	0	None	None	None
+intergenic~191	69122-68982	0	0	inf	0	0	None	None	None
+phiST~83~10	69262-69113	0	0	inf	0	0	None	None	None
+intergenic~49	69135-69335	0	0	inf	0	0	None	None	None
+phiST~84	69313-69720	0	0	inf	0	0	None	None	None
+intergenic~52	71067-71225	0	0	inf	0	0	None	None	None
+intergenic~54	71212-71361	0	0	inf	0	0	None	None	None
+intergenic~60	71441-71572	0	0	inf	0	0	None	None	None
+intergenic~51	71535-71693	0	0	inf	0	0	None	None	None
+intergenic~58	71690-71905	0	0	inf	0	0	None	None	None
+phiST~86	71916-72083	0	0	inf	0	0	None	None	None
+phiST~87	72094-72237	0	0	inf	0	0	None	None	None
+intergenic~61	72253-72429	0	0	inf	0	0	None	None	None
+intergenic~62	72776-72880	0	0	inf	0	0	None	None	None
+phiST~89~4	72783-72974	0	0	inf	0	0	None	None	None
+phiST~91	73427-73819	0	0	inf	0	0	None	None	None
+intergenic~63	73810-73956	0	0	inf	0	0	None	None	None
+phiST~92	73972-74181	0	0	inf	0	0	None	None	None
+phiST~93	74234-74383	0	0	inf	0	0	None	None	None
+intergenic~64	74380-74481	0	0	inf	0	0	None	None	None
+intergenic~65	74583-74702	0	0	inf	0	0	None	None	None
+phiST~95	75525-75692	0	0	inf	0	0	None	None	None
+phiST~96	75809-76132	0	0	inf	0	0	None	None	None
+intergenic~106	76547-76419	0	0	inf	0	0	None	None	None
+intergenic~75	77040-77243	0	0	inf	0	0	None	None	None
+intergenic~67	77281-77391	0	0	inf	0	0	None	None	None
+intergenic~97	77586-77425	0	0	inf	0	0	None	None	None
+phiST~97	77822-77625	0	0	inf	0	0	None	None	None
+phiST~98	78117-77899	0	0	inf	0	0	None	None	None
+intergenic~77	78255-78127	0	0	inf	0	0	None	None	None

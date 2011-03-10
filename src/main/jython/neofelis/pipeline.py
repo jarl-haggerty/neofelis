@@ -140,14 +140,13 @@ def updateProgress(job):
     message += 1
     currentProgress.setValue(message)
     currentLabel.setText(messages[message])
-  else:
-    if job != currentJob:
-      print "Processing %s, %.2f%% done" % (job, 100.0*jobCount/numJobs)
-      jobCount += 1
-      currentJob = job
-      message = -1
-    message += 1
-    print "    %s, %.2f%% done" % (messages[message], 100.0*message/len(messages))
+  if job != currentJob:
+    print "Processing %s, %.2f%% done" % (job, 100.0*jobCount/numJobs)
+    jobCount += 1
+    currentJob = job
+    message = -1
+  message += 1
+  print "    %s, %.2f%% done" % (messages[message], 100.0*message/len(messages))
 
 def finished():
   """
@@ -163,8 +162,7 @@ def finished():
     doneButton.setEnabled(True)
     while frame.isVisible():
       pass
-  else:
-    print "Processing 100.00% done"
+  print "Processing 100.00% done"
 
 def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, ldfCutoff, queries, swing = False, email = ""):
   """
@@ -245,7 +243,6 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
     smtp.ehlo()
     smtp.starttls()
     smtp.ehlo
-    smtp.login("tmpl", "gobanana23")
     smtp.sendmail("Neofelis", [email], message.as_string())
     smtp.close()
     

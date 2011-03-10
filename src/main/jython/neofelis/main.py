@@ -32,15 +32,18 @@ from javax.swing import JButton
 from javax.swing import JTextField
 from javax.swing import AbstractAction
 from javax.swing import JLabel
+from javax.swing import JEditorPane
+from javax.swing import JScrollPane
 from java.awt import GridBagLayout
 from java.awt import GridBagConstraints
+from java.lang import ClassLoader
 
 def getArguments():
   """
   This function brings up a window to retreive any required arguments.  This function brings up a window with fields for each argument, filled with any arguments already given.
   While this window is visible the program will wait, once it is no longer visible all the arguments will be filled with the entries in the fields.
   """
-  global blastLocation, genemarkLocation, transtermLocation, database, matrix, eValue, minLength, scaffoldingDistance, ldfCutoff, sources, email
+  global blastLocation, genemarkLocation, transtermLocation, database, database, matrix, eValue, minLength, scaffoldingDistance, promoterScoreCutoff, sources, email
 
   class BlastAction(AbstractAction):
     """
@@ -94,6 +97,37 @@ def getArguments():
       if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
         queryField.setText(fileChooser.getSelectedFile().getAbsolutePath())
 
+  class DatabaseLocationAction(AbstractAction):
+    """
+    Action for selecting the database.  Brings up a file selection dialog and fills the text field for the database with the selection.
+    """
+    def __init__(self):
+      AbstractAction.__init__(self, "...")
+
+    def actionPerformed(self, event):
+      fileChooser = JFileChooser()
+      fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES)
+      if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
+        databaseLocationField.setText(fileChooser.getSelectedFile().getAbsolutePath())
+
+  class HelpAction(AbstractAction):
+    """
+    Displays a help dialog.
+    """
+    def __init__(self):
+      AbstractAction.__init__(self, "Help")
+
+    def actionPerformed(self, event):
+      helpFrame = JFrame("Neofelis Help")
+      editorPane = JEditorPane(ClassLoader.getSystemResource("help.html"))
+      helpFrame.setContentPane(JScrollPane(editorPane))
+      helpFrame.setSize(frame.getSize())
+      mainLocation = frame.getLocation()
+      mainLocation.x += 50
+      mainLocation.y += 50
+      helpFrame.setLocation(mainLocation)
+      helpFrame.setVisible(True)
+
   class OKAction(AbstractAction):
     """
     Action for starting the pipeline.  This action will simply make the window invisible.
@@ -122,14 +156,14 @@ def getArguments():
   blastField = JTextField(blastLocation)
   genemarkField = JTextField(genemarkLocation)
   transtermField = JTextField(transtermLocation)
-  databaseField = JTextField(database)
+  databaseLocationField = JTextField(os.path.split(database)[0])
+  databaseField = JTextField(os.path.split(database)[1])
   matrixField = JTextField(str(matrix))
   eValueField = JTextField(str(eValue))
   minLengthField = JTextField(str(minLength))
   scaffoldingDistanceField = JTextField(str(scaffoldingDistance))
-  ldfField = JTextField(str(ldfCutoff))
+  promoterScoreField = JTextField(str(promoterScoreCutoff))
   queryField = JTextField(sources[0])
-  #emailField = JTextField(email)
 
   constraints.gridx = 0
   constraints.gridy = 0
@@ -144,21 +178,21 @@ def getArguments():
   constraints.gridy = 2
   contentPane.add(JLabel("Transterm Location"), constraints)
   constraints.gridy = 3
-  contentPane.add(JLabel("Database"), constraints)
+  contentPane.add(JLabel("Databases Location"), constraints)
   constraints.gridy = 4
-  contentPane.add(JLabel("Matrix(Leave blank to use heuristic matrix)"), constraints)
+  contentPane.add(JLabel("Database"), constraints)
   constraints.gridy = 5
-  contentPane.add(JLabel("E Value"), constraints)
+  contentPane.add(JLabel("Matrix(Leave blank to use heuristic matrix)"), constraints)
   constraints.gridy = 6
-  contentPane.add(JLabel("Minimum Intergenic Length"), constraints)
+  contentPane.add(JLabel("E Value"), constraints)
   constraints.gridy = 7
-  contentPane.add(JLabel("Scaffold Distance"), constraints)
-  #constraints.gridy = 8
-  #contentPane.add(JLabel("LDF Cutoff"), constraints)
+  contentPane.add(JLabel("Minimum Intergenic Length"), constraints)
   constraints.gridy = 8
+  contentPane.add(JLabel("Scaffold Distance"), constraints)
+  constraints.gridy = 9
+  contentPane.add(JLabel("Promoter Score Cutoff"), constraints)
+  constraints.gridy = 10
   contentPane.add(JLabel("Query"), constraints)
-  #constraints.gridy = 10
-  #contentPane.add(JLabel("Email"), constraints)
   constraints.gridx = 1
   constraints.gridy = 0
   constraints.weightx = 1
@@ -168,21 +202,21 @@ def getArguments():
   constraints.gridy = 2
   contentPane.add(transtermField, constraints)
   constraints.gridy = 3
-  contentPane.add(databaseField, constraints)
+  contentPane.add(databaseLocationField, constraints)
   constraints.gridy = 4
-  contentPane.add(matrixField, constraints)
+  contentPane.add(databaseField, constraints)
   constraints.gridy = 5
-  contentPane.add(eValueField, constraints)
+  contentPane.add(matrixField, constraints)
   constraints.gridy = 6
-  contentPane.add(minLengthField, constraints)
+  contentPane.add(eValueField, constraints)
   constraints.gridy = 7
-  contentPane.add(scaffoldingDistanceField, constraints)
-  #constraints.gridy = 8
-  #contentPane.add(ldfField, constraints)
+  contentPane.add(minLengthField, constraints)
   constraints.gridy = 8
+  contentPane.add(scaffoldingDistanceField, constraints)
+  constraints.gridy = 9
+  contentPane.add(promoterScoreField, constraints)
+  constraints.gridy = 10
   contentPane.add(queryField, constraints)
-  #constraints.gridy = 10
-  #contentPane.add(emailField, constraints)
   constraints.gridx = 2
   constraints.gridy = 0
   constraints.weightx = 0
@@ -193,11 +227,17 @@ def getArguments():
   contentPane.add(JButton(GenemarkAction()), constraints)
   constraints.gridy = 2
   contentPane.add(JButton(TranstermAction()), constraints)
-  constraints.gridy = 8
+  constraints.gridy = 3
+  contentPane.add(JButton(DatabaseLocationAction()), constraints)
+  constraints.gridy = 10
   contentPane.add(JButton(QueryAction()), constraints)
 
-  constraints.gridx = 1
+  constraints.gridx = 0
   constraints.gridy = 11
+  constraints.anchor = GridBagConstraints.LINE_START
+  contentPane.add(JButton(HelpAction()), constraints)
+  constraints.gridx = 1
+  constraints.anchor = GridBagConstraints.LINE_END
   contentPane.add(JButton(OKAction()), constraints)
   constraints.gridx = 2
   contentPane.add(JButton(CancelAction()), constraints)
@@ -212,33 +252,33 @@ def getArguments():
   blastLocation = blastField.getText()
   genemarkLocation = genemarkField.getText()
   transtermLocation = transtermField.getText()
-  database = databaseField.getText()
+  database = databaseLocationField.getText() + "/" + databaseField.getText()
   matrix = matrixField.getText()
   eValue = float(eValueField.getText())
   minLength = int(minLengthField.getText())
   scaffoldingDistance = int(scaffoldingDistanceField.getText())
-  ldfCutoff = float(ldfField.getText())
+  promoterScoreCutoff = float(promoterScoreField.getText())
   sources = [queryField.getText()]
 
 def main(arguments):
-  global blastLocation, genemarkLocation, transtermLocation, database, matrix, eValue, minLength, scaffoldingDistance, ldfCutoff, sources, email
+  global blastLocation, genemarkLocation, transtermLocation, database, matrix, eValue, minLength, scaffoldingDistance, promoterScoreCutoff, sources, email
   
   documentation = """
--m --matrix               Matrix with which to run genemark
--d --database             Database to use when running blast
--g --genemark             Location of Genemark
--b --blast                Location of Blast+
--e --e-value              Minimal evalue for any genes detected
--l --min-length           Minimum length of any genes discovered
--t --transterm            Location of Transterm
--d --ldf-cutoff           Minimum LDF value of any promoters selected from a BPROM search
--c --scaffolding-distance Distance to allow between genes when determining scaffolds
--q --query                Genome or directory of genomes to run pipeline on
--h --help                 Print help documentation
--s --swing                Use a swing interface
--p --pipe                 Neofelis will be set to read lines of command line arguments from the pipe, "neofelis_pipe".  For each line read a new thread will be spawned to process the query.
--n --no-swing             If any required arguments are missing then the program will exit instead of using a Swing interface to get the missing arguments
--a --email                Email address that results will be sent to.
+-m --matrix                Matrix with which to run genemark
+-d --database              Database to use when running blast
+-g --genemark              Location of Genemark
+-b --blast                 Location of Blast+
+-e --e-value               Minimal evalue for any genes detected
+-l --min-length            Minimum length of any genes discovered
+-t --transterm             Location of Transterm
+-d --promoter-score-cutoff Minimum promoter score of any promoters selected from a promoter search
+-c --scaffolding-distance  Distance to allow between genes when determining scaffolds
+-q --query                 Genome or directory of genomes to run pipeline on
+-h --help                  Print help documentation
+-s --swing                 Use a swing interface
+-p --pipe                  Neofelis will be set to read lines of command line arguments from the pipe, "neofelis_pipe".  For each line read a new thread will be spawned to process the query.
+-n --no-swing              If any required arguments are missing then the program will exit instead of using a Swing interface to get the missing arguments
+-a --email                 Email address that results will be sent to.
 """
   try:
     opts, args = getopt(arguments, "m:d:g:b:e:l:t:c:q:hsna:", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "ldf-cutoff=", "scaffolding-distance=", "query=", "help", "swing", "no-swing", "email="])
@@ -253,7 +293,7 @@ def main(arguments):
   eValue = 0.1
   minLength = 100  
   transtermLocation = ""
-  ldfCutoff = 0
+  promoterScoreCutoff = 0
   scaffoldingDistance = 100
   sources = [""]
   swingInterface = False
@@ -277,8 +317,8 @@ def main(arguments):
       eValue = float(arg)
     elif opt in ("-l", "--min-length"):
       minLength = int(arg)
-    elif opt in ("-l", "--ldf-cutoff"):
-      ldfCutoff = float(arg)
+    elif opt in ("-l", "--promoter-score-cutoff"):
+      promoterScoreCutoff = float(arg)
     elif opt in ("-t", "--transterm"):
       transtermLocation = arg
     elif opt in ("-c", "--scaffolding-distance"):
@@ -319,7 +359,8 @@ def main(arguments):
     elif utils.isGenome(source):
       queries.append(source)
 
-  pipeline.run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, ldfCutoff, queries, swingInterface, email)
+  print blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, promoterScoreCutoff, queries, swingInterface, email
+  pipeline.run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, promoterScoreCutoff, queries, swingInterface, email)
 
 if __name__ == "__main__":
   main(sys.argv)
