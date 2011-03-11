@@ -57,7 +57,9 @@ messages = ["Searching for genes via genemark",
             "Removing overlapping genes",
             "Searching for promoters",
             "Using transterm to find terminators",
-            "Removing transcription signals which conflict with genes"]
+            "Removing transcription signals which conflict with genes",
+            "Writing Artemis file",
+            "Writing summary file"]
 
 class DoneAction(AbstractAction):
   """
@@ -134,19 +136,22 @@ def updateProgress(job):
       currentProgress.setValue(currentProgress.getMaximum())
       globalLabel.setText(job)
       globalProgress.setValue(jobCount)
+      print "Processing %s, %.2f%% done" % (job, 100.0*jobCount/numJobs)
       jobCount += 1
       currentJob = job
       message = -1
     message += 1
+    print "    %s, %.2f%% done" % (messages[message], 100.0*message/len(messages))
     currentProgress.setValue(message)
     currentLabel.setText(messages[message])
-  if job != currentJob:
-    print "Processing %s, %.2f%% done" % (job, 100.0*jobCount/numJobs)
-    jobCount += 1
-    currentJob = job
-    message = -1
-  message += 1
-  print "    %s, %.2f%% done" % (messages[message], 100.0*message/len(messages))
+  else:
+    if job != currentJob:
+      print "Processing %s, %.2f%% done" % (job, 100.0*jobCount/numJobs)
+      jobCount += 1
+      currentJob = job
+      message = -1
+    message += 1
+    print "    %s, %.2f%% done" % (messages[message], 100.0*message/len(messages))
 
 def finished():
   """
@@ -154,6 +159,7 @@ def finished():
   and if a swing interface is being used the Done button is enabled.
   """
   global frame, currentLabel, currentProgress, globalLabel, globalProgress, doneButton
+  print "Processing 100.00% done"
   if frame:
     globalLabel.setText("Finished")
     globalProgress.setValue(globalProgress.getMaximum())
@@ -162,7 +168,6 @@ def finished():
     doneButton.setEnabled(True)
     while frame.isVisible():
       pass
-  print "Processing 100.00% done"
 
 def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, ldfCutoff, queries, swing = False, email = ""):
   """
@@ -228,8 +233,10 @@ def run(blastLocation, genemarkLocation, transtermLocation, database, eValue, ma
     filteredPromoters = filter(lambda x: isinstance(x, promoters.Promoter), filteredSignals)
     filteredTerminators = filter(lambda x: isinstance(x, terminators.Terminator), filteredSignals)
 
+    updateProgress(query)
     artemis.writeArtemisFile(os.path.splitext(query)[0] + ".art", genome, scaffolded.values(), filteredPromoters, filteredTerminators)
-    
+
+    updateProgress(query)
     report.report(name, scaffolded, os.path.splitext(query)[0])
 
   if email:

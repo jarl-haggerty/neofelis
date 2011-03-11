@@ -1,0 +1,335 @@
+Id	Location	Hits	Best bit score	Best evalue	Best identity	Alignment Length	Best hit gi	Definition	Organism
+Phi-4-1~8	8831-7767	61	66.6253640027	4.7540617239e-09	50.0	139	260063547	hypothetical protein RB2501_02025	Robiginitalea biformata HTCC2501
+Phi-4-1~10	10950-9205	1	45.8245869032	0.017464374346	20.0	32	255928963	tail fiber like protein	Synechococcus phage S-RSM4
+intergenic~792	11416-11021	2	46.594986055	0.000900852364161	27.0	65	149372362	CheA Signal Transduction Histidine Kinases (STHK)	unidentified eubacterium SCB49
+Phi-4-1~12	13418-12195	2	43.1281898718	0.067213974875	22.0	52	158521715	polymorphic outer membrane protein	Desulfococcus oleovorans Hxd3
+Phi-4-1~14	14353-13895	5	46.980185631	0.000768658831966	23.0	56	239905479	hypothetical protein DMR_08410	Desulfovibrio magneticus RS-1
+Phi-4-1~19~4	19944-18847	2	50.8321813901	0.000298263756282	19.0	34	149372514	putative outer membrane protein	unidentified eubacterium SCB49
+Phi-4-1~23	24393-22672	1	43.5133894477	0.0932711276305	31.0	102	256423960	Carbohydrate-binding family 9	Chitinophaga pinensis DSM 2588
+Phi-4-1~30	27741-27259	299	109.38251693	1.18051335076e-22	57.0	161	269102106	N-acetylmuramoyl alanine amidase	Photobacterium damselae subsp. damselae CIP 102761
+Phi-4-1~31	28241-27741	67	48.9061835105	0.000218710156613	25.0	88	282864128	Cupin 2 conserved barrel domain protein	Streptomyces sp. ACTE
+Phi-4-1~40	37512-35383	1	129.027695301	1.85482133604e-27	68.0	165	48727576	unknown	Mus musculus
+Phi-4-1~51	42431-41466	14	53.9137779975	2.75268546256e-05	43.0	127	251781182	conserved hypothetical protein	Clostridium botulinum E1 str. 'BoNT E Beluga'
+Phi-4-1~56~30	49502-50542	500	154.836066888	1.38945132957e-35	105.0	316	189460533	hypothetical protein BACCOP_01174	Bacteroides coprocola DSM 17136
+Phi-4-1~62	53395-54258	500	163.695657134	2.05128349867e-38	111.0	289	298207281	RecA	Croceibacter atlanticus HTCC2559
+Phi-4-1~63	54433-54699	1	45.0541877514	0.00275136055543	24.0	58	61806089	NAD synthetase	Prochlorococcus phage P-SSM2
+Phi-4-1~64	54530-54925	5	48.9061835105	0.000229285141053	28.0	70	310004413	NAD synthetase	Prochlorococcus phage P-HM1
+Phi-4-1~65	54874-55911	500	167.162453317	2.49761500325e-39	99.0	263	293364092	thymidylate synthase	Mycoplasma alligatoris A21JP2
+Phi-4-1~66	56389-57159	3	51.602580542	8.04273743776e-05	27.0	46	116193349	hypothetical protein CHGG_06392	Chaetomium globosum CBS 148.51
+Phi-4-1~72	58912-59232	3	75.4849542488	1.86571662065e-12	43.0	110	256421174	hypothetical protein Cpin_2134	Chitinophaga pinensis DSM 2588
+Phi-4-1~73	59229-59486	1	58.1509733326	3.53761927363e-07	34.0	85	150024911	hypothetical protein FP0821	Flavobacterium psychrophilum JIP02/86
+Phi-4-1~83~24	64115-64813	25	85.8853427986	3.67690930495e-15	68.0	224	292905272	hypothetical protein Ava_D0020	Anabaena variabilis ATCC 29413
+Phi-4-1~84	64800-65066	90	92.0485360133	2.22430184461e-17	49.0	87	237795050	gp9	Clostridium botulinum Ba4 str. 657
+Phi-4-1~85	65703-66149	34	67.3957631546	5.2319865973e-10	46.0	147	257083022	DNA J domain-containing protein	Enterococcus faecalis E1Sol
+Phi-4-1~89	67670-67882	35	64.3141665472	4.11060361623e-09	29.0	63	295099195	DNA methylase	Eubacterium cylindroides T2-87
+Phi-4-1~93	68710-69237	2	55.0693767252	3.70388848173e-06	29.0	74	300777183	conserved hypothetical protein	Chryseobacterium gleum ATCC 35910
+Phi-4-1~97~6	70666-71259	4	88.58173983	3.55294675815e-16	59.0	154	160700596	hypothetical protein BA3_0002	Thalassomonas phage BA3
+Phi-4-1~98	71672-72028	154	105.915720746	1.51863380933e-21	57.0	117	169834631	hypothetical protein CLD_A0185	Clostridium botulinum B1 str. Okra
+Phi-4-1~105	74344-74928	1	103.989722867	7.42483721709e-21	64.0	181	291522507	hypothetical protein	Coprococcus catus GD/7
+Phi-4-1~108	76571-77155	3	47.7505847828	0.000752403775919	54.0	217	192289460	hypothetical protein Rpal_1033	Rhodopseudomonas palustris TIE-1
+intergenic~264	79620-79763	500	56.9953746048	7.14290358043e-07	25.0	41	197116617	DnaJ-like molecular chaperone	Geobacter bemidjiensis Bem
+Phi-4-1~120	82341-83321	60	100.137727108	3.06107764762e-19	68.0	232	213961969	conserved hypothetical protein	Capnocytophaga sputigena Capno
+Phi-4-1~122	84583-85362	39	139.042884275	4.67623529934e-31	81.0	258	265763549	predicted protein	Bacteroides sp. 2_1_16
+Phi-4-1~123	85483-86466	340	85.5001432227	9.74389769386e-15	103.0	394	146301157	OmpA/MotB domain-containing protein	Flavobacterium johnsoniae UW101
+Phi-4-1~130	89663-90400	270	142.509680458	3.22267138594e-32	78.0	246	76803441	ribonucleoside-diphosphate reductase, beta subunit 1	Natronomonas pharaonis DSM 2160
+Phi-4-1~131	90652-91914	500	197.978419391	1.90762645251e-48	125.0	406	297622358	ribonucleoside-diphosphate reductase, alpha chain	Truepera radiovictrix DSM 17093
+Phi-4-1~132	91877-92068	110	59.6917716362	1.22436864929e-07	29.0	49	190149419	ribonucleoside-diphosphate reductase large chain	Actinobacillus pleuropneumoniae serovar 7 str. AP76
+Phi-4-1~133	92157-92336	21	48.9061835105	0.000196857975699	26.0	57	223983471	hypothetical protein HOLDEFILI_00937	Holdemania filiformis DSM 12042
+Phi-4-1~136	93424-95130	12	285.033523548	1.46436055425e-74	186.0	566	255103290	hypothetical protein CdifQCD-6_20930	Clostridium difficile QCD-63q42
+Phi-4-1~137	95147-95566	8	118.242107176	2.43422204684e-25	50.0	116	189426834	hypothetical protein	Ralstonia phage RSL1
+Phi-4-1~138	95679-95969	11	75.0997546729	2.3997768598e-12	38.0	93	84497031	hypothetical protein JNB_12593	Janibacter sp. HTCC2649
+Phi-4-1~140	96442-96795	1	41.2021919922	0.0368147523893	29.0	73	120436816	hypothetical protein GFO_2479	Gramella forsetii KT0803
+Phi-4-1~150	100218-100406	2	46.594986055	0.000998256633628	19.0	42	301795277	conserved uncharacterised protein	Salmonella phage Vi01
+Phi-4-1~151	100781-100993	4	41.972591144	0.0213068384467	23.0	59	307595654	hypothetical protein Vdis_1536	Vulcanisaeta distributa DSM 14429
+Phi-4-1~154	101596-101925	2	40.8169924163	0.057545432895	31.0	100	290474234	Replicative DNA helicase (Replication protein gp12)	Xenorhabdus bovienii SS-2004
+Phi-4-1~157	103067-103645	52	110.152916081	1.04194149684e-22	67.0	181	159111757	Phosphatase similar to the C-terminal domain of histone macroH2A1	Giardia lamblia ATCC 50803
+Phi-4-1~160	104449-104997	1	70.4773597619	7.87905220932e-11	54.0	200	307709491	hypothetical protein SMSK564_0735	Streptococcus mitis SK564
+Phi-4-1~163	105740-106177	5	50.8321813901	4.97352643792e-05	40.0	134	311301952	Uracil-DNA glycosylase superfamily	Mucilaginibacter paludis DSM 18603
+Phi-4-1~164~43	106194-106700	4	51.9877801179	2.65789389177e-05	31.0	102	197284362	hypothetical protein PMI0461	Proteus mirabilis HI4320
+Phi-4-1~165	106786-107010	1	40.8169924163	0.0625110752601	17.0	35	300775122	conserved hypothetical protein	Chryseobacterium gleum ATCC 35910
+Phi-4-1~166	106910-107134	4	55.0693767252	2.68822271413e-06	22.0	63	300775122	conserved hypothetical protein	Chryseobacterium gleum ATCC 35910
+Phi-4-1~167	107489-108250	51	151.75447028	6.80511639829e-35	87.0	253	297591746	putative DNA polymerase	Pseudomonas phage KPP10
+Phi-4-1~168	108267-109811	500	342.42826036	7.77019947962e-92	204.0	560	290873852	DNA polymerase	Pseudomonas phage PAK_P1
+Phi-4-1~171	110595-110876	8	52.3729796938	1.64224532441e-05	28.0	74	62464803	replication initiation protein	Sulfolobus neozealandicus
+Phi-4-1~172	110893-111591	8	97.826529652	9.9127237428e-19	76.0	234	300772203	N- superfamily bifunctional DNA primase/polymerase	Sphingobacterium spiritivorum ATCC 33861
+Phi-4-1~174	112035-112493	144	66.2401644268	1.33087949551e-09	33.0	94	109150021	putative phosphoesterase/phosphohydrolase	uncultured bacterium
+Phi-4-1~175	112477-112695	32	58.1509733326	3.41764629198e-07	34.0	71	194291749	conserved hypothetical protein; putative phosphoesterase	Cupriavidus taiwanensis
+Phi-4-1~176	112697-113458	500	306.989899375	1.11676126499e-81	148.0	234	260588436	DNA (cytosine-5-)-methyltransferase	Blautia hansenii DSM 20583
+Phi-4-1~178	113663-115033	6	166.006854589	8.84364368239e-39	140.0	475	46401741	A1	Enterobacteria phage T5
+intergenic~306	115100-115351	4	42.7429902959	0.014979912904	20.0	31	225023354	hypothetical protein EIKCOROL_00212	Eikenella corrodens ATCC 23834
+intergenic~303	115300-115680	21	45.4393873273	0.00194860465259	32.0	91	262066939	conserved hypothetical protein	Fusobacterium periodonticum ATCC 33693
+Phi-4-1~183	117523-117185	1	50.0617822383	7.74002436811e-05	38.0	109	168178709	hypothetical protein CBN_1357	Clostridium botulinum NCTC 2916
+Phi-4-1~184	118619-117507	250	278.485130757	8.83993274002e-73	171.0	475	299145766	putative C-5 cytosine-specific DNA methylase	Bacteroides sp. 3_1_23
+Phi-4-1~185	119402-118800	78	99.3673279557	2.5478286421e-19	55.0	174	301795193	Gp30 DNA ligase	Salmonella phage Vi01
+Phi-4-1~186	120213-119377	51	99.7525275316	3.1846590243e-19	85.0	288	312262811	gp30 DNA ligase	Aeromonas phage 65
+Phi-4-1~188	121449-120697	356	132.109291909	4.64178797199e-29	69.0	154	15078813	100L	Invertebrate iridescent virus 6
+intergenic~451	121849-121598	8	47.7505847828	0.000428387407081	24.0	65	290981303	predicted protein	Naegleria gruberi
+Phi-4-1~189	122590-122066	500	101.678525411	3.2976116667e-20	69.0	181	124003434	tRNA nucleotidyltransferase	Microscilla marina ATCC 23134
+Phi-4-1~197	129491-129153	116	116.701308872	7.69527647494e-25	58.0	110	307544658	hypothetical protein HELO_2068	Halomonas elongata DSM 2581
+Phi-4-1~214	139834-138731	1	42.7429902959	0.0819406242387	48.0	177	289550035	Ferrous iron transport periplasmic protein EfeO	Staphylococcus lugdunensis HKU09-01
+Phi-4-1~223	144804-144469	54	76.2553534007	1.23686050999e-12	37.0	93	296536837	possible phage-related tail protein	Roseomonas cervicalis ATCC 49957
+Phi-4-1~1	459-1	0	0	inf	0	0	None	None	None
+Phi-4-1~2	1498-425	0	0	inf	0	0	None	None	None
+Phi-4-1~3	3063-1897	0	0	inf	0	0	None	None	None
+Phi-4-1~4	4387-3038	0	0	inf	0	0	None	None	None
+Phi-4-1~5	5621-4578	0	0	inf	0	0	None	None	None
+Phi-4-1~6~9	6494-5667	0	0	inf	0	0	None	None	None
+intergenic~795	6658-6497	0	0	inf	0	0	None	None	None
+intergenic~793	6773-6549	0	0	inf	0	0	None	None	None
+Phi-4-1~7	7652-6978	0	0	inf	0	0	None	None	None
+Phi-4-1~9	9177-8785	0	0	inf	0	0	None	None	None
+Phi-4-1~11	12214-11552	0	0	inf	0	0	None	None	None
+Phi-4-1~13	14121-13324	0	0	inf	0	0	None	None	None
+Phi-4-1~15	15360-14356	0	0	inf	0	0	None	None	None
+Phi-4-1~16	16975-15389	0	0	inf	0	0	None	None	None
+Phi-4-1~17	17912-16989	0	0	inf	0	0	None	None	None
+intergenic~789	17961-17851	0	0	inf	0	0	None	None	None
+Phi-4-1~18	18826-18137	0	0	inf	0	0	None	None	None
+intergenic~24	19361-19522	0	0	inf	0	0	None	None	None
+Phi-4-1~20~16	19538-19792	0	0	inf	0	0	None	None	None
+Phi-4-1~21	21715-19997	0	0	inf	0	0	None	None	None
+intergenic~788	21990-21727	0	0	inf	0	0	None	None	None
+Phi-4-1~22	22588-21947	0	0	inf	0	0	None	None	None
+Phi-4-1~24	25167-24625	0	0	inf	0	0	None	None	None
+Phi-4-1~25	25581-25186	0	0	inf	0	0	None	None	None
+Phi-4-1~26	25883-25581	0	0	inf	0	0	None	None	None
+Phi-4-1~27	26398-25883	0	0	inf	0	0	None	None	None
+intergenic~785	26539-26426	0	0	inf	0	0	None	None	None
+Phi-4-1~28	26880-26611	0	0	inf	0	0	None	None	None
+Phi-4-1~29~45	27041-26904	0	0	inf	0	0	None	None	None
+intergenic~782	27226-27110	0	0	inf	0	0	None	None	None
+Phi-4-1~32	28573-28241	0	0	inf	0	0	None	None	None
+Phi-4-1~33~33	30557-28605	0	0	inf	0	0	None	None	None
+Phi-4-1~34	30942-30589	0	0	inf	0	0	None	None	None
+intergenic~98	31117-31221	0	0	inf	0	0	None	None	None
+Phi-4-1~35	32230-31250	0	0	inf	0	0	None	None	None
+Phi-4-1~36	33460-32384	0	0	inf	0	0	None	None	None
+Phi-4-1~37	33875-33543	0	0	inf	0	0	None	None	None
+Phi-4-1~38	34093-33854	0	0	inf	0	0	None	None	None
+Phi-4-1~39	35259-34252	0	0	inf	0	0	None	None	None
+Phi-4-1~41	38074-37520	0	0	inf	0	0	None	None	None
+intergenic~781	38117-38013	0	0	inf	0	0	None	None	None
+intergenic~121	38228-38332	0	0	inf	0	0	None	None	None
+Phi-4-1~42	38957-38466	0	0	inf	0	0	None	None	None
+Phi-4-1~43	39144-38998	0	0	inf	0	0	None	None	None
+Phi-4-1~44~46	39658-39155	0	0	inf	0	0	None	None	None
+Phi-4-1~45	40326-39679	0	0	inf	0	0	None	None	None
+Phi-4-1~46	40582-40349	0	0	inf	0	0	None	None	None
+Phi-4-1~47	40796-40563	0	0	inf	0	0	None	None	None
+Phi-4-1~48	40945-40799	0	0	inf	0	0	None	None	None
+Phi-4-1~49	41333-40908	0	0	inf	0	0	None	None	None
+Phi-4-1~50	41463-41269	0	0	inf	0	0	None	None	None
+Phi-4-1~52	42893-42651	0	0	inf	0	0	None	None	None
+Phi-4-1~53	43313-42897	0	0	inf	0	0	None	None	None
+intergenic~114	43481-43756	0	0	inf	0	0	None	None	None
+intergenic~163	43845-44066	0	0	inf	0	0	None	None	None
+intergenic~161	44118-44222	0	0	inf	0	0	None	None	None
+intergenic~77	44203-44304	0	0	inf	0	0	None	None	None
+Phi-4-1~54~3	44329-44478	0	0	inf	0	0	None	None	None
+intergenic~209	44498-44611	0	0	inf	0	0	None	None	None
+intergenic~212	44778-44897	0	0	inf	0	0	None	None	None
+intergenic~208	45005-45211	0	0	inf	0	0	None	None	None
+intergenic~210	45174-45284	0	0	inf	0	0	None	None	None
+Phi-4-1~55	45295-45486	0	0	inf	0	0	None	None	None
+intergenic~459	45837-45694	0	0	inf	0	0	None	None	None
+intergenic~660	45877-45767	0	0	inf	0	0	None	None	None
+intergenic~664	46252-46112	0	0	inf	0	0	None	None	None
+intergenic~460	46461-46357	0	0	inf	0	0	None	None	None
+intergenic~666	46801-46649	0	0	inf	0	0	None	None	None
+intergenic~222	46908-47009	0	0	inf	0	0	None	None	None
+intergenic~549	47249-47106	0	0	inf	0	0	None	None	None
+intergenic~669	47641-47414	0	0	inf	0	0	None	None	None
+intergenic~216	47645-47827	0	0	inf	0	0	None	None	None
+intergenic~214	48230-48430	0	0	inf	0	0	None	None	None
+intergenic~462	48699-48544	0	0	inf	0	0	None	None	None
+intergenic~221	48855-48989	0	0	inf	0	0	None	None	None
+intergenic~220	49128-49259	0	0	inf	0	0	None	None	None
+intergenic~213	49486-49608	0	0	inf	0	0	None	None	None
+intergenic~225	50493-50639	0	0	inf	0	0	None	None	None
+Phi-4-1~57~39	50651-51007	0	0	inf	0	0	None	None	None
+intergenic~226	50997-51122	0	0	inf	0	0	None	None	None
+Phi-4-1~58	51210-51431	0	0	inf	0	0	None	None	None
+intergenic~227	51413-51529	0	0	inf	0	0	None	None	None
+Phi-4-1~59~48	51550-51921	0	0	inf	0	0	None	None	None
+Phi-4-1~60	51921-52409	0	0	inf	0	0	None	None	None
+intergenic~232	52390-52755	0	0	inf	0	0	None	None	None
+intergenic~233	52703-52837	0	0	inf	0	0	None	None	None
+Phi-4-1~61	52849-53241	0	0	inf	0	0	None	None	None
+intergenic~234	55976-56092	0	0	inf	0	0	None	None	None
+intergenic~559	56357-56241	0	0	inf	0	0	None	None	None
+intergenic~235	57020-57184	0	0	inf	0	0	None	None	None
+Phi-4-1~67	57330-57581	0	0	inf	0	0	None	None	None
+Phi-4-1~68	57676-57786	0	0	inf	0	0	None	None	None
+intergenic~236	57773-57880	0	0	inf	0	0	None	None	None
+Phi-4-1~69~21	58108-58308	0	0	inf	0	0	None	None	None
+intergenic~238	58305-58427	0	0	inf	0	0	None	None	None
+Phi-4-1~70	58435-58626	0	0	inf	0	0	None	None	None
+Phi-4-1~71	58629-58844	0	0	inf	0	0	None	None	None
+Phi-4-1~74	59477-59713	0	0	inf	0	0	None	None	None
+Phi-4-1~75	59710-60180	0	0	inf	0	0	None	None	None
+Phi-4-1~76	60162-60344	0	0	inf	0	0	None	None	None
+intergenic~241	60329-60439	0	0	inf	0	0	None	None	None
+intergenic~239	60694-60813	0	0	inf	0	0	None	None	None
+intergenic~240	60803-61078	0	0	inf	0	0	None	None	None
+Phi-4-1~77	61075-61332	0	0	inf	0	0	None	None	None
+Phi-4-1~78	61320-61706	0	0	inf	0	0	None	None	None
+intergenic~243	61820-61948	0	0	inf	0	0	None	None	None
+Phi-4-1~79	61970-62362	0	0	inf	0	0	None	None	None
+Phi-4-1~80	62376-62666	0	0	inf	0	0	None	None	None
+intergenic~244	62676-62795	0	0	inf	0	0	None	None	None
+Phi-4-1~81	62935-63126	0	0	inf	0	0	None	None	None
+intergenic~247	63168-63335	0	0	inf	0	0	None	None	None
+intergenic~246	63431-63559	0	0	inf	0	0	None	None	None
+Phi-4-1~82~7	63575-63784	0	0	inf	0	0	None	None	None
+intergenic~249	63786-63980	0	0	inf	0	0	None	None	None
+intergenic~574	64100-63993	0	0	inf	0	0	None	None	None
+intergenic~682	65173-65069	0	0	inf	0	0	None	None	None
+intergenic~250	65459-65683	0	0	inf	0	0	None	None	None
+Phi-4-1~86	66267-66578	0	0	inf	0	0	None	None	None
+Phi-4-1~87	66571-66918	0	0	inf	0	0	None	None	None
+Phi-4-1~88~26	66933-67193	0	0	inf	0	0	None	None	None
+intergenic~251	67198-67344	0	0	inf	0	0	None	None	None
+Phi-4-1~90	67887-68060	0	0	inf	0	0	None	None	None
+intergenic~252	68085-68303	0	0	inf	0	0	None	None	None
+Phi-4-1~91~50	68212-68445	0	0	inf	0	0	None	None	None
+Phi-4-1~92	68438-68698	0	0	inf	0	0	None	None	None
+Phi-4-1~94	69314-69490	0	0	inf	0	0	None	None	None
+Phi-4-1~95	69474-69656	0	0	inf	0	0	None	None	None
+Phi-4-1~96	69695-69877	0	0	inf	0	0	None	None	None
+intergenic~257	69870-69977	0	0	inf	0	0	None	None	None
+intergenic~256	70020-70136	0	0	inf	0	0	None	None	None
+intergenic~254	70081-70404	0	0	inf	0	0	None	None	None
+intergenic~486	70563-70450	0	0	inf	0	0	None	None	None
+intergenic~255	70653-70763	0	0	inf	0	0	None	None	None
+intergenic~593	71615-71454	0	0	inf	0	0	None	None	None
+Phi-4-1~99	72039-72149	0	0	inf	0	0	None	None	None
+intergenic~258	72159-72335	0	0	inf	0	0	None	None	None
+Phi-4-1~100	72308-72511	0	0	inf	0	0	None	None	None
+Phi-4-1~101	72600-72986	0	0	inf	0	0	None	None	None
+Phi-4-1~102	73416-73679	0	0	inf	0	0	None	None	None
+Phi-4-1~103~38	73691-74113	0	0	inf	0	0	None	None	None
+Phi-4-1~104	74149-74316	0	0	inf	0	0	None	None	None
+Phi-4-1~106	74940-75659	0	0	inf	0	0	None	None	None
+Phi-4-1~107	75744-76568	0	0	inf	0	0	None	None	None
+intergenic~260	77294-77464	0	0	inf	0	0	None	None	None
+intergenic~714	77695-77516	0	0	inf	0	0	None	None	None
+Phi-4-1~109	77727-78383	0	0	inf	0	0	None	None	None
+Phi-4-1~110	78380-78574	0	0	inf	0	0	None	None	None
+Phi-4-1~111	78575-78823	0	0	inf	0	0	None	None	None
+Phi-4-1~112	78911-79207	0	0	inf	0	0	None	None	None
+intergenic~263	79207-79365	0	0	inf	0	0	None	None	None
+Phi-4-1~113	79413-79616	0	0	inf	0	0	None	None	None
+Phi-4-1~114~14	79693-79866	0	0	inf	0	0	None	None	None
+Phi-4-1~115	79772-80059	0	0	inf	0	0	None	None	None
+intergenic~265	80095-80202	0	0	inf	0	0	None	None	None
+Phi-4-1~116	80199-80531	0	0	inf	0	0	None	None	None
+Phi-4-1~117	80467-80871	0	0	inf	0	0	None	None	None
+intergenic~266	80847-80951	0	0	inf	0	0	None	None	None
+intergenic~267	80941-81093	0	0	inf	0	0	None	None	None
+Phi-4-1~118	81138-81422	0	0	inf	0	0	None	None	None
+intergenic~269	81444-81572	0	0	inf	0	0	None	None	None
+Phi-4-1~119	81541-81780	0	0	inf	0	0	None	None	None
+intergenic~725	81982-81833	0	0	inf	0	0	None	None	None
+intergenic~270	81987-82292	0	0	inf	0	0	None	None	None
+intergenic~271	83321-83533	0	0	inf	0	0	None	None	None
+Phi-4-1~121	83502-84020	0	0	inf	0	0	None	None	None
+intergenic~276	84075-84197	0	0	inf	0	0	None	None	None
+intergenic~275	84234-84401	0	0	inf	0	0	None	None	None
+intergenic~273	84409-84579	0	0	inf	0	0	None	None	None
+intergenic~277	85364-85480	0	0	inf	0	0	None	None	None
+intergenic~279	86490-86648	0	0	inf	0	0	None	None	None
+Phi-4-1~124	86850-87152	0	0	inf	0	0	None	None	None
+Phi-4-1~125	87175-87537	0	0	inf	0	0	None	None	None
+Phi-4-1~126	87819-88313	0	0	inf	0	0	None	None	None
+Phi-4-1~127	88457-88798	0	0	inf	0	0	None	None	None
+Phi-4-1~128	88782-89036	0	0	inf	0	0	None	None	None
+Phi-4-1~129~25	89047-89307	0	0	inf	0	0	None	None	None
+intergenic~280	89309-89446	0	0	inf	0	0	None	None	None
+intergenic~281	90517-90648	0	0	inf	0	0	None	None	None
+Phi-4-1~134~41	92461-92985	0	0	inf	0	0	None	None	None
+Phi-4-1~135	93065-93415	0	0	inf	0	0	None	None	None
+Phi-4-1~139	95969-96406	0	0	inf	0	0	None	None	None
+intergenic~282	96731-96853	0	0	inf	0	0	None	None	None
+Phi-4-1~141	96860-97237	0	0	inf	0	0	None	None	None
+Phi-4-1~142	97212-97448	0	0	inf	0	0	None	None	None
+intergenic~284	97480-97608	0	0	inf	0	0	None	None	None
+Phi-4-1~143	97624-97866	0	0	inf	0	0	None	None	None
+intergenic~285	97850-97951	0	0	inf	0	0	None	None	None
+Phi-4-1~144	97959-98147	0	0	inf	0	0	None	None	None
+Phi-4-1~145	98197-98532	0	0	inf	0	0	None	None	None
+Phi-4-1~146~27	98621-98896	0	0	inf	0	0	None	None	None
+intergenic~286	98910-99059	0	0	inf	0	0	None	None	None
+Phi-4-1~147	99119-99358	0	0	inf	0	0	None	None	None
+Phi-4-1~148	99336-99506	0	0	inf	0	0	None	None	None
+Phi-4-1~149	99493-99648	0	0	inf	0	0	None	None	None
+intergenic~292	99721-99921	0	0	inf	0	0	None	None	None
+intergenic~288	100109-100252	0	0	inf	0	0	None	None	None
+intergenic~293	100471-100653	0	0	inf	0	0	None	None	None
+intergenic~294	100653-100784	0	0	inf	0	0	None	None	None
+Phi-4-1~152	100995-101240	0	0	inf	0	0	None	None	None
+Phi-4-1~153	101188-101592	0	0	inf	0	0	None	None	None
+intergenic~295	102143-102262	0	0	inf	0	0	None	None	None
+Phi-4-1~155	102354-102662	0	0	inf	0	0	None	None	None
+intergenic~296	102659-102769	0	0	inf	0	0	None	None	None
+Phi-4-1~156~2	102783-102959	0	0	inf	0	0	None	None	None
+intergenic~297	102907-103056	0	0	inf	0	0	None	None	None
+Phi-4-1~158	103651-103851	0	0	inf	0	0	None	None	None
+Phi-4-1~159	103928-104407	0	0	inf	0	0	None	None	None
+Phi-4-1~161	104951-105508	0	0	inf	0	0	None	None	None
+Phi-4-1~162	105511-105750	0	0	inf	0	0	None	None	None
+intergenic~299	107181-107306	0	0	inf	0	0	None	None	None
+intergenic~298	107310-107438	0	0	inf	0	0	None	None	None
+Phi-4-1~169	109835-110224	0	0	inf	0	0	None	None	None
+Phi-4-1~170	110261-110605	0	0	inf	0	0	None	None	None
+intergenic~300	111597-111758	0	0	inf	0	0	None	None	None
+Phi-4-1~173	111718-111978	0	0	inf	0	0	None	None	None
+intergenic~301	111905-112060	0	0	inf	0	0	None	None	None
+Phi-4-1~177	113451-113717	0	0	inf	0	0	None	None	None
+Phi-4-1~179	115680-115943	0	0	inf	0	0	None	None	None
+Phi-4-1~180	116363-116010	0	0	inf	0	0	None	None	None
+Phi-4-1~181	116554-116369	0	0	inf	0	0	None	None	None
+intergenic~455	116773-116624	0	0	inf	0	0	None	None	None
+Phi-4-1~182	117198-116770	0	0	inf	0	0	None	None	None
+Phi-4-1~187	120538-120215	0	0	inf	0	0	None	None	None
+intergenic~453	120680-120552	0	0	inf	0	0	None	None	None
+intergenic~452	122094-121930	0	0	inf	0	0	None	None	None
+intergenic~449	122732-122577	0	0	inf	0	0	None	None	None
+Phi-4-1~190	122835-122677	0	0	inf	0	0	None	None	None
+intergenic~447	123007-122867	0	0	inf	0	0	None	None	None
+intergenic~448	123132-123010	0	0	inf	0	0	None	None	None
+Phi-4-1~191	123265-123089	0	0	inf	0	0	None	None	None
+Phi-4-1~192	124232-123393	0	0	inf	0	0	None	None	None
+Phi-4-1~193	125319-124249	0	0	inf	0	0	None	None	None
+Phi-4-1~194	125677-125240	0	0	inf	0	0	None	None	None
+Phi-4-1~195~5	128732-125682	0	0	inf	0	0	None	None	None
+Phi-4-1~196	129141-128710	0	0	inf	0	0	None	None	None
+intergenic~446	129636-129535	0	0	inf	0	0	None	None	None
+Phi-4-1~198	130417-129677	0	0	inf	0	0	None	None	None
+Phi-4-1~199	130853-130380	0	0	inf	0	0	None	None	None
+Phi-4-1~200	131049-130819	0	0	inf	0	0	None	None	None
+Phi-4-1~201	131647-131033	0	0	inf	0	0	None	None	None
+Phi-4-1~202	132101-131625	0	0	inf	0	0	None	None	None
+intergenic~445	132279-132145	0	0	inf	0	0	None	None	None
+Phi-4-1~203	133510-132254	0	0	inf	0	0	None	None	None
+Phi-4-1~204	133961-133557	0	0	inf	0	0	None	None	None
+Phi-4-1~205	134139-133843	0	0	inf	0	0	None	None	None
+Phi-4-1~206	135415-134108	0	0	inf	0	0	None	None	None
+Phi-4-1~207~28	135734-135432	0	0	inf	0	0	None	None	None
+Phi-4-1~208	135992-135777	0	0	inf	0	0	None	None	None
+Phi-4-1~209~10	136563-136000	0	0	inf	0	0	None	None	None
+intergenic~444	136915-136808	0	0	inf	0	0	None	None	None
+Phi-4-1~210	137114-136905	0	0	inf	0	0	None	None	None
+Phi-4-1~211	137199-137020	0	0	inf	0	0	None	None	None
+Phi-4-1~212~11	137521-137141	0	0	inf	0	0	None	None	None
+Phi-4-1~213	138659-137523	0	0	inf	0	0	None	None	None
+Phi-4-1~215	140186-139938	0	0	inf	0	0	None	None	None
+Phi-4-1~216	140586-140245	0	0	inf	0	0	None	None	None
+Phi-4-1~217	140830-140513	0	0	inf	0	0	None	None	None
+intergenic~443	141048-140755	0	0	inf	0	0	None	None	None
+Phi-4-1~218	142262-141027	0	0	inf	0	0	None	None	None
+Phi-4-1~219	142581-142015	0	0	inf	0	0	None	None	None
+Phi-4-1~220	142904-142581	0	0	inf	0	0	None	None	None
+Phi-4-1~221	143721-142939	0	0	inf	0	0	None	None	None
+Phi-4-1~222~13	144436-143648	0	0	inf	0	0	None	None	None
+Phi-4-1~224	144979-144851	0	0	inf	0	0	None	None	None
+Phi-4-1~225	146105-145134	0	0	inf	0	0	None	None	None
