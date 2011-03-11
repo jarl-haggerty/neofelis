@@ -36,7 +36,12 @@ from javax.swing import JEditorPane
 from javax.swing import JScrollPane
 from java.awt import GridBagLayout
 from java.awt import GridBagConstraints
+from java.awt import Toolkit
 from java.lang import ClassLoader
+from java.lang import System
+from java.lang import Class
+from java.lang import Runtime
+from java.lang import String
 
 def getArguments():
   """
@@ -118,15 +123,19 @@ def getArguments():
       AbstractAction.__init__(self, "Help")
 
     def actionPerformed(self, event):
-      helpFrame = JFrame("Neofelis Help")
-      editorPane = JEditorPane(ClassLoader.getSystemResource("help.html"))
-      helpFrame.setContentPane(JScrollPane(editorPane))
-      helpFrame.setSize(frame.getSize())
-      mainLocation = frame.getLocation()
-      mainLocation.x += 50
-      mainLocation.y += 50
-      helpFrame.setLocation(mainLocation)
-      helpFrame.setVisible(True)
+      browsers = ["google-chrome", "firefox", "opera", "epiphany", "konqueror", "conkeror", "midori", "kazehakase", "mozilla"]
+      osName = System.getProperty("os.name")
+      helpHTML = ClassLoader.getSystemResource("help.html").toString()
+      if osName.find("Mac OS") == 0:
+        Class.forName("com.apple.eio.FileManager").getDeclaredMethod( "openURL", [String().getClass()]).invoke(None, [helpHTML])
+      elif osName.find("Windows") == 0:
+        Runtime.getRuntime().exec( "rundll32 url.dll,FileProtocolHandler " + helpHTML)
+      else:
+        browser = None
+        for b in browsers:
+          if browser == None and Runtime.getRuntime().exec(["which", b]).getInputStream().read() != -1:
+            browser = b
+            Runtime.getRuntime().exec([browser, helpHTML])
 
   class OKAction(AbstractAction):
     """
@@ -343,7 +352,7 @@ def main(arguments):
       if line:
         threading.Thread(target = main, args = re.split(r"\s+", line))
         
-  if not blastLocation or not database or not genemarkLocation or not transtermLocation:
+  if not blastLocation or not database or not genemarkLocation or not transtermLocation or sources == [""]:
     if noSwing:
       sys.exit(1)
     else:

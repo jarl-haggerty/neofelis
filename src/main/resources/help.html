@@ -1,11 +1,78 @@
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
-<html> <head>
+<html>
+<head>
 <title>Neofelis help document</title>
 </head>
-
 <body>
 <h1>Pipeline Options</h1>
-
-
-
-</body> </html>
+<table border="1">
+  <tr>
+    <td>Matrix</td>
+    <td>Matrix with which to run Genemark</td>
+  </tr>
+  <tr>
+    <td>Database</td>
+    <td>Database to use when running Blast+</td>
+  </tr>
+  <tr>
+    <td>Genemark</td>
+    <td>Location of Genemark</td>
+  </tr>
+  <tr>
+    <td>Blast</td>
+    <td>Location of Blast+</td>
+  </tr>
+  <tr>
+    <td>E Value</td>
+    <td>Minimum e value for any genes found with Blast+</td>
+  </tr>
+  <tr>
+    <td>Minimum Length</td>
+    <td>Minimum length of any intergenic genes</td>
+  </tr>
+  <tr>
+    <td>Transterm</td>
+    <td>Location of Transterm</td>
+  </tr>
+  <tr>
+    <td>Promoter Score Cutoff</td>
+    <td>Minimum score for any predicted promoters</td>
+  </tr>
+  <tr>
+    <td>Scaffolding Distance</td>
+    <td>Minimum distance between genes for them to be combined into a
+      scaffold</td>
+    </tr>
+    <tr>
+      <td>Query</td>
+      <td>Either a fasta file on which to run the pipeline or a
+        directory containing fasta files on which to run the
+        pipeline</td>
+      </tr>
+    </table>
+    <h2>How to install Blast+</h2>
+    <p>If you are using a Windows, Linux, or Solaris computer you can
+    download the version of Blast+ for your platform here <a
+    href="http://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download">here.</a>
+    For Macs however Blast+ must be built from source.  This is not
+    that hard but the build process can take a very long time.</p>
+    <p>Download the <a
+    href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.2.24+-src.tar.gz">source
+    code</a> and put it in a safe place.  Now open
+    "Applications/Utilities/Terminal" and enter these commands</p>
+    <ol>
+      <li>cd {where did you save the download?}/c++</li>
+      <li>./configure --without-debug --without-pcre --with-mt
+      --with-flat-makefile --with-universal --with-ncbi-public
+      --with-build-root=Release --without-ccache --without-caution
+      --without-makefile-auto-update
+      --with-projects=scripts/projects/blast/project.lst
+      --with-internal</li>
+      <li>make</li>
+    </ol>
+    <p>When you tell the pipeline the location of Blast+ select {where did you save the download?} /c++/Release</p>
+    <h2>How to install a database</h2>
+    <h2>How to install Transterm</h2>
+    <h2>How to install Genemark</h2>
+    </body>
+    </html>

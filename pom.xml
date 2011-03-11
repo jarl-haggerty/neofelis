@@ -64,7 +64,7 @@ limitations under the License.
             <param>--transterm=/Users/mbsulli/transterm</param>
             <param>--database=/Users/mbsulli/blast/db/nr</param>
             <param>--e-value=0.1</param>
-            <param>--query=genomes/phi-4-1.fas</param>
+
             <param>--swing</param>
           </pythonArgs>
         </configuration>
@@ -75,7 +75,7 @@ limitations under the License.
     <dependency>
       <groupId>org.python</groupId>
       <artifactId>jython</artifactId>
-      <version>2.5.1</version>
+      <version>2.5.2</version>
     </dependency>
   </dependencies>
 </project>
