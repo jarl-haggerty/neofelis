@@ -53,11 +53,12 @@
     <h2>How to install Blast+</h2>
     <p>If you are using a Windows, Linux, or Solaris computer you can
     download the version of Blast+ for your platform here <a
-    href="http://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download">here.</a>
+    href="http://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download"
+    target="_blank">here.</a>
     For Macs however Blast+ must be built from source.  This is not
     that hard but the build process can take a very long time.</p>
     <p>Download the <a
-    href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.2.24+-src.tar.gz">source
+    href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.2.24+-src.tar.gz" target="_blank">source
     code</a> and put it in a safe place.  Now open
     "Applications/Utilities/Terminal" and enter these commands</p>
     <ol>
@@ -72,7 +73,28 @@
     </ol>
     <p>When you tell the pipeline the location of Blast+ select {where did you save the download?} /c++/Release</p>
     <h2>How to install a database</h2>
-    <h2>How to install Transterm</h2>
+    <p>Go to the list of blast <a
+    href="ftp://ftp.ncbi.nlm.nih.gov/blast/db/" target="_blank">databases</a> and
+    search for a series of files called {your
+    database}.{number}.tar.gz.  Now, choose a folder to store your
+    database in and extract the contents of each of the archives for
+    your database into this folder.  When you specify the location of
+    your databases for the pipeline you're going to specify the
+    previous folder.</p>
     <h2>How to install Genemark</h2>
+    <p>Go to the <a
+    href="http://exon.biology.gatech.edu/license_download.cgi" target="_blank">download
+    page</a> of the Genemark website, check GeneMarkS, your
+    operating system, enter your information, and agree to the license.  If you use Windows then you'll have to download
+    cygwin and the Linux 32 version of GaneMarkS.</p>
+    <h2>How to install Transterm</h2>
+    <p>Transterm is only available as source code, available <a
+    href="http://transterm.cbcb.umd.edu/" target="_blank">here.</a>  Now open
+    a terminal and enter these commands</p>
+    <ol>
+      <li>cd {where did you save the download?}</li>
+      <li>make</li>
+    </ol>
+    <p>When you tell the pipeline the location of Transterm select {where did you save the download?}</p>
     </body>
     </html>
