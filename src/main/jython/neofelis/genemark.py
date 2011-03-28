@@ -90,7 +90,7 @@ def findGenes(query, name, blastLocation, database, eValue, genemark, matrix):
   genome = utils.loadGenome(query)
   if not matrix:
     gc = int(utils.getGCContent(genome))
-    matrix = genemark + "/" + "heuristic_mat/heu_11_" + str(gc) + ".mat"
+    matrix = genemark + "/" + "heuristic_mat/heu_11_" + str(min(max(30, gc), 70)) + ".mat"
   subprocess.Popen([genemark + "/gm", "-opq", "-m", matrix, query]).wait()
   print
   removeInvalidGenes(query + ".orf", len(genome))
