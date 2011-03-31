@@ -90,6 +90,7 @@ Phi-4-1~20~16	19538-19792	0	0	inf	0	0	None	None	None
 Phi-4-1~21	21715-19997	0	0	inf	0	0	None	None	None
 intergenic~788	21990-21727	0	0	inf	0	0	None	None	None
 Phi-4-1~22	22588-21947	0	0	inf	0	0	None	None	None
+intergenic~786	22688-22554	0	0	inf	0	0	None	None	None
 Phi-4-1~24	25167-24625	0	0	inf	0	0	None	None	None
 Phi-4-1~25	25581-25186	0	0	inf	0	0	None	None	None
 Phi-4-1~26	25883-25581	0	0	inf	0	0	None	None	None
@@ -179,6 +180,7 @@ Phi-4-1~80	62376-62666	0	0	inf	0	0	None	None	None
 intergenic~244	62676-62795	0	0	inf	0	0	None	None	None
 Phi-4-1~81	62935-63126	0	0	inf	0	0	None	None	None
 intergenic~247	63168-63335	0	0	inf	0	0	None	None	None
+intergenic~248	63337-63438	0	0	inf	0	0	None	None	None
 intergenic~246	63431-63559	0	0	inf	0	0	None	None	None
 Phi-4-1~82~7	63575-63784	0	0	inf	0	0	None	None	None
 intergenic~249	63786-63980	0	0	inf	0	0	None	None	None
@@ -216,6 +218,7 @@ intergenic~714	77695-77516	0	0	inf	0	0	None	None	None
 Phi-4-1~109	77727-78383	0	0	inf	0	0	None	None	None
 Phi-4-1~110	78380-78574	0	0	inf	0	0	None	None	None
 Phi-4-1~111	78575-78823	0	0	inf	0	0	None	None	None
+intergenic~262	78795-78914	0	0	inf	0	0	None	None	None
 Phi-4-1~112	78911-79207	0	0	inf	0	0	None	None	None
 intergenic~263	79207-79365	0	0	inf	0	0	None	None	None
 Phi-4-1~113	79413-79616	0	0	inf	0	0	None	None	None

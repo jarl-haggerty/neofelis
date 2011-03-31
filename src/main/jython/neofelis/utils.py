@@ -109,7 +109,7 @@ translationDictionary["GGA"] = "G"
 translationDictionary["GGT"] = "G"
 translationDictionary["GGG"] = "G"
 translationDictionary["GGC"] = "G"
-
+    
 def translate(input):
   """
   Returns a Neucleotide sequence translated into Proteins.
@@ -341,7 +341,7 @@ def parseBlast(fileName):
 
   return dict(map(lambda iteration: (iteration.query, iteration), reader.getContentHandler().iterations))
 
-def cachedBlast(fileName, blastLocation, database, eValue, query, remote = False, force = False):
+def cachedBlast(fileName, blastLocation, database, eValue, query, pipeline, remote = False, force = False):
   """
   Performs a blast search using the blastp executable and database in blastLocation on
   the query with the eValue.  The result is an XML file saved to fileName.  If fileName
@@ -359,8 +359,12 @@ def cachedBlast(fileName, blastLocation, database, eValue, query, remote = False
     else:
       command += ["-num_threads", str(Runtime.getRuntime().availableProcessors()),
                   "-db", database]
-    subprocess.Popen(command,
-                     stdout = output).wait()
+    blastProcess = subprocess.Popen(command,
+                                      stdout = output)
+    while blastProcess.poll() == None:
+      if pipeline.exception:
+        blastProcess.kill()
+        raise pipeline.exception
     output.close()
   try:
     return parseBlast(fileName)

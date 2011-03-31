@@ -43,236 +43,235 @@ from java.lang import Class
 from java.lang import Runtime
 from java.lang import String
 
-def getArguments():
-  """
-  This function brings up a window to retreive any required arguments.  This function brings up a window with fields for each argument, filled with any arguments already given.
-  While this window is visible the program will wait, once it is no longer visible all the arguments will be filled with the entries in the fields.
-  """
-  global blastLocation, genemarkLocation, transtermLocation, database, database, matrix, eValue, minLength, scaffoldingDistance, promoterScoreCutoff, sources, email
-
-  class BlastAction(AbstractAction):
+class Main():
+  def getArguments():
     """
-    Action for selecting the location of Blast+.  Brings up a file selection dialog and fills the text field for blast with the selection.
+    This function brings up a window to retreive any required arguments.  This function brings up a window with fields for each argument, filled with any arguments already given.
+    While this window is visible the program will wait, once it is no longer visible all the arguments will be filled with the entries in the fields.
     """
-    def __init__(self):
-      AbstractAction.__init__(self, "...")
 
-    def actionPerformed(self, event):
-      fileChooser = JFileChooser()
-      fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
-      if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
-        blastField.setText(fileChooser.getSelectedFile().getAbsolutePath())
+    class BlastAction(AbstractAction):
+      """
+      Action for selecting the location of Blast+.  Brings up a file selection dialog and fills the text field for blast with the selection.
+      """
+      def __init__(self):
+        AbstractAction.__init__(self, "...")
 
-  class GenemarkAction(AbstractAction):
-    """
-    Action for selecting the location of Genemark.  Brings up a file selection dialog and fills the text field for genemark with the selection.
-    """
-    def __init__(self):
-      AbstractAction.__init__(self, "...")
+      def actionPerformed(self, event):
+        fileChooser = JFileChooser()
+        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
+        if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
+          blastField.setText(fileChooser.getSelectedFile().getAbsolutePath())
 
-    def actionPerformed(self, event):
-      fileChooser = JFileChooser()
-      fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
-      if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
-        genemarkField.setText(fileChooser.getSelectedFile().getAbsolutePath())
+    class GenemarkAction(AbstractAction):
+      """
+      Action for selecting the location of Genemark.  Brings up a file selection dialog and fills the text field for genemark with the selection.
+      """
+      def __init__(self):
+        AbstractAction.__init__(self, "...")
 
-  class TranstermAction(AbstractAction):
-    """
-    Action for selecting the location of Transterm.  Brings up a file selection dialog and fills the text field for transterm with the selection.
-    """
-    def __init__(self):
-      AbstractAction.__init__(self, "...")
+      def actionPerformed(self, event):
+        fileChooser = JFileChooser()
+        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
+        if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
+          genemarkField.setText(fileChooser.getSelectedFile().getAbsolutePath())
 
-    def actionPerformed(self, event):
-      fileChooser = JFileChooser()
-      fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
-      if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
-        transtermField.setText(fileChooser.getSelectedFile().getAbsolutePath())
+    class TranstermAction(AbstractAction):
+      """
+      Action for selecting the location of Transterm.  Brings up a file selection dialog and fills the text field for transterm with the selection.
+      """
+      def __init__(self):
+        AbstractAction.__init__(self, "...")
 
-  class QueryAction(AbstractAction):
-    """
-    Action for selecting the query file or directory.  Brings up a file selection dialog and fills the text field for the query with the selection.
-    """
-    def __init__(self):
-      AbstractAction.__init__(self, "...")
+      def actionPerformed(self, event):
+        fileChooser = JFileChooser()
+        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
+        if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
+          transtermField.setText(fileChooser.getSelectedFile().getAbsolutePath())
 
-    def actionPerformed(self, event):
-      fileChooser = JFileChooser()
-      fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES)
-      if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
-        queryField.setText(fileChooser.getSelectedFile().getAbsolutePath())
+    class QueryAction(AbstractAction):
+      """
+      Action for selecting the query file or directory.  Brings up a file selection dialog and fills the text field for the query with the selection.
+      """
+      def __init__(self):
+        AbstractAction.__init__(self, "...")
 
-  class DatabaseLocationAction(AbstractAction):
-    """
-    Action for selecting the database.  Brings up a file selection dialog and fills the text field for the database with the selection.
-    """
-    def __init__(self):
-      AbstractAction.__init__(self, "...")
+      def actionPerformed(self, event):
+        fileChooser = JFileChooser()
+        fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES)
+        if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
+          queryField.setText(fileChooser.getSelectedFile().getAbsolutePath())
 
-    def actionPerformed(self, event):
-      fileChooser = JFileChooser()
-      fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES)
-      if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
-        databaseLocationField.setText(fileChooser.getSelectedFile().getAbsolutePath())
+    class DatabaseLocationAction(AbstractAction):
+      """
+      Action for selecting the database.  Brings up a file selection dialog and fills the text field for the database with the selection.
+      """
+      def __init__(self):
+        AbstractAction.__init__(self, "...")
 
-  class HelpAction(AbstractAction):
-    """
-    Displays a help dialog.
-    """
-    def __init__(self):
-      AbstractAction.__init__(self, "Help")
+      def actionPerformed(self, event):
+        fileChooser = JFileChooser()
+        fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES)
+        if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
+          databaseLocationField.setText(fileChooser.getSelectedFile().getAbsolutePath())
 
-    def actionPerformed(self, event):
-      browsers = ["google-chrome", "firefox", "opera", "epiphany", "konqueror", "conkeror", "midori", "kazehakase", "mozilla"]
-      osName = System.getProperty("os.name")
-      helpHTML = ClassLoader.getSystemResource("help.html").toString()
-      if osName.find("Mac OS") == 0:
-        Class.forName("com.apple.eio.FileManager").getDeclaredMethod( "openURL", [String().getClass()]).invoke(None, [helpHTML])
-      elif osName.find("Windows") == 0:
-        Runtime.getRuntime().exec( "rundll32 url.dll,FileProtocolHandler " + helpHTML)
-      else:
-        browser = None
-        for b in browsers:
-          if browser == None and Runtime.getRuntime().exec(["which", b]).getInputStream().read() != -1:
-            browser = b
-            Runtime.getRuntime().exec([browser, helpHTML])
+    class HelpAction(AbstractAction):
+      """
+      Displays a help dialog.
+      """
+      def __init__(self):
+        AbstractAction.__init__(self, "Help")
 
-  class OKAction(AbstractAction):
-    """
-    Action for starting the pipeline.  This action will simply make the window invisible.
-    """
-    def __init__(self):
-      AbstractAction.__init__(self, "Ok")
+      def actionPerformed(self, event):
+        browsers = ["google-chrome", "firefox", "opera", "epiphany", "konqueror", "conkeror", "midori", "kazehakase", "mozilla"]
+        osName = System.getProperty("os.name")
+        helpHTML = ClassLoader.getSystemResource("help.html").toString()
+        if osName.find("Mac OS") == 0:
+          Class.forName("com.apple.eio.FileManager").getDeclaredMethod( "openURL", [String().getClass()]).invoke(None, [helpHTML])
+        elif osName.find("Windows") == 0:
+          Runtime.getRuntime().exec( "rundll32 url.dll,FileProtocolHandler " + helpHTML)
+        else:
+          browser = None
+          for b in browsers:
+            if browser == None and Runtime.getRuntime().exec(["which", b]).getInputStream().read() != -1:
+              browser = b
+              Runtime.getRuntime().exec([browser, helpHTML])
 
-    def actionPerformed(self, event):
-      frame.setVisible(False)
+    class OKAction(AbstractAction):
+      """
+      Action for starting the pipeline.  This action will simply make the window invisible.
+      """
+      def __init__(self):
+        AbstractAction.__init__(self, "Ok")
 
-  class CancelAction(AbstractAction):
-    """
-    Action for canceling the pipeline.  Exits the program.
-    """
-    def __init__(self):
-      AbstractAction.__init__(self, "Cancel")
+      def actionPerformed(self, event):
+        frame.setVisible(False)
 
-    def actionPerformed(self, event):
-      sys.exit(0)
-  
-  frame = JFrame("Neofelis")
-  frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
-  constraints = GridBagConstraints()
-  contentPane = JPanel(GridBagLayout())
-  frame.setContentPane(contentPane)
-  blastField = JTextField(blastLocation)
-  genemarkField = JTextField(genemarkLocation)
-  transtermField = JTextField(transtermLocation)
-  databaseLocationField = JTextField(os.path.split(database)[0])
-  databaseField = JTextField(os.path.split(database)[1])
-  matrixField = JTextField(str(matrix))
-  eValueField = JTextField(str(eValue))
-  minLengthField = JTextField(str(minLength))
-  scaffoldingDistanceField = JTextField(str(scaffoldingDistance))
-  promoterScoreField = JTextField(str(promoterScoreCutoff))
-  queryField = JTextField(sources[0])
+    class CancelAction(AbstractAction):
+      """
+      Action for canceling the pipeline.  Exits the program.
+      """
+      def __init__(self):
+        AbstractAction.__init__(self, "Cancel")
 
-  constraints.gridx = 0
-  constraints.gridy = 0
-  constraints.gridwidth = 1
-  constraints.gridheight = 1
-  constraints.fill = GridBagConstraints.HORIZONTAL
-  constraints.weightx = 0
-  constraints.weighty = 0
-  contentPane.add(JLabel("Blast Location"), constraints)
-  constraints.gridy = 1
-  contentPane.add(JLabel("Genemark Location"), constraints)
-  constraints.gridy = 2
-  contentPane.add(JLabel("Transterm Location"), constraints)
-  constraints.gridy = 3
-  contentPane.add(JLabel("Databases Location"), constraints)
-  constraints.gridy = 4
-  contentPane.add(JLabel("Database"), constraints)
-  constraints.gridy = 5
-  contentPane.add(JLabel("Matrix(Leave blank to use heuristic matrix)"), constraints)
-  constraints.gridy = 6
-  contentPane.add(JLabel("E Value"), constraints)
-  constraints.gridy = 7
-  contentPane.add(JLabel("Minimum Intergenic Length"), constraints)
-  constraints.gridy = 8
-  contentPane.add(JLabel("Scaffold Distance"), constraints)
-  constraints.gridy = 9
-  contentPane.add(JLabel("Promoter Score Cutoff"), constraints)
-  constraints.gridy = 10
-  contentPane.add(JLabel("Query"), constraints)
-  constraints.gridx = 1
-  constraints.gridy = 0
-  constraints.weightx = 1
-  contentPane.add(blastField, constraints)
-  constraints.gridy = 1
-  contentPane.add(genemarkField, constraints)
-  constraints.gridy = 2
-  contentPane.add(transtermField, constraints)
-  constraints.gridy = 3
-  contentPane.add(databaseLocationField, constraints)
-  constraints.gridy = 4
-  contentPane.add(databaseField, constraints)
-  constraints.gridy = 5
-  contentPane.add(matrixField, constraints)
-  constraints.gridy = 6
-  contentPane.add(eValueField, constraints)
-  constraints.gridy = 7
-  contentPane.add(minLengthField, constraints)
-  constraints.gridy = 8
-  contentPane.add(scaffoldingDistanceField, constraints)
-  constraints.gridy = 9
-  contentPane.add(promoterScoreField, constraints)
-  constraints.gridy = 10
-  contentPane.add(queryField, constraints)
-  constraints.gridx = 2
-  constraints.gridy = 0
-  constraints.weightx = 0
-  constraints.fill = GridBagConstraints.NONE
-  constraints.anchor = GridBagConstraints.LINE_END
-  contentPane.add(JButton(BlastAction()), constraints)
-  constraints.gridy = 1
-  contentPane.add(JButton(GenemarkAction()), constraints)
-  constraints.gridy = 2
-  contentPane.add(JButton(TranstermAction()), constraints)
-  constraints.gridy = 3
-  contentPane.add(JButton(DatabaseLocationAction()), constraints)
-  constraints.gridy = 10
-  contentPane.add(JButton(QueryAction()), constraints)
+      def actionPerformed(self, event):
+        sys.exit(0)
 
-  constraints.gridx = 0
-  constraints.gridy = 11
-  constraints.anchor = GridBagConstraints.LINE_START
-  contentPane.add(JButton(HelpAction()), constraints)
-  constraints.gridx = 1
-  constraints.anchor = GridBagConstraints.LINE_END
-  contentPane.add(JButton(OKAction()), constraints)
-  constraints.gridx = 2
-  contentPane.add(JButton(CancelAction()), constraints)
+    frame = JFrame("Neofelis")
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
+    constraints = GridBagConstraints()
+    contentPane = JPanel(GridBagLayout())
+    frame.setContentPane(contentPane)
+    blastField = JTextField(self.blastLocation)
+    genemarkField = JTextField(self.genemarkLocation)
+    transtermField = JTextField(self.transtermLocation)
+    databaseLocationField = JTextField(os.path.split(self.database)[0])
+    databaseField = JTextField(os.path.split(self.database)[1])
+    matrixField = JTextField(str(self.matrix))
+    eValueField = JTextField(str(self.eValue))
+    minLengthField = JTextField(str(self.minLength))
+    scaffoldingDistanceField = JTextField(str(self.scaffoldingDistance))
+    promoterScoreField = JTextField(str(self.promoterScoreCutoff))
+    queryField = JTextField(self.sources[0])
 
-  frame.pack()
-  frame.setLocationRelativeTo(None)
-  frame.setVisible(True)
+    constraints.gridx = 0
+    constraints.gridy = 0
+    constraints.gridwidth = 1
+    constraints.gridheight = 1
+    constraints.fill = GridBagConstraints.HORIZONTAL
+    constraints.weightx = 0
+    constraints.weighty = 0
+    contentPane.add(JLabel("Blast Location"), constraints)
+    constraints.gridy = 1
+    contentPane.add(JLabel("Genemark Location"), constraints)
+    constraints.gridy = 2
+    contentPane.add(JLabel("Transterm Location"), constraints)
+    constraints.gridy = 3
+    contentPane.add(JLabel("Databases Location"), constraints)
+    constraints.gridy = 4
+    contentPane.add(JLabel("Database"), constraints)
+    constraints.gridy = 5
+    contentPane.add(JLabel("Matrix(Leave blank to use heuristic matrix)"), constraints)
+    constraints.gridy = 6
+    contentPane.add(JLabel("E Value"), constraints)
+    constraints.gridy = 7
+    contentPane.add(JLabel("Minimum Intergenic Length"), constraints)
+    constraints.gridy = 8
+    contentPane.add(JLabel("Scaffold Distance"), constraints)
+    constraints.gridy = 9
+    contentPane.add(JLabel("Promoter Score Cutoff"), constraints)
+    constraints.gridy = 10
+    contentPane.add(JLabel("Query"), constraints)
+    constraints.gridx = 1
+    constraints.gridy = 0
+    constraints.weightx = 1
+    contentPane.add(blastField, constraints)
+    constraints.gridy = 1
+    contentPane.add(genemarkField, constraints)
+    constraints.gridy = 2
+    contentPane.add(transtermField, constraints)
+    constraints.gridy = 3
+    contentPane.add(databaseLocationField, constraints)
+    constraints.gridy = 4
+    contentPane.add(databaseField, constraints)
+    constraints.gridy = 5
+    contentPane.add(matrixField, constraints)
+    constraints.gridy = 6
+    contentPane.add(eValueField, constraints)
+    constraints.gridy = 7
+    contentPane.add(minLengthField, constraints)
+    constraints.gridy = 8
+    contentPane.add(scaffoldingDistanceField, constraints)
+    constraints.gridy = 9
+    contentPane.add(promoterScoreField, constraints)
+    constraints.gridy = 10
+    contentPane.add(queryField, constraints)
+    constraints.gridx = 2
+    constraints.gridy = 0
+    constraints.weightx = 0
+    constraints.fill = GridBagConstraints.NONE
+    constraints.anchor = GridBagConstraints.LINE_END
+    contentPane.add(JButton(BlastAction()), constraints)
+    constraints.gridy = 1
+    contentPane.add(JButton(GenemarkAction()), constraints)
+    constraints.gridy = 2
+    contentPane.add(JButton(TranstermAction()), constraints)
+    constraints.gridy = 3
+    contentPane.add(JButton(DatabaseLocationAction()), constraints)
+    constraints.gridy = 10
+    contentPane.add(JButton(QueryAction()), constraints)
 
-  while frame.isVisible():
-    pass
+    constraints.gridx = 0
+    constraints.gridy = 11
+    constraints.anchor = GridBagConstraints.LINE_START
+    contentPane.add(JButton(HelpAction()), constraints)
+    constraints.gridx = 1
+    constraints.anchor = GridBagConstraints.LINE_END
+    contentPane.add(JButton(OKAction()), constraints)
+    constraints.gridx = 2
+    contentPane.add(JButton(CancelAction()), constraints)
 
-  blastLocation = blastField.getText()
-  genemarkLocation = genemarkField.getText()
-  transtermLocation = transtermField.getText()
-  database = databaseLocationField.getText() + "/" + databaseField.getText()
-  matrix = matrixField.getText()
-  eValue = float(eValueField.getText())
-  minLength = int(minLengthField.getText())
-  scaffoldingDistance = int(scaffoldingDistanceField.getText())
-  promoterScoreCutoff = float(promoterScoreField.getText())
-  sources = [queryField.getText()]
+    frame.pack()
+    frame.setLocationRelativeTo(None)
+    frame.setVisible(True)
 
-def main(arguments):
-  global blastLocation, genemarkLocation, transtermLocation, database, matrix, eValue, minLength, scaffoldingDistance, promoterScoreCutoff, sources, email
-  
-  documentation = """
+    while frame.isVisible():
+      pass
+
+    self.blastLocation = blastField.getText()
+    self.genemarkLocation = genemarkField.getText()
+    self.transtermLocation = transtermField.getText()
+    self.database = databaseLocationField.getText() + "/" + databaseField.getText()
+    self.matrix = matrixField.getText()
+    self.eValue = float(eValueField.getText())
+    self.minLength = int(minLengthField.getText())
+    self.scaffoldingDistance = int(scaffoldingDistanceField.getText())
+    self.promoterScoreCutoff = float(promoterScoreField.getText())
+    self.sources = [queryField.getText()]
+
+
+  def run(self, arguments):
+    documentation = """
 -m --matrix                Matrix with which to run genemark
 -d --database              Database to use when running blast
 -g --genemark              Location of Genemark
@@ -289,87 +288,84 @@ def main(arguments):
 -n --no-swing              If any required arguments are missing then the program will exit instead of using a Swing interface to get the missing arguments
 -a --email                 Email address that results will be sent to.
 """
-  try:
-    opts, args = getopt(arguments, "m:d:g:b:e:l:t:c:q:hsna:", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "ldf-cutoff=", "scaffolding-distance=", "query=", "help", "swing", "no-swing", "email="])
-  except GetoptError:
-    print documentation
-    sys.exit(0)
-
-  matrix = ""
-  database = ""
-  genemarkLocation = ""  
-  blastLocation = ""
-  eValue = 0.1
-  minLength = 100  
-  transtermLocation = ""
-  promoterScoreCutoff = 0
-  scaffoldingDistance = 100
-  sources = [""]
-  swingInterface = False
-  noSwing = False
-  email = ""
-  remote = False
-  pipe = False
-	
-  for opt, arg in opts:
-    if opt in ("-q", "--query"):
-      sources = [arg]
-    elif opt in ("-g", "--genemark"):
-      genemarkLocation = arg
-    elif opt in ("-b", "--blast"):
-      blastLocation = arg
-    elif opt in ("-d", "--database"):
-      database = arg
-    elif opt in ("-m", "--matrix"):
-      matrix = arg
-    elif opt in ("-e", "--e-value"):
-      eValue = float(arg)
-    elif opt in ("-l", "--min-length"):
-      minLength = int(arg)
-    elif opt in ("-l", "--promoter-score-cutoff"):
-      promoterScoreCutoff = float(arg)
-    elif opt in ("-t", "--transterm"):
-      transtermLocation = arg
-    elif opt in ("-c", "--scaffolding-distance"):
-      scaffoldingDistance = int(arg)
-    elif opt in ("-s", "--swing"):
-      swingInterface = True
-    elif opt in ("-n", "--no-swing"):
-      noSwing = True
-    elif opt in ("-a", "--email"):
-      email = arg
-    elif opt in ("-p", "--pipe"):
-      pipe = True
-    elif opt in ("-h", "--help"):
+    try:
+      opts, args = getopt(arguments, "m:d:g:b:e:l:t:c:q:hsna:", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "ldf-cutoff=", "scaffolding-distance=", "query=", "help", "swing", "no-swing", "email="])
+    except GetoptError:
       print documentation
       sys.exit(0)
-
-  if pipe:
-    os.mkfifo("neofelis_pipe", "r")
-    pipe = open("neofelis_pipe", "r")
-    while True:
-      line = pipe.readLine()
-      if line:
-        threading.Thread(target = main, args = re.split(r"\s+", line))
         
-  if not blastLocation or not database or not genemarkLocation or not transtermLocation or sources == [""]:
-    if noSwing:
-      sys.exit(1)
-    else:
-      getArguments()
-      swingInterface = True
+    self.matrix = ""
+    self.database = ""
+    self.genemarkLocation = ""  
+    self.blastLocation = ""
+    self.eValue = 0.1
+    self.minLength = 100  
+    self.transtermLocation = ""
+    self.promoterScoreCutoff = 0
+    self.scaffoldingDistance = 100
+    self.sources = [""]
+    self.swingInterface = False
+    self.noSwing = False
+    self.email = ""
+    self.remote = False
+    
+    for opt, arg in opts:
+      if opt in ("-q", "--query"):
+        self.sources = [arg]
+      elif opt in ("-g", "--genemark"):
+        self.genemarkLocation = arg
+      elif opt in ("-b", "--blast"):
+        self.blastLocation = arg
+      elif opt in ("-d", "--database"):
+        self.database = arg
+      elif opt in ("-m", "--matrix"):
+        self.matrix = arg
+      elif opt in ("-e", "--e-value"):
+        self.eValue = float(arg)
+      elif opt in ("-l", "--min-length"):
+        self.minLength = int(arg)
+      elif opt in ("-l", "--promoter-score-cutoff"):
+        self.promoterScoreCutoff = float(arg)
+      elif opt in ("-t", "--transterm"):
+        self.transtermLocation = arg
+      elif opt in ("-c", "--scaffolding-distance"):
+        self.scaffoldingDistance = int(arg)
+      elif opt in ("-s", "--swing"):
+        self.swingInterface = True
+      elif opt in ("-n", "--no-swing"):
+        self.noSwing = True
+      elif opt in ("-a", "--email"):
+        self.email = arg
+      elif opt in ("-h", "--help"):
+        print documentation
+        sys.exit(0)
+    """
+    if pipe:
+      os.mkfifo("neofelis_pipe", "r")
+      pipe = open("neofelis_pipe", "r")
+      while True:
+        line = pipe.readLine()
+      if line:
+        threading.Thread(target = lambda x: Main().run(x), args = re.split(r"\s+", line))
+    """ 
+    if not self.blastLocation or not self.database or not self.genemarkLocation or not self.transtermLocation or self.sources == [""]:
+      if self.noSwing:
+        sys.exit(1)
+      else:
+        self.getArguments()
+        self.swingInterface = True
 
-  queries = []
-  while sources:
-    source = sources.pop()
-    if os.path.isdir(source):
-      newSources = map(lambda x: os.path.join(source, x), os.listdir(source))
-      sources.extend(newSources)
-    elif utils.isGenome(source):
-      queries.append(source)
-
-  print blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, promoterScoreCutoff, queries, swingInterface, email
-  pipeline.run(blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, promoterScoreCutoff, queries, swingInterface, email)
+    self.queries = []
+    while self.sources:
+      source = self.sources.pop()
+      if os.path.isdir(source):
+        newSources = map(lambda x: os.path.join(source, x), os.listdir(source))
+        self.sources.extend(newSources)
+      elif utils.isGenome(source):
+        self.queries.append(source)
+        
+    print self.blastLocation, self.genemarkLocation, self.transtermLocation, self.database, self.eValue, self.matrix, self.minLength, self.scaffoldingDistance, self.promoterScoreCutoff, self.queries, self.swingInterface, self.email
+    pipeline.Pipeline().run(self.blastLocation, self.genemarkLocation, self.transtermLocation, self.database, self.eValue, self.matrix, self.minLength, self.scaffoldingDistance, self.promoterScoreCutoff, self.queries, self.swingInterface, self.email)
 
 if __name__ == "__main__":
-  main(sys.argv)
+  Main().run(sys.argv)
