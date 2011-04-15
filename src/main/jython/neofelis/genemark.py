@@ -72,7 +72,7 @@ def removeInvalidGenes(fileName, genomeLength):
   output.write(swap)
   output.close()
 
-def findGenes(query, name, blastLocation, database, eValue, genemark, matrix):
+def findGenes(query, name, blastLocation, database, eValue, genemark, matrix, pipeline):
   """
   query:         File name of the query.
   name:          Name of the genome in the query.
@@ -96,7 +96,7 @@ def findGenes(query, name, blastLocation, database, eValue, genemark, matrix):
   removeInvalidGenes(query + ".orf", len(genome))
   modifyFastaHeader(query + ".orf", name)
   
-  result = utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blastLocation, database, eValue, query + ".orf")
+  result = utils.cachedBlast("initialBlasts/" + name + ".blastp.xml", blastLocation, database, eValue, query + ".orf", pipeline)
   os.remove(query + ".orf")
   os.remove(query + ".lst")
   return result

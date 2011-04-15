@@ -1,146 +1,278 @@
-     -10_signal             18162..18171
-                            /note=Promoter Position:18177	LDF:11.95
+     promoter               63..112
+                            /note=Promoter Position:63	score:0.99
                             /colour=255 0 255
-     -35_signal             18141..18147
-                            /note=Promoter Position:18177	LDF:11.95
+     promoter               4279..4328
+                            /note=Promoter Position:4279	score:0.98
                             /colour=255 0 255
-     -10_signal             9484..9493
-                            /note=Promoter Position:9499	LDF:10.85
+     promoter               4296..4345
+                            /note=Promoter Position:4296	score:0.99
                             /colour=255 0 255
-     -35_signal             9460..9466
-                            /note=Promoter Position:9499	LDF:10.85
+     promoter               4461..4510
+                            /note=Promoter Position:4461	score:0.94
                             /colour=255 0 255
-     -10_signal             58469..58478
-                            /note=Promoter Position:58484	LDF:10.02
+     promoter               5268..5317
+                            /note=Promoter Position:5268	score:0.97
                             /colour=255 0 255
-     -35_signal             58450..58456
-                            /note=Promoter Position:58484	LDF:10.02
+     promoter               5286..5335
+                            /note=Promoter Position:5286	score:0.95
                             /colour=255 0 255
-     -10_signal             37757..37766
-                            /note=Promoter Position:37772	LDF:9.69
+     promoter               9444..9493
+                            /note=Promoter Position:9444	score:1.0
                             /colour=255 0 255
-     -35_signal             37735..37741
-                            /note=Promoter Position:37772	LDF:9.69
+     promoter               19163..19212
+                            /note=Promoter Position:19163	score:0.95
                             /colour=255 0 255
-     -10_signal             36408..36417
-                            /note=Promoter Position:36427	LDF:9.37
+     promoter               19189..19238
+                            /note=Promoter Position:19189	score:0.97
                             /colour=255 0 255
-     -35_signal             36393..36399
-                            /note=Promoter Position:36427	LDF:9.37
+     promoter               19860..19909
+                            /note=Promoter Position:19860	score:0.99
                             /colour=255 0 255
-     -10_signal             54405..54414
-                            /note=Promoter Position:54420	LDF:8.56
+     promoter               19872..19921
+                            /note=Promoter Position:19872	score:0.92
                             /colour=255 0 255
-     -35_signal             54381..54387
-                            /note=Promoter Position:54420	LDF:8.56
+     promoter               20404..20453
+                            /note=Promoter Position:20404	score:0.99
                             /colour=255 0 255
-     -10_signal             41148..41157
-                            /note=Promoter Position:41163	LDF:7.78
+     promoter               24929..24978
+                            /note=Promoter Position:24929	score:0.98
                             /colour=255 0 255
-     -35_signal             41129..41135
-                            /note=Promoter Position:41163	LDF:7.78
+     promoter               25361..25410
+                            /note=Promoter Position:25361	score:0.99
                             /colour=255 0 255
-     -10_signal             75399..75408
-                            /note=Promoter Position:75414	LDF:7.76
+     promoter               25945..25994
+                            /note=Promoter Position:25945	score:0.99
                             /colour=255 0 255
-     -35_signal             75381..75387
-                            /note=Promoter Position:75414	LDF:7.76
+     promoter               26016..26065
+                            /note=Promoter Position:26016	score:0.97
                             /colour=255 0 255
-     -10_signal             74193..74202
-                            /note=Promoter Position:74208	LDF:7.22
+     promoter               26965..27014
+                            /note=Promoter Position:26965	score:0.98
                             /colour=255 0 255
-     -35_signal             74172..74178
-                            /note=Promoter Position:74208	LDF:7.22
+     promoter               31218..31267
+                            /note=Promoter Position:31218	score:1.0
                             /colour=255 0 255
-     -10_signal             35212..35221
-                            /note=Promoter Position:35227	LDF:7.16
+     promoter               31246..31295
+                            /note=Promoter Position:31246	score:0.97
                             /colour=255 0 255
-     -35_signal             35192..35198
-                            /note=Promoter Position:35227	LDF:7.16
+     promoter               31261..31310
+                            /note=Promoter Position:31261	score:0.92
                             /colour=255 0 255
-     -10_signal             59772..59781
-                            /note=Promoter Position:59787	LDF:7.04
+     promoter               33161..33210
+                            /note=Promoter Position:33161	score:0.98
                             /colour=255 0 255
-     -35_signal             59755..59761
-                            /note=Promoter Position:59787	LDF:7.04
+     promoter               35186..35235
+                            /note=Promoter Position:35186	score:0.99
                             /colour=255 0 255
-     -10_signal             31254..31263
-                            /note=Promoter Position:31269	LDF:6.62
+     promoter               35218..35267
+                            /note=Promoter Position:35218	score:0.91
                             /colour=255 0 255
-     -35_signal             31233..31239
-                            /note=Promoter Position:31269	LDF:6.62
+     promoter               36359..36408
+                            /note=Promoter Position:36359	score:0.94
                             /colour=255 0 255
-     -10_signal             19189..19198
-                            /note=Promoter Position:19204	LDF:6.25
+     promoter               36778..36827
+                            /note=Promoter Position:36778	score:0.99
                             /colour=255 0 255
-     -35_signal             19168..19174
-                            /note=Promoter Position:19204	LDF:6.25
+     promoter               37731..37780
+                            /note=Promoter Position:37731	score:0.94
                             /colour=255 0 255
-     -10_signal             52330..52339
-                            /note=Promoter Position:52345	LDF:5.89
+     promoter               38661..38710
+                            /note=Promoter Position:38661	score:1.0
                             /colour=255 0 255
-     -35_signal             52307..52313
-                            /note=Promoter Position:52345	LDF:5.89
+     promoter               41636..41685
+                            /note=Promoter Position:41636	score:0.99
                             /colour=255 0 255
-     -10_signal             38731..38740
-                            /note=Promoter Position:38746	LDF:5.8
+     promoter               41693..41742
+                            /note=Promoter Position:41693	score:0.96
                             /colour=255 0 255
-     -35_signal             38708..38714
-                            /note=Promoter Position:38746	LDF:5.8
+     promoter               41705..41754
+                            /note=Promoter Position:41705	score:0.99
                             /colour=255 0 255
-     -10_signal             72188..72197
-                            /note=Promoter Position:72203	LDF:5.67
+     promoter               47431..47480
+                            /note=Promoter Position:47431	score:0.95
                             /colour=255 0 255
-     -35_signal             72166..72172
-                            /note=Promoter Position:72203	LDF:5.67
+     promoter               47479..47528
+                            /note=Promoter Position:47479	score:0.98
                             /colour=255 0 255
-     -10_signal             60920..60929
-                            /note=Promoter Position:60935	LDF:5.16
+     promoter               49242..49291
+                            /note=Promoter Position:49242	score:0.99
                             /colour=255 0 255
-     -35_signal             60901..60907
-                            /note=Promoter Position:60935	LDF:5.16
+     promoter               54379..54428
+                            /note=Promoter Position:54379	score:0.93
                             /colour=255 0 255
-     -10_signal             65346..65355
-                            /note=Promoter Position:65361	LDF:5.1
+     promoter               54399..54448
+                            /note=Promoter Position:54399	score:1.0
                             /colour=255 0 255
-     -35_signal             65322..65328
-                            /note=Promoter Position:65361	LDF:5.1
+     promoter               54416..54465
+                            /note=Promoter Position:54416	score:0.97
                             /colour=255 0 255
-     -10_signal             41728..41737
-                            /note=Promoter Position:41743	LDF:4.93
+     promoter               54869..54918
+                            /note=Promoter Position:54869	score:0.96
                             /colour=255 0 255
-     -35_signal             41711..41717
-                            /note=Promoter Position:41743	LDF:4.93
+     promoter               55022..55071
+                            /note=Promoter Position:55022	score:1.0
                             /colour=255 0 255
-     -10_signal             69..78
-                            /note=Promoter Position:84	LDF:4.92
+     promoter               55070..55119
+                            /note=Promoter Position:55070	score:1.0
                             /colour=255 0 255
-     -35_signal             47..53
-                            /note=Promoter Position:84	LDF:4.92
+     promoter               56093..56142
+                            /note=Promoter Position:56093	score:1.0
                             /colour=255 0 255
-     -10_signal             73885..73894
-                            /note=Promoter Position:73900	LDF:4.46
+     promoter               58381..58430
+                            /note=Promoter Position:58381	score:1.0
                             /colour=255 0 255
-     -35_signal             73862..73868
-                            /note=Promoter Position:73900	LDF:4.46
+     promoter               59068..59117
+                            /note=Promoter Position:59068	score:0.97
                             /colour=255 0 255
-     -10_signal             complement(75986..75977)
-                            /note=Promoter Position:75971	LDF:7.79
+     promoter               59111..59160
+                            /note=Promoter Position:59111	score:0.97
                             /colour=255 0 255
-     -35_signal             complement(76005..75999)
-                            /note=Promoter Position:75971	LDF:7.79
+     promoter               60335..60384
+                            /note=Promoter Position:60335	score:0.95
                             /colour=255 0 255
-     -10_signal             complement(4369..4360)
-                            /note=Promoter Position:4354	LDF:7.28
+     promoter               60834..60883
+                            /note=Promoter Position:60834	score:0.98
                             /colour=255 0 255
-     -35_signal             complement(4387..4381)
-                            /note=Promoter Position:4354	LDF:7.28
+     promoter               63325..63374
+                            /note=Promoter Position:63325	score:0.93
                             /colour=255 0 255
-     -10_signal             complement(2845..2836)
-                            /note=Promoter Position:2830	LDF:6.15
+     promoter               63360..63409
+                            /note=Promoter Position:63360	score:0.94
                             /colour=255 0 255
-     -35_signal             complement(2869..2863)
-                            /note=Promoter Position:2830	LDF:6.15
+     promoter               63375..63424
+                            /note=Promoter Position:63375	score:1.0
+                            /colour=255 0 255
+     promoter               63403..63452
+                            /note=Promoter Position:63403	score:0.96
+                            /colour=255 0 255
+     promoter               64991..65040
+                            /note=Promoter Position:64991	score:0.93
+                            /colour=255 0 255
+     promoter               67017..67066
+                            /note=Promoter Position:67017	score:0.94
+                            /colour=255 0 255
+     promoter               68896..68945
+                            /note=Promoter Position:68896	score:0.97
+                            /colour=255 0 255
+     promoter               68908..68957
+                            /note=Promoter Position:68908	score:0.94
+                            /colour=255 0 255
+     promoter               68946..68995
+                            /note=Promoter Position:68946	score:0.96
+                            /colour=255 0 255
+     promoter               69317..69366
+                            /note=Promoter Position:69317	score:0.99
+                            /colour=255 0 255
+     promoter               70951..71000
+                            /note=Promoter Position:70951	score:1.0
+                            /colour=255 0 255
+     promoter               71923..71972
+                            /note=Promoter Position:71923	score:0.98
+                            /colour=255 0 255
+     promoter               72182..72231
+                            /note=Promoter Position:72182	score:0.95
+                            /colour=255 0 255
+     promoter               72474..72523
+                            /note=Promoter Position:72474	score:0.99
+                            /colour=255 0 255
+     promoter               72517..72566
+                            /note=Promoter Position:72517	score:0.99
+                            /colour=255 0 255
+     promoter               73795..73844
+                            /note=Promoter Position:73795	score:0.96
+                            /colour=255 0 255
+     promoter               73859..73908
+                            /note=Promoter Position:73859	score:0.98
+                            /colour=255 0 255
+     promoter               74099..74148
+                            /note=Promoter Position:74099	score:0.98
+                            /colour=255 0 255
+     promoter               74114..74163
+                            /note=Promoter Position:74114	score:0.93
+                            /colour=255 0 255
+     promoter               74134..74183
+                            /note=Promoter Position:74134	score:0.99
+                            /colour=255 0 255
+     promoter               74167..74216
+                            /note=Promoter Position:74167	score:0.96
+                            /colour=255 0 255
+     promoter               75319..75368
+                            /note=Promoter Position:75319	score:0.99
+                            /colour=255 0 255
+     promoter               75373..75422
+                            /note=Promoter Position:75373	score:0.96
+                            /colour=255 0 255
+     promoter               75390..75439
+                            /note=Promoter Position:75390	score:0.91
+                            /colour=255 0 255
+     promoter               complement(76275..76226)
+                            /note=Promoter Position:76275	score:1.0
+                            /colour=255 0 255
+     promoter               complement(76017..75968)
+                            /note=Promoter Position:76017	score:1.0
+                            /colour=255 0 255
+     promoter               complement(76006..75957)
+                            /note=Promoter Position:76006	score:1.0
+                            /colour=255 0 255
+     promoter               complement(75007..74958)
+                            /note=Promoter Position:75007	score:0.91
+                            /colour=255 0 255
+     promoter               complement(74980..74931)
+                            /note=Promoter Position:74980	score:0.93
+                            /colour=255 0 255
+     promoter               complement(74965..74916)
+                            /note=Promoter Position:74965	score:0.98
+                            /colour=255 0 255
+     promoter               complement(67273..67224)
+                            /note=Promoter Position:67273	score:0.99
+                            /colour=255 0 255
+     promoter               complement(67258..67209)
+                            /note=Promoter Position:67258	score:0.9
+                            /colour=255 0 255
+     promoter               complement(67247..67198)
+                            /note=Promoter Position:67247	score:0.98
+                            /colour=255 0 255
+     promoter               complement(67212..67163)
+                            /note=Promoter Position:67212	score:0.98
+                            /colour=255 0 255
+     promoter               complement(16072..16023)
+                            /note=Promoter Position:16072	score:0.99
+                            /colour=255 0 255
+     promoter               complement(16028..15979)
+                            /note=Promoter Position:16028	score:0.91
+                            /colour=255 0 255
+     promoter               complement(4410..4361)
+                            /note=Promoter Position:4410	score:0.95
+                            /colour=255 0 255
+     promoter               complement(4354..4305)
+                            /note=Promoter Position:4354	score:1.0
+                            /colour=255 0 255
+     promoter               complement(4345..4296)
+                            /note=Promoter Position:4345	score:0.98
+                            /colour=255 0 255
+     promoter               complement(3349..3300)
+                            /note=Promoter Position:3349	score:0.97
+                            /colour=255 0 255
+     promoter               complement(3310..3261)
+                            /note=Promoter Position:3310	score:0.93
+                            /colour=255 0 255
+     promoter               complement(3269..3220)
+                            /note=Promoter Position:3269	score:0.91
+                            /colour=255 0 255
+     promoter               complement(2531..2482)
+                            /note=Promoter Position:2531	score:0.96
+                            /colour=255 0 255
+     promoter               complement(2504..2455)
+                            /note=Promoter Position:2504	score:0.95
+                            /colour=255 0 255
+     promoter               complement(2461..2412)
+                            /note=Promoter Position:2461	score:0.97
+                            /colour=255 0 255
+     promoter               complement(1861..1812)
+                            /note=Promoter Position:1861	score:0.98
+                            /colour=255 0 255
+     promoter               complement(887..838)
+                            /note=Promoter Position:887	score:0.94
                             /colour=255 0 255
      terminator             19184..19207
                             /note="confidence:87	hp_score:-9.7	tail_score:-4.4267"
@@ -160,35 +292,43 @@
                             /note="confidence:91	hp_score:-5.3	tail_score:-6.14618"
      terminator             63348..63375
                             /note="confidence:100	hp_score:-11.5	tail_score:-4.85918"
-     CDS             4497..5018
-                     /gene="None"
+     CDS             47056..47433
+                     /gene="hypothetical protein P3TCK_22385"
                      /note=""
                      /colour=0 255 255
-     CDS             4383..4484
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             47553..47663
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             5312..6055
-                     /gene="None"
+     CDS             31606..33183
+                     /gene="predicted protein"
                      /note=""
                      /colour=0 255 255
-     CDS             72567..72686
+     CDS             28406..29110
+                     /gene="hypothetical protein plu2793"
+                     /note=""
+                     /colour=0 255 255
+     CDS             7424..7567
                      /gene="None"
                      /note="Intergenic"
                      /colour=160 32 240
-     CDS             70767..70958
+     CDS             6962..7411
                      /gene="None"
                      /note="Extended"
                      /colour=0 255 0
-     CDS             complement(76648..76520)
+     CDS             64599..64880
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             56463..58397
+                     /gene="DNA primase/helicase"
+                     /note=""
+                     /colour=0 255 255
+     CDS             70228..70437
                      /gene="None"
                      /note="Intergenic"
                      /colour=160 32 240
-     CDS             140..262
+     CDS             complement(76215..76018)
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             complement(2990..2853)
                      /gene="None"
                      /note="Intergenic"
                      /colour=160 32 240
@@ -196,51 +336,15 @@
                      /gene="None"
                      /note="Intergenic"
                      /colour=160 32 240
-     CDS             69599..69814
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             complement(2218..1847)
-                     /gene="None"
+     CDS             10526..11506
+                     /gene="hypothetical protein Coch_0901"
                      /note=""
                      /colour=0 255 255
-     CDS             6073..6522
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             72218..72367
-                     /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
-     CDS             243..365
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             35260..36375
-                     /gene="hypothetical protein AR158_C658R"
-                     /note="Extended"
-                     /colour=0 255 0
-     CDS             71794..71940
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             69967..70086
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
      CDS             40095..40226
                      /gene="None"
                      /note="Intergenic"
                      /colour=160 32 240
-     CDS             67044..67244
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             complement(74938..74810)
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             75431..75634
+     CDS             70760..70864
                      /gene="None"
                      /note="Intergenic"
                      /colour=160 32 240
@@ -248,71 +352,31 @@
                      /gene="None"
                      /note="Intergenic"
                      /colour=160 32 240
-     CDS             7424..7567
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             complement(1823..1518)
+     CDS             73914..74081
                      /gene="None"
                      /note=""
                      /colour=0 255 255
-     CDS             25415..25585
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             59137..59748
-                     /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
-     CDS             69444..69602
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             complement(4316..4014)
-                     /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
-     CDS             72364..72465
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             54894..55046
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             36415..36561
-                     /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
-     CDS             70760..70864
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             complement(1561..941)
+     CDS             45372..47051
+                     /gene="zinc finger Ran-binding domain-containing protein 3"
+                     /note=""
+                     /colour=0 255 255
+     CDS             44481..45065
+                     /gene="predicted protein"
+                     /note=""
+                     /colour=0 255 255
+     CDS             5312..6055
                      /gene="None"
                      /note=""
                      /colour=0 255 255
-     CDS             36577..36801
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             complement(2846..2550)
+     CDS             72748..73134
+                     /gene="hypothetical protein GFO_2479"
+                     /note=""
+                     /colour=0 255 255
+     CDS             4497..5018
                      /gene="None"
                      /note=""
                      /colour=0 255 255
-     CDS             59802..59927
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             6519..6965
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             70228..70437
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             69121..69270
+     CDS             complement(836..681)
                      /gene="None"
                      /note="Intergenic"
                      /colour=160 32 240
@@ -320,219 +384,19 @@
                      /gene="conserved phage protein"
                      /note="Extended"
                      /colour=0 255 0
-     CDS             69350..69481
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             31508..31612
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             45068..45370
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             20439..24176
-                     /gene="hypothetical protein GYMC10_2831"
-                     /note=""
-                     /colour=0 255 255
-     CDS             58467..58667
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             41148..41654
-                     /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
-     CDS             29650..29997
-                     /gene="hypothetical protein BacD2_24185"
-                     /note=""
-                     /colour=0 255 255
      CDS             complement(2426..2157)
                      /gene="None"
                      /note="Intergenic"
                      /colour=160 32 240
-     CDS             44481..45065
-                     /gene="predicted protein"
-                     /note=""
-                     /colour=0 255 255
-     CDS             33185..35206
-                     /gene="DNA polymerase III alpha subunit"
-                     /note=""
-                     /colour=0 255 255
-     CDS             56463..58397
-                     /gene="DNA primase/helicase"
-                     /note=""
-                     /colour=0 255 255
-     CDS             65382..66545
-                     /gene="hypothetical protein Coch_0858"
-                     /note=""
-                     /colour=0 255 255
-     CDS             26995..27624
-                     /gene="conserved hypothetical protein"
-                     /note=""
-                     /colour=0 255 255
-     CDS             70083..70244
+     CDS             69350..69481
                      /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             26060..26983
-                     /gene="DNA polymerase III alpha subunit"
-                     /note=""
-                     /colour=0 255 255
-     CDS             48626..49234
-                     /gene="hypothetical protein StreC_13696"
-                     /note=""
-                     /colour=0 255 255
-     CDS             16044..18110
-                     /gene="conserved hypothetical protein"
-                     /note=""
-                     /colour=0 255 255
-     CDS             42318..44480
-                     /gene="predicted protein"
-                     /note=""
-                     /colour=0 255 255
-     CDS             30456..31235
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             4383..4484
                      /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             7573..9453
-                     /gene="prophage LambdaSa1, N-acetylmuramoyl-L-alanine amidase, family 4"
-                     /note=""
-                     /colour=0 255 255
-     CDS             54461..54889
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             49266..49913
-                     /gene="hypothetical protein SNOG_10511"
-                     /note=""
-                     /colour=0 255 255
-     CDS             18174..19160
-                     /gene="hypothetical protein Bfra3_07067"
-                     /note=""
-                     /colour=0 255 255
-     CDS             67222..67629
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
+                     /note="Intergenic"
+                     /colour=160 32 240
      CDS             31285..31488
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             9477..10529
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             41754..42032
-                     /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
-     CDS             complement(3133..2927)
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             49917..52286
-                     /gene="ribonucleoside-diphosphate reductase large subunit"
-                     /note=""
-                     /colour=0 255 255
-     CDS             59924..60352
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             10526..11506
-                     /gene="hypothetical protein Coch_0901"
-                     /note=""
-                     /colour=0 255 255
-     CDS             complement(3225..3097)
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             complement(836..681)
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             31606..33183
-                     /gene="predicted protein"
-                     /note=""
-                     /colour=0 255 255
-     CDS             24959..25378
-                     /gene="bacteriophage P7 related protein"
-                     /note=""
-                     /colour=0 255 255
-     CDS             69825..69992
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             67641..68897
-                     /gene="conserved hypothetical protein"
-                     /note=""
-                     /colour=0 255 255
-     CDS             42025..42321
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             60378..60833
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             37767..38681
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             29073..29660
-                     /gene="protein 37 protein (Gp37)"
-                     /note=""
-                     /colour=0 255 255
-     CDS             58667..59092
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             73914..74081
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             13993..16041
-                     /gene="laminin subunit alpha-2 isoform b precursor"
-                     /note=""
-                     /colour=0 255 255
-     CDS             52717..54342
-                     /gene="A1"
-                     /note=""
-                     /colour=0 255 255
-     CDS             71411..71803
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             65072..65332
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             24221..24529
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             19940..20428
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             64599..64880
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             complement(4004..3678)
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             39139..40164
-                     /gene="predicted protein"
-                     /note=""
-                     /colour=0 255 255
-     CDS             63605..64609
-                     /gene="hypothetical protein tll1156"
-                     /note=""
-                     /colour=0 255 255
-     CDS             37361..37687
                      /gene="None"
                      /note=""
                      /colour=0 255 255
@@ -540,91 +404,27 @@
                      /gene="None"
                      /note=""
                      /colour=0 255 255
-     CDS             71956..72165
+     CDS             33185..35206
+                     /gene="DNA polymerase III alpha subunit"
+                     /note=""
+                     /colour=0 255 255
+     CDS             31508..31612
                      /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             52337..52717
-                     /gene="histone family protein DNA-binding protein"
-                     /note=""
-                     /colour=0 255 255
-     CDS             47660..48193
-                     /gene="Chain A, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H >gi|18655793|pdb|1JL2|B Chain B, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H >gi|18655794|pdb|1JL2|C Chain C, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H >gi|18655795|pdb|1JL2|D Chain D, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H"
-                     /note=""
-                     /colour=0 255 255
-     CDS             11507..13990
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             60941..63310
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             39139..40164
                      /gene="predicted protein"
-                     /note=""
-                     /colour=0 255 255
-     CDS             36820..37359
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             74200..74523
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             28406..29110
-                     /gene="hypothetical protein plu2793"
-                     /note=""
-                     /colour=0 255 255
-     CDS             73127..73705
-                     /gene="hypothetical protein GFO_2479"
-                     /note=""
-                     /colour=0 255 255
-     CDS             70984..71409
-                     /gene="conserved hypothetical protein"
                      /note=""
                      /colour=0 255 255
      CDS             24513..24944
                      /gene="Cupin 2 conserved barrel domain protein"
                      /note=""
                      /colour=0 255 255
-     CDS             complement(1001..870)
+     CDS             25415..25585
                      /gene="None"
                      /note="Intergenic"
                      /colour=160 32 240
-     CDS             55338..56096
-                     /gene="hypothetical protein phiCTP1_gp38"
-                     /note=""
-                     /colour=0 255 255
-     CDS             complement(76215..76018)
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             55103..55321
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             6962..7411
-                     /gene="None"
-                     /note="Extended"
-                     /colour=0 255 0
-     CDS             29957..30454
-                     /gene="envelope glycoprotein"
-                     /note=""
-                     /colour=0 255 255
-     CDS             complement(76510..76292)
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             66538..67038
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             48190..48618
-                     /gene="putative purine phosphoribosyltransferase-related protein"
-                     /note=""
-                     /colour=0 255 255
-     CDS             70434..70709
-                     /gene="hypothetical protein CA_C1211"
-                     /note=""
-                     /colour=0 255 255
-     CDS             63447..63590
+     CDS             69825..69992
                      /gene="None"
                      /note=""
                      /colour=0 255 255
@@ -632,11 +432,279 @@
                      /gene="Radical SAM domain protein"
                      /note=""
                      /colour=0 255 255
-     CDS             72748..73134
+     CDS             49917..52286
+                     /gene="ribonucleoside-diphosphate reductase large subunit"
+                     /note=""
+                     /colour=0 255 255
+     CDS             69599..69814
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             69967..70086
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             complement(2846..2550)
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             37767..38681
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             45068..45370
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             75431..75634
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             complement(4316..4014)
+                     /gene="None"
+                     /note="Extended"
+                     /colour=0 255 0
+     CDS             complement(15964..15854)
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             complement(3133..2927)
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             65072..65332
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             complement(3225..3097)
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             71411..71803
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             37361..37687
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             26060..26983
+                     /gene="DNA polymerase III alpha subunit"
+                     /note=""
+                     /colour=0 255 255
+     CDS             11507..13990
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             72567..72686
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             20439..24176
+                     /gene="hypothetical protein GYMC10_2831"
+                     /note=""
+                     /colour=0 255 255
+     CDS             19940..20428
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             30456..31235
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             66538..67038
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             36577..36801
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             58467..58667
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             42318..44480
+                     /gene="predicted protein"
+                     /note=""
+                     /colour=0 255 255
+     CDS             47553..47663
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             74200..74523
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             complement(67171..67022)
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             13993..16041
+                     /gene="laminin subunit alpha-2 isoform b precursor"
+                     /note=""
+                     /colour=0 255 255
+     CDS             52337..52717
+                     /gene="histone family protein DNA-binding protein"
+                     /note=""
+                     /colour=0 255 255
+     CDS             55338..56096
+                     /gene="hypothetical protein phiCTP1_gp38"
+                     /note=""
+                     /colour=0 255 255
+     CDS             63605..64609
+                     /gene="hypothetical protein tll1156"
+                     /note=""
+                     /colour=0 255 255
+     CDS             complement(76648..76520)
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             6519..6965
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             complement(15941..15699)
+                     /gene="None"
+                     /note="Extended"
+                     /colour=0 255 0
+     CDS             6073..6522
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             36415..36561
+                     /gene="None"
+                     /note="Extended"
+                     /colour=0 255 0
+     CDS             54894..55046
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             complement(1001..870)
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             36820..37359
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             67222..67629
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             54461..54889
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             69121..69270
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             complement(1823..1518)
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             48626..49234
+                     /gene="hypothetical protein StreC_13696"
+                     /note=""
+                     /colour=0 255 255
+     CDS             243..365
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             72218..72367
+                     /gene="None"
+                     /note="Extended"
+                     /colour=0 255 0
+     CDS             9477..10529
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             complement(4004..3678)
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             48190..48618
+                     /gene="putative purine phosphoribosyltransferase-related protein"
+                     /note=""
+                     /colour=0 255 255
+     CDS             59137..59748
+                     /gene="None"
+                     /note="Extended"
+                     /colour=0 255 0
+     CDS             59924..60352
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             67641..68897
+                     /gene="conserved hypothetical protein"
+                     /note=""
+                     /colour=0 255 255
+     CDS             35260..36375
+                     /gene="hypothetical protein AR158_C658R"
+                     /note="Extended"
+                     /colour=0 255 0
+     CDS             70083..70244
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             complement(74938..74810)
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             56136..56456
+                     /gene="hypothetical protein BRADO3615"
+                     /note=""
+                     /colour=0 255 255
+     CDS             65382..66545
+                     /gene="hypothetical protein Coch_0858"
+                     /note=""
+                     /colour=0 255 255
+     CDS             complement(67031..66891)
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             60941..63310
+                     /gene="predicted protein"
+                     /note=""
+                     /colour=0 255 255
+     CDS             complement(1561..941)
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             41148..41654
+                     /gene="None"
+                     /note="Extended"
+                     /colour=0 255 0
+     CDS             29957..30454
+                     /gene="envelope glycoprotein"
+                     /note=""
+                     /colour=0 255 255
+     CDS             24221..24529
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             41754..42032
+                     /gene="None"
+                     /note="Extended"
+                     /colour=0 255 0
+     CDS             29073..29660
+                     /gene="protein 37 protein (Gp37)"
+                     /note=""
+                     /colour=0 255 255
+     CDS             19231..19803
+                     /gene="hypothetical protein Coch_0856"
+                     /note=""
+                     /colour=0 255 255
+     CDS             73127..73705
                      /gene="hypothetical protein GFO_2479"
                      /note=""
                      /colour=0 255 255
-     CDS             complement(2990..2853)
+     CDS             26995..27624
+                     /gene="conserved hypothetical protein"
+                     /note=""
+                     /colour=0 255 255
+     CDS             71794..71940
                      /gene="None"
                      /note="Intergenic"
                      /colour=160 32 240
@@ -644,20 +712,100 @@
                      /gene="recombinase A"
                      /note=""
                      /colour=0 255 255
-     CDS             56136..56456
-                     /gene="hypothetical protein BRADO3615"
+     CDS             47660..48193
+                     /gene="Chain A, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H >gi|18655793|pdb|1JL2|B Chain B, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H >gi|18655794|pdb|1JL2|C Chain C, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H >gi|18655795|pdb|1JL2|D Chain D, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H"
                      /note=""
                      /colour=0 255 255
-     CDS             47056..47433
-                     /gene="hypothetical protein P3TCK_22385"
+     CDS             70984..71409
+                     /gene="conserved hypothetical protein"
                      /note=""
                      /colour=0 255 255
-     CDS             19231..19803
-                     /gene="hypothetical protein Coch_0856"
+     CDS             72364..72465
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             70434..70709
+                     /gene="hypothetical protein CA_C1211"
                      /note=""
                      /colour=0 255 255
-     CDS             45372..47051
-                     /gene="zinc finger Ran-binding domain-containing protein 3"
+     CDS             16044..18110
+                     /gene="conserved hypothetical protein"
+                     /note=""
+                     /colour=0 255 255
+     CDS             69444..69602
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             60378..60833
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             70767..70958
+                     /gene="None"
+                     /note="Extended"
+                     /colour=0 255 0
+     CDS             63447..63590
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             67044..67244
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             18174..19160
+                     /gene="hypothetical protein Bfra3_07067"
+                     /note=""
+                     /colour=0 255 255
+     CDS             42025..42321
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             24959..25378
+                     /gene="bacteriophage P7 related protein"
+                     /note=""
+                     /colour=0 255 255
+     CDS             59802..59927
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             58667..59092
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             140..262
+                     /gene="None"
+                     /note="Intergenic"
+                     /colour=160 32 240
+     CDS             71956..72165
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             55103..55321
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             7573..9453
+                     /gene="prophage LambdaSa1, N-acetylmuramoyl-L-alanine amidase, family 4"
+                     /note=""
+                     /colour=0 255 255
+     CDS             complement(76510..76292)
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             29650..29997
+                     /gene="hypothetical protein BacD2_24185"
+                     /note=""
+                     /colour=0 255 255
+     CDS             49266..49913
+                     /gene="hypothetical protein SNOG_10511"
+                     /note=""
+                     /colour=0 255 255
+     CDS             complement(2218..1847)
+                     /gene="None"
+                     /note=""
+                     /colour=0 255 255
+     CDS             52717..54342
+                     /gene="A1"
                      /note=""
                      /colour=0 255 255
 

@@ -1,0 +1,130 @@
+Id	Location	Hits	Best bit score	Best evalue	Best identity	Alignment Length	Best hit gi	Definition	Organism
+phi13_1~11	7573-9453	61	147.902474521	3.98223590531e-33	115.0	319	298480073	prophage LambdaSa1, N-acetylmuramoyl-L-alanine amidase, family 4	Bacteroides sp. D22
+phi13_1~13	10526-11506	1	42.3577907199	0.0895037513104	33.0	136	256819738	hypothetical protein Coch_0901	Capnocytophaga ochracea DSM 7271
+phi13_1~15	13993-16041	12	56.224975453	1.38182700342e-05	125.0	528	119466532	laminin subunit alpha-2 isoform b precursor	Homo sapiens
+phi13_1~17	16044-18110	500	157.147264343	7.40832122712e-36	77.0	165	307564893	conserved hypothetical protein	Prevotella amnii CRIS 21A-A
+phi13_1~18	18174-19160	10	65.469765275	8.65791351062e-09	79.0	339	255008882	hypothetical protein Bfra3_07067	Bacteroides fragilis 3_1_12
+phi13_1~19	19231-19803	1	45.4393873273	0.00328971823279	39.0	172	256819694	hypothetical protein Coch_0856	Capnocytophaga ochracea DSM 7271
+phi13_1~21	20439-24176	500	158.688062647	4.26661917253e-36	139.0	414	261406668	hypothetical protein GYMC10_2831	Geobacillus sp. Y412MC10
+phi13_1~23	24513-24944	1	43.1281898718	0.0118544499718	24.0	79	312442583	Cupin 2 conserved barrel domain protein	Paludibacter propionicigenes WB4
+phi13_1~24	24959-25378	160	97.826529652	4.05656034787e-19	56.0	138	84393141	bacteriophage P7 related protein	Vibrio splendidus 12B01
+phi13_1~25~9	25423-25953	1	51.602580542	3.39484388112e-05	28.0	89	200003987	conserved phage protein	Bacteroides phage B40-8
+phi13_1~26	26060-26983	142	54.2989775734	1.93577951411e-05	26.0	56	226313025	DNA polymerase III alpha subunit	Brevibacillus brevis NBRC 100599
+phi13_1~27	26995-27624	45	127.101697422	1.18368508478e-27	65.0	153	301167814	conserved hypothetical protein	Bacteriovorax marinus SJ
+phi13_1~28	27593-28390	500	129.798094453	2.61248240855e-28	91.0	260	284164674	Radical SAM domain protein	Haloterrigena turkmenica DSM 5511
+phi13_1~29	28406-29110	500	281.951926941	3.06916700182e-74	133.0	223	37526683	hypothetical protein plu2793	Photorhabdus luminescens subsp. laumondii TTO1
+phi13_1~30	29073-29660	25	51.9877801179	4.05192553736e-05	25.0	87	288926640	protein 37 protein (Gp37)	Prevotella buccae D17
+phi13_1~31	29650-29997	2	59.3065720603	1.43108381065e-07	36.0	113	260174978	hypothetical protein BacD2_24185	Bacteroides sp. D2
+phi13_1~32	29957-30454	2	40.8169924163	0.0508141205977	35.0	110	75370543	envelope glycoprotein	Human immunodeficiency virus 1
+phi13_1~35	31606-33183	500	221.475593522	1.84655138128e-55	142.0	432	265763455	predicted protein	Bacteroides sp. 2_1_16
+phi13_1~36	33185-35206	500	357.45104382	3.34113684972e-96	220.0	674	237711879	DNA polymerase III alpha subunit	Bacteroides sp. 9_1_42FAA
+phi13_1~37~19	35260-36375	20	73.1737567933	5.04043346978e-11	66.0	209	157953848	hypothetical protein AR158_C658R	Paramecium bursaria Chlorella virus AR158
+phi13_1~43	39139-40164	134	106.686119898	3.49551000673e-21	90.0	348	237711870	predicted protein	Bacteroides sp. 9_1_42FAA
+phi13_1~44	40165-41136	500	301.211905736	1.00906939466e-79	150.0	318	189502646	recombinase A	Candidatus Amoebophilus asiaticus 5a2
+phi13_1~48	42318-44480	29	154.450867312	4.41870828369e-35	168.0	745	237711871	predicted protein	Bacteroides sp. 9_1_42FAA
+phi13_1~49	44481-45065	3	51.9877801179	3.95643858314e-05	50.0	184	168017937	predicted protein	Physcomitrella patens subsp. patens
+phi13_1~51	45372-47051	500	229.17958504	1.03168478125e-57	164.0	524	298376514	zinc finger Ran-binding domain-containing protein 3	Bacteroides sp. 3_1_19
+phi13_1~52	47056-47433	23	68.5513618823	2.36552595022e-10	48.0	130	90412703	hypothetical protein P3TCK_22385	Photobacterium profundum 3TCK
+phi13_1~53	47660-48193	500	90.1225381337	1.03029414088e-16	62.0	166	18655792	Chain A, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H >gi|18655793|pdb|1JL2|B Chain B, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H >gi|18655794|pdb|1JL2|C Chain C, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H >gi|18655795|pdb|1JL2|D Chain D, Crystal Structure Of Tceo Rnase H-A Chimera Combining The Folding Core From T. Thermophilus Rnase H And The Remaining Region Of E. Coli Rnase H	
+phi13_1~54	48190-48618	500	80.1073491598	7.68988559605e-14	53.0	137	157413431	putative purine phosphoribosyltransferase-related protein	Prochlorococcus marinus str. MIT 9215
+phi13_1~55	48626-49234	2	52.3729796938	3.40800579227e-05	54.0	206	256767597	hypothetical protein StreC_13696	Streptomyces sp. C
+phi13_1~56	49266-49913	3	64.3141665472	1.00629974108e-08	40.0	152	169614728	hypothetical protein SNOG_10511	Phaeosphaeria nodorum SN15
+phi13_1~57	49917-52286	500	861.29208912	0.0	441.0	805	86134367	ribonucleoside-diphosphate reductase large subunit	Polaribacter sp. MED152
+phi13_1~58	52337-52717	21	47.7505847828	0.00044870642528	27.0	100	281357086	histone family protein DNA-binding protein	Victivallis vadensis ATCC BAA-548
+phi13_1~59	52717-54342	6	155.221266464	1.69307152383e-35	132.0	465	46401741	A1	Enterobacteria phage T5
+phi13_1~62	55338-56096	51	62.3881686676	5.56676091411e-08	35.0	86	304360700	hypothetical protein phiCTP1_gp38	Clostridium phage phiCTP1
+phi13_1~63	56136-56456	57	125.175699542	2.12292875008e-27	58.0	103	146340571	hypothetical protein BRADO3615	Bradyrhizobium sp. ORS278
+phi13_1~64	56463-58397	100	103.989722867	5.55282869258e-20	80.0	269	237713714	DNA primase/helicase	Bacteroides sp. D1
+phi13_1~70	60941-63310	440	185.266833385	2.3924841461e-44	163.0	586	145350935	predicted protein	Ostreococcus lucimarinus CCE9901
+phi13_1~72	63605-64609	11	168.703251621	9.22701591056e-40	106.0	322	22298699	hypothetical protein tll1156	Thermosynechococcus elongatus BP-1
+phi13_1~75	65382-66545	1	53.9137779975	4.16355025502e-05	58.0	259	256819696	hypothetical protein Coch_0858	Capnocytophaga ochracea DSM 7271
+phi13_1~79	67641-68897	303	177.177642291	2.85557857783e-42	130.0	395	261881105	conserved hypothetical protein	Prevotella bergensis DSM 17361
+phi13_1~82	70434-70709	2	51.217380966	3.83031741752e-05	26.0	70	15894494	hypothetical protein CA_C1211	Clostridium acetobutylicum ATCC 824
+phi13_1~84	70984-71409	1	42.3577907199	0.0205644132259	43.0	131	300775616	conserved hypothetical protein	Chryseobacterium gleum ATCC 35910
+phi13_1~88	72748-73134	1	65.8549648509	1.59265022174e-09	60.0	168	120436816	hypothetical protein GFO_2479	Gramella forsetii KT0803
+phi13_1~89	73127-73705	1	80.4925487358	1.10749555539e-13	67.0	199	120436816	hypothetical protein GFO_2479	Gramella forsetii KT0803
+intergenic~25	140-262	0	0	inf	0	0	None	None	None
+intergenic~12	243-365	0	0	inf	0	0	None	None	None
+intergenic~421	836-681	0	0	inf	0	0	None	None	None
+intergenic~422	1001-870	0	0	inf	0	0	None	None	None
+phi13_1~1	1561-941	0	0	inf	0	0	None	None	None
+phi13_1~2	1823-1518	0	0	inf	0	0	None	None	None
+phi13_1~3	2218-1847	0	0	inf	0	0	None	None	None
+intergenic~419	2426-2157	0	0	inf	0	0	None	None	None
+phi13_1~4	2846-2550	0	0	inf	0	0	None	None	None
+intergenic~407	2990-2853	0	0	inf	0	0	None	None	None
+intergenic~416	3133-2927	0	0	inf	0	0	None	None	None
+intergenic~405	3225-3097	0	0	inf	0	0	None	None	None
+intergenic~411	4004-3678	0	0	inf	0	0	None	None	None
+phi13_1~5~10	4316-4014	0	0	inf	0	0	None	None	None
+intergenic~1	4383-4484	0	0	inf	0	0	None	None	None
+phi13_1~6	4497-5018	0	0	inf	0	0	None	None	None
+phi13_1~7	5312-6055	0	0	inf	0	0	None	None	None
+phi13_1~8	6073-6522	0	0	inf	0	0	None	None	None
+phi13_1~9	6519-6965	0	0	inf	0	0	None	None	None
+phi13_1~10~12	6962-7411	0	0	inf	0	0	None	None	None
+intergenic~28	7424-7567	0	0	inf	0	0	None	None	None
+phi13_1~12	9477-10529	0	0	inf	0	0	None	None	None
+phi13_1~14	11507-13990	0	0	inf	0	0	None	None	None
+phi13_1~16~17	15941-15699	0	0	inf	0	0	None	None	None
+intergenic~241	15964-15854	0	0	inf	0	0	None	None	None
+phi13_1~20	19940-20428	0	0	inf	0	0	None	None	None
+phi13_1~22	24221-24529	0	0	inf	0	0	None	None	None
+intergenic~30	25415-25585	0	0	inf	0	0	None	None	None
+phi13_1~33	30456-31235	0	0	inf	0	0	None	None	None
+phi13_1~34	31285-31488	0	0	inf	0	0	None	None	None
+intergenic~31	31508-31612	0	0	inf	0	0	None	None	None
+phi13_1~38~21	36415-36561	0	0	inf	0	0	None	None	None
+intergenic~32	36577-36801	0	0	inf	0	0	None	None	None
+phi13_1~39	36820-37359	0	0	inf	0	0	None	None	None
+phi13_1~40	37361-37687	0	0	inf	0	0	None	None	None
+phi13_1~41	37767-38681	0	0	inf	0	0	None	None	None
+phi13_1~42	38738-39139	0	0	inf	0	0	None	None	None
+intergenic~33	40095-40226	0	0	inf	0	0	None	None	None
+phi13_1~45~13	41148-41654	0	0	inf	0	0	None	None	None
+phi13_1~46~16	41754-42032	0	0	inf	0	0	None	None	None
+phi13_1~47	42025-42321	0	0	inf	0	0	None	None	None
+phi13_1~50	45068-45370	0	0	inf	0	0	None	None	None
+intergenic~34	47553-47663	0	0	inf	0	0	None	None	None
+phi13_1~60	54461-54889	0	0	inf	0	0	None	None	None
+intergenic~35	54894-55046	0	0	inf	0	0	None	None	None
+phi13_1~61	55103-55321	0	0	inf	0	0	None	None	None
+phi13_1~65	58467-58667	0	0	inf	0	0	None	None	None
+phi13_1~66	58667-59092	0	0	inf	0	0	None	None	None
+phi13_1~67~2	59137-59748	0	0	inf	0	0	None	None	None
+intergenic~36	59802-59927	0	0	inf	0	0	None	None	None
+phi13_1~68	59924-60352	0	0	inf	0	0	None	None	None
+phi13_1~69	60378-60833	0	0	inf	0	0	None	None	None
+phi13_1~71	63447-63590	0	0	inf	0	0	None	None	None
+phi13_1~73	64599-64880	0	0	inf	0	0	None	None	None
+phi13_1~74	65072-65332	0	0	inf	0	0	None	None	None
+phi13_1~76	66538-67038	0	0	inf	0	0	None	None	None
+intergenic~239	67031-66891	0	0	inf	0	0	None	None	None
+phi13_1~77	67171-67022	0	0	inf	0	0	None	None	None
+intergenic~38	67044-67244	0	0	inf	0	0	None	None	None
+phi13_1~78	67222-67629	0	0	inf	0	0	None	None	None
+intergenic~41	68976-69134	0	0	inf	0	0	None	None	None
+intergenic~42	69121-69270	0	0	inf	0	0	None	None	None
+intergenic~48	69350-69481	0	0	inf	0	0	None	None	None
+intergenic~40	69444-69602	0	0	inf	0	0	None	None	None
+intergenic~46	69599-69814	0	0	inf	0	0	None	None	None
+phi13_1~80	69825-69992	0	0	inf	0	0	None	None	None
+intergenic~49	69967-70086	0	0	inf	0	0	None	None	None
+phi13_1~81	70083-70244	0	0	inf	0	0	None	None	None
+intergenic~53	70228-70437	0	0	inf	0	0	None	None	None
+intergenic~54	70760-70864	0	0	inf	0	0	None	None	None
+phi13_1~83~4	70767-70958	0	0	inf	0	0	None	None	None
+phi13_1~85	71411-71803	0	0	inf	0	0	None	None	None
+intergenic~55	71794-71940	0	0	inf	0	0	None	None	None
+phi13_1~86	71956-72165	0	0	inf	0	0	None	None	None
+phi13_1~87~8	72218-72367	0	0	inf	0	0	None	None	None
+intergenic~57	72364-72465	0	0	inf	0	0	None	None	None
+intergenic~56	72567-72686	0	0	inf	0	0	None	None	None
+phi13_1~90	73914-74081	0	0	inf	0	0	None	None	None
+phi13_1~91	74200-74523	0	0	inf	0	0	None	None	None
+intergenic~77	74938-74810	0	0	inf	0	0	None	None	None
+intergenic~63	75431-75634	0	0	inf	0	0	None	None	None
+intergenic~80	75979-75818	0	0	inf	0	0	None	None	None
+phi13_1~92	76215-76018	0	0	inf	0	0	None	None	None
+phi13_1~93	76510-76292	0	0	inf	0	0	None	None	None
+intergenic~68	76648-76520	0	0	inf	0	0	None	None	None

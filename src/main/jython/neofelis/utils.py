@@ -363,14 +363,19 @@ def cachedBlast(fileName, blastLocation, database, eValue, query, pipeline, remo
                                       stdout = output)
     while blastProcess.poll() == None:
       if pipeline.exception:
-        blastProcess.kill()
+        print "Stopping in blast"
+        psProcess = subprocess.Popen(["ps", "aux"], stdout = subprocess.PIPE)
+        awkProcess = subprocess.Popen(["awk", "/" + " ".join(command).replace("/", "\\/") + "/"], stdin = psProcess.stdout, stdout = subprocess.PIPE)
+        for line in awkProcess.stdout:
+          subprocess.Popen(["kill", "-9", re.split(r"\s+", line)[1]])
+        output.close()
         raise pipeline.exception
     output.close()
   try:
     return parseBlast(fileName)
   except SAXParseException:
     print 'Retry'
-    return cachedBlast(fileName, blastLocation, database, eValue, query, remote, True)
+    return cachedBlast(fileName, blastLocation, database, eValue, query, pipeline, remote, True)
 
 def getGCContent(genome):
   """

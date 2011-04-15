@@ -184,7 +184,7 @@ def removeCommonStops(genes):
     result[temp.query] = temp
   return result
 
-def findIntergenics(query, genes, name, minLength, blast, database, eValue):
+def findIntergenics(query, genes, name, minLength, blast, database, eValue, pipeline):
   """
   query:     File name of the fasta file.
   genes:     A dictionary that maps query names to Iteration objects
@@ -211,7 +211,7 @@ def findIntergenics(query, genes, name, minLength, blast, database, eValue):
   
   writePotentialGenes(genome, potentialGenes)
   
-  result = utils.cachedBlast("intergenicBlasts/" + name + ".blastp.xml", blast, database, eValue, "intergenics.fas")
+  result = utils.cachedBlast("intergenicBlasts/" + name + ".blastp.xml", blast, database, eValue, "intergenics.fas", pipeline)
   os.remove("intergenics.fas")
   result = removeCommonStops(result)
   for r in result.values():

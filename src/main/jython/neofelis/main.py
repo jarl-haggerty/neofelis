@@ -21,7 +21,10 @@ limitations under the License.
 """
 
 import os
+import re
 import sys
+import socket
+import threading
 from getopt import getopt
 from neofelis import pipeline
 from neofelis import utils
@@ -43,7 +46,24 @@ from java.lang import Class
 from java.lang import Runtime
 from java.lang import String
 
+class NeofelisThread(threading.Thread):
+  def __init__(self, arguments):
+    threading.Thread.__init__(self)
+    self.arguments = arguments
+    self.name = "NeofelisThread"
+    
+  def run(self):
+    self.program = Main()
+    print "NeofelisThread", self.arguments
+    self.program.run(self.arguments)
+
+  def terminate(self):
+    self.program.pipeline.exception = pipeline.PipelineException()
+
 class Main():
+  def __init__(self):
+    self.shutDown = False
+    
   def getArguments():
     """
     This function brings up a window to retreive any required arguments.  This function brings up a window with fields for each argument, filled with any arguments already given.
@@ -284,12 +304,13 @@ class Main():
 -q --query                 Genome or directory of genomes to run pipeline on
 -h --help                  Print help documentation
 -s --swing                 Use a swing interface
--p --pipe                  Neofelis will be set to read lines of command line arguments from the pipe, "neofelis_pipe".  For each line read a new thread will be spawned to process the query.
+-v --server                Neofelis will be set to read lines of command line arguments from the socket 1122 on localhost.  For each line read a new thread will be spawned to process the query.  Only one connection will be accepted per process.
+-u --shutdown              If Neofelis is already running as a server then this will shut it down.
 -n --no-swing              If any required arguments are missing then the program will exit instead of using a Swing interface to get the missing arguments
 -a --email                 Email address that results will be sent to.
 """
     try:
-      opts, args = getopt(arguments, "m:d:g:b:e:l:t:c:q:hsna:", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "ldf-cutoff=", "scaffolding-distance=", "query=", "help", "swing", "no-swing", "email="])
+      opts, args = getopt(arguments, "m:d:g:b:e:l:t:c:q:hsna:v", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "ldf-cutoff=", "scaffolding-distance=", "query=", "help", "swing", "no-swing", "email=", "server"])
     except GetoptError:
       print documentation
       sys.exit(0)
@@ -308,6 +329,7 @@ class Main():
     self.noSwing = False
     self.email = ""
     self.remote = False
+    self.server = False
     
     for opt, arg in opts:
       if opt in ("-q", "--query"):
@@ -336,18 +358,53 @@ class Main():
         self.noSwing = True
       elif opt in ("-a", "--email"):
         self.email = arg
+      elif opt in ("-v", "--server"):
+        self.server = True
       elif opt in ("-h", "--help"):
         print documentation
         sys.exit(0)
-    """
-    if pipe:
-      os.mkfifo("neofelis_pipe", "r")
-      pipe = open("neofelis_pipe", "r")
-      while True:
-        line = pipe.readLine()
-      if line:
-        threading.Thread(target = lambda x: Main().run(x), args = re.split(r"\s+", line))
-    """ 
+        
+    if self.server:
+      print self.server
+      s = socket.socket()
+      s.bind(("localhost", 1122))
+      s.listen(5)
+      running = True
+      try:
+        while running:
+          connection, address = s.accept()
+          recieved, abort = "", False
+          print "listening"
+          while not "\n" in recieved:
+            data = connection.recv(4096)
+            if data:
+              recieved += data
+            elif data == None:
+              abort = True
+              break
+          connection.close()
+          print recieved, abort
+          if abort:
+            continue
+          arguments = re.split(r"\s+", recieved[:recieved.find("\n")])
+          print arguments, recieved, running
+          if "--server" in arguments or "-v" in arguments:
+            print "ERROR: Can't run a neofelis server within a neofelis server, you just had to try that didn't you?"
+          elif "--shutdown" in arguments or "-u" in arguments:
+            running = False
+          else:
+            print "Threading"
+            NeofelisThread(arguments).start()
+          print "Continue", running
+      except Exception, e:
+        print e
+      finally:
+        for thread in threading.enumerate():
+          if isinstance(thread, NeofelisThread):
+            thread.terminate()
+        s.close()
+        return
+      
     if not self.blastLocation or not self.database or not self.genemarkLocation or not self.transtermLocation or self.sources == [""]:
       if self.noSwing:
         sys.exit(1)
@@ -365,7 +422,8 @@ class Main():
         self.queries.append(source)
         
     print self.blastLocation, self.genemarkLocation, self.transtermLocation, self.database, self.eValue, self.matrix, self.minLength, self.scaffoldingDistance, self.promoterScoreCutoff, self.queries, self.swingInterface, self.email
-    pipeline.Pipeline().run(self.blastLocation, self.genemarkLocation, self.transtermLocation, self.database, self.eValue, self.matrix, self.minLength, self.scaffoldingDistance, self.promoterScoreCutoff, self.queries, self.swingInterface, self.email)
+    self.pipeline = pipeline.Pipeline()
+    self.pipeline.run(self.blastLocation, self.genemarkLocation, self.transtermLocation, self.database, self.eValue, self.matrix, self.minLength, self.scaffoldingDistance, self.promoterScoreCutoff, self.queries, self.swingInterface, self.email)
 
 if __name__ == "__main__":
   Main().run(sys.argv)

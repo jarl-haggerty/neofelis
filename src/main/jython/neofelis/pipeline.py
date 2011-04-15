@@ -39,7 +39,7 @@ from javax.swing import JLabel
 from javax.swing import JButton
 from javax.swing import JProgressBar
 from javax.swing import AbstractAction
-from javax.swing import WindowAdapter
+from java.awt.event import WindowAdapter
 from java.awt import GridBagLayout
 from java.awt import GridBagConstraints
 
@@ -61,6 +61,9 @@ class DoneAction(AbstractAction):
 class PipelineWindowAdapter(WindowAdapter):
   def __init__(self, pipeline):
     self.pipeline = pipeline
+
+  def windowClosing(self, event):
+    self.pipeline.frame.dispose()
     
   def windowClosed(self, event):
     self.pipeline.exception = PipelineException()
@@ -100,6 +103,7 @@ class Pipeline():
     self.numJobs = len(queries)
     if swing:
       self.frame = JFrame("Neofelis")
+      self.frame.addWindowListener(PipelineWindowAdapter(self))
       contentPane = JPanel(GridBagLayout())
       self.frame.setContentPane(contentPane)
       self.globalLabel = JLabel(max(queries, key = len))
@@ -221,15 +225,15 @@ class Pipeline():
         queryFile.close()
 
         self.updateProgress(query)
-        initialGenes = genemark.findGenes(swapFileName, name, blastLocation, database, eValue, genemarkLocation, matrix)
+        initialGenes = genemark.findGenes(swapFileName, name, blastLocation, database, eValue, genemarkLocation, matrix, self)
         #artemis.writeArtemisFile(os.path.splitext(query)[0] + ".genemark.art", genome, initialGenes.values())
       
         self.updateProgress(query)
-        extendedGenes = extend.extendGenes(swapFileName, initialGenes, name, blastLocation, database, eValue)
+        extendedGenes = extend.extendGenes(swapFileName, initialGenes, name, blastLocation, database, eValue, self)
         #artemis.writeArtemisFile(os.path.splitext(query)[0] + ".extended.art", genome, extendedGenes.values())
     
         self.updateProgress(query)
-        intergenicGenes = intergenic.findIntergenics(swapFileName, extendedGenes, name, minLength, blastLocation, database, eValue)
+        intergenicGenes = intergenic.findIntergenics(swapFileName, extendedGenes, name, minLength, blastLocation, database, eValue, self)
         #artemis.writeArtemisFile(os.path.splitext(query)[0] + ".intergenic.art", genome, intergenicGenes.values())
         genes = {}
         for k, v in extendedGenes.items() + intergenicGenes.items():

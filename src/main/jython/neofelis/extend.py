@@ -145,7 +145,7 @@ def applyExtensions(genome, genes, extendedGenes):
       result[gene].note = "Extended"
   return result
 
-def extendGenes(query, genes, name, blast, database, eValue):
+def extendGenes(query, genes, name, blast, database, eValue, pipeline):
   """
   query:    File name of the query.
   ganes:    A dictionary that maps query names to Iteration objects
@@ -164,6 +164,6 @@ def extendGenes(query, genes, name, blast, database, eValue):
   extensions = getExtensions(genome, genes.values())
   
   writeExtensions(genome, extensions)
-  extendedGenes = utils.cachedBlast("extendedBlasts/" + name + ".blastp.xml", blast, database, eValue, "extensions.fas")
+  extendedGenes = utils.cachedBlast("extendedBlasts/" + name + ".blastp.xml", blast, database, eValue, "extensions.fas", pipeline)
   os.remove("extensions.fas")
   return applyExtensions(genome, genes, extendedGenes)
