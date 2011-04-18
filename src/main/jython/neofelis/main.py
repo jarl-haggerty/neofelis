@@ -64,7 +64,7 @@ class Main():
   def __init__(self):
     self.shutDown = False
     
-  def getArguments():
+  def getArguments(self):
     """
     This function brings up a window to retreive any required arguments.  This function brings up a window with fields for each argument, filled with any arguments already given.
     While this window is visible the program will wait, once it is no longer visible all the arguments will be filled with the entries in the fields.

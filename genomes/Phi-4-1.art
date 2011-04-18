@@ -26,30 +26,6 @@
                             /note="confidence:89	hp_score:-7.9	tail_score:-5.14985"
      terminator             complement(123350..123327)
                             /note="confidence:82	hp_score:-6.1	tail_score:-5.12707"
-     CDS             complement(122094..121930)
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             80941..81093
-                     /gene="None"
-                     /note="Intergenic"
-                     /colour=160 32 240
-     CDS             112477..112695
-                     /gene="conserved hypothetical protein; putative phosphoesterase"
-                     /note=""
-                     /colour=0 255 255
-     CDS             complement(135992..135777)
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             101188..101592
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
-     CDS             95969..96406
-                     /gene="None"
-                     /note=""
-                     /colour=0 255 255
      CDS             19538..19792
                      /gene="None"
                      /note="Extended"

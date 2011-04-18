@@ -21,7 +21,7 @@ limitations under the License.
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.curious</groupId>
   <artifactId>neofelis</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>Neofelis</name>
   <description>An automated genome annotator</description>
   <url></url>
