@@ -21,11 +21,19 @@ limitations under the License.
 import os
 import re
 import copy
+from xml.dom import minidom
 from org.xml.sax.helpers import XMLReaderFactory
 from org.xml.sax import XMLReader
 from org.xml.sax import InputSource
+from org.xml.sax import EntityResolver
 from org.xml.sax.helpers import DefaultHandler
+from javax.xml.parsers import DocumentBuilderFactory
 from java.lang import ClassLoader
+from javax.xml.transform import OutputKeys
+from javax.xml.transform import TransformerFactory
+from javax.xml.transform.dom import DOMSource
+from javax.xml.transform.stream import StreamResult
+from java.io import File
 
 class Node():
   """
@@ -142,6 +150,7 @@ class Collector(DefaultHandler):
       query = self.root.children["Iteration_query-def"][0].text
       if query[:query.find(":")] in self.genes:
         writeNode(self.root.parent, self.output)
+          
       self.root.parent.clearChildren()
       
     if self.root.parent:
@@ -156,6 +165,26 @@ class Collector(DefaultHandler):
   def resolveEntity(self, publicId, systemId):
     return InputSource(ClassLoader.getSystemResourceAsStream("dtds/" + os.path.split(systemId)[1]))
 
+class NeofelisEntityResolver(EntityResolver):
+  def resolveEntity(self, publicId, systemId):
+    return InputSource(ClassLoader.getSystemResourceAsStream("dtds/" + os.path.split(systemId)[1]))
+
+def writeHeader(oldDocument, newDocument):
+  print oldDocument.documentElement
+  print oldDocument.documentElement.childNodes
+  for i in range(oldDocument.documentElement.childNodes.length):
+    if oldDocument.documentElement.childNodes.item(i).nodeName != "BlastOutput_iterations":
+      newDocument.documentElement.appendChild(newDocument.importNode(oldDocument.documentElement.childNodes.item(i), True))
+  newDocument.documentElement.appendChild(newDocument.createElement("BlastOutput_iterations"))  
+
+def writeGenes(oldDocument, newDocument, genes):
+  iterationsRoot = newDocument.getElementsByTagName("BlastOutput_iterations").item(0)
+  iterations = oldDocument.getElementsByTagName("Iteration")
+  for i in range(iterations.length):
+    query = iterations.item(i).getElementsByTagName("Iteration_query-def").item(0).childNodes.item(0).data.strip()
+    if query[:query.find(":")] in genes:
+      iterationsRoot.appendChild(newDocument.importNode(iterations.item(i), True))
+
 def report(name, genes, output):
   """
   name:   Name of the genome.
@@ -165,16 +194,33 @@ def report(name, genes, output):
   Writes a report of the contents of the blast searchs for the queries in
   genes into "<name>.dat" and "<name>.xls".
   """
+  
   dataOutput = open(output + ".dat", "w")
   spreadsheetOutput = open(output + ".xls", "w")
+  xmlOutput = open(output + ".blastp.xml", "w")
+
+  documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
+  documentBuilder.entityResolver = NeofelisEntityResolver()
+  
+  oldDocument = documentBuilder.parse("initialBlasts/" + name + ".blastp.xml")
+  newDocument = documentBuilder.newDocument()
+  newDocument.appendChild(newDocument.createElement("BlastOutput"))
+  writeHeader(oldDocument, newDocument)
+  writeGenes(oldDocument, newDocument, genes.keys())
+  oldDocument = documentBuilder.parse("extendedBlasts/" + name + ".blastp.xml").documentElement
+  writeGenes(oldDocument, newDocument, genes.keys())
+  oldDocument = documentBuilder.parse("intergenicBlasts/" + name + ".blastp.xml").documentElement
+  writeGenes(oldDocument, newDocument, genes.keys())
+  transformer = TransformerFactory.newInstance().newTransformer();
+  transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+  transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
+  transformer.transform(DOMSource(newDocument), StreamResult(File(output + ".blastp.xml")));
   
   reader = XMLReaderFactory.createXMLReader()
   reader.setContentHandler(Collector(genes.keys(), dataOutput))
   reader.setEntityResolver(reader.getContentHandler())
 
-  reader.parse("initialBlasts/" + name + ".blastp.xml")
-  reader.parse("extendedBlasts/" + name + ".blastp.xml")
-  reader.parse("intergenicBlasts/" + name + ".blastp.xml")
+  reader.parse(output + ".blastp.xml")
 
   writeSpreadsheet(genes.values(), spreadsheetOutput)
   
