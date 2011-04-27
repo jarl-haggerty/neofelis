@@ -310,7 +310,7 @@ class Main():
 -a --email                 Email address that results will be sent to.
 """
     try:
-      opts, args = getopt(arguments, "m:d:g:b:e:l:t:c:q:hsna:v", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "ldf-cutoff=", "scaffolding-distance=", "query=", "help", "swing", "no-swing", "email=", "server"])
+      opts, args = getopt(arguments, "m:d:g:b:e:l:t:c:q:hsna:vw:r:y:", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "ldf-cutoff=", "scaffolding-distance=", "query=", "help", "swing", "no-swing", "email=", "server", "smtp-server=", "smtp-user=", "smtp-password="])
     except GetoptError:
       print documentation
       sys.exit(0)
@@ -330,6 +330,9 @@ class Main():
     self.email = ""
     self.remote = False
     self.server = False
+    self.smtpServer = ""
+    self.smtpUser = ""
+    self.smtpPassword = ""
     
     for opt, arg in opts:
       if opt in ("-q", "--query"):
@@ -346,7 +349,7 @@ class Main():
         self.eValue = float(arg)
       elif opt in ("-l", "--min-length"):
         self.minLength = int(arg)
-      elif opt in ("-l", "--promoter-score-cutoff"):
+      elif opt in ("-d", "--promoter-score-cutoff"):
         self.promoterScoreCutoff = float(arg)
       elif opt in ("-t", "--transterm"):
         self.transtermLocation = arg
@@ -360,6 +363,12 @@ class Main():
         self.email = arg
       elif opt in ("-v", "--server"):
         self.server = True
+      elif opt in ("-w", "--smtp-server"):
+        self.smtpServer = arg
+      elif opt in ("-r", "--smtp-user"):
+        self.smtpUser = arg
+      elif opt in ("-y", "--smtp-password"):
+        self.smtpPassword = arg
       elif opt in ("-h", "--help"):
         print documentation
         sys.exit(0)
@@ -404,7 +413,8 @@ class Main():
             thread.terminate()
         s.close()
         return
-      
+
+    print "Getting", self.blastLocation, self.database, self.genemarkLocation, self.transtermLocation, self.sources, self.noSwing
     if not self.blastLocation or not self.database or not self.genemarkLocation or not self.transtermLocation or self.sources == [""]:
       if self.noSwing:
         sys.exit(1)
@@ -423,7 +433,7 @@ class Main():
         
     print self.blastLocation, self.genemarkLocation, self.transtermLocation, self.database, self.eValue, self.matrix, self.minLength, self.scaffoldingDistance, self.promoterScoreCutoff, self.queries, self.swingInterface, self.email
     self.pipeline = pipeline.Pipeline()
-    self.pipeline.run(self.blastLocation, self.genemarkLocation, self.transtermLocation, self.database, self.eValue, self.matrix, self.minLength, self.scaffoldingDistance, self.promoterScoreCutoff, self.queries, self.swingInterface, self.email)
+    self.pipeline.run(self.blastLocation, self.genemarkLocation, self.transtermLocation, self.database, self.eValue, self.matrix, self.minLength, self.scaffoldingDistance, self.promoterScoreCutoff, self.queries, self.swingInterface, self.email, self.smtpServer, self.smtpUser, self.smtpPassword)
 
 if __name__ == "__main__":
   Main().run(sys.argv)

@@ -35,60 +35,111 @@ from javax.xml.transform.dom import DOMSource
 from javax.xml.transform.stream import StreamResult
 from java.io import File
 
-class Node():
-  """
-  Class for storing the information of an XML node.
-  """
-  def __init__(self, tag, attributes, parent):
+xmlDictionary = {"&" : "&amp;",
+                 "\"" : "&quot;"}
+
+def handleXMLCharacters(input):
+    result = ""
+    for q in input:
+        result += xmlDictionary[q] if q in xmlDictionary else q
+    return result
+
+class BlastMerger(DefaultHandler):
     """
-    tag:        A string.
-    attributes: A dictionary mapping strings to strings.
-    parent:     A Node or None.
+    A SAX handler for Deleting Genes.
+    """
+    def __init__(self, sources, genes, output, printing = False, parent = None):
+      print sources
+      self.sources = sources
+      self.output = output
+      self.genes = genes
+      self.text = []
+      self.iterationQueryDef = True
+      self.iterationQueryDefString = ""
+      self.holding = False
+      self.parent = parent
+      self.printing = printing
+      self.whitespace = []
+
+    def startDocument(self):
+      if isinstance(self.output, str):
+        self.output = open(self.output, "w")
+        self.output.write("<?xml version=\"1.0\"?>\n")
+        self.output.write("<!DOCTYPE BlastOutput PUBLIC \"-//NCBI//NCBI BlastOutput/EN\" \"NCBI_BlastOutput.dtd\">")
+
+    def endDocument(self):
+      self.output.write("\n")
+      self.output.close()
+
+    def startElement(self, uri, tag, name, attributes):
+        if tag == "Iteration":
+            self.printing = self.holding = True
+        self.iterationQueryDef = tag == "Iteration_query-def"
+        self.iterationQueryDefString = ""
+            
+        if self.printing:
+            if self.holding:
+                self.text += re.sub("\n\s+\n", "\n", "".join(self.whitespace)) + "<" + tag + ">"
+            else:
+                self.output.write(re.sub("\n\s+\n", "\n", "".join(self.whitespace)) + "<" + tag + ">")
+            self.whitespace = []
     
-    Initializes the node with the tag as it's tag, attributes as attribute, and parent as the parent.
-    If parent is not None then this Node is added to the parent's list of children
-    """
-    self.tag = tag
-    self.parent = parent
-    self.children = {}
-    self.childrenList = []
-    if parent:
-      self.parent.childrenList.append(self)
-      if tag in parent.children:
-        parent.children[tag].append(self)
-      else:
-        parent.children[tag] = [self]
-    self.text = None
+    def endElement(self, uri, tag, name):
+      if tag == "BlastOutput_iterations":
+        if self.sources:
+          self.output.write("  ")
+          reader = XMLReaderFactory.createXMLReader()
+          reader.entityResolver = reader.contentHandler = BlastMerger(self.sources[1:], self.genes, self.output, False, self)
+          try:
+            reader.parse(self.sources[0])
+          except BreakParsingException:
+            if self.parent:
+              raise BreakParsingException()
+            else:
+              pass
+        else:
+          raise BreakParsingException()
+        
+      if self.iterationQueryDef:
+        self.iterationQueryDef = False
+        if self.iterationQueryDefString[:self.iterationQueryDefString.rfind(":")] in self.genes:
+          self.printing = True
+          self.holding = False
+          self.output.write("".join(self.text))
+          self.text = []
+        else:
+          self.printing = False
+          self.holding = False
+          self.text = []
+              
+      if self.printing:
+        if self.holding:
+          self.text += re.sub("\n\s+\n", "\n", "".join(self.whitespace)) + "</" + tag + ">"
+        else:
+          self.output.write(re.sub("\n\s+\n", "\n", "".join(self.whitespace)) + "</" + tag + ">")
+        self.whitespace = []
 
-  def __str__(self):
-    content  = self.content+">" if isinstance(self.content, str) else str(map(str, self.content))+">"
-    return "<tag = " + self.tag + ", content = " + content
+      if tag == "Iteration":
+        self.holding = False
+        self.printing = True
 
-  def __getitem__(self, index):
-    return self.children[index]
+    def characters(self, raw, start, length):
+        if self.iterationQueryDef:
+            self.iterationQueryDefString += raw[start:start+length].tostring()
+        if self.printing:
+            if self.holding:
+                self.text += handleXMLCharacters(raw[start:start+length].tostring())
+            else:
+                self.output.write(handleXMLCharacters(raw[start:start+length].tostring()))
 
-  def clearChildren(self):
-    """
-    Clears the list and dictionary of children.
-    """
-    self.children = {}
-    self.childrenList = []
+    def ignorableWhitespace(self, raw, start, length):
+      self.whitespace += raw[start:start+length].tostring()
 
-def writeNode(root, output, depth = 0):
-  """
-  root:   A Node object to write.
-  output: A file object to write into.
-  depth:  Amount of indentation.
-  
-  Writes root into output.
-  """
-  maxLength = reduce(lambda x, y: max(x, len(y)), root.children.keys(), 0)
-  for node in root.childrenList:
-    if node.text:
-      output.write("    "*depth + node.tag + " "*(maxLength-len(node.tag)) + " = " + node.text + "\n")
-    else:
-      output.write("    "*depth + node.tag + "\n")
-      writeNode(node, output, depth+1)
+    def resolveEntity(self, publicId, systemId):
+        return InputSource(ClassLoader.getSystemResourceAsStream("dtds/" + os.path.split(systemId)[1]))
+
+class BreakParsingException(Exception):
+    pass
 
 def writeSpreadsheet(genes, output):
   """
@@ -114,77 +165,6 @@ def writeSpreadsheet(genes, output):
     output.write(gene.title + "\t")
     output.write(gene.organism + "\n")
 
-class Collector(DefaultHandler):
-  """
-  A SAX handler for parsing Blast XML output.
-  """
-  def __init__(self, genes, output):
-    """
-    genes:  List of gene names.
-    output: File object for writing to.
-    """
-    self.genes = genes
-    self.output = output
-    self.root = None
-    self.text = ""
-  
-  def startElement(self, uri, tag, name, attributes):
-    """
-    Move down the tree and add the new root to the children of the old root,
-    and clear the text.
-    """
-    self.root = Node(tag, attributes, self.root)
-    self.text = ""
-
-  def endElement(self, uri, tag, name):
-    """
-    If the root is a leaf node then the text is add to the root and then the
-    root moves to the current root's parent.  Also, if the current root is an
-    Iteration node then it is written to a file if it's name(without the coordinates)
-    is in genes and removed from the tree.
-    """
-    if not self.root.children:
-      self.root.text = self.text
-
-    if tag == "Iteration":
-      query = self.root.children["Iteration_query-def"][0].text
-      if query[:query.find(":")] in self.genes:
-        writeNode(self.root.parent, self.output)
-          
-      self.root.parent.clearChildren()
-      
-    if self.root.parent:
-      self.root = self.root.parent
-
-  def characters(self, raw, start, length):
-    """
-    Pulls the character information from the current node.
-    """
-    self.text += raw[start:start+length].tostring()
-
-  def resolveEntity(self, publicId, systemId):
-    return InputSource(ClassLoader.getSystemResourceAsStream("dtds/" + os.path.split(systemId)[1]))
-
-class NeofelisEntityResolver(EntityResolver):
-  def resolveEntity(self, publicId, systemId):
-    return InputSource(ClassLoader.getSystemResourceAsStream("dtds/" + os.path.split(systemId)[1]))
-
-def writeHeader(oldDocument, newDocument):
-  print oldDocument.documentElement
-  print oldDocument.documentElement.childNodes
-  for i in range(oldDocument.documentElement.childNodes.length):
-    if oldDocument.documentElement.childNodes.item(i).nodeName != "BlastOutput_iterations":
-      newDocument.documentElement.appendChild(newDocument.importNode(oldDocument.documentElement.childNodes.item(i), True))
-  newDocument.documentElement.appendChild(newDocument.createElement("BlastOutput_iterations"))  
-
-def writeGenes(oldDocument, newDocument, genes):
-  iterationsRoot = newDocument.getElementsByTagName("BlastOutput_iterations").item(0)
-  iterations = oldDocument.getElementsByTagName("Iteration")
-  for i in range(iterations.length):
-    query = iterations.item(i).getElementsByTagName("Iteration_query-def").item(0).childNodes.item(0).data.strip()
-    if query[:query.find(":")] in genes:
-      iterationsRoot.appendChild(newDocument.importNode(iterations.item(i), True))
-
 def report(name, genes, output):
   """
   name:   Name of the genome.
@@ -194,35 +174,8 @@ def report(name, genes, output):
   Writes a report of the contents of the blast searchs for the queries in
   genes into "<name>.dat" and "<name>.xls".
   """
-  
-  dataOutput = open(output + ".dat", "w")
-  spreadsheetOutput = open(output + ".xls", "w")
-  xmlOutput = open(output + ".blastp.xml", "w")
-
-  documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
-  documentBuilder.entityResolver = NeofelisEntityResolver()
-  
-  oldDocument = documentBuilder.parse("initialBlasts/" + name + ".blastp.xml")
-  newDocument = documentBuilder.newDocument()
-  newDocument.appendChild(newDocument.createElement("BlastOutput"))
-  writeHeader(oldDocument, newDocument)
-  writeGenes(oldDocument, newDocument, genes.keys())
-  oldDocument = documentBuilder.parse("extendedBlasts/" + name + ".blastp.xml").documentElement
-  writeGenes(oldDocument, newDocument, genes.keys())
-  oldDocument = documentBuilder.parse("intergenicBlasts/" + name + ".blastp.xml").documentElement
-  writeGenes(oldDocument, newDocument, genes.keys())
-  transformer = TransformerFactory.newInstance().newTransformer();
-  transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-  transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-  transformer.transform(DOMSource(newDocument), StreamResult(File(output + ".blastp.xml")));
-  
   reader = XMLReaderFactory.createXMLReader()
-  reader.setContentHandler(Collector(genes.keys(), dataOutput))
-  reader.setEntityResolver(reader.getContentHandler())
+  reader.entityResolver = reader.contentHandler = BlastMerger(["extendedBlasts/" + name + ".blastp.xml", "intergenicBlasts/" + name + ".blastp.xml"], genes.keys(), output + ".blastp.xml", True)
+  reader.parse("initialBlasts/" + name + ".blastp.xml")
 
-  reader.parse(output + ".blastp.xml")
-
-  writeSpreadsheet(genes.values(), spreadsheetOutput)
-  
-  dataOutput.close()
-  spreadsheetOutput.close()
+  #writeSpreadsheet(genes.values(), output)

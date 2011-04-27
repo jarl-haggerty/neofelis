@@ -187,7 +187,7 @@ class Pipeline():
       while self.frame.isVisible():
         pass
 
-  def run(self, blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, ldfCutoff, queries, swing = False, email = ""):
+  def run(self, blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, ldfCutoff, queries, swing = False, email = "", smtpServer = "", smtpUser = "", smtpPassword = ""):
     """
     blastLocation:       Directory blast was installed in.
     genemarkLocation:    Directory genemark was installed in.
@@ -260,16 +260,17 @@ class Pipeline():
         report.report(name, scaffolded, os.path.splitext(query)[0])
 
       if email:
+        print email, smtpServer, smtpUser, smtpPassword
         message = MIMEText("Your genome has been annotated.")
         message["Subject"] = "Annotation complete"
         message["From"] = "Neofelis"
         message["To"] = email
-    
 
-        smtp = smtplib.SMTP("tmpl.arizona.edu", 587)
+        smtp = smtplib.SMTP(smtpServer, 587)
         smtp.ehlo()
         smtp.starttls()
         smtp.ehlo
+        smtp.login(smtpUser, smtpPassword)
         smtp.sendmail("Neofelis", [email], message.as_string())
         smtp.close()
     
