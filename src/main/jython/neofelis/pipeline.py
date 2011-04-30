@@ -187,7 +187,7 @@ class Pipeline():
       while self.frame.isVisible():
         pass
 
-  def run(self, blastLocation, genemarkLocation, transtermLocation, database, eValue, matrix, minLength, scaffoldingDistance, ldfCutoff, queries, swing = False, email = "", smtpServer = "", smtpUser = "", smtpPassword = ""):
+  def run(self, blastLocation, genemarkLocation, transtermLocation, tRNAscan, database, eValue, matrix, minLength, scaffoldingDistance, ldfCutoff, queries, swing = False, email = "", smtpServer = "", smtpUser = "", smtpPassword = ""):
     """
     blastLocation:       Directory blast was installed in.
     genemarkLocation:    Directory genemark was installed in.
@@ -244,6 +244,7 @@ class Pipeline():
  
         self.updateProgress(query)
         initialPromoters = promoters.findPromoters(swapFileName, name)
+        print "initialPromoters", initialPromoters
     
         self.updateProgress(query)
         initialTerminators = terminators.findTerminators(swapFileName, name, genes.values(), transtermLocation)
@@ -252,6 +253,9 @@ class Pipeline():
         filteredSignals = signals.filterSignals(scaffolded.values(), initialPromoters + initialTerminators)
         filteredPromoters = filter(lambda x: isinstance(x, promoters.Promoter), filteredSignals)
         filteredTerminators = filter(lambda x: isinstance(x, terminators.Terminator), filteredSignals)
+        print "filteredPromoters", filteredPromoters
+
+        transferRNAs = rna.findtRNAs(tRNAscanLocation, swapFileName)
 
         self.updateProgress(query)
         artemis.writeArtemisFile(os.path.splitext(query)[0] + ".art", genome, scaffolded.values(), filteredPromoters, filteredTerminators)

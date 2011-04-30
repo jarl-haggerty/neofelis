@@ -70,70 +70,20 @@ class Main():
     While this window is visible the program will wait, once it is no longer visible all the arguments will be filled with the entries in the fields.
     """
 
-    class BlastAction(AbstractAction):
-      """
-      Action for selecting the location of Blast+.  Brings up a file selection dialog and fills the text field for blast with the selection.
-      """
-      def __init__(self):
-        AbstractAction.__init__(self, "...")
-
-      def actionPerformed(self, event):
-        fileChooser = JFileChooser()
-        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
-        if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
-          blastField.setText(fileChooser.getSelectedFile().getAbsolutePath())
-
-    class GenemarkAction(AbstractAction):
-      """
-      Action for selecting the location of Genemark.  Brings up a file selection dialog and fills the text field for genemark with the selection.
-      """
-      def __init__(self):
-        AbstractAction.__init__(self, "...")
-
-      def actionPerformed(self, event):
-        fileChooser = JFileChooser()
-        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
-        if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
-          genemarkField.setText(fileChooser.getSelectedFile().getAbsolutePath())
-
-    class TranstermAction(AbstractAction):
-      """
-      Action for selecting the location of Transterm.  Brings up a file selection dialog and fills the text field for transterm with the selection.
-      """
-      def __init__(self):
-        AbstractAction.__init__(self, "...")
-
-      def actionPerformed(self, event):
-        fileChooser = JFileChooser()
-        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY)
-        if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
-          transtermField.setText(fileChooser.getSelectedFile().getAbsolutePath())
-
-    class QueryAction(AbstractAction):
-      """
-      Action for selecting the query file or directory.  Brings up a file selection dialog and fills the text field for the query with the selection.
-      """
-      def __init__(self):
-        AbstractAction.__init__(self, "...")
-
-      def actionPerformed(self, event):
-        fileChooser = JFileChooser()
-        fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES)
-        if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
-          queryField.setText(fileChooser.getSelectedFile().getAbsolutePath())
-
-    class DatabaseLocationAction(AbstractAction):
+    class LocationAction(AbstractAction):
       """
       Action for selecting the database.  Brings up a file selection dialog and fills the text field for the database with the selection.
       """
-      def __init__(self):
+      def __init__(self, field):
         AbstractAction.__init__(self, "...")
+        self.field = field
 
       def actionPerformed(self, event):
         fileChooser = JFileChooser()
-        fileChooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES)
+        fileChooser.fileSelectionMode = JFileChooser.FILES_AND_DIRECTORIES
         if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
-          databaseLocationField.setText(fileChooser.getSelectedFile().getAbsolutePath())
+          field.text = fileChooser.selectedFile.absolutePath
+    
 
     class HelpAction(AbstractAction):
       """
@@ -185,6 +135,7 @@ class Main():
     blastField = JTextField(self.blastLocation)
     genemarkField = JTextField(self.genemarkLocation)
     transtermField = JTextField(self.transtermLocation)
+    tRNAscanField = JTextField(self.tRNAscanLocation)
     databaseLocationField = JTextField(os.path.split(self.database)[0])
     databaseField = JTextField(os.path.split(self.database)[1])
     matrixField = JTextField(str(self.matrix))
@@ -207,20 +158,22 @@ class Main():
     constraints.gridy = 2
     contentPane.add(JLabel("Transterm Location"), constraints)
     constraints.gridy = 3
-    contentPane.add(JLabel("Databases Location"), constraints)
+    contentPane.add(JLabel("tRNAscan Location"), constraints)
     constraints.gridy = 4
-    contentPane.add(JLabel("Database"), constraints)
+    contentPane.add(JLabel("Databases Location"), constraints)
     constraints.gridy = 5
-    contentPane.add(JLabel("Matrix(Leave blank to use heuristic matrix)"), constraints)
+    contentPane.add(JLabel("Database"), constraints)
     constraints.gridy = 6
-    contentPane.add(JLabel("E Value"), constraints)
+    contentPane.add(JLabel("Matrix(Leave blank to use heuristic matrix)"), constraints)
     constraints.gridy = 7
-    contentPane.add(JLabel("Minimum Intergenic Length"), constraints)
+    contentPane.add(JLabel("E Value"), constraints)
     constraints.gridy = 8
-    contentPane.add(JLabel("Scaffold Distance"), constraints)
+    contentPane.add(JLabel("Minimum Intergenic Length"), constraints)
     constraints.gridy = 9
+    contentPane.add(JLabel("Scaffold Distance"), constraints)
+    constraints.gridy = 0
     contentPane.add(JLabel("Promoter Score Cutoff"), constraints)
-    constraints.gridy = 10
+    constraints.gridy = 11
     contentPane.add(JLabel("Query"), constraints)
     constraints.gridx = 1
     constraints.gridy = 0
@@ -231,38 +184,42 @@ class Main():
     constraints.gridy = 2
     contentPane.add(transtermField, constraints)
     constraints.gridy = 3
-    contentPane.add(databaseLocationField, constraints)
+    contentPane.add(tRNAscanField, constraints)
     constraints.gridy = 4
-    contentPane.add(databaseField, constraints)
+    contentPane.add(databaseLocationField, constraints)
     constraints.gridy = 5
-    contentPane.add(matrixField, constraints)
+    contentPane.add(databaseField, constraints)
     constraints.gridy = 6
-    contentPane.add(eValueField, constraints)
+    contentPane.add(matrixField, constraints)
     constraints.gridy = 7
-    contentPane.add(minLengthField, constraints)
+    contentPane.add(eValueField, constraints)
     constraints.gridy = 8
-    contentPane.add(scaffoldingDistanceField, constraints)
+    contentPane.add(minLengthField, constraints)
     constraints.gridy = 9
-    contentPane.add(promoterScoreField, constraints)
+    contentPane.add(scaffoldingDistanceField, constraints)
     constraints.gridy = 10
+    contentPane.add(promoterScoreField, constraints)
+    constraints.gridy = 11
     contentPane.add(queryField, constraints)
     constraints.gridx = 2
     constraints.gridy = 0
     constraints.weightx = 0
     constraints.fill = GridBagConstraints.NONE
     constraints.anchor = GridBagConstraints.LINE_END
-    contentPane.add(JButton(BlastAction()), constraints)
+    contentPane.add(JButton(LocationAction(blastField)), constraints)
     constraints.gridy = 1
-    contentPane.add(JButton(GenemarkAction()), constraints)
+    contentPane.add(JButton(LocationAction(genemarkField)), constraints)
     constraints.gridy = 2
-    contentPane.add(JButton(TranstermAction()), constraints)
+    contentPane.add(JButton(LocationAction(transtermField)), constraints)
     constraints.gridy = 3
-    contentPane.add(JButton(DatabaseLocationAction()), constraints)
-    constraints.gridy = 10
-    contentPane.add(JButton(QueryAction()), constraints)
+    contentPane.add(JButton(LocationAction(tRNAscanField)), constraints)
+    constraints.gridy = 4
+    contentPane.add(JButton(LocationAction(databaseLocationField)), constraints)
+    constraints.gridy = 11
+    contentPane.add(JButton(LocationAction(queryField)), constraints)
 
     constraints.gridx = 0
-    constraints.gridy = 11
+    constraints.gridy = 12
     constraints.anchor = GridBagConstraints.LINE_START
     contentPane.add(JButton(HelpAction()), constraints)
     constraints.gridx = 1
@@ -322,6 +279,7 @@ class Main():
     self.eValue = 0.1
     self.minLength = 100  
     self.transtermLocation = ""
+    self.tRNAscanLocation = ""
     self.promoterScoreCutoff = 0
     self.scaffoldingDistance = 100
     self.sources = [""]
@@ -433,7 +391,7 @@ class Main():
         
     print self.blastLocation, self.genemarkLocation, self.transtermLocation, self.database, self.eValue, self.matrix, self.minLength, self.scaffoldingDistance, self.promoterScoreCutoff, self.queries, self.swingInterface, self.email
     self.pipeline = pipeline.Pipeline()
-    self.pipeline.run(self.blastLocation, self.genemarkLocation, self.transtermLocation, self.database, self.eValue, self.matrix, self.minLength, self.scaffoldingDistance, self.promoterScoreCutoff, self.queries, self.swingInterface, self.email, self.smtpServer, self.smtpUser, self.smtpPassword)
+    self.pipeline.run(self.blastLocation, self.genemarkLocation, self.transtermLocation, self.tRNAscanLocation, self.database, self.eValue, self.matrix, self.minLength, self.scaffoldingDistance, self.promoterScoreCutoff, self.queries, self.swingInterface, self.email, self.smtpServer, self.smtpUser, self.smtpPassword)
 
 if __name__ == "__main__":
   Main().run(sys.argv)
