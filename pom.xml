@@ -21,7 +21,7 @@ limitations under the License.
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.curious</groupId>
   <artifactId>neofelis</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <name>Neofelis</name>
   <description>An automated genome annotator</description>
   <url></url>
@@ -62,9 +62,11 @@ limitations under the License.
             <param>--genemark=/Users/mbsulli/genemark</param>
             <param>--blast=/Users/mbsulli/blast</param>
             <param>--transterm=/Users/mbsulli/transterm</param>
+            <param>--trna-scan=/Users/mbsulli/tRNAscan</param>
             <param>--database=/Users/mbsulli/blast/db/nr</param>
             <param>--e-value=0.1</param>
             <param>--query=genomes/Phi-4-1.fas</param>
+            <param>--swing</param>
           </pythonArgs>
         </configuration>
       </plugin>

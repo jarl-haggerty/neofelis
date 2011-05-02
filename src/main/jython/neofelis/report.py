@@ -160,8 +160,11 @@ class BlastMerger(DefaultHandler):
       self.iterationNumberTag = False
 
     def startDocument(self):
-      if isinstance(self.output, str):
+      print "startDocument", self.output, type(self.output)
+      if isinstance(self.output, basestring):
+        print "\t", self.output
         self.output = open(self.output, "w")
+        print "\t", self.output
         self.output.write("<?xml version=\"1.0\"?>\n")
         self.output.write("<!DOCTYPE BlastOutput PUBLIC \"-//NCBI//NCBI BlastOutput/EN\" \"NCBI_BlastOutput.dtd\">")
         

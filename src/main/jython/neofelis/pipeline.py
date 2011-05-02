@@ -33,6 +33,7 @@ from neofelis import utils
 from neofelis import scaffolds
 from neofelis import signals
 from neofelis import report
+from neofelis import rna
 from javax.swing import JFrame
 from javax.swing import JPanel
 from javax.swing import JLabel
@@ -187,7 +188,7 @@ class Pipeline():
       while self.frame.isVisible():
         pass
 
-  def run(self, blastLocation, genemarkLocation, transtermLocation, tRNAscan, database, eValue, matrix, minLength, scaffoldingDistance, ldfCutoff, queries, swing = False, email = "", smtpServer = "", smtpUser = "", smtpPassword = ""):
+  def run(self, blastLocation, genemarkLocation, transtermLocation, tRNAscanLocation, database, eValue, matrix, minLength, scaffoldingDistance, ldfCutoff, queries, swing = False, email = "", smtpServer = "", smtpUser = "", smtpPassword = ""):
     """
     blastLocation:       Directory blast was installed in.
     genemarkLocation:    Directory genemark was installed in.
@@ -258,7 +259,7 @@ class Pipeline():
         transferRNAs = rna.findtRNAs(tRNAscanLocation, swapFileName)
 
         self.updateProgress(query)
-        artemis.writeArtemisFile(os.path.splitext(query)[0] + ".art", genome, scaffolded.values(), filteredPromoters, filteredTerminators)
+        artemis.writeArtemisFile(os.path.splitext(query)[0] + ".art", genome, scaffolded.values(), filteredPromoters, filteredTerminators, transferRNAs)
 
         self.updateProgress(query)
         report.report(name, scaffolded, os.path.splitext(query)[0])

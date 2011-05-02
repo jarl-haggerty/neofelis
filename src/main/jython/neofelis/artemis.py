@@ -47,6 +47,20 @@ def writeTerminators(output, terminators):
             output.write("     terminator             complement(" + "..".join(map(str, terminator.location)) + ")\n")
         output.write("                            /note=\"confidence:" + str(terminator.confidence) + "\thp_score:" + str(terminator.hpScore) + "\ttail_score:" + str(terminator.tailScore) + "\"\n")
 
+def writeTransferRNAs(output, transferRNAs):
+    """
+    output:      File object to write to.
+    terminators: List of Terminator objects.
+
+    Writes terminators to the file.
+    """
+    for transferRNA in transferRNAs:
+        if transferRNA.location[0] < transferRNA.location[1]:
+            output.write("     gene                   " + "..".join(map(str, transferRNA.location)) + "\n")
+        else:
+            output.write("     gene                   complement(" + "..".join(map(str, transferRNA.location)) + ")\n")
+        output.write("                            /note=\"type:" + str(transferRNA.type) + "\tanti codon:" + str(transferRNA.antiCodon) + "\tcove_score:" + str(transferRNA.coveScore) + "\"\n")
+
 def writeGenes(output, genes):
     """
     output: File object to write to.
@@ -74,7 +88,7 @@ def writeGenome(output, genome):
     for i in xrange(0, len(genome), 50):
         output.write(genome[i:min(i+50, len(genome))] + "\n")
 
-def writeArtemisFile(fileName, genome, genes=[], promoters=[], terminators=[]):
+def writeArtemisFile(fileName, genome, genes=[], promoters=[], terminators=[], transferRNAs=[]):
     """
     fileName:    Name of the artemis file to write.
     genome:      Genome as a string.
@@ -87,6 +101,7 @@ def writeArtemisFile(fileName, genome, genes=[], promoters=[], terminators=[]):
     output = open(fileName, "w")
     writePromoters(output, promoters)
     writeTerminators(output, terminators)
+    writeTransferRNAs(output, transferRNAs)
     writeGenes(output, genes)
     writeGenome(output, genome)
 

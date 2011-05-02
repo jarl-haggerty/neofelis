@@ -21,6 +21,7 @@ limitations under the License.
 import subprocess
 from neofelis import utils
 import re
+import os
 
 class Terminator():
   """
@@ -32,14 +33,14 @@ class Terminator():
     self.hpScore = None
     self.tailScore = None
 
-def writeCoords(name, genes):
+def writeCoords(fileName, name, genes):
   """
   name:  Name of the genome.
   ganes: List of Iteration objects.
 
   Writes the genes into a .crd file.
   """
-  output = open(name + ".crd", "w")
+  output = open(fileName + ".crd", "w")
   for gene in genes:
     output.write("gene\t%d\t%d\t%s\n" %  (gene.location[0], gene.location[1], name))
   output.close()
@@ -75,11 +76,12 @@ def findTerminators(query, name, genes, transterm):
 
   This function runs transterm with the query and the genes and parses the results into the return value.
   """
-  writeCoords(name, genes)
-  output = open(name + ".tt", "w")
-  subprocess.Popen([transterm + "/transterm", "-p", transterm + "/expterm.dat", query, name + ".crd"], stdout=output).wait()
+  fileName = os.path.splitext(os.path.split(query)[1])[0]
+  writeCoords(fileName, name, genes)
+  output = open(fileName + ".tt", "w")
+  subprocess.Popen([transterm + "/transterm", "-p", transterm + "/expterm.dat", query, fileName + ".crd"], stdout=output).wait()
   output.close()
-  input = open(name + ".tt", "r")
+  input = open(fileName + ".tt", "r")
   result = parseTransterm(input.read())
   input.close()
   return result

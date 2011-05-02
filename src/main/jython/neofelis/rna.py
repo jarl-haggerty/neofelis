@@ -18,14 +18,16 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
+import os
+import re
 import subprocess
 
 class TransferRNA():
-    def __init__(self, start, stop):
-        self.start, self.stop = start, stop
+    def __init__(self, start, stop, type, antiCodon, coveScore):
+        self.location, self.type, self.antiCodon, self.coveScore = [start, stop], type, antiCodon, coveScore
 
 def findtRNAs(tRNAscanLocation, query):
-    tRNAscanProcess = subprocess.Popen([tRNAscanLocation + "/tRNAscan-SE", "-P", query], stdout = subprocess.PIPE)
+    tRNAscanProcess = subprocess.Popen([tRNAscanLocation + "/tRNAscan-SE", "-P", os.getcwd() + "/" + query], stdout = subprocess.PIPE, env = {"PATH" : tRNAscanLocation}, cwd = tRNAscanLocation)
     result = ""
     while tRNAscanProcess.poll() == None:
         result += tRNAscanProcess.stdout.read()
@@ -35,9 +37,13 @@ def findtRNAs(tRNAscanLocation, query):
         nextRead = tRNAscanProcess.stdout.read()
 
     transferRNAs = []
+    print "trna"
+    print result
     for line in result.split("\n"):
-        match = re.match(".+\s+\d+\s+(\d+)\s+(\d+)\s+\w+\s+[ACTG]+\s+\d+\s+\d+\s+\d*\.\d*\n", line)
+        match = re.match(".+\s+\d+\s+(\d+)\s+(\d+)\s+(\w+)\s+([ACTG?]+)\s+\d+\s+\d+\s+(\d*\.\d*)", line)
+        print "\t", match
         if match:
-            transferRNAs += TransferRNA(int(match.groups(0)), int(match.groups(1)))
+            transferRNAs.append(TransferRNA(int(match.group(1)), int(match.group(2)), match.group(3), match.group(4), float(match.group(5))))
+    print "trna"
     return transferRNAs
     

@@ -109,7 +109,7 @@ translationDictionary["GGA"] = "G"
 translationDictionary["GGT"] = "G"
 translationDictionary["GGG"] = "G"
 translationDictionary["GGC"] = "G"
-    
+
 def translate(input):
   """
   Returns a Neucleotide sequence translated into Proteins.

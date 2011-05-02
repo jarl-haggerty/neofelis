@@ -82,9 +82,8 @@ class Main():
         fileChooser = JFileChooser()
         fileChooser.fileSelectionMode = JFileChooser.FILES_AND_DIRECTORIES
         if fileChooser.showOpenDialog(None) == JFileChooser.APPROVE_OPTION:
-          field.text = fileChooser.selectedFile.absolutePath
+          self.field.text = fileChooser.selectedFile.absolutePath
     
-
     class HelpAction(AbstractAction):
       """
       Displays a help dialog.
@@ -171,7 +170,7 @@ class Main():
     contentPane.add(JLabel("Minimum Intergenic Length"), constraints)
     constraints.gridy = 9
     contentPane.add(JLabel("Scaffold Distance"), constraints)
-    constraints.gridy = 0
+    constraints.gridy = 10
     contentPane.add(JLabel("Promoter Score Cutoff"), constraints)
     constraints.gridy = 11
     contentPane.add(JLabel("Query"), constraints)
@@ -267,7 +266,7 @@ class Main():
 -a --email                 Email address that results will be sent to.
 """
     try:
-      opts, args = getopt(arguments, "m:d:g:b:e:l:t:c:q:hsna:vw:r:y:", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "ldf-cutoff=", "scaffolding-distance=", "query=", "help", "swing", "no-swing", "email=", "server", "smtp-server=", "smtp-user=", "smtp-password="])
+      opts, args = getopt(arguments, "m:d:g:b:e:l:t:c:q:hsna:vw:r:y:z:", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "ldf-cutoff=", "scaffolding-distance=", "query=", "help", "swing", "no-swing", "email=", "server", "smtp-server=", "smtp-user=", "smtp-password=", "trna-scan="])
     except GetoptError:
       print documentation
       sys.exit(0)
@@ -311,6 +310,8 @@ class Main():
         self.promoterScoreCutoff = float(arg)
       elif opt in ("-t", "--transterm"):
         self.transtermLocation = arg
+      elif opt in ("-z", "--trna-scan"):
+        self.tRNAscanLocation = arg
       elif opt in ("-c", "--scaffolding-distance"):
         self.scaffoldingDistance = int(arg)
       elif opt in ("-s", "--swing"):
@@ -373,7 +374,13 @@ class Main():
         return
 
     print "Getting", self.blastLocation, self.database, self.genemarkLocation, self.transtermLocation, self.sources, self.noSwing
-    if not self.blastLocation or not self.database or not self.genemarkLocation or not self.transtermLocation or self.sources == [""]:
+    if not self.blastLocation or not self.database or not self.genemarkLocation or not self.transtermLocation or not self.tRNAscanLocation or self.sources == [""]:
+      home = System.getProperty("user.home")
+      self.blastLocation = self.blastLocation if self.blastLocation else home + "/blast"
+      self.database = self.database if self.database else home + "/db/"
+      self.genemarkLocation = self.genemarkLocation if self.genemarkLocation else home + "/genemark"
+      self.transtermLocation = self.transtermLocation if self.transtermLocation else home + "/transterm"
+      self.tRNAscanLocation = self.tRNAscanLocation if self.tRNAscanLocation else home + "/tRNAscan"
       if self.noSwing:
         sys.exit(1)
       else:
