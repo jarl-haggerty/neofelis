@@ -65,7 +65,7 @@ limitations under the License.
             <param>--trna-scan=/Users/mbsulli/tRNAscan</param>
             <param>--database=/Users/mbsulli/blast/db/nr</param>
             <param>--e-value=0.1</param>
-            <param>--query=genomes/Phi-4-1.fas</param>
+            <param>--query=genomes/17_2_corr.fas</param>
             <param>--swing</param>
           </pythonArgs>
         </configuration>

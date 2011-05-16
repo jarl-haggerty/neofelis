@@ -1,0 +1,220 @@
+Id	Start	Stop	Hits	Best bit score	Best evalue	Best identity	Alignment Length	Best hit gi	Definition	Organism
+1	302	880	52	110.152916081	1.04194149684e-22	67.0	181	159111757	Phosphatase similar to the C-terminal domain of histone macroH2A1	Giardia lamblia ATCC 50803
+2	1682	2230	1	70.4773597619	7.87905220932e-11	54.0	200	307709491	hypothetical protein SMSK564_0735	Streptococcus mitis SK564
+3	2972	3409	5	50.8321813901	4.97352643792e-05	40.0	134	311301952	Uracil-DNA glycosylase superfamily	Mucilaginibacter paludis DSM 18603
+4	3410	3976	4	53.1433788456	1.63131376879e-05	33.0	106	197284362	hypothetical protein PMI0461	Proteus mirabilis HI4320
+5	3948	4361	7	83.5741453431	6.7633554112e-15	55.0	126	300775122	conserved hypothetical protein	Chryseobacterium gleum ATCC 35910
+6	4609	7035	500	466.847723381	4.38224414048e-129	305.0	885	297591746	putative DNA polymerase	Pseudomonas phage KPP10
+7	7818	8813	15	118.627306752	1.05168893914e-24	102.0	333	300772203	N- superfamily bifunctional DNA primase/polymerase	Sphingobacterium spiritivorum ATCC 33861
+8	9255	9914	211	101.293325835	6.42629185816e-20	73.0	210	194291749	conserved hypothetical protein; putative phosphoesterase	Cupriavidus taiwanensis
+9	9916	10677	500	306.989899375	1.11676126499e-81	148.0	234	260588436	DNA (cytosine-5-)-methyltransferase	Blautia hansenii DSM 20583
+10	10670	12250	6	169.088451197	1.17546005453e-39	144.0	487	59897146	probable A1 protein	Enterobacteria phage T5
+11	12317	12895	27	58.5361729085	3.78244982583e-07	61.0	230	294671260	hypothetical protein NEIELOOT_02970	Neisseria elongata subsp. glycolytica ATCC 29315
+12	14736	14398	1	51.217380966	4.49992660179e-05	38.0	109	168178709	hypothetical protein CBN_1357	Clostridium botulinum NCTC 2916
+13	16012	14720	500	350.132251878	2.88571188029e-94	212.0	551	299145766	putative C-5 cytosine-specific DNA methylase	Bacteroides sp. 3_1_23
+14	17424	16012	61	150.598871553	3.3424234241e-34	130.0	494	301795193	Gp30 DNA ligase	Salmonella phage Vi01
+15	19058	17907	278	179.874039322	3.85368043922e-43	132.0	418	124003433	poly (ADP-ribose) polymerase family, member 1	Microscilla marina ATCC 23134
+16	19797	19060	500	112.849313113	3.39696471367e-23	78.0	217	124003434	tRNA nucleotidyltransferase	Microscilla marina ATCC 23134
+17	20610	19807	3	102.063724987	5.87404716313e-20	71.0	214	213961979	hypothetical protein CAPSP0001_1189	Capnocytophaga sputigena Capno
+18	27088	26729	117	119.012506327	1.51094573913e-25	60.0	115	307544658	hypothetical protein HELO_2068	Halomonas elongata DSM 2581
+19	42367	41843	76	81.2629478876	3.80677228623e-14	52.0	123	66391257	ORF002	Staphylococcus phage Twort
+20	52833	51424	57	66.6253640027	6.38127807628e-09	50.0	139	260063547	hypothetical protein RB2501_02025	Robiginitalea biformata HTCC2501
+21	55185	52861	4	58.1509733326	4.71449086813e-06	40.0	96	149372362	CheA Signal Transduction Histidine Kinases (STHK)	unidentified eubacterium SCB49
+22	63473	62520	33	180.644438474	1.66917850809e-43	110.0	253	188584293	conserved hypothetical protein	Methylobacterium populi BJ001
+23	65416	63473	5	64.6993661232	4.5883405741e-08	52.0	188	298103503	gp38	Streptomyces phage phiSASD1
+24	70810	70094	1	41.5873915681	0.0932250927163	28.0	81	307209849	WD repeat-containing protein 65	Harpegnathos saltator
+25	71429	70800	500	127.486896998	8.26836153916e-28	74.0	171	163789066	Cell wall hydrolase/autolysin	Flavobacteriales bacterium ALC-1
+26	71929	71429	67	48.9061835105	0.000218710156613	25.0	88	282864128	Cupin 2 conserved barrel domain protein	Streptomyces sp. ACTE
+27	81792	79030	1	154.065667736	6.83243524903e-35	92.0	211	48727576	unknown	Mus musculus
+28	85477	85133	16	52.7581792697	1.27896955166e-05	40.0	113	251781182	conserved hypothetical protein	Clostridium botulinum E1 str. 'BoNT E Beluga'
+29	92498	94054	500	218.77919649	1.15557879821e-54	137.0	379	260170649	putative ATP-dependent helicase	Bacteroides sp. D2
+30	96646	97641	500	175.251644411	8.63779903683e-42	121.0	331	189502646	recombinase A	Candidatus Amoebophilus asiaticus 5a2
+31	97813	98265	16	70.4773597619	5.827426213e-11	46.0	125	310004413	NAD synthetase	Prochlorococcus phage P-HM1
+32	98252	99289	500	167.162453317	2.18548173477e-39	99.0	263	293364092	thymidylate synthase	Mycoplasma alligatoris A21JP2
+33	99766	100494	1	41.972591144	0.0740991790045	19.0	29	116193349	hypothetical protein CHGG_06392	Chaetomium globosum CBS 148.51
+34	102243	102563	3	75.4849542488	1.86571662065e-12	43.0	110	256421174	hypothetical protein Cpin_2134	Chitinophaga pinensis DSM 2588
+35	102560	102817	1	58.1509733326	3.53761927363e-07	34.0	85	150024911	hypothetical protein FP0821	Flavobacterium psychrophilum JIP02/86
+36	102808	103056	1	40.4317928404	0.0639432590163	26.0	76	153815783	hypothetical protein RUMTOR_02028	Ruminococcus torques ATCC 27756
+37	105438	105896	2	40.8169924163	0.0519605974779	45.0	137	300775616	conserved hypothetical protein	Chryseobacterium gleum ATCC 35910
+38	106667	106975	8	48.9061835105	0.000172803993925	32.0	100	153835205	hypothetical protein A1Q_4533	Vibrio harveyi HY01
+39	107947	108738	68	103.219323715	2.79126111741e-20	82.0	255	292905272	hypothetical protein Ava_D0020	Anabaena variabilis ATCC 29413
+40	108725	108988	83	82.8037461913	1.27737907324e-14	46.0	86	237795050	gp9	Clostridium botulinum Ba4 str. 657
+41	109624	110124	49	77.0257525525	6.95700641063e-13	55.0	168	256963340	conserved hypothetical protein	Enterococcus faecalis HIP11704
+42	111588	111800	35	64.3141665472	4.11060361623e-09	29.0	63	295099195	DNA methylase	Eubacterium cylindroides T2-87
+43	112626	113153	2	55.0693767252	3.70388848173e-06	29.0	74	300777183	conserved hypothetical protein	Chryseobacterium gleum ATCC 35910
+44	113932	116052	133	321.62748326	1.82939292034e-85	233.0	698	160700596	hypothetical protein BA3_0002	Thalassomonas phage BA3
+45	118238	118843	1	103.989722867	9.18063435875e-21	64.0	181	291522507	hypothetical protein	Coprococcus catus GD/7
+46	120191	120775	3	47.7505847828	0.000752403775919	54.0	217	192289460	hypothetical protein Rpal_1033	Rhodopseudomonas palustris TIE-1
+47	123234	123704	500	68.5513618823	2.3191292264e-10	49.0	134	187918511	hypothetical protein BH0655	Borrelia hermsii DAH
+48	125946	126926	60	100.137727108	3.03564303856e-19	68.0	232	213961969	conserved hypothetical protein	Capnocytophaga sputigena Capno
+49	128185	128964	39	137.502085972	1.41853836347e-30	80.0	258	265763549	predicted protein	Bacteroides sp. 2_1_16
+50	129085	130068	367	86.6557419504	3.99027424457e-15	105.0	394	146301157	OmpA/MotB domain-containing protein	Flavobacterium johnsoniae UW101
+51	133263	134246	289	161.384459678	1.16293939049e-37	100.0	308	86140897	ribonucleoside-diphosphate reductase, beta subunit 1	Leeuwenhoekiella blandensis MED217
+52	134250	135932	500	303.137903616	5.14111522758e-80	186.0	555	297622358	ribonucleoside-diphosphate reductase, alpha chain	Truepera radiovictrix DSM 17093
+53	137017	139185	12	388.267009894	1.66445026071e-105	240.0	727	255103290	hypothetical protein CdifQCD-6_20930	Clostridium difficile QCD-63q42
+54	139239	139586	11	78.1813512803	3.20924714291e-13	38.0	93	84497031	hypothetical protein JNB_12593	Janibacter sp. HTCC2649
+55	139586	140350	3	45.4393873273	0.00626635605743	47.0	181	291531123	Predicted periplasmic solute-binding protein	Eubacterium siraeum 70/3
+56	142799	143233	6	68.9365614582	1.71426236491e-10	41.0	123	301795277	conserved uncharacterised protein	Salmonella phage Vi01
+57	143361	143573	4	41.972591144	0.0213068384467	23.0	59	307595654	hypothetical protein Vdis_1536	Vulcanisaeta distributa DSM 14429
+58	144175	145281	23	54.6841771493	1.99064733874e-05	78.0	285	296118478	replicative DNA helicase	Corynebacterium ammoniagenes DSM 20306
+59	19	291	0	0	inf	0	0	None	None	None
+60	886	1677	0	0	inf	0	0	None	None	None
+61	2184	2495	0	0	inf	0	0	None	None	None
+62	2492	2740	0	0	inf	0	0	None	None	None
+63	2743	2982	0	0	inf	0	0	None	None	None
+64	4408	4533	0	0	inf	0	0	None	None	None
+65	4536	4664	0	0	inf	0	0	None	None	None
+66	7022	7447	0	0	inf	0	0	None	None	None
+67	7484	7828	0	0	inf	0	0	None	None	None
+68	8819	9280	0	0	inf	0	0	None	None	None
+69	12895	13158	0	0	inf	0	0	None	None	None
+70	13578	13225	0	0	inf	0	0	None	None	None
+71	13768	13580	0	0	inf	0	0	None	None	None
+72	13986	13852	0	0	inf	0	0	None	None	None
+73	14411	13983	0	0	inf	0	0	None	None	None
+74	17890	17426	0	0	inf	0	0	None	None	None
+75	20867	20613	0	0	inf	0	0	None	None	None
+76	26739	20995	0	0	inf	0	0	None	None	None
+77	28642	27089	0	0	inf	0	0	None	None	None
+78	34499	28626	0	0	inf	0	0	None	None	None
+79	37410	34486	0	0	inf	0	0	None	None	None
+80	40149	37462	0	0	inf	0	0	None	None	None
+81	41741	40149	0	0	inf	0	0	None	None	None
+82	49283	42414	0	0	inf	0	0	None	None	None
+83	50155	49283	0	0	inf	0	0	None	None	None
+84	50649	50158	0	0	inf	0	0	None	None	None
+85	51310	50624	0	0	inf	0	0	None	None	None
+86	58036	55208	0	0	inf	0	0	None	None	None
+87	60657	58039	0	0	inf	0	0	None	None	None
+88	62506	60671	0	0	inf	0	0	None	None	None
+89	68315	65427	0	0	inf	0	0	None	None	None
+90	68862	68320	0	0	inf	0	0	None	None	None
+91	69275	68865	0	0	inf	0	0	None	None	None
+92	69577	69275	0	0	inf	0	0	None	None	None
+93	70092	69577	0	0	inf	0	0	None	None	None
+94	72261	71929	0	0	inf	0	0	None	None	None
+95	74245	72293	0	0	inf	0	0	None	None	None
+96	74936	74277	0	0	inf	0	0	None	None	None
+97	75917	74937	0	0	inf	0	0	None	None	None
+98	77775	76069	0	0	inf	0	0	None	None	None
+99	78939	77809	0	0	inf	0	0	None	None	None
+100	84464	81867	0	0	inf	0	0	None	None	None
+101	85000	84467	0	0	inf	0	0	None	None	None
+102	85130	84936	0	0	inf	0	0	None	None	None
+103	86097	85474	0	0	inf	0	0	None	None	None
+104	86557	86090	0	0	inf	0	0	None	None	None
+105	86976	86557	0	0	inf	0	0	None	None	None
+106	87144	87419	0	0	inf	0	0	None	None	None
+107	87509	87763	0	0	inf	0	0	None	None	None
+108	87781	87885	0	0	inf	0	0	None	None	None
+109	87866	87967	0	0	inf	0	0	None	None	None
+110	87961	88140	0	0	inf	0	0	None	None	None
+111	88160	88273	0	0	inf	0	0	None	None	None
+112	88440	88559	0	0	inf	0	0	None	None	None
+113	88836	88973	0	0	inf	0	0	None	None	None
+114	89311	89168	0	0	inf	0	0	None	None	None
+115	89351	89241	0	0	inf	0	0	None	None	None
+116	89631	89756	0	0	inf	0	0	None	None	None
+117	89644	89787	0	0	inf	0	0	None	None	None
+118	89934	89830	0	0	inf	0	0	None	None	None
+119	90274	90122	0	0	inf	0	0	None	None	None
+120	90381	90482	0	0	inf	0	0	None	None	None
+121	90592	90693	0	0	inf	0	0	None	None	None
+122	90849	90706	0	0	inf	0	0	None	None	None
+123	91078	90818	0	0	inf	0	0	None	None	None
+124	91157	90918	0	0	inf	0	0	None	None	None
+125	91626	91778	0	0	inf	0	0	None	None	None
+126	92094	91939	0	0	inf	0	0	None	None	None
+127	92191	92021	0	0	inf	0	0	None	None	None
+128	92248	92370	0	0	inf	0	0	None	None	None
+129	92255	92374	0	0	inf	0	0	None	None	None
+130	92458	92565	0	0	inf	0	0	None	None	None
+131	94065	94397	0	0	inf	0	0	None	None	None
+132	94387	94596	0	0	inf	0	0	None	None	None
+133	94599	94820	0	0	inf	0	0	None	None	None
+134	94802	95308	0	0	inf	0	0	None	None	None
+135	95308	95796	0	0	inf	0	0	None	None	None
+136	95777	96232	0	0	inf	0	0	None	None	None
+137	96234	96644	0	0	inf	0	0	None	None	None
+138	97643	97819	0	0	inf	0	0	None	None	None
+139	99354	99758	0	0	inf	0	0	None	None	None
+140	100397	100519	0	0	inf	0	0	None	None	None
+141	100544	101119	0	0	inf	0	0	None	None	None
+142	101106	101462	0	0	inf	0	0	None	None	None
+143	101446	101640	0	0	inf	0	0	None	None	None
+144	101637	101957	0	0	inf	0	0	None	None	None
+145	101960	102175	0	0	inf	0	0	None	None	None
+146	103040	103498	0	0	inf	0	0	None	None	None
+147	103491	103670	0	0	inf	0	0	None	None	None
+148	103612	104058	0	0	inf	0	0	None	None	None
+149	104055	104315	0	0	inf	0	0	None	None	None
+150	104303	104740	0	0	inf	0	0	None	None	None
+151	104786	104932	0	0	inf	0	0	None	None	None
+152	104913	105119	0	0	inf	0	0	None	None	None
+153	105085	105441	0	0	inf	0	0	None	None	None
+154	105899	106087	0	0	inf	0	0	None	None	None
+155	106145	106624	0	0	inf	0	0	None	None	None
+156	107097	107264	0	0	inf	0	0	None	None	None
+157	107266	107487	0	0	inf	0	0	None	None	None
+158	107589	107711	0	0	inf	0	0	None	None	None
+159	107713	107907	0	0	inf	0	0	None	None	None
+160	109060	109161	0	0	inf	0	0	None	None	None
+161	109380	109604	0	0	inf	0	0	None	None	None
+162	110187	110498	0	0	inf	0	0	None	None	None
+163	110491	110622	0	0	inf	0	0	None	None	None
+164	110628	110837	0	0	inf	0	0	None	None	None
+165	110842	111111	0	0	inf	0	0	None	None	None
+166	111116	111262	0	0	inf	0	0	None	None	None
+167	111805	111990	0	0	inf	0	0	None	None	None
+168	112002	112361	0	0	inf	0	0	None	None	None
+169	112354	112614	0	0	inf	0	0	None	None	None
+170	113230	113889	0	0	inf	0	0	None	None	None
+171	116062	116238	0	0	inf	0	0	None	None	None
+172	116211	116891	0	0	inf	0	0	None	None	None
+173	117313	117576	0	0	inf	0	0	None	None	None
+174	117588	118010	0	0	inf	0	0	None	None	None
+175	118022	118210	0	0	inf	0	0	None	None	None
+176	118833	119552	0	0	inf	0	0	None	None	None
+177	119637	120188	0	0	inf	0	0	None	None	None
+178	120778	121083	0	0	inf	0	0	None	None	None
+179	121085	121342	0	0	inf	0	0	None	None	None
+180	121344	121808	0	0	inf	0	0	None	None	None
+181	121811	121999	0	0	inf	0	0	None	None	None
+182	121996	122190	0	0	inf	0	0	None	None	None
+183	122191	122529	0	0	inf	0	0	None	None	None
+184	122526	122822	0	0	inf	0	0	None	None	None
+185	122822	123046	0	0	inf	0	0	None	None	None
+186	123027	123230	0	0	inf	0	0	None	None	None
+187	123706	123813	0	0	inf	0	0	None	None	None
+188	123810	124142	0	0	inf	0	0	None	None	None
+189	124078	124482	0	0	inf	0	0	None	None	None
+190	124483	124620	0	0	inf	0	0	None	None	None
+191	124551	124811	0	0	inf	0	0	None	None	None
+192	124789	125031	0	0	inf	0	0	None	None	None
+193	125028	125180	0	0	inf	0	0	None	None	None
+194	125149	125949	0	0	inf	0	0	None	None	None
+195	126926	127678	0	0	inf	0	0	None	None	None
+196	127678	127782	0	0	inf	0	0	None	None	None
+197	127810	128010	0	0	inf	0	0	None	None	None
+198	128011	128181	0	0	inf	0	0	None	None	None
+199	128966	129082	0	0	inf	0	0	None	None	None
+200	130092	130250	0	0	inf	0	0	None	None	None
+201	130452	130754	0	0	inf	0	0	None	None	None
+202	130777	131139	0	0	inf	0	0	None	None	None
+203	131132	131914	0	0	inf	0	0	None	None	None
+204	132058	132399	0	0	inf	0	0	None	None	None
+205	132383	132637	0	0	inf	0	0	None	None	None
+206	132648	132908	0	0	inf	0	0	None	None	None
+207	132910	133101	0	0	inf	0	0	None	None	None
+208	135969	136595	0	0	inf	0	0	None	None	None
+209	136658	137008	0	0	inf	0	0	None	None	None
+210	140413	140559	0	0	inf	0	0	None	None	None
+211	140619	140729	0	0	inf	0	0	None	None	None
+212	140782	141117	0	0	inf	0	0	None	None	None
+213	141181	141480	0	0	inf	0	0	None	None	None
+214	141494	141643	0	0	inf	0	0	None	None	None
+215	141703	142230	0	0	inf	0	0	None	None	None
+216	142302	142502	0	0	inf	0	0	None	None	None
+217	142690	142833	0	0	inf	0	0	None	None	None
+218	143233	143364	0	0	inf	0	0	None	None	None
+219	143575	144171	0	0	inf	0	0	None	None	None

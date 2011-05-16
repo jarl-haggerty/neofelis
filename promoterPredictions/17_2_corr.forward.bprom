@@ -1,0 +1,2913 @@
+ test sequence                                                                 
+ Length of sequence-    145340
+ Threshold for promoters -  0.20
+ Number of predicted promoters -    363
+ Promoter Pos: 109299 LDF- 12.98
+ -10 box at pos. 109284 TGTTAAAAT Score    86
+ -35 box at pos. 109264 TTTATA    Score    39
+ Promoter Pos:  62505 LDF- 12.38
+ -10 box at pos.  62486 TTTTATAAT Score    86
+ -35 box at pos.  62471 TTGAAT    Score    55
+ Promoter Pos:  38734 LDF- 12.32
+ -10 box at pos.  38719 ATTTATTTT Score    47
+ -35 box at pos.  38700 TTTTCT    Score    29
+ Promoter Pos: 123989 LDF- 11.83
+ -10 box at pos. 123974 TGTTATAAT Score    93
+ -35 box at pos. 123952 TTGATA    Score    58
+ Promoter Pos:  65411 LDF- 11.81
+ -10 box at pos.  65396 TTTTATAAT Score    86
+ -35 box at pos.  65371 TTGGTA    Score    30
+ Promoter Pos:  55221 LDF- 11.15
+ -10 box at pos.  55206 AATTATATT Score    54
+ -35 box at pos.  55185 TTGGTT    Score    25
+ Promoter Pos:  99758 LDF- 10.96
+ -10 box at pos.  99743 TTCTAAATT Score    54
+ -35 box at pos.  99723 GTGAAT    Score    22
+ Promoter Pos:  87487 LDF- 10.38
+ -10 box at pos.  87472 TTATATAAT Score    75
+ -35 box at pos.  87449 TTAATA    Score    35
+ Promoter Pos:   4560 LDF- 10.33
+ -10 box at pos.   4545 TTATATAAT Score    75
+ -35 box at pos.   4520 TTCAAA    Score    40
+ Promoter Pos: 116816 LDF- 10.26
+ -10 box at pos. 116801 TTTTATAAT Score    86
+ -35 box at pos. 116779 TCGATA    Score    21
+ Promoter Pos:  12323 LDF- 10.15
+ -10 box at pos.  12308 CTTTAAATT Score    55
+ -35 box at pos.  12288 TTTACA    Score    47
+ Promoter Pos:  97798 LDF-  9.93
+ -10 box at pos.  97783 TTTTATAAA Score    48
+ -35 box at pos.  97763 TTTATG    Score    33
+ Promoter Pos:  87052 LDF-  9.71
+ -10 box at pos.  87037 ATATATATT Score    50
+ -35 box at pos.  87020 TTAACA    Score    43
+ Promoter Pos:   7484 LDF-  9.69
+ -10 box at pos.   7469 TAATACATT Score    32
+ -35 box at pos.   7449 TTGCAA    Score    55
+ Promoter Pos:  84480 LDF-  9.68
+ -10 box at pos.  84465 ATTTATTTT Score    47
+ -35 box at pos.  84448 TTTACA    Score    47
+ Promoter Pos: 113060 LDF-  9.61
+ -10 box at pos. 113045 AGTTATAAA Score    50
+ -35 box at pos. 113020 TTGATT    Score    53
+ Promoter Pos: 103598 LDF-  9.49
+ -10 box at pos. 103583 TGATAAAAT Score    75
+ -35 box at pos. 103563 TTTACA    Score    47
+ Promoter Pos:  90026 LDF-  9.45
+ -10 box at pos.  90011 ATTTATATT Score    61
+ -35 box at pos.  89991 TTAATA    Score    35
+ Promoter Pos: 111409 LDF-  9.35
+ -10 box at pos. 111394 TTTTACTAT Score    56
+ -35 box at pos. 111377 TTTTTA    Score    26
+ Promoter Pos:  14764 LDF-  9.29
+ -10 box at pos.  14749 AACTATTAT Score    55
+ -35 box at pos.  14732 TTCATA    Score    38
+ Promoter Pos:  81427 LDF-  9.22
+ -10 box at pos.  81412 AGATATAAT Score    77
+ -35 box at pos.  81395 TTTTCA    Score    34
+ Promoter Pos:  52850 LDF-  9.20
+ -10 box at pos.  52835 TTGTAAAAT Score    80
+ -35 box at pos.  52813 TTCACA    Score    46
+ Promoter Pos: 121840 LDF-  9.20
+ -10 box at pos. 121825 TAGTATTAT Score    66
+ -35 box at pos. 121804 TTTAAT    Score    36
+ Promoter Pos:  79001 LDF-  9.16
+ -10 box at pos.  78986 ACTTACATT Score    38
+ -35 box at pos.  78966 TTTAAA    Score    41
+ Promoter Pos:  49621 LDF-  9.15
+ -10 box at pos.  49606 CTGTAAAAT Score    76
+ -35 box at pos.  49586 TTGAAT    Score    55
+ Promoter Pos: 110319 LDF-  8.99
+ -10 box at pos. 110305 CTGTAAAAT Score    76
+ -35 box at pos. 110283 TTTAAT    Score    36
+ Promoter Pos:  69246 LDF-  8.97
+ -10 box at pos.  69231 TGTTATAAT Score    93
+ -35 box at pos.  69207 TTCATA    Score    38
+ Promoter Pos:  65972 LDF-  8.93
+ -10 box at pos.  65957 CTGTAGAAT Score    66
+ -35 box at pos.  65939 TTGACC    Score    44
+ Promoter Pos:  59286 LDF-  8.87
+ -10 box at pos.  59271 TTTTATAGT Score    62
+ -35 box at pos.  59249 TTTAAA    Score    41
+ Promoter Pos: 133194 LDF-  8.76
+ -10 box at pos. 133179 ATGTATACT Score    72
+ -35 box at pos. 133161 TTGATT    Score    53
+ Promoter Pos: 142271 LDF-  8.71
+ -10 box at pos. 142256 GTATATATT Score    52
+ -35 box at pos. 142236 TTGCAT    Score    50
+ Promoter Pos:  30962 LDF-  8.71
+ -10 box at pos.  30947 CGTTATAAT Score    89
+ -35 box at pos.  30924 TTGGAT    Score    27
+ Promoter Pos:  29760 LDF-  8.65
+ -10 box at pos.  29745 TCCTATTAT Score    60
+ -35 box at pos.  29722 TTTATG    Score    33
+ Promoter Pos:  41919 LDF-  8.59
+ -10 box at pos.  41905 GGTTAAAAT Score    83
+ -35 box at pos.  41879 TTGAAG    Score    54
+ Promoter Pos:  91171 LDF-  8.56
+ -10 box at pos.  91156 ATTTATTTT Score    47
+ -35 box at pos.  91138 TTTTTA    Score    26
+ Promoter Pos:  67031 LDF-  8.53
+ -10 box at pos.  67016 ATGTAAAAT Score    75
+ -35 box at pos.  66998 TTGTTT    Score    40
+ Promoter Pos:  34911 LDF-  8.53
+ -10 box at pos.  34896 TTGTAGAAT Score    70
+ -35 box at pos.  34875 TTTCTA    Score    34
+ Promoter Pos:  51342 LDF-  8.50
+ -10 box at pos.  51327 TATTATAAT Score    79
+ -35 box at pos.  51306 TTCATA    Score    38
+ Promoter Pos:  65105 LDF-  8.49
+ -10 box at pos.  65090 ATATAAACT Score    53
+ -35 box at pos.  65070 TTACCT    Score    33
+ Promoter Pos:    881 LDF-  8.45
+ -10 box at pos.    866 ACTTATAAT Score    74
+ -35 box at pos.    843 TAGACT    Score    24
+ Promoter Pos: 102250 LDF-  8.45
+ -10 box at pos. 102236 TGTTAAGAT Score    70
+ -35 box at pos. 102211 TTTACA    Score    47
+ Promoter Pos:  44780 LDF-  8.41
+ -10 box at pos.  44765 AGTTAAAAT Score    81
+ -35 box at pos.  44747 TTGTAA    Score    47
+ Promoter Pos:  27571 LDF-  8.41
+ -10 box at pos.  27556 TTTCAAAAT Score    53
+ -35 box at pos.  27532 TTAACT    Score    38
+ Promoter Pos:  85138 LDF-  8.39
+ -10 box at pos.  85123 TTGTACATT Score    51
+ -35 box at pos.  85098 TTGAAT    Score    55
+ Promoter Pos:  80658 LDF-  8.35
+ -10 box at pos.  80643 TGTTGTAAT Score    55
+ -35 box at pos.  80622 TTGATA    Score    58
+ Promoter Pos: 130764 LDF-  8.34
+ -10 box at pos. 130749 GTGTAAATT Score    57
+ -35 box at pos. 130728 TTTCTA    Score    34
+ Promoter Pos:  27015 LDF-  8.34
+ -10 box at pos.  26999 TTTTATATT Score    66
+ -35 box at pos.  26980 TTACAA    Score    32
+ Promoter Pos:  85888 LDF-  8.19
+ -10 box at pos.  85873 GTCTATTTT Score    44
+ -35 box at pos.  85853 TTTATA    Score    39
+ Promoter Pos: 129123 LDF-  8.16
+ -10 box at pos. 129108 AGCTATAAT Score    83
+ -35 box at pos. 129085 ATGAAA    Score    30
+ Promoter Pos:  61936 LDF-  8.12
+ -10 box at pos.  61921 ATCTAGATT Score    39
+ -35 box at pos.  61903 TTGTAG    Score    41
+ Promoter Pos:  45644 LDF-  8.10
+ -10 box at pos.  45629 TTATATAAT Score    75
+ -35 box at pos.  45607 TTGCCT    Score    56
+ Promoter Pos: 107615 LDF-  8.07
+ -10 box at pos. 107600 TTTTATATT Score    66
+ -35 box at pos. 107579 TTGGAT    Score    27
+ Promoter Pos:   3484 LDF-  8.05
+ -10 box at pos.   3469 AGGTAAAAT Score    82
+ -35 box at pos.   3445 TTTAGA    Score    24
+ Promoter Pos:  68333 LDF-  8.05
+ -10 box at pos.  68318 TTTTAGTAT Score    55
+ -35 box at pos.  68295 TTTAAT    Score    36
+ Promoter Pos:  61132 LDF-  8.01
+ -10 box at pos.  61117 CTGTATTAT Score    69
+ -35 box at pos.  61092 GTAATA    Score     2
+ Promoter Pos:  60686 LDF-  7.99
+ -10 box at pos.  60671 TTATATGCT Score    49
+ -35 box at pos.  60651 TTGTCA    Score    53
+ Promoter Pos:  95490 LDF-  7.93
+ -10 box at pos.  95475 AGTTATTTT Score    54
+ -35 box at pos.  95455 TTGTCA    Score    53
+ Promoter Pos:  43800 LDF-  7.89
+ -10 box at pos.  43785 AGGTATGAT Score    73
+ -35 box at pos.  43763 TTACAT    Score    27
+ Promoter Pos: 128512 LDF-  7.85
+ -10 box at pos. 128497 AATTATAAT Score    74
+ -35 box at pos. 128474 CTGAAA    Score    25
+ Promoter Pos: 144790 LDF-  7.84
+ -10 box at pos. 144775 GTGTATTTT Score    50
+ -35 box at pos. 144754 TTGAAA    Score    60
+ Promoter Pos:   1498 LDF-  7.83
+ -10 box at pos.   1483 ACCTATCCT Score    41
+ -35 box at pos.   1459 TTTATA    Score    39
+ Promoter Pos:  94648 LDF-  7.82
+ -10 box at pos.  94632 CATTATTAT Score    61
+ -35 box at pos.  94616 TTATTT    Score    17
+ Promoter Pos:  23118 LDF-  7.66
+ -10 box at pos.  23103 TGTTAGTAT Score    62
+ -35 box at pos.  23078 TTGTCA    Score    53
+ Promoter Pos:  25416 LDF-  7.61
+ -10 box at pos.  25401 GTCTATACT Score    68
+ -35 box at pos.  25376 GTGTTA    Score    12
+ Promoter Pos: 115893 LDF-  7.59
+ -10 box at pos. 115878 TGCTATAAT Score    88
+ -35 box at pos. 115855 TTGAAT    Score    55
+ Promoter Pos:  88458 LDF-  7.59
+ -10 box at pos.  88443 TTGTATGTT Score    51
+ -35 box at pos.  88423 TTGTTT    Score    40
+ Promoter Pos:  69744 LDF-  7.57
+ -10 box at pos.  69729 CATTATAAT Score    75
+ -35 box at pos.  69710 TTTATA    Score    39
+ Promoter Pos:   2325 LDF-  7.56
+ -10 box at pos.   2310 GGGTATACT Score    81
+ -35 box at pos.   2293 TTAAAG    Score    31
+ Promoter Pos:  17761 LDF-  7.55
+ -10 box at pos.  17746 TCATAGCAT Score    33
+ -35 box at pos.  17727 TTTTCA    Score    34
+ Promoter Pos: 120056 LDF-  7.54
+ -10 box at pos. 120041 TTTTACAGT Score    46
+ -35 box at pos. 120020 TTTAAA    Score    41
+ Promoter Pos: 106689 LDF-  7.52
+ -10 box at pos. 106674 AACTAAAAT Score    62
+ -35 box at pos. 106652 TTTAAA    Score    41
+ Promoter Pos: 106237 LDF-  7.50
+ -10 box at pos. 106222 AAATAAAAT Score    56
+ -35 box at pos. 106202 TTGGAT    Score    27
+ Promoter Pos:  50409 LDF-  7.48
+ -10 box at pos.  50394 TTTTATAAG Score    48
+ -35 box at pos.  50369 TTAATA    Score    35
+ Promoter Pos:  78183 LDF-  7.46
+ -10 box at pos.  78168 TCTTATTAT Score    65
+ -35 box at pos.  78150 TTTCCT    Score    37
+ Promoter Pos:  59959 LDF-  7.37
+ -10 box at pos.  59944 TCTTATACT Score    69
+ -35 box at pos.  59922 TTAAAT    Score    32
+ Promoter Pos:  74912 LDF-  7.35
+ -10 box at pos.  74898 TTTTAAAAT Score    79
+ -35 box at pos.  74872 TTGTTA    Score    45
+ Promoter Pos: 117122 LDF-  7.35
+ -10 box at pos. 117107 AGTTAAAAC Score    43
+ -35 box at pos. 117088 TTTATG    Score    33
+ Promoter Pos:   2790 LDF-  7.34
+ -10 box at pos.   2775 TGGTAAATT Score    67
+ -35 box at pos.   2754 TTCAGA    Score    23
+ Promoter Pos:  31922 LDF-  7.33
+ -10 box at pos.  31907 CTTTATTTT Score    48
+ -35 box at pos.  31885 TTGTCT    Score    48
+ Promoter Pos:  71871 LDF-  7.25
+ -10 box at pos.  71857 CTCTAAAAT Score    70
+ -35 box at pos.  71835 TTGTTT    Score    40
+ Promoter Pos:  86233 LDF-  7.24
+ -10 box at pos.  86218 TAGTATACT Score    70
+ -35 box at pos.  86193 TTTAGT    Score    19
+ Promoter Pos:  46140 LDF-  7.23
+ -10 box at pos.  46125 ATTTAAAAT Score    74
+ -35 box at pos.  46105 TTCCTA    Score    33
+ Promoter Pos:  18101 LDF-  7.23
+ -10 box at pos.  18086 AGGTATAAT Score    89
+ -35 box at pos.  18066 TTGTCT    Score    48
+ Promoter Pos:  34386 LDF-  7.20
+ -10 box at pos.  34367 TTGCATATT Score    41
+ -35 box at pos.  34350 TTGCTT    Score    48
+ Promoter Pos:  40167 LDF-  7.14
+ -10 box at pos.  40152 TGTTAAATT Score    66
+ -35 box at pos.  40135 TTTACG    Score    41
+ Promoter Pos: 136664 LDF-  7.05
+ -10 box at pos. 136649 AATTAAAAT Score    67
+ -35 box at pos. 136629 TTGTAT    Score    42
+ Promoter Pos: 103292 LDF-  7.05
+ -10 box at pos. 103276 TGATAAAAT Score    75
+ -35 box at pos. 103252 TTCCAA    Score    35
+ Promoter Pos: 124476 LDF-  7.03
+ -10 box at pos. 124461 TGGTATACT Score    84
+ -35 box at pos. 124441 TTTATA    Score    39
+ Promoter Pos:  17271 LDF-  7.03
+ -10 box at pos.  17256 ATTTAGAAT Score    64
+ -35 box at pos.  17238 TTGCAA    Score    55
+ Promoter Pos:  19126 LDF-  7.02
+ -10 box at pos.  19111 ACTTCTAAT Score    36
+ -35 box at pos.  19092 TTGTTT    Score    40
+ Promoter Pos: 117816 LDF-  6.99
+ -10 box at pos. 117801 ATCTACGAT Score    44
+ -35 box at pos. 117782 TTCAAC    Score    18
+ Promoter Pos:  15949 LDF-  6.98
+ -10 box at pos.  15934 TTGTATTTT Score    53
+ -35 box at pos.  15915 TTTACA    Score    47
+ Promoter Pos: 113949 LDF-  6.93
+ -10 box at pos. 113934 GGATACATT Score    43
+ -35 box at pos. 113915 TTTAAA    Score    41
+ Promoter Pos: 131503 LDF-  6.93
+ -10 box at pos. 131488 AGTTAAAAT Score    81
+ -35 box at pos. 131465 ATGAAA    Score    30
+ Promoter Pos:  99349 LDF-  6.92
+ -10 box at pos.  99333 ATTTGTAAT Score    43
+ -35 box at pos.  99314 TTAAAT    Score    32
+ Promoter Pos:  26115 LDF-  6.90
+ -10 box at pos.  26100 TGGTATAAT Score    94
+ -35 box at pos.  26075 TTGTCC    Score    31
+ Promoter Pos: 127701 LDF-  6.85
+ -10 box at pos. 127686 GGATATAAT Score    79
+ -35 box at pos. 127667 TTTTTT    Score    21
+ Promoter Pos:  56947 LDF-  6.84
+ -10 box at pos.  56932 AGTTATTAT Score    74
+ -35 box at pos.  56911 TTATAA    Score    24
+ Promoter Pos:  76070 LDF-  6.84
+ -10 box at pos.  76055 ATTTATTAT Score    67
+ -35 box at pos.  76037 AGGTTA    Score   -22
+ Promoter Pos:  83711 LDF-  6.83
+ -10 box at pos.  83696 TTGTAAACT Score    70
+ -35 box at pos.  83675 TATCCT    Score     0
+ Promoter Pos: 137227 LDF-  6.83
+ -10 box at pos. 137212 AGGTATGGT Score    49
+ -35 box at pos. 137193 TTGCAA    Score    55
+ Promoter Pos: 115148 LDF-  6.77
+ -10 box at pos. 115133 ATATAAAAT Score    63
+ -35 box at pos. 115116 TTTAGA    Score    24
+ Promoter Pos: 129990 LDF-  6.76
+ -10 box at pos. 129975 AGATAGAAT Score    60
+ -35 box at pos. 129952 TTGTTA    Score    45
+ Promoter Pos:  48234 LDF-  6.74
+ -10 box at pos.  48219 AGTTAAAAT Score    81
+ -35 box at pos.  48201 TTGAGT    Score    38
+ Promoter Pos:  23716 LDF-  6.74
+ -10 box at pos.  23701 TTTTATAGT Score    62
+ -35 box at pos.  23681 TCTAAT    Score    -1
+ Promoter Pos:  58384 LDF-  6.70
+ -10 box at pos.  58369 GTCTATACT Score    68
+ -35 box at pos.  58350 TTGAAA    Score    60
+ Promoter Pos:  84153 LDF-  6.68
+ -10 box at pos.  84137 TTTTATTTT Score    52
+ -35 box at pos.  84117 CTGTAA    Score    12
+ Promoter Pos:  77386 LDF-  6.67
+ -10 box at pos.  77371 AGTTAAGAT Score    65
+ -35 box at pos.  77350 TTGACC    Score    44
+ Promoter Pos: 122301 LDF-  6.66
+ -10 box at pos. 122286 CACTATAAT Score    70
+ -35 box at pos. 122269 TTAAAA    Score    37
+ Promoter Pos:  51038 LDF-  6.66
+ -10 box at pos.  51023 ATTTATTAT Score    67
+ -35 box at pos.  50998 TTCTAA    Score    27
+ Promoter Pos: 131191 LDF-  6.63
+ -10 box at pos. 131176 AGTAATGAT Score    36
+ -35 box at pos. 131159 TTCAAA    Score    40
+ Promoter Pos: 135985 LDF-  6.63
+ -10 box at pos. 135970 TGGTAGGGT Score    37
+ -35 box at pos. 135950 TTAAAA    Score    37
+ Promoter Pos:  30284 LDF-  6.63
+ -10 box at pos.  30269 TTTTATTTT Score    52
+ -35 box at pos.  30248 TTCCAA    Score    35
+ Promoter Pos: 125774 LDF-  6.58
+ -10 box at pos. 125759 GTATAAAAT Score    65
+ -35 box at pos. 125734 TTTAAT    Score    36
+ Promoter Pos: 119399 LDF-  6.58
+ -10 box at pos. 119384 GGATATAAT Score    79
+ -35 box at pos. 119359 ATCCAA    Score     5
+ Promoter Pos:  20846 LDF-  6.54
+ -10 box at pos.  20831 CTGTAATCT Score    52
+ -35 box at pos.  20811 TTTACT    Score    42
+ Promoter Pos: 105129 LDF-  6.50
+ -10 box at pos. 105114 AAGTAAAAT Score    68
+ -35 box at pos. 105090 TTTAAA    Score    41
+ Promoter Pos:   6111 LDF-  6.49
+ -10 box at pos.   6096 TGGTAGAAT Score    77
+ -35 box at pos.   6073 TTATCT    Score    25
+ Promoter Pos: 109881 LDF-  6.45
+ -10 box at pos. 109866 TAATATAAT Score    68
+ -35 box at pos. 109847 TTGACG    Score    60
+ Promoter Pos:  41426 LDF-  6.39
+ -10 box at pos.  41411 TTGTAGAAT Score    70
+ -35 box at pos.  41393 CTGAAT    Score    20
+ Promoter Pos:  24082 LDF-  6.37
+ -10 box at pos.  24067 GGCTACAAT Score    69
+ -35 box at pos.  24047 TCTAAT    Score    -1
+ Promoter Pos:   1181 LDF-  6.31
+ -10 box at pos.   1162 ATGTATAAT Score    82
+ -35 box at pos.   1141 TTTACT    Score    42
+ Promoter Pos: 145105 LDF-  6.29
+ -10 box at pos. 145089 AGATATATT Score    57
+ -35 box at pos. 145073 CTGATA    Score    23
+ Promoter Pos:  64021 LDF-  6.29
+ -10 box at pos.  64006 TTTTATTTT Score    52
+ -35 box at pos.  63988 TCAACA    Score     6
+ Promoter Pos: 116219 LDF-  6.28
+ -10 box at pos. 116204 AATTAGAAT Score    57
+ -35 box at pos. 116180 TTATAT    Score    19
+ Promoter Pos:  55834 LDF-  6.26
+ -10 box at pos.  55819 TTGTATTAT Score    73
+ -35 box at pos.  55798 TTGTAA    Score    47
+ Promoter Pos:   9884 LDF-  6.25
+ -10 box at pos.   9869 GGATATAAT Score    79
+ -35 box at pos.   9848 TTATAA    Score    24
+ Promoter Pos:   8811 LDF-  6.23
+ -10 box at pos.   8796 GGTTACGGT Score    34
+ -35 box at pos.   8775 TTTAAA    Score    41
+ Promoter Pos: 108998 LDF-  6.21
+ -10 box at pos. 108983 GGATAATAT Score    58
+ -35 box at pos. 108959 TTCAGA    Score    23
+ Promoter Pos: 117468 LDF-  6.21
+ -10 box at pos. 117453 TTTTAAAAT Score    79
+ -35 box at pos. 117435 TTGCCA    Score    61
+ Promoter Pos: 127105 LDF-  6.18
+ -10 box at pos. 127090 TGCTAAAAT Score    81
+ -35 box at pos. 127073 TTGATT    Score    53
+ Promoter Pos:  63210 LDF-  6.16
+ -10 box at pos.  63195 TTGTATACC Score    39
+ -35 box at pos.  63175 TTAACA    Score    43
+ Promoter Pos:  28690 LDF-  6.16
+ -10 box at pos.  28675 TTTTGTAAT Score    48
+ -35 box at pos.  28655 TTGTTA    Score    45
+ Promoter Pos:  44322 LDF-  6.13
+ -10 box at pos.  44307 TTGTATTAT Score    73
+ -35 box at pos.  44289 TTGAGA    Score    43
+ Promoter Pos:  79770 LDF-  6.13
+ -10 box at pos.  79755 TTCTAGAAT Score    64
+ -35 box at pos.  79735 GTGCAA    Score    22
+ Promoter Pos:   4977 LDF-  6.11
+ -10 box at pos.   4962 TACTATATT Score    54
+ -35 box at pos.   4941 TTACAG    Score    26
+ Promoter Pos:  91819 LDF-  6.10
+ -10 box at pos.  91804 TTGTACGTT Score    35
+ -35 box at pos.  91784 TTGCAT    Score    50
+ Promoter Pos: 141063 LDF-  6.08
+ -10 box at pos. 141048 GCCTATAAT Score    71
+ -35 box at pos. 141027 TTGTGA    Score    30
+ Promoter Pos: 101628 LDF-  6.08
+ -10 box at pos. 101613 TATTAACAT Score    54
+ -35 box at pos. 101593 ATAAAT    Score     2
+ Promoter Pos:  12778 LDF-  6.08
+ -10 box at pos.  12763 CATTAAAAT Score    68
+ -35 box at pos.  12744 TAGATG    Score    15
+ Promoter Pos:  98839 LDF-  6.05
+ -10 box at pos.  98824 ATTTAAAAT Score    74
+ -35 box at pos.  98807 TTAACA    Score    43
+ Promoter Pos:  96649 LDF-  6.04
+ -10 box at pos.  96634 TGATAGAAT Score    65
+ -35 box at pos.  96610 ATGCAA    Score    25
+ Promoter Pos: 139339 LDF-  6.01
+ -10 box at pos. 139324 ATGTATTAT Score    68
+ -35 box at pos. 139304 TTTAAA    Score    41
+ Promoter Pos:  97334 LDF-  5.96
+ -10 box at pos.  97319 AATTATTCT Score    50
+ -35 box at pos.  97298 TTGCTG    Score    47
+ Promoter Pos:  36884 LDF-  5.96
+ -10 box at pos.  36868 TTTTATACT Score    76
+ -35 box at pos.  36847 TTGTAC    Score    25
+ Promoter Pos:  90541 LDF-  5.95
+ -10 box at pos.  90526 CCTTATATT Score    55
+ -35 box at pos.  90502 TTCCCA    Score    41
+ Promoter Pos:  70838 LDF-  5.94
+ -10 box at pos.  70823 TTATATAGT Score    51
+ -35 box at pos.  70799 TTTAAA    Score    41
+ Promoter Pos: 132335 LDF-  5.92
+ -10 box at pos. 132320 AAGTAAAAT Score    68
+ -35 box at pos. 132298 TTTATA    Score    39
+ Promoter Pos: 140375 LDF-  5.92
+ -10 box at pos. 140359 CAGTAATAT Score    55
+ -35 box at pos. 140339 GTGACA    Score    33
+ Promoter Pos:  16762 LDF-  5.92
+ -10 box at pos.  16747 GTCTATGAT Score    62
+ -35 box at pos.  16727 TTTTCT    Score    29
+ Promoter Pos:  20038 LDF-  5.92
+ -10 box at pos.  20023 ATCTATAAT Score    76
+ -35 box at pos.  20003 TTCTCT    Score    28
+ Promoter Pos:  21898 LDF-  5.91
+ -10 box at pos.  21879 CGTTAAACT Score    72
+ -35 box at pos.  21864 TTGATA    Score    58
+ Promoter Pos:  20430 LDF-  5.91
+ -10 box at pos.  20415 TGCTAAATT Score    61
+ -35 box at pos.  20398 TTCAAA    Score    40
+ Promoter Pos:   9399 LDF-  5.90
+ -10 box at pos.   9384 GAGCATAAT Score    51
+ -35 box at pos.   9359 TTGTAG    Score    41
+ Promoter Pos: 141629 LDF-  5.88
+ -10 box at pos. 141613 AAATAATAT Score    42
+ -35 box at pos. 141593 ATAAAA    Score     7
+ Promoter Pos:  75396 LDF-  5.86
+ -10 box at pos.  75381 ATTTACAAT Score    65
+ -35 box at pos.  75357 TTGAGT    Score    38
+ Promoter Pos:   6984 LDF-  5.86
+ -10 box at pos.   6969 ACTTAAAAT Score    67
+ -35 box at pos.   6949 ATAACA    Score    13
+ Promoter Pos:  71315 LDF-  5.84
+ -10 box at pos.  71300 TATTATACT Score    69
+ -35 box at pos.  71275 TTGCCT    Score    56
+ Promoter Pos:  82399 LDF-  5.82
+ -10 box at pos.  82384 CTGTAAAAT Score    76
+ -35 box at pos.  82363 TCTAAA    Score     4
+ Promoter Pos: 112371 LDF-  5.80
+ -10 box at pos. 112356 GGTTAAACT Score    73
+ -35 box at pos. 112337 TTTAGA    Score    24
+ Promoter Pos:  57482 LDF-  5.80
+ -10 box at pos.  57467 TGATAAGTT Score    39
+ -35 box at pos.  57448 TTAAAT    Score    32
+ Promoter Pos:  18705 LDF-  5.78
+ -10 box at pos.  18690 ATTTAGAAT Score    64
+ -35 box at pos.  18672 TTGTAG    Score    41
+ Promoter Pos:  13540 LDF-  5.78
+ -10 box at pos.  13525 TGCTAAACT Score    71
+ -35 box at pos.  13502 TTTACT    Score    42
+ Promoter Pos: 121079 LDF-  5.77
+ -10 box at pos. 121064 TGTTAAAAT Score    86
+ -35 box at pos. 121039 TTTACA    Score    47
+ Promoter Pos:  93691 LDF-  5.77
+ -10 box at pos.  93676 CAGTAAAAT Score    69
+ -35 box at pos.  93656 TTGACA    Score    66
+ Promoter Pos: 119701 LDF-  5.76
+ -10 box at pos. 119686 TTTTATACT Score    76
+ -35 box at pos. 119661 TTAGCA    Score    15
+ Promoter Pos:  30615 LDF-  5.73
+ -10 box at pos.  30600 AGTTATGTT Score    52
+ -35 box at pos.  30583 TTACCT    Score    33
+ Promoter Pos:  80224 LDF-  5.73
+ -10 box at pos.  80209 TGCTAAACT Score    71
+ -35 box at pos.  80188 TTGGTA    Score    30
+ Promoter Pos:  82722 LDF-  5.69
+ -10 box at pos.  82707 TTCTATTAT Score    67
+ -35 box at pos.  82690 TTGCCT    Score    56
+ Promoter Pos: 126616 LDF-  5.69
+ -10 box at pos. 126601 GTGTAAAAT Score    77
+ -35 box at pos. 126578 TTGTAA    Score    47
+ Promoter Pos:  52021 LDF-  5.69
+ -10 box at pos.  52006 TGTTATACT Score    83
+ -35 box at pos.  51987 TTGCAG    Score    49
+ Promoter Pos:  61610 LDF-  5.64
+ -10 box at pos.  61595 TTTTATTCT Score    62
+ -35 box at pos.  61578 TTGCTA    Score    53
+ Promoter Pos:  41011 LDF-  5.63
+ -10 box at pos.  40996 GGATAAAGT Score    48
+ -35 box at pos.  40976 TTCTCA    Score    33
+ Promoter Pos:  81816 LDF-  5.61
+ -10 box at pos.  81797 TCTTATAAT Score    79
+ -35 box at pos.  81776 TTTATA    Score    39
+ Promoter Pos:  47720 LDF-  5.61
+ -10 box at pos.  47705 TTACAAAAT Score    42
+ -35 box at pos.  47686 TTTATA    Score    39
+ Promoter Pos:  68737 LDF-  5.60
+ -10 box at pos.  68722 AGATATATT Score    57
+ -35 box at pos.  68702 TTCTCA    Score    33
+ Promoter Pos:  83355 LDF-  5.57
+ -10 box at pos.  83340 AGGTATTTT Score    55
+ -35 box at pos.  83318 TTATCA    Score    30
+ Promoter Pos:  70138 LDF-  5.55
+ -10 box at pos.  70123 AGGTATTAT Score    75
+ -35 box at pos.  70106 TTTAAA    Score    41
+ Promoter Pos: 142963 LDF-  5.53
+ -10 box at pos. 142948 AACTAGAAT Score    52
+ -35 box at pos. 142931 TTAAAT    Score    32
+ Promoter Pos: 144172 LDF-  5.53
+ -10 box at pos. 144156 AAATAAAAT Score    56
+ -35 box at pos. 144140 TTGAAC    Score    38
+ Promoter Pos:  70457 LDF-  5.53
+ -10 box at pos.  70442 TTTTACAAA Score    32
+ -35 box at pos.  70425 TTGTAA    Score    47
+ Promoter Pos: 104768 LDF-  5.52
+ -10 box at pos. 104753 ATATATTAT Score    56
+ -35 box at pos. 104731 TTTATG    Score    33
+ Promoter Pos:  86583 LDF-  5.52
+ -10 box at pos.  86568 TTTTAAACT Score    69
+ -35 box at pos.  86548 CTGTAT    Score     7
+ Promoter Pos:  43022 LDF-  5.52
+ -10 box at pos.  43007 AATTATTAT Score    60
+ -35 box at pos.  42982 TTGTCT    Score    48
+ Promoter Pos: 106998 LDF-  5.49
+ -10 box at pos. 106983 AGTTAAATT Score    61
+ -35 box at pos. 106959 TTGTTA    Score    45
+ Promoter Pos: 135083 LDF-  5.49
+ -10 box at pos. 135068 TTGTATCAT Score    69
+ -35 box at pos. 135046 TTTATG    Score    33
+ Promoter Pos:  64763 LDF-  5.48
+ -10 box at pos.  64748 TGGTAAACT Score    77
+ -35 box at pos.  64726 TTTCTA    Score    34
+ Promoter Pos:  10552 LDF-  5.46
+ -10 box at pos.  10537 GGGGATACT Score    45
+ -35 box at pos.  10513 TTTATA    Score    39
+ Promoter Pos:  42618 LDF-  5.45
+ -10 box at pos.  42602 TGTTAGAAT Score    76
+ -35 box at pos.  42585 TTTCCA    Score    42
+ Promoter Pos: 112013 LDF-  5.45
+ -10 box at pos. 111998 TTTTATGTT Score    50
+ -35 box at pos. 111974 TTGATA    Score    58
+ Promoter Pos: 112760 LDF-  5.42
+ -10 box at pos. 112745 TAGTAATAT Score    59
+ -35 box at pos. 112725 TTTATT    Score    34
+ Promoter Pos: 143272 LDF-  5.40
+ -10 box at pos. 143257 GCTTATTTT Score    42
+ -35 box at pos. 143237 GTGTAA    Score    14
+ Promoter Pos:     92 LDF-  5.40
+ -10 box at pos.     77 GGATAGAAT Score    62
+ -35 box at pos.     55 TTTACA    Score    47
+ Promoter Pos:  92505 LDF-  5.39
+ -10 box at pos.  92490 TACTAAATT Score    47
+ -35 box at pos.  92470 TTGGTT    Score    25
+ Promoter Pos:  54121 LDF-  5.38
+ -10 box at pos.  54106 ATCTATAAT Score    76
+ -35 box at pos.  54084 TTACAA    Score    32
+ Promoter Pos:   6668 LDF-  5.37
+ -10 box at pos.   6653 GAGTAATAT Score    56
+ -35 box at pos.   6629 TTAATG    Score    29
+ Promoter Pos:  31266 LDF-  5.37
+ -10 box at pos.  31251 AAGTAAACT Score    58
+ -35 box at pos.  31232 TTGAAT    Score    55
+ Promoter Pos:  21265 LDF-  5.35
+ -10 box at pos.  21250 TCCTATAAT Score    74
+ -35 box at pos.  21232 TTGAGA    Score    43
+ Promoter Pos:  37427 LDF-  5.35
+ -10 box at pos.  37412 GTTTAAAGT Score    52
+ -35 box at pos.  37392 TTGATG    Score    52
+ Promoter Pos:  88780 LDF-  5.35
+ -10 box at pos.  88765 GGGTAACAA Score    28
+ -35 box at pos.  88744 TTACCT    Score    33
+ Promoter Pos:  24418 LDF-  5.35
+ -10 box at pos.  24403 TGGTAACAT Score    69
+ -35 box at pos.  24378 TTTCCT    Score    37
+ Promoter Pos:  81060 LDF-  5.32
+ -10 box at pos.  81045 TTCTATAAT Score    81
+ -35 box at pos.  81025 TTTATA    Score    39
+ Promoter Pos:  33364 LDF-  5.31
+ -10 box at pos.  33349 TTTTTTAAT Score    48
+ -35 box at pos.  33325 TTGTAT    Score    42
+ Promoter Pos:  11405 LDF-  5.30
+ -10 box at pos.  11386 TGTTATAGT Score    69
+ -35 box at pos.  11366 TTCCAT    Score    30
+ Promoter Pos: 111050 LDF-  5.30
+ -10 box at pos. 111035 TTTTAAATT Score    59
+ -35 box at pos. 111014 TTGAAA    Score    60
+ Promoter Pos:  73069 LDF-  5.27
+ -10 box at pos.  73052 ACCTACAAT Score    53
+ -35 box at pos.  73034 TTGATC    Score    36
+ Promoter Pos:  36198 LDF-  5.26
+ -10 box at pos.  36183 CATTAAACT Score    58
+ -35 box at pos.  36161 TTATAA    Score    24
+ Promoter Pos:  73812 LDF-  5.26
+ -10 box at pos.  73796 AGTTATAAT Score    88
+ -35 box at pos.  73780 GTGCAG    Score    16
+ Promoter Pos:  87945 LDF-  5.25
+ -10 box at pos.  87930 CGTTAAGCT Score    56
+ -35 box at pos.  87911 TTGCTT    Score    48
+ Promoter Pos: 134500 LDF-  5.25
+ -10 box at pos. 134485 ATTTAAATT Score    54
+ -35 box at pos. 134468 TGGTAA    Score    10
+ Promoter Pos:  32664 LDF-  5.24
+ -10 box at pos.  32649 AGATAAAAT Score    70
+ -35 box at pos.  32626 TTTTCT    Score    29
+ Promoter Pos:  95830 LDF-  5.23
+ -10 box at pos.  95815 CTCTAAACT Score    60
+ -35 box at pos.  95793 TTGATT    Score    53
+ Promoter Pos:  96219 LDF-  5.20
+ -10 box at pos.  96204 AGGTAGCGT Score    30
+ -35 box at pos.  96182 TTGATA    Score    58
+ Promoter Pos:  14410 LDF-  5.19
+ -10 box at pos.  14395 TTTTTAAGT Score    17
+ -35 box at pos.  14374 TTGCCA    Score    61
+ Promoter Pos: 121394 LDF-  5.18
+ -10 box at pos. 121379 GTGTACAAT Score    68
+ -35 box at pos. 121360 TTCACG    Score    40
+ Promoter Pos:  31583 LDF-  5.17
+ -10 box at pos.  31568 TTGTATACT Score    77
+ -35 box at pos.  31545 TTCACT    Score    41
+ Promoter Pos:  48779 LDF-  5.16
+ -10 box at pos.  48764 CTGTAAAAT Score    76
+ -35 box at pos.  48739 ATGTAT    Score    12
+ Promoter Pos: 115584 LDF-  5.16
+ -10 box at pos. 115569 TAATAGAAT Score    51
+ -35 box at pos. 115546 TTCCCT    Score    36
+ Promoter Pos:  72553 LDF-  5.15
+ -10 box at pos.  72538 TGTTATTAT Score    79
+ -35 box at pos.  72513 TTCCCT    Score    36
+ Promoter Pos:  13897 LDF-  5.15
+ -10 box at pos.  13882 TGCAATAAT Score    52
+ -35 box at pos.  13862 TAGAAA    Score    23
+ Promoter Pos: 118563 LDF-  5.14
+ -10 box at pos. 118548 AGATATATA Score    19
+ -35 box at pos. 118526 TTCTCG    Score    27
+ Promoter Pos: 104352 LDF-  5.12
+ -10 box at pos. 104337 GGGCAGAGT Score    24
+ -35 box at pos. 104312 TTAAAA    Score    37
+ Promoter Pos:  76467 LDF-  5.10
+ -10 box at pos.  76452 AGTTAATAT Score    67
+ -35 box at pos.  76433 ATGTTA    Score    15
+ Promoter Pos:  29370 LDF-  5.09
+ -10 box at pos.  29355 ATTTATATT Score    61
+ -35 box at pos.  29332 TTGTAA    Score    47
+ Promoter Pos:  79341 LDF-  5.06
+ -10 box at pos.  79326 TGTTATCCT Score    65
+ -35 box at pos.  79306 TTGTAA    Score    47
+ Promoter Pos:  98193 LDF-  5.05
+ -10 box at pos.  98178 AGGTACAAT Score    73
+ -35 box at pos.  98158 TCGAAA    Score    23
+ Promoter Pos:  52411 LDF-  5.03
+ -10 box at pos.  52396 TGCTATTCT Score    64
+ -35 box at pos.  52376 TTATCT    Score    25
+ Promoter Pos:  39229 LDF-  5.03
+ -10 box at pos.  39213 TGTTATACT Score    83
+ -35 box at pos.  39197 TTGTCT    Score    48
+ Promoter Pos: 105837 LDF-  5.01
+ -10 box at pos. 105822 TTTTATCAT Score    68
+ -35 box at pos. 105799 TTTATT    Score    34
+ Promoter Pos: 118903 LDF-  4.99
+ -10 box at pos. 118889 TGTTATACT Score    83
+ -35 box at pos. 118863 TTACCT    Score    33
+ Promoter Pos:  76801 LDF-  4.97
+ -10 box at pos.  76786 TTTTATGAT Score    70
+ -35 box at pos.  76767 TTGCAC    Score    33
+ Promoter Pos:  66410 LDF-  4.93
+ -10 box at pos.  66395 AGTTACAAT Score    72
+ -35 box at pos.  66374 TTGCAG    Score    49
+ Promoter Pos: 107301 LDF-  4.93
+ -10 box at pos. 107286 TGGAATAAT Score    58
+ -35 box at pos. 107266 ATGACT    Score    31
+ Promoter Pos:  67736 LDF-  4.89
+ -10 box at pos.  67721 TATTATTAT Score    65
+ -35 box at pos.  67698 TTTAAA    Score    41
+ Promoter Pos:  95095 LDF-  4.89
+ -10 box at pos.  95080 AGATATAAT Score    77
+ -35 box at pos.  95060 ATGATA    Score    28
+ Promoter Pos:  50036 LDF-  4.89
+ -10 box at pos.  50021 CATTATATT Score    55
+ -35 box at pos.  49998 TTAATA    Score    35
+ Promoter Pos:  74276 LDF-  4.87
+ -10 box at pos.  74261 AATTAAAAT Score    67
+ -35 box at pos.  74237 GTGAAA    Score    27
+ Promoter Pos:  13214 LDF-  4.86
+ -10 box at pos.  13199 AGATATTAT Score    63
+ -35 box at pos.  13179 TTAAGA    Score    20
+ Promoter Pos: 123629 LDF-  4.85
+ -10 box at pos. 123614 AGATATTCT Score    53
+ -35 box at pos. 123594 TTGCTT    Score    48
+ Promoter Pos: 124881 LDF-  4.85
+ -10 box at pos. 124866 TTATATATT Score    55
+ -35 box at pos. 124846 TTTTTT    Score    21
+ Promoter Pos: 130349 LDF-  4.83
+ -10 box at pos. 130334 GTGTATAAT Score    84
+ -35 box at pos. 130313 TGGAAG    Score    17
+ Promoter Pos:  89599 LDF-  4.77
+ -10 box at pos.  89584 GATCAAAAT Score    43
+ -35 box at pos.  89560 TTGTCG    Score    47
+ Promoter Pos:  85570 LDF-  4.75
+ -10 box at pos.  85555 ACCTAAAAT Score    62
+ -35 box at pos.  85530 TTACAT    Score    27
+ Promoter Pos:  53788 LDF-  4.73
+ -10 box at pos.  53773 TCTTACGAT Score    47
+ -35 box at pos.  53756 TTTACT    Score    42
+ Promoter Pos:  63665 LDF-  4.72
+ -10 box at pos.  63650 AGTTAACAT Score    63
+ -35 box at pos.  63628 TTGAAA    Score    60
+ Promoter Pos: 102830 LDF-  4.72
+ -10 box at pos. 102815 TGATAAAAT Score    75
+ -35 box at pos. 102797 TTTAAA    Score    41
+ Promoter Pos: 101249 LDF-  4.72
+ -10 box at pos. 101234 TTTTAAAAA Score    41
+ -35 box at pos. 101215 TTGAAA    Score    60
+ Promoter Pos:  47115 LDF-  4.70
+ -10 box at pos.  47100 TTCTAGAAT Score    64
+ -35 box at pos.  47083 TTAACT    Score    38
+ Promoter Pos: 113623 LDF-  4.69
+ -10 box at pos. 113608 GTGCATAAT Score    58
+ -35 box at pos. 113587 ATAACA    Score    13
+ Promoter Pos:  49085 LDF-  4.66
+ -10 box at pos.  49070 TGATATCAT Score    64
+ -35 box at pos.  49053 ATAAGT    Score   -15
+ Promoter Pos: 100195 LDF-  4.65
+ -10 box at pos. 100180 CCTGATAAT Score    39
+ -35 box at pos. 100162 TTTAAT    Score    36
+ Promoter Pos:  15509 LDF-  4.64
+ -10 box at pos.  15494 GTTTATAAT Score    83
+ -35 box at pos.  15473 ATGCGC    Score   -14
+ Promoter Pos:  19581 LDF-  4.64
+ -10 box at pos.  19566 CTTTAAACT Score    65
+ -35 box at pos.  19542 TTGCTA    Score    53
+ Promoter Pos:   5520 LDF-  4.60
+ -10 box at pos.   5505 AGCTAAAAT Score    76
+ -35 box at pos.   5486 TTCATA    Score    38
+ Promoter Pos:  22275 LDF-  4.58
+ -10 box at pos.  22260 TTCTATACT Score    71
+ -35 box at pos.  22238 TTCATA    Score    38
+ Promoter Pos:  74582 LDF-  4.56
+ -10 box at pos.  74567 TGTTAGAGT Score    52
+ -35 box at pos.  74550 TTCAAA    Score    40
+ Promoter Pos:  56198 LDF-  4.55
+ -10 box at pos.  56183 GGTTAAACT Score    73
+ -35 box at pos.  56164 TTGTTA    Score    45
+ Promoter Pos:  77796 LDF-  4.55
+ -10 box at pos.  77781 TTTTAAATT Score    59
+ -35 box at pos.  77758 TTGGAT    Score    27
+ Promoter Pos:  26452 LDF-  4.54
+ -10 box at pos.  26437 ACTTATTAT Score    60
+ -35 box at pos.  26420 TTACTA    Score    30
+ Promoter Pos:  29069 LDF-  4.53
+ -10 box at pos.  29054 TGATACCTT Score    28
+ -35 box at pos.  29034 TTGACT    Score    61
+ Promoter Pos:  15134 LDF-  4.52
+ -10 box at pos.  15119 ATTTATAGT Score    57
+ -35 box at pos.  15099 GTGTCT    Score    15
+ Promoter Pos:  51679 LDF-  4.49
+ -10 box at pos.  51664 AGTTATATT Score    68
+ -35 box at pos.  51645 TTTCAA    Score    36
+ Promoter Pos:  93229 LDF-  4.47
+ -10 box at pos.  93214 AGCTAAAAT Score    76
+ -35 box at pos.  93189 CAGAAA    Score   -12
+ Promoter Pos:  35411 LDF-  4.47
+ -10 box at pos.  35396 TTTTGTAAT Score    48
+ -35 box at pos.  35378 TTTCCA    Score    42
+ Promoter Pos: 131931 LDF-  4.46
+ -10 box at pos. 131916 CGGGAAAAT Score    47
+ -35 box at pos. 131898 TTAAAG    Score    31
+ Promoter Pos:  39713 LDF-  4.39
+ -10 box at pos.  39696 TGGTAAACT Score    77
+ -35 box at pos.  39681 TTTCCA    Score    42
+ Promoter Pos: 132637 LDF-  4.37
+ -10 box at pos. 132618 ATGTAAAAT Score    75
+ -35 box at pos. 132603 ATGAAA    Score    30
+ Promoter Pos: 110724 LDF-  4.37
+ -10 box at pos. 110709 AGGCAAAAT Score    56
+ -35 box at pos. 110688 TTAACG    Score    37
+ Promoter Pos:  46485 LDF-  4.37
+ -10 box at pos.  46470 CGTCAAATT Score    36
+ -35 box at pos.  46446 TTTAAA    Score    41
+ Promoter Pos:  22741 LDF-  4.34
+ -10 box at pos.  22726 AGGAATAGT Score    29
+ -35 box at pos.  22709 TTGTAA    Score    47
+ Promoter Pos: 135471 LDF-  4.28
+ -10 box at pos. 135456 AAGTCTACT Score    27
+ -35 box at pos. 135434 TTTAAT    Score    36
+ Promoter Pos:  28183 LDF-  4.28
+ -10 box at pos.  28168 CTTTATGCT Score    56
+ -35 box at pos.  28151 TTGGCT    Score    33
+ Promoter Pos: 122884 LDF-  4.27
+ -10 box at pos. 122869 TTTTAGAAG Score    31
+ -35 box at pos. 122851 TTGCAA    Score    55
+ Promoter Pos:  32966 LDF-  4.26
+ -10 box at pos.  32951 CTGTATTAC Score    31
+ -35 box at pos.  32929 TTAACA    Score    43
+ Promoter Pos:  78560 LDF-  4.25
+ -10 box at pos.  78545 TGGTCTTCT Score    32
+ -35 box at pos.  78526 TTTCTT    Score    29
+ Promoter Pos: 128139 LDF-  4.16
+ -10 box at pos. 128124 TCTTATTAT Score    65
+ -35 box at pos. 128103 TTACCC    Score    16
+ Promoter Pos:  64453 LDF-  4.16
+ -10 box at pos.  64438 TTTTTAAAT Score    41
+ -35 box at pos.  64419 TTGTCA    Score    53
+ Promoter Pos:  16339 LDF-  4.12
+ -10 box at pos.  16324 CCCTATTAT Score    56
+ -35 box at pos.  16306 TTTCTT    Score    29
+ Promoter Pos: 136287 LDF-  4.09
+ -10 box at pos. 136271 TCTTAAAAT Score    72
+ -35 box at pos. 136255 TTGATT    Score    53
+ Promoter Pos:  73453 LDF-  4.08
+ -10 box at pos.  73438 TAGTAAAAT Score    73
+ -35 box at pos.  73421 TTGCCA    Score    61
+ Promoter Pos:  45166 LDF-  4.06
+ -10 box at pos.  45151 AAGAATAAT Score    39
+ -35 box at pos.  45129 TTCCAA    Score    35
+ Promoter Pos:  62852 LDF-  4.05
+ -10 box at pos.  62837 TATTATTAT Score    65
+ -35 box at pos.  62817 TTGCTC    Score    31
+ Promoter Pos: 120409 LDF-  4.04
+ -10 box at pos. 120394 GTTTAAATT Score    56
+ -35 box at pos. 120375 ATGATG    Score    22
+ Promoter Pos:  58738 LDF-  4.01
+ -10 box at pos.  58723 TGGTATTGT Score    56
+ -35 box at pos.  58699 TTCAAA    Score    40
+ Promoter Pos:  67380 LDF-  3.97
+ -10 box at pos.  67365 ATCTAAAAT Score    69
+ -35 box at pos.  67344 TTTACT    Score    42
+ Promoter Pos:  35829 LDF-  3.93
+ -10 box at pos.  35814 CTTTATATT Score    62
+ -35 box at pos.  35792 TTAACT    Score    38
+ Promoter Pos: 133823 LDF-  3.92
+ -10 box at pos. 133808 GGCTACAAT Score    69
+ -35 box at pos. 133786 ATGATA    Score    28
+ Promoter Pos:  25006 LDF-  3.92
+ -10 box at pos.  24991 ATTTAATAT Score    60
+ -35 box at pos.  24967 TTCTAA    Score    27
+ Promoter Pos:  91513 LDF-  3.88
+ -10 box at pos.  91498 AGTGAGAAT Score    35
+ -35 box at pos.  91479 TTACTT    Score    25
+ Promoter Pos: 137712 LDF-  3.86
+ -10 box at pos. 137697 ACATAAAAT Score    56
+ -35 box at pos. 137678 TTAATG    Score    29
+ Promoter Pos:  58052 LDF-  3.81
+ -10 box at pos.  58037 ATCTATTCT Score    52
+ -35 box at pos.  58014 TTTCCA    Score    42
+ Promoter Pos:  18402 LDF-  3.81
+ -10 box at pos.  18383 TTTTACAAT Score    70
+ -35 box at pos.  18362 TTATCT    Score    25
+ Promoter Pos:  33729 LDF-  3.79
+ -10 box at pos.  33714 CCTTAAAAT Score    68
+ -35 box at pos.  33692 TTACAG    Score    26
+ Promoter Pos:  38277 LDF-  3.79
+ -10 box at pos.  38262 ATTTAGAAT Score    64
+ -35 box at pos.  38245 TTGAGT    Score    38
+ Promoter Pos: 129520 LDF-  3.77
+ -10 box at pos. 129505 AGGTTAAAT Score    44
+ -35 box at pos. 129487 TTTATA    Score    39
+ Promoter Pos:  37828 LDF-  3.77
+ -10 box at pos.  37813 AGCTAAATT Score    56
+ -35 box at pos.  37792 TTGTTG    Score    39
+ Promoter Pos:   8022 LDF-  3.73
+ -10 box at pos.   8007 GGTAATTAT Score    40
+ -35 box at pos.   7982 TTGTTG    Score    39
+ Promoter Pos: 108581 LDF-  3.71
+ -10 box at pos. 108566 ATTTACAAT Score    65
+ -35 box at pos. 108541 TTAAAT    Score    32
+ Promoter Pos: 107939 LDF-  3.64
+ -10 box at pos. 107924 CGGTAAATT Score    63
+ -35 box at pos. 107907 ATGAAA    Score    30
+ Promoter Pos:  66728 LDF-  3.63
+ -10 box at pos.  66713 CTACATCAT Score    27
+ -35 box at pos.  66690 TTGAGG    Score    37
+ Promoter Pos:  54582 LDF-  3.62
+ -10 box at pos.  54567 CTCCATCAT Score    33
+ -35 box at pos.  54543 TTACAA    Score    32
+ Promoter Pos:  40572 LDF-  3.60
+ -10 box at pos.  40557 AATTACACT Score    48
+ -35 box at pos.  40535 TTGCTA    Score    53
+ Promoter Pos: 139705 LDF-  3.57
+ -10 box at pos. 139686 TATCAAAAT Score    46
+ -35 box at pos. 139668 TTGTAG    Score    41
+ Promoter Pos:  94065 LDF-  3.57
+ -10 box at pos.  94050 TTTAAAAAT Score    43
+ -35 box at pos.  94030 TTTAGG    Score    18
+ Promoter Pos: 125457 LDF-  3.56
+ -10 box at pos. 125442 TATTAAAAT Score    72
+ -35 box at pos. 125420 TTACTA    Score    30
+ Promoter Pos:  36539 LDF-  3.53
+ -10 box at pos.  36524 TAGGAAACT Score    27
+ -35 box at pos.  36502 TTGTTT    Score    40
+ Promoter Pos: 138116 LDF-  3.52
+ -10 box at pos. 138101 AGGTAAAAA Score    44
+ -35 box at pos. 138083 TTGCCT    Score    56
+ Promoter Pos:   8379 LDF-  3.47
+ -10 box at pos.   8364 GGGTATAAG Score    53
+ -35 box at pos.   8346 TTGATA    Score    58
+ Promoter Pos:  11848 LDF-  3.46
+ -10 box at pos.  11833 GGCTAGAAA Score    30
+ -35 box at pos.  11810 TTGAAA    Score    60
+ Promoter Pos: 105457 LDF-  3.45
+ -10 box at pos. 105442 GAGTATTAG Score    25
+ -35 box at pos. 105422 TTAAAT    Score    32
+ Promoter Pos:  56594 LDF-  3.41
+ -10 box at pos.  56578 ACATAGGAT Score    30
+ -35 box at pos.  56555 TTGCAA    Score    55
+ Promoter Pos:   4060 LDF-  3.39
+ -10 box at pos.   4045 AGGTATTTT Score    55
+ -35 box at pos.   4025 TTGTCT    Score    48
+ Promoter Pos: 138827 LDF-  3.38
+ -10 box at pos. 138812 CTGTAAAAC Score    38
+ -35 box at pos. 138793 TTAAAA    Score    37
+ Promoter Pos: 126271 LDF-  3.35
+ -10 box at pos. 126256 TATTAAACT Score    62
+ -35 box at pos. 126238 TTGAAG    Score    54
+ Promoter Pos: 103971 LDF-  3.29
+ -10 box at pos. 103956 GGATAACAT Score    54
+ -35 box at pos. 103935 TTGGAA    Score    32
+ Promoter Pos:  42230 LDF-  3.18
+ -10 box at pos.  42215 GTTTACAAT Score    67
+ -35 box at pos.  42195 ATACCT    Score     3
+ Promoter Pos:  72218 LDF-  3.18
+ -10 box at pos.  72202 TAGAAAAAT Score    37
+ -35 box at pos.  72183 TTCCTG    Score    27
+ Promoter Pos:  10991 LDF-  3.17
+ -10 box at pos.  10976 TTTGAAAAT Score    43
+ -35 box at pos.  10956 CTCCTG    Score    -8
+ Promoter Pos: 143742 LDF-  3.16
+ -10 box at pos. 143727 AGGTATTCT Score    65
+ -35 box at pos. 143708 TAGAAA    Score    23
+ Promoter Pos: 123191 LDF-  3.14
+ -10 box at pos. 123176 GTTTAAGAT Score    60
+ -35 box at pos. 123157 GTACAA    Score    -1
+ Promoter Pos:  96961 LDF-  3.13
+ -10 box at pos.  96946 TGGGATGAT Score    42
+ -35 box at pos.  96926 TTGTCG    Score    47
+ Promoter Pos:  10224 LDF-  3.06
+ -10 box at pos.  10209 TTCTAAAAT Score    74
+ -35 box at pos.  10187 CTAACG    Score     2
+ Promoter Pos:  83042 LDF-  3.04
+ -10 box at pos.  83027 ATGTAATAT Score    61
+ -35 box at pos.  83006 TTCCAA    Score    35
+ Promoter Pos:  60263 LDF-  3.02
+ -10 box at pos.  60248 GTGTATCCT Score    56
+ -35 box at pos.  60224 TTTATA    Score    39
+ Promoter Pos:  84838 LDF-  2.95
+ -10 box at pos.  84824 CTCTAAACT Score    60
+ -35 box at pos.  84800 TTCTTC    Score     3
+ Promoter Pos:  59639 LDF-  2.94
+ -10 box at pos.  59624 AAGTAAGAT Score    52
+ -35 box at pos.  59606 TTACCT    Score    33
+ Promoter Pos: 118231 LDF-  2.91
+ -10 box at pos. 118216 AGACAAAAT Score    44
+ -35 box at pos. 118199 TTAAAT    Score    32
+ Promoter Pos:  21597 LDF-  2.81
+ -10 box at pos.  21582 TTCTAAATT Score    54
+ -35 box at pos.  21557 TTTAAG    Score    35
+ Promoter Pos: 140727 LDF-  2.78
+ -10 box at pos. 140712 AGGCAAAAT Score    56
+ -35 box at pos. 140692 TTTATA    Score    39
+ Promoter Pos:  53342 LDF-  2.77
+ -10 box at pos.  53327 GTGTATGTT Score    48
+ -35 box at pos.  53307 TTCCTG    Score    27
+ Promoter Pos: 100788 LDF-  2.74
+ -10 box at pos. 100773 CTTTAAAGT Score    51
+ -35 box at pos. 100755 TAGATG    Score    15
+ Promoter Pos: 120775 LDF-  2.72
+ -10 box at pos. 120760 AATTGAAAT Score    29
+ -35 box at pos. 120735 TAGACT    Score    24
+ Promoter Pos:  27878 LDF-  2.65
+ -10 box at pos.  27863 AGTTAAAGT Score    57
+ -35 box at pos.  27846 ATGTTT    Score    10
+ Promoter Pos:   3136 LDF-  2.50
+ -10 box at pos.   3121 AGACAAAAT Score    44
+ -35 box at pos.   3102 TTGAGT    Score    38
+ Promoter Pos: 101942 LDF-  2.47
+ -10 box at pos. 101927 CGATATTCT Score    54
+ -35 box at pos. 101907 TTTCTG    Score    28
+ Promoter Pos: 141954 LDF-  2.40
+ -10 box at pos. 141939 TGATACAGT Score    42
+ -35 box at pos. 141916 TTGATG    Score    52
+ Promoter Pos:  25774 LDF-  2.39
+ -10 box at pos.  25759 AAGTACATT Score    39
+ -35 box at pos.  25735 TTCATC    Score    16
+ Promoter Pos:  92158 LDF-  2.38
+ -10 box at pos.  92143 TACTAAAGT Score    43
+ -35 box at pos.  92120 ATAAAA    Score     7
+ Promoter Pos: 142620 LDF-  2.32
+ -10 box at pos. 142605 GTATAGCAT Score    37
+ -35 box at pos. 142585 ATAAAA    Score     7
+ Promoter Pos: 114624 LDF-  2.30
+ -10 box at pos. 114609 AGCTAAAAA Score    38
+ -35 box at pos. 114590 TTAACA    Score    43
+ Promoter Pos:  32249 LDF-  2.29
+ -10 box at pos.  32234 CTTTATTAG Score    30
+ -35 box at pos.  32214 TTGTTG    Score    39
+ Promoter Pos: 144483 LDF-  2.28
+ -10 box at pos. 144468 AGGTATAGC Score    27
+ -35 box at pos. 144450 TTTCAA    Score    36
+ Promoter Pos:  92924 LDF-  2.28
+ -10 box at pos.  92909 TTGCACACT Score    35
+ -35 box at pos.  92890 TTCATT    Score    33
+ Promoter Pos:  43397 LDF-  2.24
+ -10 box at pos.  43382 TGTTAATTT Score    52
+ -35 box at pos.  43358 TTACAT    Score    27
+ Promoter Pos:   1843 LDF-  2.07
+ -10 box at pos.   1828 TTGTATAGT Score    63
+ -35 box at pos.   1809 ATCAAG    Score     4
+ Promoter Pos:  55534 LDF-  2.06
+ -10 box at pos.  55522 ATTTAGTAT Score    50
+ -35 box at pos.  55500 TTTATA    Score    39
+ Promoter Pos:  34029 LDF-  2.05
+ -10 box at pos.  34010 TGTTAAGAT Score    70
+ -35 box at pos.  33994 TTGTTG    Score    39
+ Promoter Pos: 133516 LDF-  1.97
+ -10 box at pos. 133501 CTATAGACT Score    44
+ -35 box at pos. 133483 TTTACT    Score    42
+ Promoter Pos:  54904 LDF-  1.90
+ -10 box at pos.  54889 TATTGTAAT Score    41
+ -35 box at pos.  54870 TTTCTA    Score    34
+ Promoter Pos: 140006 LDF-  1.82
+ -10 box at pos. 139991 GGATATAAG Score    41
+ -35 box at pos. 139974 TTTACG    Score    41
+ Promoter Pos:    477 LDF-  1.48
+ -10 box at pos.    462 AGCAAGAAT Score    30
+ -35 box at pos.    438 TTGGAG    Score    26
+ Promoter Pos: 134153 LDF-  1.47
+ -10 box at pos. 134138 GTTTACAGT Score    43
+ -35 box at pos. 134115 TTGTAT    Score    42
+ Promoter Pos: 108244 LDF-  1.43
+ -10 box at pos. 108229 TGGTACCGT Score    36
+ -35 box at pos. 108212 TTGATG    Score    52
+ Promoter Pos:  98503 LDF-  1.37
+ -10 box at pos.  98488 CAATAAGAT Score    41
+ -35 box at pos.  98466 ATGATA    Score    28
+ Promoter Pos:  50738 LDF-  1.26
+ -10 box at pos.  50726 TATTAAAGT Score    48
+ -35 box at pos.  50705 TTTCAA    Score    36
+ Promoter Pos:  89133 LDF-  1.18
+ -10 box at pos.  89118 GCCTATCAT Score    53
+ -35 box at pos.  89099 TACACG    Score     3
+ Promoter Pos: 111712 LDF-  1.05
+ -10 box at pos. 111697 ACATAAGAG Score     2
+ -35 box at pos. 111676 TTTATA    Score    39
+ Promoter Pos:  46810 LDF-  0.95
+ -10 box at pos.  46795 CCATAACAT Score    39
+ -35 box at pos.  46773 TTCTAT    Score    22
+ Promoter Pos: 128815 LDF-  0.84
+ -10 box at pos. 128799 TGCTGAAAT Score    43
+ -35 box at pos. 128780 TAGAGA    Score     6
+ Promoter Pos: 138416 LDF-  0.82
+ -10 box at pos. 138400 ACTCACTCT Score     8
+ -35 box at pos. 138380 TTGATG    Score    52
+ Promoter Pos:  75706 LDF-  0.74
+ -10 box at pos.  75691 TCATAACCT Score    33
+ -35 box at pos.  75670 TTTTCT    Score    29
+ Promoter Pos: 114276 LDF-  0.49
+ -10 box at pos. 114261 CGAAACGCT Score     0
+ -35 box at pos. 114241 TTAATA    Score    35
+ Promoter Pos:  90846 LDF-  0.26
+ -10 box at pos.  90831 CAGTGGTCT Score    -3
+ -35 box at pos.  90809 TTGAGT    Score    38
+
+ Oligonucleotides from known TF binding sites:
+
+ For promoter at 109299:
+       lexA:  TATATATA at position  109240 Score -  14
+       lexA:  TATATATA at position  109242 Score -  14
+       lexA:  TATATATA at position  109244 Score -  14
+       lexA:  TATATATA at position  109246 Score -  14
+       lexA:  TATATATA at position  109248 Score -  14
+       gcvA:  TTATATTT at position  109265 Score -  11
+       nagC:  ATATTTTA at position  109267 Score -   7
+       pdhR:  TTGTTAAA at position  109292 Score -   8
+        crp:  TTTTGTTA at position  109301 Score -   9
+     rpoS18:  TAGTTTAG at position  109313 Score -  12
+ For promoter at  62505:
+     rpoD17:  ACTTTTGT at position   62451 Score -   9
+      argR2:  TTTTTATT at position   62478 Score -  13
+        ihf:  TTTTATTT at position   62479 Score -  13
+      argR2:  TTTATTTT at position   62480 Score -   7
+        lrp:  TATTTTTT at position   62482 Score -  11
+       argR:  TTTTTTAT at position   62484 Score -  13
+     rpoD16:  TTTTTATA at position   62485 Score -  13
+     rpoD17:  TTTATAAT at position   62487 Score -   9
+       argR:  TTATAATT at position   62488 Score -  14
+     rpoS17:  TTATGTTT at position   62510 Score -   7
+       phoB:  TTTATTAA at position   62516 Score -   8
+ For promoter at  38734:
+        lrp:  ATTTTTTT at position   38675 Score -  11
+       lexA:  TTTTTTTA at position   38676 Score -  16
+        lrp:  TTTCTTTT at position   38701 Score -   9
+       metR:  TTCTTTTC at position   38702 Score -   8
+      argR2:  TTTATTTT at position   38720 Score -   7
+        lrp:  TATTTTTT at position   38722 Score -  11
+        lrp:  ATTTTTTT at position   38723 Score -  11
+       lexA:  TTTTTTTA at position   38724 Score -  16
+       rpoN:  AAATTGTA at position   38737 Score -   8
+       arcA:  AATTGTAA at position   38738 Score -  16
+        fis:  TGTAAATT at position   38741 Score -  15
+       cpxR:  GTAAATTA at position   38742 Score -   9
+ For promoter at 123989:
+       arcA:  TAATTATA at position  123941 Score -  18
+        ihf:  TATACTTT at position  123945 Score -  15
+     rpoD17:  TGTTATAA at position  123974 Score -  12
+       phoB:  TAATATAT at position  123979 Score -  15
+       tyrR:  AATATATA at position  123980 Score -  15
+     rpoD19:  TACTTAAA at position  123997 Score -   8
+ For promoter at  65411:
+        lrp:  ATTTATTA at position   65354 Score -   6
+        lrp:  TTTCTTTT at position   65389 Score -   9
+       ompR:  TTCTTTTT at position   65390 Score -   8
+       lexA:  TTTTTTTA at position   65393 Score -  16
+       argR:  TTTTTTAT at position   65394 Score -  13
+     rpoD16:  TTTTTATA at position   65395 Score -  13
+     rpoD17:  TTTATAAT at position   65397 Score -   9
+       argR:  TTATAATT at position   65398 Score -  14
+       gcvA:  TTATATTT at position   65420 Score -  11
+       nagC:  ATATTTTA at position   65422 Score -   7
+ For promoter at  55221:
+       metJ:  CTTTACAT at position   55161 Score -  14
+       lexA:  TTTTTTTA at position   55173 Score -  16
+        ihf:  TTTTATTT at position   55189 Score -  13
+      argR2:  TTTATTTT at position   55190 Score -   7
+      argR2:  TTTTTATT at position   55194 Score -  13
+        ihf:  TTTTATTT at position   55195 Score -  13
+        lrp:  TATTTATT at position   55198 Score -   8
+        lrp:  ATTTATTA at position   55199 Score -   6
+       phoB:  TTTATTAA at position   55200 Score -   8
+       arcA:  TAATTATA at position   55205 Score -  18
+        hns:  ATTAAATT at position   55224 Score -   9
+ For promoter at  99758:
+        crp:  AAATAACA at position   99703 Score -  10
+        crp:  ATAACAAT at position   99705 Score -   9
+       arcA:  TAACAATT at position   99706 Score -  13
+     rpoD15:  GTGAATAG at position   99723 Score -   9
+     rpoD17:  CAATTCTA at position   99740 Score -  14
+       deoR:  AATTCTAA at position   99741 Score -  17
+        hns:  ATTAAATT at position   99749 Score -   9
+       tyrR:  TAAATAAA at position   99756 Score -  10
+        ihf:  AAATAAAA at position   99757 Score -  13
+       phoB:  AATAAAAG at position   99758 Score -   8
+      argR2:  GCAAATAA at position   99772 Score -   6
+      rpoH2:  AAATAATG at position   99774 Score -   5
+ For promoter at  87487:
+       argR:  AATTAATA at position   87447 Score -  11
+     rpoD17:  AATAGTTA at position   87451 Score -  13
+       argR:  TTTTTTAT at position   87464 Score -  13
+      argR2:  TTTTTATT at position   87465 Score -  13
+        ihf:  TTTTATTT at position   87466 Score -  13
+        fnr:  ATTTGTTT at position   87479 Score -   7
+     rpoD17:  TTTGTTTT at position   87480 Score -   9
+        fis:  AATTATTT at position   87492 Score -  12
+ For promoter at   4560:
+     rpoD15:  CTAAATAA at position    4526 Score -  12
+       tyrR:  TAAATAAA at position    4527 Score -  10
+        ihf:  AAATAAAA at position    4528 Score -  13
+       arcA:  AATAAAAA at position    4529 Score -  12
+       argR:  ATAAAAAT at position    4530 Score -  10
+        ihf:  AATAAAAT at position    4551 Score -  10
+     rpoD17:  CTTACTTT at position    4561 Score -   7
+     rpoD17:  ACTTTTGT at position    4564 Score -   9
+     rpoD15:  TTTTGTAA at position    4566 Score -  11
+ For promoter at 116816:
+        fnr:  ACAATTTA at position  116762 Score -   6
+       deoR:  TTAGAATA at position  116767 Score -  17
+     rpoD17:  AATAAATA at position  116771 Score -  11
+        fnr:  ATAAATAT at position  116772 Score -   9
+       lexA:  TACTGTAT at position  116792 Score -   9
+       nagC:  ATATTTTA at position  116798 Score -   7
+     rpoD17:  TTTATAAT at position  116802 Score -   9
+       argR:  TTATAATT at position  116803 Score -  14
+     rpoD17:  TTTTACTT at position  116825 Score -   8
+     rpoD17:  TTATGATA at position  116831 Score -   7
+ For promoter at  12323:
+     rpoD17:  CTCCTTTT at position   12277 Score -  12
+       argR:  TTTTTTAT at position   12281 Score -  13
+      argR2:  TTTTTATT at position   12282 Score -  13
+        ihf:  TTTTATTT at position   12283 Score -  13
+       ompR:  TTTACATT at position   12288 Score -  11
+        fnr:  ATTTGTTT at position   12293 Score -   7
+     rpoD17:  TTTGTTTT at position   12294 Score -   9
+       cynR:  ATAAGTAA at position   12326 Score -  12
+ For promoter at  97798:
+     rpoD16:  TTTTTATA at position   97782 Score -  13
+     rpoD16:  TTATAAAA at position   97785 Score -   9
+       argR:  ATAAAAAT at position   97787 Score -  10
+        fis:  AAAAATAA at position   97789 Score -   9
+        ihf:  AAATAAAA at position   97791 Score -  13
+       arcA:  AATAAAAA at position   97792 Score -  12
+     rpoD18:  AAATATAT at position   97799 Score -   7
+       tyrR:  AATATATA at position   97800 Score -  15
+       cynR:  ATAAGTAA at position   97805 Score -  12
+ For promoter at  87052:
+        fis:  AAAAATAA at position   87005 Score -   9
+        ihf:  AAATAAAA at position   87007 Score -  13
+       nagC:  ATATTTTA at position   87027 Score -   7
+       tyrR:  TTTACAAT at position   87031 Score -   8
+       tyrR:  AATATATA at position   87036 Score -  15
+     rpoD15:  TTTTGTTT at position   87044 Score -   9
+     rpoD17:  TTTGTTTT at position   87045 Score -   9
+       nagC:  TTTAATTT at position   87058 Score -   7
+     rpoD18:  TTAATTTT at position   87059 Score -   9
+     rpoD17:  ATTTTGTA at position   87062 Score -   9
+     rpoD17:  TTTTGTAT at position   87063 Score -   9
+ For promoter at   7484:
+        crp:  GAAACATA at position    7455 Score -   8
+       lexA:  ATAAATAA at position    7460 Score -  14
+     rpoD16:  AAATAATT at position    7462 Score -  15
+       argR:  AATAATTA at position    7463 Score -  17
+       argR:  AATTAATA at position    7466 Score -  11
+       tyrR:  TTAATACA at position    7468 Score -  10
+        fnr:  ATTTGTTT at position    7475 Score -   7
+     rpoD17:  TTTGTTTT at position    7476 Score -   9
+ For promoter at  84480:
+       nagC:  CTTATTTT at position   84426 Score -   6
+     rpoD15:  TTTTGTTT at position   84430 Score -   9
+        fis:  AATTATTT at position   84443 Score -  12
+     rpoS17:  CAGACATA at position   84458 Score -  10
+        lrp:  TATTTATT at position   84464 Score -   8
+      argR2:  TTTATTTT at position   84466 Score -   7
+        lrp:  TATTTTTT at position   84468 Score -  11
+       argR:  TTTTTTAT at position   84470 Score -  13
+      argR2:  TTTTTATT at position   84471 Score -  13
+        ihf:  TTTTATTT at position   84472 Score -  13
+ For promoter at 113060:
+       marR:  TATACTTG at position  113026 Score -  11
+     rpoD18:  ACTTGTTA at position  113029 Score -   9
+     rpoD16:  TTATAAAA at position  113047 Score -   9
+       lexA:  TAAAAACA at position  113050 Score -   7
+     rpoD18:  AAATATAT at position  113063 Score -   7
+       tyrR:  AATATATA at position  113064 Score -  15
+       lexA:  ATATATAC at position  113065 Score -  12
+       lexA:  TATATACA at position  113066 Score -  13
+       modE:  TATACAAG at position  113068 Score -  13
+ For promoter at 103598:
+       ompR:  TTTACATT at position  103563 Score -  11
+     rpoD15:  TAATGTTT at position  103571 Score -   9
+     rpoD17:  AATAAATA at position  103589 Score -  11
+      argR2:  ATACACTA at position  103594 Score -  20
+        fnr:  TAAATTGT at position  103600 Score -  12
+       rpoN:  AAATTGTA at position  103601 Score -   8
+ For promoter at  90026:
+       lexA:  ATAAATAA at position   89980 Score -  14
+     rpoD17:  ATAATAAT at position   89984 Score -   8
+       argR:  AATAATTA at position   89986 Score -  17
+       argR:  AATTAATA at position   89989 Score -  11
+       phoB:  TAATATAT at position   89992 Score -  15
+       gcvA:  TTATATTT at position   90013 Score -  11
+     rpoD17:  ATTTTGTA at position   90017 Score -   9
+ For promoter at 111409:
+       lexA:  TATATACA at position  111349 Score -  13
+       dnaA:  TATACACA at position  111351 Score -  14
+       argR:  CACAATAA at position  111355 Score -   9
+       hipB:  CCTTTTTA at position  111375 Score -  11
+       purR:  TTTTTAAG at position  111377 Score -   9
+     rpoD17:  TTTGTTTT at position  111390 Score -   9
+       lexA:  TATATACT at position  111411 Score -  18
+        fis:  TATACTTA at position  111413 Score -  18
+     rpoD17:  TTATGATA at position  111421 Score -   7
+ For promoter at  14764:
+       deoR:  AATTTTAT at position   14716 Score -   8
+       phoB:  TTTTCATA at position   14730 Score -  13
+     rpoD17:  ATACTTAA at position   14738 Score -  13
+       arcA:  TTAACTAA at position   14742 Score -  12
+     rpoD17:  AACTAAAC at position   14744 Score -   7
+     rpoS17:  CTATTATA at position   14751 Score -  13
+       cysB:  TATAGTTA at position   14755 Score -  14
+       narL:  TAACTCTT at position   14771 Score -   8
+ For promoter at  81427:
+       ompR:  TTCTTTTT at position   81370 Score -   8
+       purR:  CTTTTTCT at position   81372 Score -   6
+     rpoD16:  TTATAAAA at position   81381 Score -   9
+       metR:  TTCTTTTC at position   81392 Score -   8
+       phoB:  TTTTCATA at position   81395 Score -  13
+     rpoD16:  CAGATATA at position   81411 Score -   9
+       phoB:  CTGTCATA at position   81432 Score -   8
+        crp:  TCATATCA at position   81435 Score -   9
+ For promoter at  52850:
+       dnaA:  CCACAAGT at position   52790 Score -   5
+        fis:  CTCATTTT at position   52829 Score -   9
+     rpoD17:  ATTTTGTA at position   52832 Score -   9
+     rpoD15:  TTTTGTAA at position   52833 Score -  11
+     rpoD17:  TGTAAAAT at position   52836 Score -  11
+       nagC:  TTTAATTT at position   52844 Score -   7
+     rpoS17:  TTATATTA at position   52856 Score -  14
+ For promoter at 121840:
+     rpoD17:  TATAGATT at position  121784 Score -  11
+       argR:  TTTTTTAT at position  121790 Score -  13
+      argR2:  TTTTTATT at position  121791 Score -  13
+       phoB:  TTTAATTA at position  121804 Score -  11
+     rpoD17:  ATTAGTTA at position  121819 Score -  15
+     rpoD17:  ATAACAGG at position  121832 Score -  12
+ For promoter at  79001:
+        lrp:  ATTTTTTT at position   78952 Score -  11
+       lexA:  TTTTTTTA at position   78953 Score -  16
+       argR:  TTTTTTAT at position   78954 Score -  13
+     rpoD18:  TTTAAAAT at position   78966 Score -   7
+     rpoD17:  AATTTTCT at position   78971 Score -   7
+       lexA:  ATAAATAA at position   78996 Score -  14
+     rpoD17:  ATAATAAT at position   79000 Score -   8
+       argR:  AATAATTA at position   79002 Score -  17
+ For promoter at  49621:
+       tyrR:  AATATATA at position   49589 Score -  15
+       cytR:  TTCTGTAA at position   49604 Score -   8
+       carP:  CTGTAAAA at position   49606 Score -   7
+     rpoD17:  TGTAAAAT at position   49607 Score -  11
+       cpxR:  TAAAATTA at position   49609 Score -   6
+       oxyR:  ATTAGTGT at position   49613 Score -  12
+     rpoD15:  TAATGTTT at position   49636 Score -   9
+ For promoter at 110319:
+        lrp:  TATTTATT at position  110259 Score -   8
+      argR2:  TTTATTTT at position  110261 Score -   7
+        lrp:  TATTTTTT at position  110263 Score -  11
+        fnr:  TTTTTTGA at position  110265 Score -   9
+     rpoD17:  TTGATATA at position  110269 Score -   8
+       ilvY:  ATATATCA at position  110272 Score -   9
+        fis:  TCTTTAAT at position  110281 Score -   6
+       soxS:  AACTGTAA at position  110303 Score -   7
+       carP:  CTGTAAAA at position  110305 Score -   7
+     rpoD17:  TGTAAAAT at position  110306 Score -  11
+ For promoter at  69246:
+       soxS:  ATTTGTTA at position   69228 Score -  10
+     rpoD17:  TGTTATAA at position   69231 Score -  12
+       argR:  TTATAATT at position   69233 Score -  14
+       arcA:  TAATTATA at position   69236 Score -  18
+ For promoter at  65972:
+       arcA:  TTAACTAA at position   65914 Score -  12
+     rpoD17:  ATAATAAT at position   65928 Score -   8
+       argR:  AATAATTA at position   65930 Score -  17
+        fis:  AATTATTT at position   65933 Score -  12
+        lrp:  TGTAGAAT at position   65958 Score -  11
+     rpoD17:  TTATGATA at position   65965 Score -   7
+        crp:  AATAAATT at position   65982 Score -   9
+ For promoter at  59286:
+        lrp:  ATCTTTTA at position   59245 Score -   6
+       argR:  TTTTTTAT at position   59269 Score -  13
+     rpoD16:  TTTTTATA at position   59270 Score -  13
+     rpoD17:  TTTTATAG at position   59271 Score -  10
+       cpxR:  AGTGTAAA at position   59277 Score -  10
+        fis:  TGTAAATT at position   59279 Score -  15
+        ihf:  GCTTAGAG at position   59293 Score -  13
+ For promoter at 133194:
+        fnr:  ATAAATAT at position  133144 Score -   9
+     rpoD17:  ATTTTGTA at position  133164 Score -   9
+     rpoD15:  TTTTGTAA at position  133165 Score -  11
+       ompR:  GTAACATA at position  133169 Score -  11
+        ihf:  TATACTTT at position  133182 Score -  15
+     rpoD17:  ACTTTTGT at position  133185 Score -   9
+        ihf:  AAATAAAA at position  133213 Score -  13
+ For promoter at 142271:
+        fis:  AAAAATAA at position  142213 Score -   9
+     rpoD17:  ATAATAAT at position  142217 Score -   8
+       arcA:  ATTTGTAA at position  142223 Score -   8
+       cysB:  TCTTGCAT at position  142234 Score -  10
+       arcA:  TAATTAAA at position  142241 Score -  11
+        fur:  ATTTGCAT at position  142262 Score -   7
+       lexA:  ATATAAAA at position  142272 Score -  11
+       argR:  ATAAAAAT at position  142274 Score -  10
+        fis:  AATTATTT at position  142290 Score -  12
+ For promoter at  30962:
+     rpoD17:  CTCCTTTT at position   30917 Score -  12
+       dnaA:  TTTGGATA at position   30923 Score -   6
+       soxS:  TATCATTT at position   30929 Score -   9
+     rpoD15:  TTTGTGTA at position   30934 Score -  14
+       argR:  TTATAATT at position   30949 Score -  14
+        lrp:  ATTTATTA at position   30954 Score -   6
+ For promoter at  29760:
+        ihf:  TATACTTT at position   29717 Score -  15
+       soxS:  TTGCTCCT at position   29741 Score -   9
+     rpoS17:  CTATTATA at position   29747 Score -  13
+       gcvA:  TTATATTT at position   29750 Score -  11
+        lrp:  TATTTTTT at position   29753 Score -  11
+       argR:  TTTTTTAT at position   29755 Score -  13
+      argR2:  TTTTTATT at position   29756 Score -  13
+ For promoter at  41919:
+     rpoD15:  TTTTGTAA at position   41870 Score -  11
+      rpoH2:  TTTTTTTT at position   41896 Score -  16
+      rpoH2:  TTTTTTTT at position   41897 Score -  16
+       glpR:  AATTTGAG at position   41911 Score -   6
+       carP:  CACTTTTT at position   41921 Score -   8
+       purR:  CTTTTTCT at position   41923 Score -   6
+ For promoter at  91171:
+       tyrR:  TTTACAAT at position   91122 Score -   8
+       carP:  CACTTTTT at position   91135 Score -   8
+     rpoD17:  TTTTACTT at position   91139 Score -   8
+      argR2:  TTTATTTT at position   91157 Score -   7
+        lrp:  TATTTTTT at position   91159 Score -  11
+        lrp:  ATTTTTTT at position   91160 Score -  11
+      rpoH2:  TTTTTTTT at position   91161 Score -  16
+       lexA:  TTTTTTTA at position   91162 Score -  16
+     rpoD17:  TTTTACTT at position   91165 Score -   8
+ For promoter at  67031:
+       lexA:  ATATAAAA at position   67008 Score -  11
+       argR:  ATAAAAAT at position   67010 Score -  10
+        crp:  AAATGTAA at position   67014 Score -  13
+     rpoD17:  TGTAAAAT at position   67017 Score -  11
+        crp:  AAATGTAA at position   67029 Score -  13
+ For promoter at  34911:
+       soxS:  AAACCATA at position   34862 Score -   7
+      argR2:  CATATTTT at position   34866 Score -   8
+        lrp:  TATTTTTT at position   34868 Score -  11
+        lrp:  ATTTTTTT at position   34869 Score -  11
+      rpoH2:  TTTTTTTT at position   34870 Score -  16
+        lrp:  TGTAGAAT at position   34897 Score -  11
+ For promoter at  51342:
+       argR:  TTTTTTAT at position   51293 Score -  13
+     rpoD16:  TTTTTATA at position   51294 Score -  13
+       ompR:  TCATATTT at position   51307 Score -  11
+     rpoD16:  TTGCAAAT at position   51313 Score -   5
+     rpoD17:  ATAATAAT at position   51331 Score -   8
+       lexA:  ATATAAAA at position   51337 Score -  11
+ For promoter at  65105:
+       phoB:  TAATATAT at position   65086 Score -  15
+       tyrR:  AATATATA at position   65087 Score -  15
+       lexA:  TATATAAA at position   65089 Score -  14
+     rpoD16:  AACTAGTT at position   65095 Score -  24
+        lrp:  TGCATTTT at position   65114 Score -   5
+     rpoD16:  TTTCAAAT at position   65119 Score -  10
+ For promoter at    881:
+        fur:  ATAATGAT at position     836 Score -   6
+     rpoD17:  TAATGTAA at position     850 Score -  12
+     rpoD17:  AATAAATA at position     872 Score -  11
+       lexA:  ATAAATAA at position     873 Score -  14
+       tyrR:  TAAATAAA at position     874 Score -  10
+        ihf:  AAATAAAA at position     875 Score -  13
+        ihf:  AATAAAAT at position     876 Score -  10
+ For promoter at 102250:
+     rpoD17:  AATAAGTA at position  102190 Score -  13
+     rpoD15:  TTTTGTTT at position  102205 Score -   9
+     rpoD17:  TTTGTTTT at position  102206 Score -   9
+       nagC:  TTTAATTT at position  102223 Score -   7
+        ihf:  TTAATTTA at position  102224 Score -  12
+      argR2:  TTTTTATT at position  102257 Score -  13
+        ihf:  TTTTATTT at position  102258 Score -  13
+ For promoter at  44780:
+       deoR:  TTAGAATA at position   44758 Score -  17
+       oxyR:  TAGAATAG at position   44759 Score -  21
+     rpoD17:  AATAGTTA at position   44762 Score -  13
+       cpxR:  TAAAATTA at position   44768 Score -   6
+ For promoter at  27571:
+        lrp:  TATTTATT at position   27526 Score -   8
+        lrp:  ATTTATTA at position   27527 Score -   6
+       phoB:  TTTATTAA at position   27528 Score -   8
+       narL:  TAACTCTA at position   27533 Score -   6
+     rpoD17:  TCCCTTTT at position   27541 Score -  11
+        ihf:  TTTCAAAA at position   27556 Score -   6
+       glpR:  TTCAAAAT at position   27557 Score -   6
+     rpoD16:  TTTTTATA at position   27564 Score -  13
+     rpoD16:  TTATAAAA at position   27567 Score -   9
+       metR:  CAAATTTT at position   27580 Score -   8
+ For promoter at  85138:
+       argR:  CATCCATA at position   85085 Score -   6
+       soxS:  AATTTCTT at position   85101 Score -   7
+        lrp:  TTTCTTTT at position   85103 Score -   9
+       ompR:  TTCTTTTT at position   85104 Score -   8
+       nagC:  CTTATTTT at position   85132 Score -   6
+        lrp:  TATTTTTT at position   85134 Score -  11
+       argR:  TTTTTTAT at position   85136 Score -  13
+     rpoD16:  TTTTTATA at position   85137 Score -  13
+ For promoter at  80658:
+        fis:  TCTTAACT at position   80599 Score -  11
+        fis:  AATTATTT at position   80616 Score -  12
+        ada:  ATAAGAAT at position   80629 Score -  11
+     rpoD17:  ATTAGAGT at position   80635 Score -  12
+     rpoD16:  TAATTAGA at position   80648 Score -  20
+ For promoter at 130764:
+       cysB:  TGTATATA at position  130711 Score -  12
+       lexA:  TATATAAA at position  130713 Score -  14
+       cpxR:  AGTGTAAA at position  130748 Score -  10
+        fis:  TGTAAATT at position  130750 Score -  15
+       cpxR:  GTAAATTA at position  130751 Score -   9
+        lrp:  ATAACTAA at position  130758 Score -  14
+ For promoter at  27015:
+       narL:  TGCTCCTT at position   26960 Score -  12
+     rpoD17:  CTCCTTTT at position   26962 Score -  12
+       gcvA:  TTATATTT at position   27001 Score -  11
+        lrp:  TATTTTTT at position   27004 Score -  11
+        crp:  TCACATTT at position   27021 Score -  12
+        ihf:  TTTTATTT at position   27026 Score -  13
+      argR2:  TTTATTTT at position   27027 Score -   7
+ For promoter at  85888:
+        lrp:  ATTTTTTT at position   85848 Score -  11
+       lexA:  TTTTTTTA at position   85849 Score -  16
+       argR:  TTTTTTAT at position   85850 Score -  13
+     rpoD16:  TTTTTATA at position   85851 Score -  13
+     rpoD17:  TTTTATAG at position   85852 Score -  10
+       tyrR:  ATTGTACA at position   85895 Score -  10
+       dnaA:  CCACAAGT at position   85904 Score -   5
+ For promoter at 129123:
+        crp:  AAATAACA at position  129064 Score -  10
+       cytR:  ATAGAACT at position  129071 Score -   7
+       argR:  ATAAAAAT at position  129079 Score -  10
+        fnr:  ACAATTTA at position  129090 Score -   6
+     rpoD18:  TTTAAAAT at position  129094 Score -   7
+       cpxR:  TAAAATTA at position  129096 Score -   6
+     rpoD19:  GCTATAAT at position  129109 Score -  13
+ For promoter at  61936:
+     rpoD17:  AATCTTTA at position   61876 Score -   7
+        fis:  TCTTTAAT at position   61878 Score -   6
+       nagC:  TTTAATTT at position   61880 Score -   7
+     rpoD18:  TTAATTTT at position   61881 Score -   9
+       arcA:  TTAACTAA at position   61887 Score -  12
+        fis:  ACAGTTGT at position   61899 Score -   6
+        ihf:  AAATAAAA at position   61910 Score -  13
+       arcA:  AATAAAAA at position   61911 Score -  12
+       argR:  ATAAAAAT at position   61912 Score -  10
+        fis:  AAAAATAA at position   61914 Score -   9
+ For promoter at  45644:
+        lrp:  TATTTTTT at position   45623 Score -  11
+       argR:  TTTTTTAT at position   45625 Score -  13
+     rpoD16:  TTTTTATA at position   45626 Score -  13
+       arcA:  TAATTATA at position   45634 Score -  18
+ For promoter at 107615:
+       oxyR:  ATTAGTGT at position  107585 Score -  12
+     rpoD17:  CTCCTTTT at position  107596 Score -  12
+     rpoS17:  TTATATTA at position  107602 Score -  14
+        fis:  TATACTTA at position  107617 Score -  18
+     rpoD17:  ATACTTAA at position  107618 Score -  13
+ For promoter at   3484:
+        lrp:  TATTTTTT at position    3439 Score -  11
+        lrp:  ATTTTTTT at position    3440 Score -  11
+       lexA:  TTTTTTTA at position    3441 Score -  16
+       cpxR:  TAAAATTA at position    3472 Score -   6
+       argR:  TTATAATT at position    3477 Score -  14
+     rpoD16:  TTGCAAAT at position    3483 Score -   5
+ For promoter at  68333:
+       deoR:  AATTCTAA at position   68278 Score -  17
+       lexA:  TTTTTTTA at position   68291 Score -  16
+       nagC:  TTTAATTT at position   68295 Score -   7
+     rpoD18:  TTAATTTT at position   68296 Score -   9
+        lrp:  ATTTTTTT at position   68314 Score -  11
+       lexA:  TTTTTTTA at position   68315 Score -  16
+     rpoD16:  CTCCTGAT at position   68349 Score -   9
+ For promoter at  61132:
+        lrp:  TTTCTTTT at position   61077 Score -   9
+       ompR:  TTCTTTTT at position   61078 Score -   8
+     rpoD16:  TTTTTATA at position   61081 Score -  13
+     rpoS17:  TTATATTA at position   61084 Score -  14
+       farR:  TGTATTAT at position   61118 Score -   6
+       lexA:  TATATATA at position   61123 Score -  14
+       lexA:  TATATATA at position   61125 Score -  14
+ For promoter at  60686:
+       deoR:  AATTTTAT at position   60641 Score -   8
+        ihf:  TTTTATTT at position   60643 Score -  13
+      argR2:  TTTATTTT at position   60644 Score -   7
+       nagC:  TTTAATTT at position   60663 Score -   7
+     rpoD18:  TTAATTTT at position   60664 Score -   9
+     rpoD16:  TTTTTATA at position   60668 Score -  13
+        fur:  ATGATAAT at position   60704 Score -   8
+     rpoD17:  TGATAATT at position   60705 Score -   9
+ For promoter at  95490:
+        ihf:  AAATAAAA at position   95468 Score -  13
+       phoB:  AATAAAAG at position   95469 Score -   8
+     rpoD15:  TTTTAACA at position   95480 Score -  10
+     rpoD18:  GATAGAAT at position   95488 Score -   9
+       oxyR:  TAGAATAG at position   95490 Score -  21
+ For promoter at  43800:
+       argR:  TTTTTTAT at position   43741 Score -  13
+     rpoD16:  TTTTTATA at position   43742 Score -  13
+     rpoD17:  TTTTATAG at position   43743 Score -  10
+       phoB:  CTTACATA at position   43762 Score -  16
+     rpoD16:  TGTATAAT at position   43806 Score -  13
+ For promoter at 128512:
+     rpoD19:  TGTGTTAG at position  128481 Score -   9
+     rpoD15:  TAGCTTAT at position  128486 Score -  15
+     rpoD16:  TTATAAAA at position  128490 Score -   9
+       argR:  ATAAAAAT at position  128492 Score -  10
+     rpoD17:  TAATGTAA at position  128502 Score -  12
+       narL:  TAACTCTT at position  128517 Score -   8
+ For promoter at 144790:
+        crp:  TTTGTGAG at position  144734 Score -  10
+     rpoD17:  ATTAGAGT at position  144759 Score -  12
+        ihf:  TTTTATTT at position  144780 Score -  13
+      argR2:  TTTATTTT at position  144781 Score -   7
+       nagC:  TTTAATTT at position  144786 Score -   7
+        crp:  AAATAACA at position  144798 Score -  10
+ For promoter at   1498:
+       nagC:  TTTAATTT at position    1453 Score -   7
+     rpoD18:  TTAATTTT at position    1454 Score -   9
+       deoR:  AATTTTAT at position    1456 Score -   8
+        fnr:  TTATACAA at position    1460 Score -  14
+       modE:  TATACAAG at position    1461 Score -  13
+        ihf:  ACAAAAAA at position    1498 Score -   9
+        fis:  AAAAATAA at position    1501 Score -   9
+        ihf:  AAATAAAA at position    1503 Score -  13
+       gcvA:  TTATATTT at position    1518 Score -  11
+ For promoter at  94648:
+       phoB:  TTTAATTA at position   94592 Score -  11
+     rpoD16:  AAATAATT at position   94610 Score -  15
+       argR:  AATAATTA at position   94611 Score -  17
+        fis:  AATTATTT at position   94614 Score -  12
+     rpoD16:  TTATAAAA at position   94637 Score -   9
+       arcA:  AAAAGGGA at position   94641 Score -   8
+       deoR:  TTAGAATA at position   94659 Score -  17
+ For promoter at  23118:
+     rpoD17:  TTCCTCCT at position   23061 Score -   8
+     rpoD18:  TTTAAAAT at position   23068 Score -   7
+       gcvA:  TTATATTT at position   23094 Score -  11
+        crp:  TTTTGTTA at position   23100 Score -   9
+       phoB:  TCATAAAA at position   23117 Score -  11
+       argR:  CATAAAAA at position   23118 Score -  14
+ For promoter at  25416:
+     rpoD17:  ACTTTTGT at position   25370 Score -   9
+     rpoD19:  TGTGTTAG at position   25375 Score -   9
+     rpoS17:  AGAGGGAG at position   25381 Score -  10
+       marR:  TATACTTG at position   25404 Score -  11
+     rpoD19:  TGTTGTGT at position   25410 Score -   8
+     rpoD18:  TTTAAAAT at position   25417 Score -   7
+       cpxR:  TAAAATTA at position   25419 Score -   6
+        fis:  AATTATTT at position   25422 Score -  12
+ For promoter at 115893:
+     rpoD19:  GCTATAAT at position  115879 Score -  13
+       nagC:  GAAATAAG at position  115892 Score -   8
+     rpoD17:  AATAAGTA at position  115894 Score -  13
+ For promoter at  88458:
+        fis:  AAAAATAA at position   88405 Score -   9
+     rpoD16:  AAATAATT at position   88407 Score -  15
+        fnr:  ATTTGTTT at position   88421 Score -   7
+     rpoD17:  TTTGTTTT at position   88422 Score -   9
+        fis:  AATTATTT at position   88434 Score -  12
+       cpxR:  TAAAAAGA at position   88463 Score -   9
+ For promoter at  69744:
+     rpoS17:  TTATATTA at position   69693 Score -  14
+       ompR:  ATATTACA at position   69695 Score -   9
+     rpoD17:  ACAAGTGT at position   69702 Score -  11
+        ihf:  CTCCTTGA at position   69741 Score -   9
+     rpoD18:  TTGAGATA at position   69745 Score -   9
+ For promoter at   2325:
+     rpoD17:  TTATGATA at position    2273 Score -   7
+       narL:  TCCTAAAG at position    2303 Score -  20
+     rpoD15:  GGTATACT at position    2311 Score -  13
+     rpoD17:  ATACTATA at position    2314 Score -  11
+ For promoter at  17761:
+        lrp:  TTGTCTTA at position   17716 Score -   7
+        crp:  ATCACAAA at position   17732 Score -  10
+       arcA:  TCACAAAA at position   17733 Score -  10
+        ihf:  ACAAAAAA at position   17735 Score -   9
+     rpoD16:  CAGATATA at position   17755 Score -   9
+        ihf:  AGATATAT at position   17756 Score -  12
+       ilvY:  ATATATCA at position   17758 Score -   9
+       soxS:  TATCATTT at position   17761 Score -   9
+        fur:  ATCATTTT at position   17762 Score -   8
+ For promoter at 120056:
+       arcA:  TTAACTAA at position  120003 Score -  12
+        tus:  TAACTAAG at position  120004 Score -  12
+       metR:  CAAATTTT at position  120015 Score -   8
+        lrp:  ATCTTTTA at position  120038 Score -   6
+        hns:  AAAGGAAT at position  120053 Score -   8
+       arcA:  TTAACTAA at position  120060 Score -  12
+        tus:  TAACTAAG at position  120061 Score -  12
+ For promoter at 106689:
+       phoB:  TTTAATTA at position  106636 Score -  11
+       arcA:  TTAATTAA at position  106637 Score -  13
+       arcA:  TAATTAAA at position  106638 Score -  11
+        fis:  AAAAATAA at position  106643 Score -   9
+        crp:  AATAAATT at position  106646 Score -   9
+       cpxR:  TAAAATTA at position  106677 Score -   6
+ For promoter at 106237:
+     rpoD19:  ATTGTTTT at position  106183 Score -   7
+        ihf:  AAATAAAA at position  106215 Score -  13
+       arcA:  AATAAAAA at position  106216 Score -  12
+        fis:  AAAAATAA at position  106220 Score -   9
+        ihf:  AAATAAAA at position  106222 Score -  13
+        ihf:  AATAAAAT at position  106223 Score -  10
+      rpoH2:  AAATAATG at position  106227 Score -   5
+ For promoter at  50409:
+     rpoD17:  CTTACTTT at position   50350 Score -   7
+     rpoD17:  ACTTTTAG at position   50353 Score -   9
+        lrp:  TTTAGTGT at position   50356 Score -   9
+     rpoD15:  AGGATTAA at position   50365 Score -   8
+     rpoD17:  CTCCTTTT at position   50388 Score -  12
+       argR:  TTTTTTAT at position   50392 Score -  13
+     rpoD16:  TTTTTATA at position   50393 Score -  13
+ For promoter at  78183:
+       ompR:  TTCTTTTT at position   78134 Score -   8
+     rpoD16:  TTTTTATA at position   78137 Score -  13
+     rpoD17:  CTCCTTTT at position   78145 Score -  12
+       ompR:  TTCTTTTT at position   78187 Score -   8
+     rpoD15:  TTTTGTTT at position   78191 Score -   9
+     rpoD17:  TTTGTTTT at position   78192 Score -   9
+ For promoter at  59959:
+        hns:  ATTAAATT at position   59902 Score -   9
+        hns:  ATTAAATT at position   59921 Score -   9
+     rpoD18:  CTTATACT at position   59945 Score -  10
+        fis:  TATACTTA at position   59947 Score -  18
+     rpoD17:  ATACTTAA at position   59948 Score -  13
+ For promoter at  74912:
+        lrp:  TGCATTTT at position   74883 Score -   5
+      argR2:  TTTTTATT at position   74887 Score -  13
+        ihf:  TTTTATTT at position   74888 Score -  13
+        lrp:  TATTTATT at position   74891 Score -   8
+      argR2:  TTTATTTT at position   74893 Score -   7
+     rpoD18:  TTTAAAAT at position   74899 Score -   7
+ For promoter at 117122:
+      rpoH2:  TTTTTTTT at position  117083 Score -  16
+       lexA:  TTTTTTTA at position  117084 Score -  16
+       argR:  TTTTTTAT at position  117085 Score -  13
+        fis:  AAAAATAA at position  117098 Score -   9
+        ihf:  AAATAAAA at position  117100 Score -  13
+       phoB:  AATAAAAG at position  117101 Score -   8
+ For promoter at   2790:
+        fnr:  ATAAATAT at position    2737 Score -   9
+     rpoD16:  AAATAATT at position    2748 Score -  15
+       soxS:  ATAATTCA at position    2750 Score -  11
+        ihf:  AGATATAT at position    2761 Score -  12
+       cpxR:  GTAAATTA at position    2777 Score -   9
+ For promoter at  31922:
+     rpoD18:  TTTAAAAT at position   31875 Score -   7
+      argR2:  TTTATTTT at position   31908 Score -   7
+      argR2:  TTTTTATT at position   31912 Score -  13
+        ihf:  TTTTATTT at position   31913 Score -  13
+        lrp:  TATTTATT at position   31916 Score -   8
+        lrp:  ATTTATTA at position   31917 Score -   6
+       phoB:  TTTATTAA at position   31918 Score -   8
+     rpoD18:  TTAATTTT at position   31922 Score -   9
+ For promoter at  71871:
+     rpoD16:  TTATAAAA at position   71811 Score -   9
+       argR:  ATAAAAAT at position   71813 Score -  10
+     rpoD17:  AAAAATAG at position   71815 Score -   9
+       argR:  TTTTTTAT at position   71838 Score -  13
+     rpoD16:  TTTTTATA at position   71839 Score -  13
+       cpxR:  TAAAATTA at position   71860 Score -   6
+     rpoD17:  TTTATAAT at position   71891 Score -   9
+ For promoter at  86233:
+        lrp:  TTTCTTTT at position   86174 Score -   9
+       ompR:  TTCTTTTT at position   86175 Score -   8
+       purR:  TTTTTAAG at position   86178 Score -   9
+       hipB:  CCTTTTTA at position   86189 Score -  11
+        ihf:  TATACTTT at position   86221 Score -  15
+       farR:  TGTATTAT at position   86228 Score -   6
+     rpoS17:  TTATGTTT at position   86232 Score -   7
+     rpoD15:  TAATGTTT at position   86252 Score -   9
+ For promoter at  46140:
+     rpoD18:  GTGAGGGA at position   46089 Score -  12
+       tyrR:  TGTAATTT at position   46121 Score -  10
+        hns:  TAATTTAA at position   46123 Score -   9
+     rpoD18:  TTTAAAAT at position   46126 Score -   7
+     rpoD18:  ATCATTGT at position   46146 Score -   5
+ For promoter at  18101:
+       purR:  CTTTCCCT at position   18059 Score -   7
+        fur:  ATAATTGT at position   18090 Score -  13
+ For promoter at  34386:
+       soxS:  TATCATTT at position   34331 Score -   9
+        fur:  ATCATTTT at position   34332 Score -   8
+     rpoD17:  ATTTTGTA at position   34335 Score -   9
+     rpoD15:  TTTTGTAA at position   34336 Score -  11
+        lrp:  TATTTTTT at position   34391 Score -  11
+        lrp:  ATTTTTTT at position   34392 Score -  11
+      rpoH2:  TTTTTTTT at position   34393 Score -  16
+        fnr:  TTTTTTGA at position   34395 Score -   9
+ For promoter at  40167:
+        ihf:  TATACTTT at position   40128 Score -  15
+      argR2:  TTTTTATT at position   40159 Score -  13
+        ihf:  TTTTATTT at position   40160 Score -  13
+      argR2:  TTTATTTT at position   40161 Score -   7
+ For promoter at 136664:
+       lexA:  TATATTCA at position  136604 Score -   8
+     rpoD17:  AATAAATA at position  136612 Score -  11
+       cpxR:  TAAAACAA at position  136641 Score -   9
+        fis:  ACAATTAT at position  136667 Score -   8
+ For promoter at 103292:
+     rpoD17:  TTATGATA at position  103273 Score -   7
+        ihf:  AAATAAAA at position  103281 Score -  13
+       phoB:  AATAAAAG at position  103282 Score -   8
+        lrp:  TAAGATAA at position  103303 Score -  16
+ For promoter at 124476:
+     rpoD15:  GGTATACT at position  124462 Score -  13
+       lexA:  TAAAAACA at position  124469 Score -   7
+        hns:  ACAGAGTA at position  124474 Score -   7
+ For promoter at  17271:
+       deoR:  TTAGAATA at position   17258 Score -  17
+       lexA:  TATATAAA at position   17281 Score -  14
+       lexA:  ATATAAAA at position   17282 Score -  11
+ For promoter at  19126:
+     rpoD18:  ACTTGTTA at position   19069 Score -   9
+       deoR:  AATTCTAA at position   19076 Score -  17
+     rpoD19:  ACAGATTT at position   19086 Score -   6
+        fnr:  ATTTGTTT at position   19090 Score -   7
+     rpoD17:  TTTGTTTT at position   19091 Score -   9
+     rpoD18:  AAATATAT at position   19102 Score -   7
+       tyrR:  AATATATA at position   19103 Score -  15
+      rpoH3:  CAAAAAAA at position   19140 Score -   9
+ For promoter at 117816:
+     rpoD18:  GGCATAAT at position  117775 Score -   7
+       soxS:  ATAATTCA at position  117778 Score -  11
+       marR:  CAACTAAT at position  117784 Score -   8
+       gcvA:  ACTAATAG at position  117786 Score -  14
+      argR2:  ATATAAAT at position  117808 Score -  13
+       lexA:  ATAAATAA at position  117810 Score -  14
+       tyrR:  TAAATAAA at position  117811 Score -  10
+ For promoter at  15949:
+     rpoD17:  ACTTTTGT at position   15930 Score -   9
+     rpoD17:  TTTTGTAT at position   15932 Score -   9
+      argR2:  TTTTTATT at position   15939 Score -  13
+        ihf:  TTTTATTT at position   15940 Score -  13
+       soxS:  ATTTGTTA at position   15944 Score -  10
+ For promoter at 113949:
+       cpxR:  TAAAACAA at position  113890 Score -   9
+        fnr:  ATCAATAA at position  113897 Score -   5
+     rpoD18:  AAATATAT at position  113918 Score -   7
+       tyrR:  AATATATA at position  113919 Score -  15
+       lexA:  TATATAAA at position  113921 Score -  14
+       lexA:  ATATAAAA at position  113922 Score -  11
+       purR:  ATTTCAAG at position  113951 Score -   9
+ For promoter at 131503:
+       phoB:  TAATATAT at position  131473 Score -  15
+      argR2:  TTTTTATT at position  131480 Score -  13
+     rpoD17:  ATTAGTTA at position  131485 Score -  15
+ For promoter at  99349:
+        ihf:  AAATAAAA at position   99289 Score -  13
+       phoB:  AATAAAAG at position   99290 Score -   8
+        hns:  ATTAAATT at position   99328 Score -   9
+       arcA:  ATTTGTAA at position   99333 Score -   8
+       cysB:  TGTATATA at position   99355 Score -  12
+       lexA:  TATATAAA at position   99357 Score -  14
+       lexA:  ATATAAAA at position   99358 Score -  11
+ For promoter at  26115:
+       gcvA:  AACTAATT at position   26086 Score -  14
+        lrp:  TAAGATAA at position   26126 Score -  16
+ For promoter at 127701:
+     rpoD17:  TGTTATAA at position  127646 Score -  12
+     rpoD16:  TTATAAAA at position  127648 Score -   9
+       dnaA:  TTTGGATA at position  127670 Score -   6
+       nagC:  ATATTTTA at position  127702 Score -   7
+     rpoD17:  TTTTATAG at position  127705 Score -  10
+ For promoter at  56947:
+     rpoD17:  ATTAGTTA at position   56906 Score -  15
+       araC:  TAACAAAA at position   56914 Score -  10
+     rpoD16:  TTATAAAA at position   56923 Score -   9
+     rpoD17:  AATAGTTA at position   56929 Score -  13
+ For promoter at  76070:
+       phoB:  TTTAATTA at position   76019 Score -  11
+       arcA:  TTAATTAA at position   76020 Score -  13
+       arcA:  TAATTAAA at position   76021 Score -  11
+        ihf:  TTTTATTT at position   76051 Score -  13
+        lrp:  TATTTATT at position   76054 Score -   8
+        lrp:  ATTTATTA at position   76055 Score -   6
+       gcvA:  ACTAATAG at position   76068 Score -  14
+ For promoter at  83711:
+     rpoS17:  GGAGGGTG at position   83659 Score -  12
+        fnr:  ATAAATAT at position   83668 Score -   9
+     rpoD18:  AAATATAT at position   83670 Score -   7
+        fnr:  ATTTGTTT at position   83689 Score -   7
+     rpoD17:  TTTGTTTT at position   83690 Score -   9
+     rpoD15:  TTTTGTAA at position   83694 Score -  11
+     rpoD17:  TTGGAATA at position   83720 Score -   8
+ For promoter at 137227:
+       arcA:  AATTGTAA at position  137182 Score -  16
+     rpoD17:  AATAAATA at position  137232 Score -  11
+       lexA:  ATAAATAA at position  137233 Score -  14
+       tyrR:  TAAATAAA at position  137234 Score -  10
+ For promoter at 115148:
+        fis:  TGTAAATT at position  115125 Score -  15
+       cpxR:  GTAAATTA at position  115126 Score -   9
+       lexA:  TATATAAA at position  115132 Score -  14
+       lexA:  ATATAAAA at position  115133 Score -  11
+       ompR:  TTTACATT at position  115157 Score -  11
+ For promoter at 129990:
+        hns:  ATTAAATT at position  129940 Score -   9
+       soxS:  ATTTGTTA at position  129950 Score -  10
+     rpoD18:  GATAGAAT at position  129976 Score -   9
+       oxyR:  TAGAATAG at position  129978 Score -  21
+       lexA:  ATAGATAA at position  130003 Score -   9
+     rpoD17:  ATAATAAT at position  130007 Score -   8
+ For promoter at  48234:
+        lrp:  TAAGATAA at position   48185 Score -  16
+        fur:  ATAATTGT at position   48189 Score -  13
+ For promoter at  23716:
+       fadR:  AACTCATC at position   23675 Score -   5
+     rpoD15:  TAATGTTT at position   23683 Score -   9
+       purR:  CGTTTTTT at position   23697 Score -   8
+       argR:  TTTTTTAT at position   23699 Score -  13
+     rpoD16:  TTTTTATA at position   23700 Score -  13
+     rpoD17:  TTTTATAG at position   23701 Score -  10
+ For promoter at  58384:
+       araC:  AAGATTAG at position   58327 Score -  16
+        ihf:  TATACTTT at position   58372 Score -  15
+ For promoter at  84153:
+      rpoH3:  CTTGAATA at position   84102 Score -   5
+       cytR:  TTCTGTAA at position   84115 Score -   8
+        ihf:  TTTTATTT at position   84137 Score -  13
+      argR2:  TTTATTTT at position   84138 Score -   7
+        lrp:  TATTTTTT at position   84140 Score -  11
+        fnr:  TTTTTTGA at position   84142 Score -   9
+       purR:  TTTTTAAG at position   84151 Score -   9
+ For promoter at  77386:
+        crp:  ATTTGTGA at position   77332 Score -   6
+        fis:  TGTAAATT at position   77340 Score -  15
+     rpoD17:  ATTAGTTA at position   77368 Score -  15
+ For promoter at 122301:
+       lexA:  TATATATA at position  122244 Score -  14
+       lexA:  TATATAAA at position  122246 Score -  14
+       lexA:  ATATAAAA at position  122247 Score -  11
+       cpxR:  TAAAAAGA at position  122270 Score -   9
+ For promoter at  51038:
+        ihf:  TAATCTAT at position   50979 Score -  17
+        crp:  TCACATTT at position   50992 Score -  12
+     rpoD16:  CACATTTC at position   50993 Score -   7
+        lrp:  TATTTATT at position   51022 Score -   8
+        lrp:  ATTTATTA at position   51023 Score -   6
+ For promoter at 131191:
+     rpoD15:  AAGGTAGA at position  131148 Score -   7
+     rpoD16:  AGTGTAAT at position  131166 Score -   9
+       tyrR:  TAAATAAA at position  131190 Score -  10
+        ihf:  AAATAAAA at position  131191 Score -  13
+       arcA:  AATAAAAA at position  131192 Score -  12
+       argR:  ATAAAAAT at position  131193 Score -  10
+        fis:  AAAAATAA at position  131195 Score -   9
+      rpoH2:  AAATAATG at position  131197 Score -   5
+ For promoter at 135985:
+       cpxR:  TAAAAAGA at position  135940 Score -   9
+       argR:  TTTTTTAT at position  135978 Score -  13
+      argR2:  TTTTTATT at position  135979 Score -  13
+        ihf:  TTTTATTT at position  135980 Score -  13
+        ihf:  TTGGAGTC at position  135996 Score -  14
+ For promoter at  30284:
+        fis:  AATTATTT at position   30227 Score -  12
+        ihf:  TAATCTAT at position   30241 Score -  17
+        ihf:  TTTTATTT at position   30269 Score -  13
+      argR2:  TTTATTTT at position   30270 Score -   7
+       rpoE:  ACTTTACA at position   30287 Score -  10
+ For promoter at 125774:
+     rpoD17:  AAAAATAG at position  125716 Score -   9
+     rpoD17:  CCTATACT at position  125744 Score -  15
+        fis:  TATACTTA at position  125746 Score -  18
+       cpxR:  TAAAATTA at position  125762 Score -   6
+ For promoter at 119399:
+        ihf:  AGTATACA at position  119341 Score -  19
+       soxS:  CAAGTATA at position  119362 Score -  12
+     rpoD17:  TACCTAAA at position  119392 Score -  11
+     rpoD16:  TCATAACA at position  119408 Score -  11
+ For promoter at  20846:
+       araC:  AAGATTAG at position   20790 Score -  16
+     rpoD15:  CTAAATAA at position   20798 Score -  12
+       tyrR:  TAAATAAA at position   20799 Score -  10
+       cytR:  TTCTGTAA at position   20829 Score -   8
+ For promoter at 105129:
+     rpoD18:  TTTAAAAT at position  105077 Score -   7
+        fis:  AAATGTGA at position  105081 Score -  11
+        ihf:  AAATAAAA at position  105119 Score -  13
+     rpoD16:  TTATAAAA at position  105132 Score -   9
+ For promoter at   6111:
+        fis:  TTATCTAA at position    6073 Score -  11
+       arcA:  TAATTATA at position    6078 Score -  18
+       oxyR:  TAGAATAG at position    6099 Score -  21
+ For promoter at 109881:
+       metR:  CAAATTTT at position  109821 Score -   8
+       tyrR:  TTTACAAT at position  109826 Score -   8
+     rpoD15:  TAATGTTT at position  109871 Score -   9
+ For promoter at  41426:
+       cysB:  TATAGTTA at position   41366 Score -  14
+       soxS:  CTTTTCCC at position   41378 Score -   7
+        lrp:  TGTAGAAT at position   41412 Score -  11
+     rpoD15:  TTTTAACA at position   41432 Score -  10
+ For promoter at  24082:
+       gcvA:  TTATATTT at position   24027 Score -  11
+       soxS:  AACCCCCG at position   24039 Score -  10
+       deoR:  AATTTTAT at position   24050 Score -   8
+       phoB:  TTTATTAA at position   24053 Score -   8
+       arcA:  TAACTCAA at position   24058 Score -   7
+     rpoD17:  GCTACAAT at position   24068 Score -   8
+ For promoter at   1181:
+     rpoD16:  TGTATAAT at position    1163 Score -  13
+        crp:  TTAAATTG at position    1186 Score -  10
+        fnr:  TAAATTGT at position    1187 Score -  12
+     rpoD19:  ATTGTTTT at position    1190 Score -   7
+ For promoter at 145105:
+       rpoE:  GTCTGATA at position  145071 Score -   8
+       narL:  ACTCCTTA at position  145078 Score -  18
+     rpoD16:  CCTTATAA at position  145081 Score -  21
+        ihf:  AGATATAT at position  145089 Score -  12
+       arcA:  ATTTGTAA at position  145095 Score -   8
+ For promoter at  64021:
+        lrp:  ATAACTAA at position   63977 Score -  14
+        tus:  TAACTAAT at position   63978 Score -  17
+      argR2:  TTTTTATT at position   64005 Score -  13
+        ihf:  TTTTATTT at position   64006 Score -  13
+      argR2:  TTTATTTT at position   64007 Score -   7
+ For promoter at 116219:
+       cpxR:  TAAAACAA at position  116172 Score -   9
+        fis:  ACAATTAT at position  116176 Score -   8
+     rpoS17:  TTATATTA at position  116180 Score -  14
+     rpoD16:  TTTCAAAT at position  116193 Score -  10
+       gcvA:  TTATATTT at position  116226 Score -  11
+        lrp:  TATTTATT at position  116229 Score -   8
+ For promoter at  55834:
+       arcA:  ATTTGTAA at position   55796 Score -   8
+     rpoS17:  CAGACATA at position   55804 Score -  10
+       farR:  TGTATTAT at position   55820 Score -   6
+ For promoter at   9884:
+     rpoD16:  CCTTATAA at position    9846 Score -  21
+     rpoD17:  ACAAGTGT at position    9887 Score -  11
+ For promoter at   8811:
+     rpoD18:  GTGAGGGA at position    8752 Score -  12
+     rpoD17:  AATCTTTA at position    8779 Score -   7
+        fis:  AAAAATAA at position    8806 Score -   9
+     rpoD16:  AAATAATT at position    8808 Score -  15
+       argR:  AATAATTA at position    8809 Score -  17
+ For promoter at 108998:
+       lexA:  TATATTCA at position  108955 Score -   8
+        ihf:  TAGGATAA at position  108981 Score -  19
+       soxS:  TATCATTT at position  108989 Score -   9
+     rpoD17:  ATTTTGTA at position  109003 Score -   9
+     rpoD17:  TTTTGTAT at position  109004 Score -   9
+ For promoter at 117468:
+        crp:  TTTGTGAG at position  117410 Score -  10
+     rpoD18:  TTTAAAAT at position  117454 Score -   7
+       rpoN:  AAATTGTA at position  117465 Score -   8
+ For promoter at 127105:
+       metJ:  GCTAAAAT at position  127091 Score -   7
+       cpxR:  TAAAATTA at position  127093 Score -   6
+        hns:  ATTAAATT at position  127097 Score -   9
+ For promoter at  63210:
+       metJ:  CTTTACAT at position   63165 Score -  14
+       ompR:  TTTACATT at position   63166 Score -  11
+     rpoD15:  TTTTAACA at position   63173 Score -  10
+        ihf:  CTCCTTGA at position   63209 Score -   9
+        lrp:  TTGACAAT at position   63213 Score -   7
+ For promoter at  28690:
+       tyrR:  TGTAATTT at position   28648 Score -  10
+        crp:  TTTTGTTA at position   28653 Score -   9
+        lrp:  TATTTTTT at position   28671 Score -  11
+     rpoD15:  TTTTGTAA at position   28675 Score -  11
+ For promoter at  44322:
+        lrp:  TTTCTTTT at position   44276 Score -   9
+        ihf:  CTCCTTGA at position   44285 Score -   9
+       farR:  TGTATTAT at position   44308 Score -   6
+       tyrR:  TTTACAAT at position   44325 Score -   8
+ For promoter at  79770:
+     rpoD17:  CAATTCTA at position   79738 Score -  14
+        lrp:  TTTCTTTT at position   79748 Score -   9
+       ompR:  TTCTTTTT at position   79749 Score -   8
+       purR:  CTTTTTCT at position   79751 Score -   6
+        fnr:  ATTTGTTT at position   79786 Score -   7
+ For promoter at   4977:
+       nagC:  ATTTTAGA at position    4921 Score -   6
+       deoR:  TTAGAATA at position    4924 Score -  17
+     rpoD17:  ATACTATA at position    4961 Score -  11
+       cpxR:  AGTGTAAA at position    4979 Score -  10
+        fis:  TGTAAATT at position    4981 Score -  15
+ For promoter at  91819:
+       cynR:  ATAAGTAA at position   91775 Score -  12
+        fur:  ATTTGCAT at position   91782 Score -   7
+      argR2:  TTTATTTT at position   91796 Score -   7
+        lrp:  TATTTTTT at position   91798 Score -  11
+        ihf:  TTTTATTT at position   91827 Score -  13
+ For promoter at 141063:
+        fis:  ACAGTTGT at position  141018 Score -   6
+       lexA:  TAAAAACA at position  141039 Score -   7
+       phoB:  AATAAAAG at position  141054 Score -   8
+       lexA:  TATATTCA at position  141070 Score -   8
+       argR:  ATATTCAT at position  141071 Score -   7
+ For promoter at 101628:
+        fis:  AAAAATAA at position  101589 Score -   9
+     rpoD17:  AATAAATA at position  101592 Score -  11
+       lexA:  ATAAATAA at position  101593 Score -  14
+       hipB:  AAAGGATA at position  101607 Score -   9
+     rpoD17:  AAATCAGA at position  101623 Score -   7
+        fis:  TCAGAGGA at position  101626 Score -  10
+ For promoter at  12778:
+       purR:  CTTTTTCT at position   12723 Score -   6
+        lrp:  TTTCTTTT at position   12726 Score -   9
+       metJ:  CTTTACAT at position   12758 Score -  14
+       ompR:  TTTACATT at position   12759 Score -  11
+ For promoter at  98839:
+       purR:  ATTTCAAG at position   98785 Score -   9
+     rpoD18:  TTTAAAAT at position   98825 Score -   7
+        crp:  AAATAACA at position   98829 Score -  10
+ For promoter at  96649:
+       ompR:  ATATTACA at position   96603 Score -   9
+     rpoD17:  TGCAATAA at position   96611 Score -   5
+       arcA:  AATAAAAA at position   96626 Score -  12
+       argR:  ATAAAAAT at position   96627 Score -  10
+     rpoD18:  GATAGAAT at position   96635 Score -   9
+ For promoter at 139339:
+        fis:  AAAAATAA at position  139284 Score -   9
+       lexA:  TAAAAACA at position  139306 Score -   7
+       farR:  TGTATTAT at position  139325 Score -   6
+ For promoter at  97334:
+        lrp:  TATTCTTA at position   97322 Score -   8
+        fis:  TCTTAACT at position   97325 Score -  11
+       trpR:  TTAACTAG at position   97327 Score -  20
+ For promoter at  36884:
+     rpoD17:  CTCCTTTT at position   36864 Score -  12
+        lrp:  ATCTTTTA at position   36883 Score -   6
+     rpoD17:  TAGCCTTT at position   36889 Score -   6
+     rpoD15:  TTTTGTAA at position   36895 Score -  11
+ For promoter at  90541:
+     rpoD16:  AGTGTAAT at position   90483 Score -   9
+       metR:  ATTTTTCC at position   90498 Score -   6
+       tyrR:  TATACAGA at position   90510 Score -  11
+        fur:  CATTATAG at position   90538 Score -  17
+ For promoter at  70838:
+      argR2:  TTTTTATT at position   70816 Score -  13
+        ihf:  TTTTATTT at position   70817 Score -  13
+       cysB:  TATAGTTA at position   70826 Score -  14
+       lexA:  ATAGATAA at position   70845 Score -   9
+ For promoter at 132335:
+      rpoH2:  ACAAAAGA at position  132278 Score -   6
+       argR:  TTTTTTAT at position  132295 Score -  13
+     rpoD16:  TTTTTATA at position  132296 Score -  13
+     rpoD17:  TTTTATAG at position  132297 Score -  10
+ For promoter at 140375:
+        fnr:  ACAATTTA at position  140342 Score -   6
+        fis:  AAAAATAA at position  140375 Score -   9
+        ihf:  AAATAAAA at position  140377 Score -  13
+       arcA:  AATAAAAA at position  140378 Score -  12
+        ihf:  ACAAAAAA at position  140386 Score -   9
+      rpoH3:  CAAAAAAA at position  140387 Score -   9
+       narL:  AAGTAGTA at position  140393 Score -   9
+ For promoter at  16762:
+       ompR:  TTCTTTTT at position   16722 Score -   8
+        lrp:  TATTTTTT at position   16734 Score -  11
+        lrp:  ATTTTTTT at position   16735 Score -  11
+      rpoH3:  AATAACTC at position   16762 Score -  10
+ For promoter at  20038:
+        ihf:  AAATAAAA at position   19986 Score -  13
+        ihf:  AATAAAAT at position   19987 Score -  10
+ For promoter at  21898:
+        fnr:  TTTTTTGA at position   21860 Score -   9
+     rpoD17:  TGATAATT at position   21865 Score -   9
+       soxS:  ATAATTCA at position   21867 Score -  11
+      argR2:  ACATATAA at position   21909 Score -  14
+        fur:  ATAATTGT at position   21913 Score -  13
+ For promoter at  20430:
+       glpR:  TTCAAAAT at position   20398 Score -   6
+     rpoD17:  CATGCTAA at position   20413 Score -   8
+        lrp:  ATTTTTTT at position   20421 Score -  11
+        lrp:  TTTCTTTT at position   20426 Score -   9
+       ompR:  TTCTTTTT at position   20427 Score -   8
+ For promoter at   9399:
+        ihf:  TGTAGGCC at position    9360 Score -  33
+     rpoD17:  ATAATAAT at position    9388 Score -   8
+        fur:  TAATGCTT at position    9392 Score -   6
+ For promoter at 141629:
+        ihf:  AATAAAAT at position  141587 Score -  10
+        ihf:  AAATAAAA at position  141591 Score -  13
+       phoB:  AATAAAAG at position  141592 Score -   8
+       lexA:  TAAAAACA at position  141606 Score -   7
+       tyrR:  TAAATAAA at position  141637 Score -  10
+        ihf:  AAATAAAA at position  141638 Score -  13
+       phoB:  AATAAAAG at position  141639 Score -   8
+ For promoter at  75396:
+       cpxR:  CTTGTAAG at position   75339 Score -  11
+     rpoD18:  TTAATTTT at position   75364 Score -   9
+     rpoD15:  TTTTGTTT at position   75370 Score -   9
+       tyrR:  TTTACAAT at position   75382 Score -   8
+ For promoter at   6984:
+     rpoD19:  TACTTAAA at position    6968 Score -   8
+     rpoD17:  CTTAAAAT at position    6970 Score -  11
+        ihf:  AAATAAAA at position    6974 Score -  13
+       phoB:  AATAAAAG at position    6975 Score -   8
+ For promoter at  71315:
+     rpoS17:  CTATTATA at position   71299 Score -  13
+        fis:  TATACTTA at position   71303 Score -  18
+ For promoter at  82399:
+     rpoD17:  CGTTGTAA at position   82352 Score -   7
+      argR2:  TTTTTATT at position   82373 Score -  13
+        ihf:  TTTTATTT at position   82374 Score -  13
+       carP:  CTGTAAAA at position   82384 Score -   7
+     rpoD17:  TGTAAAAT at position   82385 Score -  11
+        tus:  TAACTAAG at position   82415 Score -  12
+ For promoter at 112371:
+       pdhR:  TTGTTAAA at position  112323 Score -   8
+     rpoD17:  AACTAAAC at position  112361 Score -   7
+        crp:  AATAAATT at position  112372 Score -   9
+       argR:  AATTAATA at position  112376 Score -  11
+ For promoter at  57482:
+        fur:  ATAATTGT at position   57426 Score -  13
+       tyrR:  TAAATAAA at position   57449 Score -  10
+        ihf:  AAATAAAA at position   57450 Score -  13
+       arcA:  AATAAAAA at position   57451 Score -  12
+      rpoH3:  CTGATAAG at position   57466 Score -  17
+ For promoter at  18705:
+     rpoD18:  TTAATTTT at position   18682 Score -   9
+       deoR:  AATTTTAT at position   18684 Score -   8
+        ihf:  TTTTATTT at position   18686 Score -  13
+     rpoD16:  TAGAATGC at position   18693 Score -  13
+ For promoter at  13540:
+       gcvA:  AACTAATT at position   13530 Score -  14
+     rpoD16:  TAATTAGA at position   13533 Score -  20
+ For promoter at 121079:
+     rpoD19:  ATTGTTTT at position  121034 Score -   7
+     rpoD19:  ACAGATTT at position  121048 Score -   6
+ For promoter at  93691:
+       purR:  CTTTTTCT at position   93636 Score -   6
+        fis:  TCTTTAAT at position   93701 Score -   6
+ For promoter at 119701:
+        ihf:  ACAAAAAA at position  119651 Score -   9
+        ihf:  TATACTTT at position  119689 Score -  15
+       purR:  TTTTTAAG at position  119694 Score -   9
+ For promoter at  30615:
+     rpoD19:  ATTGTTTT at position   30571 Score -   7
+     rpoD17:  AATAGTTA at position   30597 Score -  13
+     rpoD16:  GTTAGGGT at position   30606 Score -  12
+     rpoD17:  TACCTAAA at position   30614 Score -  11
+       purR:  CTTTTTCT at position   30626 Score -   6
+ For promoter at  80224:
+     rpoD17:  CTCCTTTT at position   80181 Score -  12
+       nagC:  CTTATTTT at position   80198 Score -   6
+        lrp:  TATTTTTT at position   80200 Score -  11
+ For promoter at  82722:
+      rpoH3:  CAAAAAAA at position   82673 Score -   9
+        ihf:  TTTTATTT at position   82715 Score -  13
+ For promoter at 126616:
+     rpoD17:  ATACTATA at position  126589 Score -  11
+       tyrR:  GTGTAAAA at position  126601 Score -   5
+     rpoD17:  TGTAAAAT at position  126602 Score -  11
+ For promoter at  52021:
+     rpoD17:  GTTATACT at position   52007 Score -  13
+ For promoter at  61610:
+        fis:  TATACTTA at position   61582 Score -  18
+        lrp:  TATTCTTA at position   61598 Score -   8
+ For promoter at  41011:
+       narL:  TAACTCTA at position   40988 Score -   6
+        ihf:  TAGGATAA at position   40994 Score -  19
+        fnr:  ATAAATAT at position   41018 Score -   9
+ For promoter at  81816:
+     rpoS17:  TTATATTA at position   81777 Score -  14
+       argR:  TTATAATT at position   81799 Score -  14
+ For promoter at  47720:
+     rpoD17:  TTCCCTGT at position   47665 Score -   6
+        fis:  TATACTTA at position   47700 Score -  18
+       arcA:  AATTGTAA at position   47727 Score -  16
+        fnr:  TGTAAATC at position   47730 Score -   9
+ For promoter at  68737:
+       cytR:  TTCTGTAA at position   68713 Score -   8
+        ihf:  AGATATAT at position   68722 Score -  12
+     rpoD16:  GAGTATAA at position   68740 Score -   9
+ For promoter at  83355:
+        lrp:  TATTTTTT at position   83343 Score -  11
+        lrp:  ATTTTTTT at position   83344 Score -  11
+       lexA:  TTTTTTTA at position   83345 Score -  16
+       ompR:  TTCTTTTT at position   83359 Score -   8
+ For promoter at  70138:
+     rpoD18:  TTTAAAAT at position   70093 Score -   7
+     rpoD17:  CTCCTTTT at position   70114 Score -  12
+ For promoter at 142963:
+       trpR:  TTAACTAG at position  142946 Score -  20
+       argR:  AATAATTA at position  142954 Score -  17
+       arcA:  TAATTAAA at position  142956 Score -  11
+ For promoter at 144172:
+        fis:  AAAAATAA at position  144154 Score -   9
+        ihf:  AAATAAAA at position  144156 Score -  13
+        ihf:  AATAAAAT at position  144157 Score -  10
+        ihf:  AAATAAAA at position  144161 Score -  13
+        ihf:  AATAAAAT at position  144162 Score -  10
+ For promoter at  70457:
+       narL:  TCCTAAAG at position   70400 Score -  20
+        tus:  TAGTATGT at position   70435 Score -  16
+        ihf:  ACAAAAAA at position   70446 Score -   9
+      rpoH3:  CAAAAAAA at position   70447 Score -   9
+ For promoter at 104768:
+     rpoD15:  TAAGGTTA at position  104738 Score -  14
+     rpoD18:  AAATATAT at position  104751 Score -   7
+       arcA:  TAATTAAA at position  104770 Score -  11
+        hns:  ATTAAATT at position  104772 Score -   9
+ For promoter at  86583:
+     rpoD17:  CTTACTTT at position   86560 Score -   7
+       lexA:  TTTTTTTA at position   86565 Score -  16
+       cpxR:  TAAAACAA at position   86578 Score -   9
+ For promoter at  43022:
+     rpoD16:  AAATAATT at position   43003 Score -  15
+       argR:  AATAATTA at position   43004 Score -  17
+ For promoter at 106998:
+     rpoD15:  CTAAATAA at position  107006 Score -  12
+       tyrR:  TAAATAAA at position  107007 Score -  10
+     rpoD17:  AATAAATA at position  107009 Score -  11
+ For promoter at 135083:
+     rpoD17:  CTCCTTTT at position  135040 Score -  12
+       hipB:  CCTTTTTA at position  135042 Score -  11
+     rpoD17:  TGCTTGTA at position  135065 Score -  10
+ For promoter at  64763:
+       purR:  CTTTTTCT at position   64723 Score -   6
+     rpoD17:  ATTTTGTA at position   64773 Score -   9
+     rpoD15:  TTTTGTAA at position   64774 Score -  11
+ For promoter at  10552:
+       nagC:  ATATTTTA at position   10509 Score -   7
+     rpoD16:  TTATAAAA at position   10514 Score -   9
+       lexA:  TAAAAACA at position   10517 Score -   7
+      argR2:  ATACACTA at position   10524 Score -  20
+ For promoter at  42618:
+        hns:  TAGGCTGA at position   42593 Score -  13
+     rpoD17:  AAAAATAG at position   42629 Score -   9
+ For promoter at 112013:
+        lrp:  TATTTATT at position  111967 Score -   8
+     rpoD17:  TTGATATA at position  111974 Score -   8
+     rpoD16:  TGATATAA at position  111975 Score -   9
+       ompR:  ATATTACA at position  112020 Score -   9
+ For promoter at 112760:
+        crp:  ATAACAAT at position  112711 Score -   9
+        lrp:  TATTTATT at position  112723 Score -   8
+        lrp:  ATTTATTA at position  112724 Score -   6
+       soxS:  AATTTCTT at position  112779 Score -   7
+ For promoter at 143272:
+     rpoS17:  CTATTATA at position  143214 Score -  13
+        fis:  AAAAATAA at position  143226 Score -   9
+      rpoH2:  AAATAATG at position  143228 Score -   5
+       argR:  ATAATCAT at position  143248 Score -   9
+       nagC:  CTTATTTT at position  143258 Score -   6
+     rpoD17:  TTTTACTT at position  143263 Score -   8
+ For promoter at     92:
+       deoR:  AATTTTAT at position      34 Score -   8
+     rpoD17:  TTTTATAG at position      36 Score -  10
+       hipB:  AAAGGATA at position      74 Score -   9
+     rpoD18:  GATAGAAT at position      78 Score -   9
+ For promoter at  92505:
+        fis:  AAAAATAA at position   92450 Score -   9
+     rpoD16:  AAATAATT at position   92452 Score -  15
+        ihf:  ACAAAAAA at position   92507 Score -   9
+        crp:  AAATGTAA at position   92512 Score -  13
+ For promoter at  54121:
+       narL:  TCCTAAAG at position   54076 Score -  20
+       phoB:  TAATCTGT at position   54111 Score -   7
+ For promoter at   6668:
+        fis:  TCTTTAAT at position    6622 Score -   6
+       phoB:  TTTAATTA at position    6624 Score -  11
+       arcA:  TTAATTAA at position    6625 Score -  13
+        fur:  TAATGCTT at position    6630 Score -   6
+       tyrR:  TGTAATTT at position    6678 Score -  10
+ For promoter at  31266:
+       cynR:  ATAAGTAA at position   31221 Score -  12
+     rpoD17:  TAGGAATA at position   31238 Score -  11
+     rpoD16:  ATTTCATA at position   31279 Score -  11
+ For promoter at  21265:
+     rpoD18:  TTGAGATA at position   21232 Score -   9
+     rpoD16:  TTTCAAAT at position   21264 Score -  10
+ For promoter at  37427:
+        hns:  ATTAAATT at position   37385 Score -   9
+     rpoD19:  TACTTAAA at position   37430 Score -   8
+     rpoD17:  CTTAAAAT at position   37432 Score -  11
+       nagC:  TTTAATTT at position   37443 Score -   7
+ For promoter at  88780:
+     rpoD17:  ATTTTGTA at position   88725 Score -   9
+     rpoD15:  TTTTGTAA at position   88726 Score -  11
+       metJ:  TGTAAACA at position   88729 Score -   8
+       arcA:  TTAACTAA at position   88754 Score -  12
+        tus:  TAACTAAT at position   88755 Score -  17
+ For promoter at  24418:
+        lrp:  ATCTTTTA at position   24367 Score -   6
+       trpR:  TACTCTTT at position   24373 Score -   7
+       ompR:  GTAACATA at position   24405 Score -  11
+     rpoD17:  TTTTCCTT at position   24436 Score -   7
+ For promoter at  81060:
+       phoB:  CATCTTTC at position   81014 Score -   6
+        fis:  TATTCTAT at position   81043 Score -  10
+ For promoter at  33364:
+     rpoD17:  TTTTGTAT at position   33323 Score -   9
+       nagC:  CTTATTTT at position   33345 Score -   6
+        lrp:  TATTTTTT at position   33347 Score -  11
+     rpoD15:  TTTTAACA at position   33365 Score -  10
+ For promoter at  11405:
+       soxS:  ATTTGTTA at position   11383 Score -  10
+     rpoD16:  ATTTCATA at position   11413 Score -  11
+     rpoD19:  TTTCATAT at position   11414 Score -  11
+        crp:  TCATATCA at position   11416 Score -   9
+ For promoter at 111050:
+       lexA:  AAACCACA at position  111025 Score -   5
+      argR2:  CATATTTT at position  111031 Score -   8
+       nagC:  ATATTTTA at position  111032 Score -   7
+ For promoter at  73069:
+     rpoD17:  TGCTTGTA at position   73010 Score -  10
+     rpoD16:  CCTACAAT at position   73053 Score -  12
+        fur:  ATAATTGT at position   73059 Score -  13
+     rpoD15:  TTTTGTTT at position   73079 Score -   9
+     rpoD17:  TTTGTTTT at position   73080 Score -   9
+ For promoter at  36198:
+        lrp:  TTTCTTTT at position   36139 Score -   9
+       metR:  TTCTTTTC at position   36140 Score -   8
+     rpoD18:  TTGAGATA at position   36148 Score -   9
+      argR2:  TTTATTTT at position   36197 Score -   7
+        lrp:  TATTTTTT at position   36199 Score -  11
+       ompR:  TTCTTTTT at position   36211 Score -   8
+ For promoter at  73812:
+     rpoD18:  TTGCTTTT at position   73762 Score -   6
+       argR:  TTATAATT at position   73798 Score -  14
+     rpoD17:  CCCTAAAA at position   73823 Score -  11
+     rpoD17:  TACCTAAA at position   73831 Score -  11
+ For promoter at  87945:
+        hns:  TAGGCTGA at position   87889 Score -  13
+     rpoD16:  TCATAACA at position   87918 Score -  11
+ For promoter at 134500:
+     rpoD17:  ATACTATA at position  134476 Score -  11
+     rpoD17:  TATAGATT at position  134480 Score -  11
+        crp:  TTAAATTG at position  134487 Score -  10
+        fnr:  TAAATTGT at position  134488 Score -  12
+       rpoN:  AAATTGTA at position  134489 Score -   8
+ For promoter at  32664:
+        ihf:  TAGATTAA at position   32604 Score -  18
+     rpoD17:  TTTTGTAT at position   32639 Score -   9
+ For promoter at  95830:
+       tyrR:  TTAATACA at position   95799 Score -  10
+       hipB:  TAAGATGT at position   95824 Score -  12
+       cpxR:  TAAAAAGA at position   95838 Score -   9
+ For promoter at  96219:
+       nagC:  GAAATAAG at position   96198 Score -   8
+        fis:  AAAAATAA at position   96215 Score -   9
+        ihf:  AAATAAAA at position   96217 Score -  13
+       arcA:  AATAAAAA at position   96218 Score -  12
+       argR:  ATAAAAAT at position   96219 Score -  10
+ For promoter at  14410:
+       carP:  CTGTAAAA at position   14358 Score -   7
+     rpoD17:  TGTAAAAT at position   14359 Score -  11
+       trpR:  TACTCTTT at position   14385 Score -   7
+        lrp:  TTTCTTTT at position   14390 Score -   9
+       ompR:  TTCTTTTT at position   14391 Score -   8
+       purR:  TTTTTAAG at position   14395 Score -   9
+     rpoD19:  ATTGTTTT at position   14410 Score -   7
+ For promoter at 121394:
+     rpoD15:  TTTTCACG at position  121358 Score -   6
+       oxyR:  CGGAGTAA at position  121400 Score -   7
+       cpxR:  GGAGTAAC at position  121401 Score -   8
+        tus:  TAACTAAG at position  121405 Score -  12
+     rpoD15:  TGTGTAGG at position  121413 Score -  22
+ For promoter at  31583:
+     rpoD17:  TTTTCCTT at position   31560 Score -   7
+     rpoD17:  TTTTGTAT at position   31566 Score -   9
+ For promoter at  48779:
+        fis:  TTATCTAA at position   48727 Score -  11
+       carP:  CTGTAAAA at position   48764 Score -   7
+     rpoD17:  TGTAAAAT at position   48765 Score -  11
+       nagC:  TTTAATTT at position   48798 Score -   7
+ For promoter at 115584:
+      flhCD:  GGGCTTTT at position  115539 Score -   9
+       phoB:  TTTAATTA at position  115563 Score -  11
+       arcA:  TTAATTAA at position  115564 Score -  13
+       argR:  AATTAATA at position  115566 Score -  11
+ For promoter at  72553:
+       purR:  CTTTCCCT at position   72511 Score -   7
+     rpoD17:  TTCCCTGT at position   72513 Score -   6
+        tus:  TAACTAAG at position   72520 Score -  12
+ For promoter at  13897:
+       tyrR:  TGTAATTT at position   13841 Score -  10
+     rpoD17:  TGCAATAA at position   13882 Score -   5
+     rpoD17:  AATAAGTA at position   13888 Score -  13
+        tus:  ATAAGTAT at position   13889 Score -   7
+ For promoter at 118563:
+     rpoD19:  CACCTAAA at position  118505 Score -   6
+     rpoD16:  ACCTAAAT at position  118506 Score -   9
+        ihf:  AGATATAT at position  118548 Score -  12
+       lexA:  TATATATA at position  118551 Score -  14
+       lexA:  TATATAAA at position  118553 Score -  14
+       lexA:  ATATAAAA at position  118554 Score -  11
+     rpoD15:  AAGGTAGA at position  118563 Score -   7
+ For promoter at 104352:
+       arcA:  AATTGTAA at position  104295 Score -  16
+       gcvA:  ACTAATAG at position  104320 Score -  14
+     rpoD17:  AGTTAATA at position  104343 Score -  12
+       cysB:  TGTATATA at position  104356 Score -  12
+     rpoD17:  ATTTTGTA at position  104363 Score -   9
+ For promoter at  76467:
+        ihf:  TAATCTAT at position   76420 Score -  17
+     rpoD17:  TGTTATAA at position   76434 Score -  12
+     rpoD17:  AGTTAATA at position   76452 Score -  12
+ For promoter at  29370:
+       arcA:  ATTTGTAA at position   29330 Score -   8
+        hns:  AAAGGAAT at position   29338 Score -   8
+       gcvA:  TTATATTT at position   29357 Score -  11
+ For promoter at  79341:
+     rpoD17:  TACCTAAA at position   79281 Score -  11
+ For promoter at  98193:
+        lrp:  TATTTATT at position   98164 Score -   8
+      argR2:  TTTATTTT at position   98166 Score -   7
+       ompR:  GTAACATA at position   98210 Score -  11
+ For promoter at  52411:
+        fis:  TATTCTAT at position   52399 Score -  10
+       araC:  TAACAAAA at position   52422 Score -  10
+      rpoH2:  ACAAAAGA at position   52424 Score -   6
+ For promoter at  39229:
+     rpoD17:  GTTATACT at position   39214 Score -  13
+     rpoD17:  TTCCTCCT at position   39239 Score -   8
+ For promoter at 105837:
+        ihf:  TTTTATTT at position  105798 Score -  13
+       araC:  TAACAAAA at position  105842 Score -  10
+ For promoter at 118903:
+     rpoD17:  AAAAATAG at position  118850 Score -   9
+     rpoD17:  GTTATACT at position  118890 Score -  13
+ For promoter at  76801:
+        fis:  TCTTTAAT at position   76745 Score -   6
+      argR2:  CATATTTT at position   76782 Score -   8
+       nagC:  ATATTTTA at position   76783 Score -   7
+ For promoter at  66410:
+       soxS:  TATCATTT at position   66368 Score -   9
+ For promoter at 107301:
+        ihf:  TGATATGA at position  107262 Score -   6
+     rpoD16:  TGATATAA at position  107271 Score -   9
+     rpoD18:  AAATATAT at position  107308 Score -   7
+       lexA:  TATATTCA at position  107311 Score -   8
+ For promoter at  67736:
+     rpoD17:  TATAGATT at position   67677 Score -  11
+        fis:  TTATCTAA at position   67726 Score -  11
+ For promoter at  95095:
+        fur:  ATGATAAT at position   95097 Score -   8
+ For promoter at  50036:
+     rpoD17:  AATAGTTA at position   50000 Score -  13
+     rpoS17:  TTATATTA at position   50023 Score -  14
+       hipB:  CCTTTTTA at position   50039 Score -  11
+ For promoter at  74276:
+        crp:  GAAACATA at position   74239 Score -   8
+     rpoD19:  ATTGTTTT at position   74252 Score -   7
+      argR2:  TTTATTTT at position   74276 Score -   7
+     rpoD17:  TTTTGTAT at position   74281 Score -   9
+ For promoter at  13214:
+     rpoD16:  CTCCTGAT at position   13168 Score -   9
+     rpoD17:  ATTAGTTA at position   13224 Score -  15
+ For promoter at 123629:
+       arcA:  AAAAGGGA at position  123582 Score -   8
+       tyrR:  CTTACACA at position  123640 Score -   9
+ For promoter at 124881:
+       argR:  CATAAAAA at position  124821 Score -  14
+       argR:  ATAAAAAT at position  124822 Score -  10
+        fnr:  TTTTTTGA at position  124846 Score -   9
+ For promoter at 130349:
+     rpoD16:  TGTATAAT at position  130335 Score -  13
+ For promoter at  89599:
+     rpoD15:  TTTTGTAA at position   89544 Score -  11
+       araC:  TCCGACCT at position   89573 Score -  14
+       fadR:  CCGACCTA at position   89574 Score -  16
+       farR:  TGTATTAT at position   89616 Score -   6
+ For promoter at  85570:
+       rpoE:  ACTTTACA at position   85542 Score -  10
+     rpoD17:  TACCTAAA at position   85554 Score -  11
+       oxyR:  ATTAGTGT at position   85576 Score -  12
+       gcvA:  TTATATTT at position   85583 Score -  11
+ For promoter at  53788:
+        fur:  ATCATTTT at position   53734 Score -   8
+        ihf:  AAAGTATA at position   53744 Score -  14
+        lrp:  TATTTATT at position   53750 Score -   8
+       glpR:  ACGATAAG at position   53777 Score -   6
+ For promoter at  63665:
+     rpoD17:  ATTAGTTA at position   63647 Score -  15
+ For promoter at 102830:
+     rpoD18:  TTAATTTT at position  102792 Score -   9
+        crp:  AAATGTAA at position  102800 Score -  13
+ For promoter at 101249:
+        fnr:  TTATACAA at position  101200 Score -  14
+     rpoD16:  GCTTTTTA at position  101231 Score -   7
+       cpxR:  TAAAAAGA at position  101237 Score -   9
+ For promoter at  47115:
+       trpR:  TTAACTAG at position   47083 Score -  20
+ For promoter at 113623:
+        fis:  TATACTTA at position  113575 Score -  18
+     rpoD17:  ATAATAAT at position  113612 Score -   8
+        crp:  TTTTGTTA at position  113619 Score -   9
+ For promoter at  49085:
+        fis:  AAAAATAA at position   49049 Score -   9
+     rpoD17:  AATAAGTA at position   49052 Score -  13
+        tus:  CATTAGTA at position   49061 Score -   9
+       soxS:  TATCATTT at position   49073 Score -   9
+        fur:  ATCATTTT at position   49074 Score -   8
+ For promoter at 100195:
+     rpoD15:  AGAGTCAA at position  100137 Score -   8
+     rpoS17:  CAGACATA at position  100148 Score -  10
+     rpoD17:  TGATAATT at position  100182 Score -   9
+     rpoD15:  AAGGTAGA at position  100193 Score -   7
+     rpoD16:  GCTTTTTA at position  100201 Score -   7
+ For promoter at  15509:
+       purR:  CTTTTTCT at position   15459 Score -   6
+     rpoD17:  TTTATAAT at position   15495 Score -   9
+       argR:  TTATAATT at position   15496 Score -  14
+ For promoter at  19581:
+     rpoD15:  CTAAATAA at position   19521 Score -  12
+ For promoter at   5520:
+       torR:  GTTCATAT at position    5485 Score -   9
+       metJ:  GCTAAAAT at position    5506 Score -   7
+ For promoter at  22275:
+     rpoD16:  CCTACAAT at position   22250 Score -  12
+       trpR:  TACTCTTT at position   22265 Score -   7
+ For promoter at  74582:
+     rpoD19:  TGTGTTAG at position   74565 Score -   9
+     rpoD15:  AGAGTCAA at position   74571 Score -   8
+     rpoD16:  AAATAATT at position   74577 Score -  15
+ No such sites for promoter at  56198
+ For promoter at  77796:
+        crp:  TTAAATTG at position   77783 Score -  10
+     rpoD15:  TTTTGTTT at position   77796 Score -   9
+       phoB:  TTTATTAA at position   77801 Score -   8
+ For promoter at  26452:
+     rpoD17:  ACTTTTAG at position   26425 Score -   9
+        ihf:  TAGGATAA at position   26445 Score -  19
+ For promoter at  29069:
+        lrp:  TTTCTTTT at position   29009 Score -   9
+        ihf:  TAATCTAT at position   29076 Score -  17
+     rpoD18:  TTAATTTT at position   29083 Score -   9
+ For promoter at  15134:
+        fnr:  CCTACCTC at position   15077 Score -   5
+       cysB:  TATAGTTA at position   15122 Score -  14
+      phoB3:  TCCTTACA at position   15144 Score -  13
+ For promoter at  51679:
+     rpoS17:  TTATATTA at position   51666 Score -  14
+     rpoD19:  TCCTGCTA at position   51696 Score -   7
+ For promoter at  93229:
+       nagC:  ATATTTTA at position   93201 Score -   7
+       nagC:  ATTTTAGA at position   93203 Score -   6
+       metJ:  GCTAAAAT at position   93215 Score -   7
+     rpoD15:  TTTTAACA at position   93237 Score -  10
+ For promoter at  35411:
+     rpoD17:  ATTTTGTA at position   35395 Score -   9
+     rpoD15:  TTTTGTAA at position   35396 Score -  11
+        fur:  TAATGCTT at position   35401 Score -   6
+ For promoter at 131931:
+       metJ:  TAGATGTG at position  131872 Score -   7
+        crp:  AGATGTGA at position  131873 Score -   6
+        ihf:  AAATAAAA at position  131921 Score -  13
+       phoB:  AATAAAAG at position  131922 Score -   8
+ For promoter at  39713:
+     rpoD17:  ATAACAGG at position   39653 Score -  12
+       purR:  TAATCGTT at position   39689 Score -   6
+       pdhR:  TTGTTAAA at position   39714 Score -   8
+ For promoter at 132637:
+     rpoD17:  TGCAATAA at position  132586 Score -   5
+        crp:  AAATGTAA at position  132616 Score -  13
+     rpoD17:  TGTAAAAT at position  132619 Score -  11
+ For promoter at 110724:
+       phoB:  TTTAATTA at position  110696 Score -  11
+        ihf:  AAATAAAA at position  110714 Score -  13
+     rpoD16:  AAATAATT at position  110740 Score -  15
+ For promoter at  46485:
+     rpoD18:  TTTAAAAT at position   46446 Score -   7
+      rpoH2:  CCCTTTAA at position   46486 Score -  10
+       nagC:  TTTAATTT at position   46489 Score -   7
+        ihf:  TTAATTTA at position   46490 Score -  12
+ For promoter at  22741:
+     rpoD17:  ATTTTGTA at position   22706 Score -   9
+     rpoD15:  TTTTGTAA at position   22707 Score -  11
+     rpoD17:  TAGGAATA at position   22725 Score -  11
+     rpoD16:  TTTTTATA at position   22734 Score -  13
+ For promoter at 135471:
+     rpoD17:  CTTATAAG at position  135414 Score -  12
+        fis:  TCTTTAAT at position  135432 Score -   6
+       soxS:  TTGCTCCT at position  135445 Score -   9
+        lrp:  TGCATTTT at position  135464 Score -   5
+       argR:  TTTTTTAT at position  135468 Score -  13
+ For promoter at  28183:
+      rpoH3:  CTTCCCTT at position   28163 Score -   6
+      rpoH3:  CTGATAAG at position   28177 Score -  17
+       purR:  ATTTCAAG at position   28194 Score -   9
+ For promoter at 122884:
+       arcA:  TAATTAAA at position  122829 Score -  11
+       metR:  CAAATTTT at position  122865 Score -   8
+       nagC:  ATTTTAGA at position  122868 Score -   6
+     rpoD17:  ATACTATA at position  122884 Score -  11
+ For promoter at  32966:
+        fis:  TCTTTAAT at position   32917 Score -   6
+     rpoD16:  AACTAGTT at position   32934 Score -  24
+     rpoD17:  ACTTTTGT at position   32958 Score -   9
+     rpoD15:  TTTTGTTT at position   32960 Score -   9
+ For promoter at  78560:
+       metR:  TTCTTTTC at position   78512 Score -   8
+       phoB:  TTTTCATA at position   78515 Score -  13
+     rpoD17:  CTTAACCT at position   78529 Score -   7
+        ihf:  TTTTATTT at position   78553 Score -  13
+ For promoter at 128139:
+     rpoD17:  AGATCGGA at position  128095 Score -   7
+     rpoD17:  CCCCTTTT at position  128106 Score -  12
+       hipB:  CCTTTTTA at position  128108 Score -  11
+     rpoD15:  TTTTAACA at position  128159 Score -  10
+ For promoter at  64453:
+       argR:  AATTAATA at position   64393 Score -  11
+       soxS:  TATCATTT at position   64399 Score -   9
+ For promoter at  16339:
+       purR:  TTTTCGTT at position   16289 Score -   5
+       arcA:  TAATTAAA at position   16316 Score -  11
+ For promoter at 136287:
+     rpoD17:  CTTAAAAT at position  136272 Score -  11
+ For promoter at  73453:
+     rpoD17:  TTTTACTT at position   73415 Score -   8
+       lexA:  TACTGTAT at position   73469 Score -   9
+ For promoter at  45166:
+       arcA:  TAATTAAA at position   45109 Score -  11
+       phoB:  CATCTTTC at position   45162 Score -   6
+        lrp:  TTTCTTTT at position   45166 Score -   9
+       ompR:  TTCTTTTT at position   45167 Score -   8
+ For promoter at  62852:
+       arcA:  ATTTGTAA at position   62805 Score -   8
+ For promoter at 120409:
+       nagC:  TTTAATTT at position  120383 Score -   7
+     rpoD18:  TTAATTTT at position  120384 Score -   9
+       purR:  ATTTCAAG at position  120400 Score -   9
+ For promoter at  58738:
+        fis:  AAATGTGA at position   58678 Score -  11
+        crp:  TAATGTGA at position   58731 Score -   9
+ No such sites for promoter at  67380
+ For promoter at  35829:
+       gcvA:  TTATATTT at position   35816 Score -  11
+       dnaA:  AGTTATCC at position   35833 Score -   6
+ For promoter at 133823:
+       nagC:  ATATTTTA at position  133771 Score -   7
+     rpoD17:  GCTACAAT at position  133809 Score -   8
+ For promoter at  25006:
+        fis:  TGTAAATT at position   24958 Score -  15
+        fis:  TCTTTAAT at position   24977 Score -   6
+ For promoter at  91513:
+       argR:  TTATAATT at position   91483 Score -  14
+       phoB:  TTTAATTA at position   91514 Score -  11
+       arcA:  TAATTATA at position   91516 Score -  18
+ For promoter at 137712:
+       phoB:  CTTACATA at position  137694 Score -  16
+ For promoter at  58052:
+       argR:  AATAATTA at position   58062 Score -  17
+ For promoter at  18402:
+     rpoD15:  TAGCTTAT at position   18372 Score -  15
+       tyrR:  TTTACAAT at position   18384 Score -   8
+     rpoD19:  ATTGTTTT at position   18421 Score -   7
+ For promoter at  33729:
+     rpoD17:  CTTAAAAT at position   33715 Score -  11
+     rpoD17:  ACTTTTGT at position   33738 Score -   9
+ For promoter at  38277:
+       farR:  TGTATTAT at position   38218 Score -   6
+       dnaA:  TTTGGATA at position   38276 Score -   6
+ For promoter at 129520:
+       lexA:  ATAGATAA at position  129490 Score -   9
+        crp:  AAATAACA at position  129510 Score -  10
+      argR2:  TTTATTTT at position  129519 Score -   7
+ For promoter at  37828:
+        lrp:  TTGTCTTA at position   37768 Score -   7
+ For promoter at   8022:
+       nagC:  ATATTTTA at position    7970 Score -   7
+     rpoD15:  TTTTGTTT at position    7997 Score -   9
+       arcA:  TAATTATA at position    8009 Score -  18
+ For promoter at 108581:
+       tyrR:  TTTACAAT at position  108567 Score -   8
+       arcA:  AAAAGGGA at position  108600 Score -   8
+ For promoter at 107939:
+     rpoD18:  AAATATAT at position  107892 Score -   7
+       ilvY:  ATATATCA at position  107894 Score -   9
+        lrp:  TATTTTTT at position  107953 Score -  11
+ For promoter at  66728:
+       narP:  TTGAGGTA at position   66690 Score -   8
+        tus:  CATTAGTA at position   66719 Score -   9
+       gcvA:  TTATATTT at position   66731 Score -  11
+       narP:  TTTAGAGT at position   66738 Score -   8
+ For promoter at  54582:
+     rpoD15:  AGGATTAA at position   54550 Score -   8
+     rpoD17:  ATTAGTTA at position   54574 Score -  15
+     rpoD17:  ACTTTTAG at position   54592 Score -   9
+ For promoter at  40572:
+        lrp:  TATTTTTT at position   40521 Score -  11
+ For promoter at 139705:
+        lrp:  TTGACAAT at position  139647 Score -   7
+        fur:  ATCATTTT at position  139653 Score -   8
+     rpoD17:  AATAAGTA at position  139715 Score -  13
+        tus:  ATAAGTAT at position  139716 Score -   7
+ For promoter at  94065:
+     rpoS18:  TAGTTTAG at position   94027 Score -  12
+       phoB:  AATAAAAG at position   94068 Score -   8
+ No such sites for promoter at 125457
+ For promoter at  36539:
+     rpoD17:  ACTTTTAG at position   36481 Score -   9
+     rpoD17:  CTCTGTAG at position   36519 Score -  12
+        ihf:  TAATCTAT at position   36532 Score -  17
+ For promoter at 138116:
+       cynR:  TAAGGTAA at position  138099 Score -  11
+ For promoter at   8379:
+     rpoD17:  AAAAATAG at position    8384 Score -   9
+ For promoter at  11848:
+        ihf:  AAATAAAA at position   11839 Score -  13
+       arcA:  AATAAAAA at position   11840 Score -  12
+ For promoter at 105457:
+        lrp:  ATAACTAA at position  105409 Score -  14
+        tus:  TAACTAAG at position  105410 Score -  12
+       cpxR:  TAAAACAA at position  105452 Score -   9
+ For promoter at  56594:
+     rpoD18:  AGTGTAGT at position   56561 Score -  12
+       trpR:  TTAACTAG at position   56601 Score -  20
+ No such sites for promoter at   4060
+ For promoter at 138827:
+     rpoD17:  AATTTTCT at position  138806 Score -   7
+       cytR:  TTCTGTAA at position  138810 Score -   8
+       carP:  CTGTAAAA at position  138812 Score -   7
+      rpoH2:  ACAAAAGA at position  138847 Score -   6
+ No such sites for promoter at 126271
+ For promoter at 103971:
+     rpoS17:  AGAGGGAG at position  103913 Score -  10
+ For promoter at  42230:
+       tyrR:  TTTACAAT at position   42216 Score -   8
+       cysB:  TCTTGCAT at position   42249 Score -  10
+ For promoter at  72218:
+       ompR:  TTTACATT at position   72158 Score -  11
+        fnr:  ATCAATAA at position   72226 Score -   5
+       arcA:  AATAAAAA at position   72229 Score -  12
+ For promoter at  10991:
+       lexA:  TGTACACA at position   10960 Score -  10
+     rpoD18:  AAATATAT at position   10981 Score -   7
+     rpoD15:  TAGCTTAT at position   10989 Score -  15
+ For promoter at 143742:
+       cpxR:  TAAAAAGA at position  143745 Score -   9
+ For promoter at 123191:
+     rpoD17:  AAAAATAG at position  123137 Score -   9
+     rpoD17:  ACTTTTGT at position  123165 Score -   9
+ For promoter at  96961:
+        tus:  ATAAGTAT at position   96974 Score -   7
+ For promoter at  10224:
+       deoR:  AATTCTAA at position   10207 Score -  17
+      rpoH2:  AAATAATG at position   10214 Score -   5
+       nagC:  ATATTTTA at position   10241 Score -   7
+ No such sites for promoter at  83042
+ For promoter at  60263:
+     rpoD17:  TTTATAAT at position   60224 Score -   9
+ For promoter at  84838:
+       purR:  CGTTTTTT at position   84811 Score -   8
+      rpoH2:  CCCTTTAA at position   84833 Score -  10
+       metR:  TTCTTTTC at position   84845 Score -   8
+ For promoter at  59639:
+       cynR:  ATAAGTAA at position   59617 Score -  12
+ For promoter at 118231:
+     rpoD19:  TACTTAAA at position  118196 Score -   8
+        fnr:  ATCAATAA at position  118203 Score -   5
+     rpoD17:  AATAAATA at position  118222 Score -  11
+ For promoter at  21597:
+       hipB:  CCTTTTTA at position   21543 Score -  11
+ No such sites for promoter at 140727
+ No such sites for promoter at  53342
+ For promoter at 100788:
+        ihf:  AAAGTATA at position  100777 Score -  14
+ For promoter at 120775:
+       gcvA:  AACTAATT at position  120756 Score -  14
+     rpoD17:  ATTTTGTA at position  120785 Score -   9
+     rpoD15:  TTTTGTAA at position  120786 Score -  11
+ For promoter at  27878:
+       metJ:  ATACATCT at position   27887 Score -   9
+ For promoter at   3136:
+        ihf:  ACAGACAA at position    3119 Score -   6
+ No such sites for promoter at 101942
+ No such sites for promoter at 141954
+ For promoter at  25774:
+      rpoH2:  ATTCTACC at position   25725 Score -   8
+     rpoD17:  TTGTGAAT at position   25745 Score -   6
+        lrp:  TTTCTTTT at position   25776 Score -   9
+ For promoter at  92158:
+       lexA:  ATATAAAA at position   92118 Score -  11
+     rpoD17:  TAGGAATA at position   92151 Score -  11
+ For promoter at 142620:
+        ihf:  AAATAAAA at position  142583 Score -  13
+       phoB:  AATAAAAG at position  142584 Score -   8
+ For promoter at 114624:
+     rpoD17:  AAAAATAG at position  114615 Score -   9
+ For promoter at  32249:
+       soxS:  AATTTCTT at position   32208 Score -   7
+ For promoter at 144483:
+       metJ:  TAGATGTG at position  144425 Score -   7
+       argR:  CATAAAAA at position  144483 Score -  14
+ For promoter at  92924:
+       arcA:  AATAAAAA at position   92929 Score -  12
+        fnr:  ATTTGTTT at position   92941 Score -   7
+     rpoD17:  TTTGTTTT at position   92942 Score -   9
+ For promoter at  43397:
+       soxS:  AATTTCTT at position   43386 Score -   7
+ No such sites for promoter at   1843
+ For promoter at  55534:
+     rpoD16:  TTATAAAA at position   55501 Score -   9
+ No such sites for promoter at  34029
+ No such sites for promoter at 133516
+ No such sites for promoter at  54904
+ For promoter at 140006:
+        lrp:  TATTTTTT at position  139969 Score -  11
+ For promoter at    477:
+        crp:  ATCACAAA at position     471 Score -  10
+ No such sites for promoter at 134153
+ No such sites for promoter at 108244
+ For promoter at  98503:
+        fur:  ATAATGAT at position   98463 Score -   6
+ For promoter at  50738:
+        ihf:  TGTAAGAA at position   50693 Score -  11
+ For promoter at  89133:
+       soxS:  TATCATTT at position   89121 Score -   9
+ For promoter at 111712:
+      argR2:  TTTATTTT at position  111671 Score -   7
+     rpoD17:  TTTTATAG at position  111675 Score -  10
+ For promoter at  46810:
+     rpoD16:  GCTTTTTA at position   46764 Score -   7
+ No such sites for promoter at 128815
+ For promoter at 138416:
+       malT:  AGGGAGGA at position  138368 Score -  10
+ No such sites for promoter at  75706
+ For promoter at 114276:
+     rpoD17:  AGTTAATA at position  114239 Score -  12
+       tyrR:  TTAATACA at position  114241 Score -  10
+ For promoter at  90846:
+       lexA:  TATATACT at position   90802 Score -  18
+       marR:  TATACTTG at position   90804 Score -  11
