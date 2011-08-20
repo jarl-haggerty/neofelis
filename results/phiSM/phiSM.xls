@@ -1,0 +1,77 @@
+Id	Start	Stop	Hits	Best bit score	Best evalue	Best identity	Alignment Length	Best hit gi	Definition	Organism
+1	3389	4432	16	176.407243139	5.40139211003e-42	85.0	160	265984053	conserved hypothetical protein	Brucella sp. 83/13
+2	4651	5877	250	273.47753627	3.92491665746e-71	150.0	375	150026209	hypothetical protein FP2173	Flavobacterium psychrophilum JIP02/86
+3	6259	6918	250	249.980362139	1.32836438088e-64	122.0	215	119713097	GTP cyclohydrolase I	uncultured marine bacterium EB0_49D07
+4	7193	7801	14	50.4469818142	0.000150530422127	57.0	153	251766818	60S ribosomal protein L19	Burkholderia mallei PRL-20
+5	7803	8204	250	156.376865191	1.12259589626e-36	75.0	126	301062275	putative 7-cyano-7-deazaguanine reductase	delta proteobacterium NaphS2
+6	8920	9582	15	98.211729228	8.46412196007e-19	58.0	171	327198321	queuosine tRNA-ribosyltransferase	Streptococcus phage Dp-1
+7	9629	10093	16	54.2989775734	6.24571565657e-06	30.0	97	167041315	putative ParB-like nuclease domain protein	uncultured marine microorganism HF4000_005H07
+8	10103	10813	250	236.883576558	1.74961152059e-60	115.0	221	34557973	PP family ATPase	Wolinella succinogenes DSM 1740
+9	10806	11297	63	105.145321594	3.02883120783e-21	60.0	159	295689278	6-pyruvoyl tetrahydrobiopterin synthase	Caulobacter segnis ATCC 21756
+10	11224	11997	250	134.80568894	9.83454528576e-30	90.0	230	187735213	Radical SAM domain protein	Akkermansia muciniphila ATCC BAA-835
+11	12163	13245	250	92.0485360133	1.48406904875e-16	92.0	360	120436260	DNA polymerase III subunit beta	Gramella forsetii KT0803
+12	13232	14131	143	137.887285547	1.37063433379e-30	98.0	299	167761844	hypothetical protein BACSTE_00187	Bacteroides stercoris ATCC 43183
+13	15425	16543	4	51.217380966	0.000236098134639	48.0	176	290512983	exonuclease	Klebsiella sp. 1_1_55
+14	16638	18290	250	220.319994794	5.38829251242e-55	145.0	468	260063425	putative helicase	Robiginitalea biformata HTCC2501
+15	19714	20478	3	45.8245869032	0.00675342581323	24.0	62	291529532	hypothetical protein ERE_33720	Eubacterium rectale M104/1
+16	20968	20465	1	45.8245869032	0.00235801829224	31.0	111	37626110	hypothetical protein	Vibrio phage VP16T
+17	21989	20970	7	118.627306752	1.22243140633e-24	88.0	348	37626109	putative tail protein	Vibrio phage VP16T
+18	23200	21989	4	98.9821283798	1.26794792165e-18	47.0	126	309242577	hypothetical protein	Flavobacterium phage FL-1
+19	26927	26166	3	290.041118035	1.82915493115e-76	135.0	253	309242573	hypothetical protein	Flavobacterium phage FCL-2
+20	28102	26927	127	94.3597334688	3.37944546943e-17	95.0	326	329847781	baseplate J-like family protein	Asticcacaulis biprosthecum C19
+21	28584	28102	2	50.4469818142	8.32632862146e-05	31.0	131	37626112	hypothetical protein	Vibrio phage VP16T
+22	30545	28599	191	171.014449076	5.50595839633e-40	111.0	296	300772232	conserved hypothetical protein	Sphingobacterium spiritivorum ATCC 33861
+23	33169	31643	101	193.35602448	6.75680173486e-47	162.0	513	37626168	putative tail protein	Vibrio phage VP16C
+24	33785	33189	1	47.3653852069	0.00126711798157	45.0	148	343386648	hypothetical protein Bint_1519	Brachyspira intermedia PWS/A
+25	35751	34642	22	82.8037461913	8.9040539157e-14	89.0	335	37626164	hypothetical protein	Vibrio phage VP16C
+26	37429	36164	75	78.1813512803	2.27708661481e-12	67.0	237	333381555	hypothetical protein HMPREF9455_01401	Dysgonomonas gadei ATCC BAA-286
+27	38669	38043	126	147.517274945	9.74195831235e-34	69.0	141	300774776	peptidoglycan L-alanyl-D-glutamate endopeptidase CwlK	Chryseobacterium gleum ATCC 35910
+28	43136	39852	250	173.325646532	1.65741946157e-40	139.0	435	337746180	hypothetical protein KNP414_01910	Paenibacillus mucilaginosus KNP414
+29	46328	44718	130	151.75447028	2.53089871079e-34	125.0	499	37626096	putative capsid protein	Vibrio phage VP16T
+30	48810	46765	250	258.839952385	1.89043011165e-66	194.0	675	343386664	putative large terminase subunit	Brachyspira intermedia PWS/A
+31	12	128	0	0	inf	0	0	None	None	None
+32	156	473	0	0	inf	0	0	None	None	None
+33	559	1011	0	0	inf	0	0	None	None	None
+34	1015	1188	0	0	inf	0	0	None	None	None
+35	1169	1537	0	0	inf	0	0	None	None	None
+36	1512	1715	0	0	inf	0	0	None	None	None
+37	1712	2002	0	0	inf	0	0	None	None	None
+38	2004	2186	0	0	inf	0	0	None	None	None
+39	2237	3238	0	0	inf	0	0	None	None	None
+40	4456	4650	0	0	inf	0	0	None	None	None
+41	5969	6124	0	0	inf	0	0	None	None	None
+42	6137	6253	0	0	inf	0	0	None	None	None
+43	6918	7103	0	0	inf	0	0	None	None	None
+44	8257	8910	0	0	inf	0	0	None	None	None
+45	11925	12173	0	0	inf	0	0	None	None	None
+46	14204	14377	0	0	inf	0	0	None	None	None
+47	14313	14657	0	0	inf	0	0	None	None	None
+48	14518	14877	0	0	inf	0	0	None	None	None
+49	14870	15424	0	0	inf	0	0	None	None	None
+50	18290	18955	0	0	inf	0	0	None	None	None
+51	18962	19390	0	0	inf	0	0	None	None	None
+52	19372	19641	0	0	inf	0	0	None	None	None
+53	23940	23197	0	0	inf	0	0	None	None	None
+54	25119	23941	0	0	inf	0	0	None	None	None
+55	26161	25130	0	0	inf	0	0	None	None	None
+56	28487	28597	0	0	inf	0	0	None	None	None
+57	28654	28911	0	0	inf	0	0	None	None	None
+58	28933	29187	0	0	inf	0	0	None	None	None
+59	30731	30546	0	0	inf	0	0	None	None	None
+60	31144	30716	0	0	inf	0	0	None	None	None
+61	31620	31210	0	0	inf	0	0	None	None	None
+62	34164	33769	0	0	inf	0	0	None	None	None
+63	34590	34165	0	0	inf	0	0	None	None	None
+64	36160	35720	0	0	inf	0	0	None	None	None
+65	37829	37494	0	0	inf	0	0	None	None	None
+66	38046	37765	0	0	inf	0	0	None	None	None
+67	39291	38656	0	0	inf	0	0	None	None	None
+68	39750	39376	0	0	inf	0	0	None	None	None
+69	44383	43160	0	0	inf	0	0	None	None	None
+70	44749	44387	0	0	inf	0	0	None	None	None
+71	44496	44672	0	0	inf	0	0	None	None	None
+72	46619	46332	0	0	inf	0	0	None	None	None
+73	48950	48807	0	0	inf	0	0	None	None	None
+74	49471	48953	0	0	inf	0	0	None	None	None
+75	50190	49513	0	0	inf	0	0	None	None	None
+76	50224	50418	0	0	inf	0	0	None	None	None

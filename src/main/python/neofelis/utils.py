@@ -303,15 +303,16 @@ def cachedBlast(fileName, blastLocation, database, eValue, query, pipeline, remo
     command = [blastLocation + "/bin/blastp",
                "-evalue", str(eValue),
                "-outfmt", "5",
-               "-query", query]
+               "-query", os.getcwd() + "/" + query]
     if remote:
       command += ["-remote",
                   "-db", database]
     else:
       command += ["-num_threads", str(Runtime.getRuntime().availableProcessors()),
-                  "-db", database]
+                  "-db", os.path.split(database)[1]]
     blastProcess = subprocess.Popen(command,
-                                    stdout = subprocess.PIPE)
+                                    stdout = subprocess.PIPE,
+                                    cwd = database)
     while blastProcess.poll() == None:
       output.write(blastProcess.stdout.read())
       if pipeline.exception:

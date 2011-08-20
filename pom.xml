@@ -57,16 +57,16 @@ limitations under the License.
         <extensions>true</extensions>
         <configuration>
           <pythonMain>neofelis.main</pythonMain>
-          <pythonPath>/Users/mbsulli/jython/Lib</pythonPath>
+          <pythonPath>/home/jarl-haggerty/jython/Lib</pythonPath>
           <pythonArgs>
-            <param>--genemark=/Users/mbsulli/genemark</param>
-            <param>--blast=/Users/mbsulli/blast</param>
-            <param>--transterm=/Users/mbsulli/transterm</param>
-            <param>--trna-scan=/Users/mbsulli/tRNAscan</param>
-            <param>--database=/Users/mbsulli/blast/db/nr</param>
+            <param>--genemark=/home/jarl-haggerty/genemark</param>
+            <param>--blast=/home/jarl-haggerty/blast</param>
+            <param>--transterm=/home/jarl-haggerty/transterm</param>
+            <param>--trna-scan=/home/jarl-haggerty/tRNAscan</param>
+            <param>--database=/home/jarl-haggerty/db/nr</param>
             <param>--e-value=0.1</param>
             <param>--query=genomes/17_2_corr.fas</param>
-            <param>--swing</param>
+            <param>--server</param>
           </pythonArgs>
         </configuration>
       </plugin>

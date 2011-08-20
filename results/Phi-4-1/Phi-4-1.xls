@@ -1,0 +1,338 @@
+Id	Start	Stop	Hits	Best bit score	Best evalue	Best identity	Alignment Length	Best hit gi	Definition	Organism
+1	8831	7767	62	66.6253640027	5.73169385149e-09	50.0	139	260063547	hypothetical protein RB2501_02025	Robiginitalea biformata HTCC2501
+2	11416	11021	2	46.594986055	0.00109600651578	27.0	65	149372362	CheA Signal Transduction Histidine Kinases (STHK)	unidentified eubacterium SCB49
+3	13418	12195	1	43.1281898718	0.0804033984063	22.0	52	158521715	polymorphic outer membrane protein	Desulfococcus oleovorans Hxd3
+4	14353	13895	7	46.980185631	0.000935362554553	23.0	56	239905479	hypothetical protein DMR_08410	Desulfovibrio magneticus RS-1
+5	16975	15389	1	43.5133894477	0.0966946234808	32.0	126	320332770	parallel beta-helix repeat	Deinococcus maricopensis DSM 21211
+6	19944	18847	3	139.042884275	1.08145683746e-30	76.0	170	319952695	hypothetical protein Celal_1147	Cellulophaga algicola DSM 14237
+7	21715	19997	1	355.525045941	1.21956721307e-95	194.0	434	319952695	hypothetical protein Celal_1147	Cellulophaga algicola DSM 14237
+8	22588	21947	1	189.889228296	1.96551109579e-46	92.0	203	319952695	hypothetical protein Celal_1147	Cellulophaga algicola DSM 14237
+9	22688	22554	1	51.9877801179	3.11983024867e-05	24.0	39	319952695	hypothetical protein Celal_1147	Cellulophaga algicola DSM 14237
+10	24393	22672	1	276.173933302	9.50403444532e-72	145.0	313	319952695	hypothetical protein Celal_1147	Cellulophaga algicola DSM 14237
+11	27741	27259	250	109.38251693	1.43663948915e-22	57.0	161	269102106	N-acetylmuramoyl alanine amidase	Photobacterium damselae subsp. damselae CIP 102761
+12	28241	27741	70	48.9061835105	0.000258319329442	25.0	88	282864128	Cupin 2 conserved barrel domain protein	Streptomyces sp. SirexAA-E
+13	37512	35383	2	252.291559595	1.8619923507e-64	152.0	471	321448733	hypothetical protein DAPPUDRAFT_338964	Daphnia pulex
+14	42431	41466	16	53.9137779975	3.31610060105e-05	43.0	127	251781182	conserved hypothetical protein	Clostridium botulinum E1 str. 'BoNT E Beluga'
+15	49502	50542	250	154.836066888	1.67488043578e-35	105.0	316	189460533	hypothetical protein BACCOP_01174	Bacteroides coprocola DSM 17136
+16	53395	54258	250	163.695657134	2.46821039812e-38	111.0	289	298207281	RecA	Croceibacter atlanticus HTCC2559
+17	54433	54699	1	45.0541877514	0.00334632634698	24.0	58	61806089	NAD synthetase	Prochlorococcus phage P-SSM2
+18	54530	54925	3	48.9061835105	0.000278955818471	28.0	70	326782206	NAD synthetase	Prochlorococcus phage P-HM1
+19	54874	55911	250	453.365738224	2.24838858703e-125	234.0	361	343082985	thymidylate synthase	Cyclobacterium marinum DSM 745
+20	56389	57159	5	51.602580542	9.66229205153e-05	27.0	46	116193349	hypothetical protein CHGG_06392	Chaetomium globosum CBS 148.51
+21	58912	59232	3	75.4849542488	2.26944712211e-12	43.0	110	256421174	hypothetical protein Cpin_2134	Chitinophaga pinensis DSM 2588
+22	59229	59486	1	58.1509733326	4.3025160031e-07	34.0	85	150024911	hypothetical protein FP0821	Flavobacterium psychrophilum JIP02/86
+23	64115	64813	28	85.8853427986	4.40888470324e-15	68.0	224	292905272	hypothetical protein Ava_D0020	Anabaena variabilis ATCC 29413
+24	64800	65066	116	123.634901239	6.86757879914e-27	56.0	85	327492208	hypothetical protein	Clostridium phage CP26F
+25	65703	66149	46	68.1661623064	3.95681517947e-10	46.0	147	315033388	DnaJ domain protein	Enterococcus faecalis TX0017
+26	67670	67882	44	64.3141665472	4.9989468312e-09	29.0	63	295099195	DNA methylase	Eubacterium cylindroides T2-87
+27	68710	69237	2	55.0693767252	4.39130185732e-06	29.0	74	300777183	conserved hypothetical protein	Chryseobacterium gleum ATCC 35910
+28	70666	71259	6	88.58173983	4.23960285e-16	59.0	154	160700596	hypothetical protein BA3_0002	Thalassomonas phage BA3
+29	71672	72028	189	105.915720746	1.84743083174e-21	57.0	117	169834631	hypothetical protein CLD_A0185	Clostridium botulinum B1 str. Okra
+30	74344	74928	1	103.989722867	8.85349721712e-21	64.0	181	291522507	hypothetical protein CC1_20820	Coprococcus catus GD/7
+31	76571	77155	3	47.7505847828	0.000897178556443	54.0	217	192289460	hypothetical protein Rpal_1033	Rhodopseudomonas palustris TIE-1
+32	79620	79763	250	56.9953746048	8.68539699037e-07	25.0	41	197116617	DnaJ-like molecular chaperone	Geobacter bemidjiensis Bem
+33	82341	83321	87	100.137727108	3.68814708441e-19	68.0	232	213961969	conserved hypothetical protein	Capnocytophaga sputigena Capno
+34	84583	85362	49	303.908302768	1.26504018321e-80	146.0	252	338213425	hypothetical protein Runsl_3995	Runella slithyformis DSM 19594
+35	85483	86466	250	88.58173983	1.17368851531e-15	109.0	406	326336146	OmpA/MotB domain protein	Capnocytophaga sp. oral taxon 338 str. F0234
+36	88457	88798	1	50.4469818142	7.62283954311e-05	34.0	110	334364897	hypothetical protein HMPREF9720_2110	Alistipes sp. HGB5
+37	89663	90400	250	142.509680458	3.81546282112e-32	78.0	246	76803441	ribonucleoside-diphosphate reductase, beta subunit 1	Natronomonas pharaonis DSM 2160
+38	90652	91914	250	197.978419391	2.3023114621e-48	125.0	406	297622358	ribonucleoside-diphosphate reductase, alpha chain	Truepera radiovictrix DSM 17093
+39	91877	92068	137	59.6917716362	1.48890075159e-07	29.0	49	190149419	ribonucleoside-diphosphate reductase large chain	Actinobacillus pleuropneumoniae serovar 7 str. AP76
+40	92157	92336	20	48.9061835105	0.000239385880275	26.0	57	223983471	hypothetical protein HOLDEFILI_00937	Holdemania filiformis DSM 12042
+41	93424	95130	16	285.033523548	1.76943999444e-74	186.0	566	255103290	hypothetical protein CdifQCD-6_20930	Clostridium difficile QCD-63q42
+42	95147	95566	11	118.242107176	2.96176153343e-25	50.0	116	189426834	hypothetical protein RSL1_gp058	Ralstonia phage RSL1
+43	95679	95969	17	75.0997546729	2.9188671834e-12	38.0	93	84497031	hypothetical protein JNB_12593	Janibacter sp. HTCC2649
+44	96442	96795	1	41.2021919922	0.0447850599146	29.0	73	120436816	hypothetical protein GFO_2479	Gramella forsetii KT0803
+45	100218	100406	2	46.594986055	0.00121392836209	19.0	42	326804627	conserved uncharacterised protein	Salmonella phage Vi01
+46	100781	100993	5	41.972591144	0.0259114627631	23.0	59	307595654	hypothetical protein Vdis_1536	Vulcanisaeta distributa DSM 14429
+47	101596	101925	1	40.8169924163	0.0699996747943	31.0	100	290474234	replicative DNA helicase (replication protein gp12)	Xenorhabdus bovienii SS-2004
+48	103067	103645	62	110.152916081	1.21631315298e-22	67.0	181	159111757	Phosphatase similar to the C-terminal domain of histone macroH2A1	Giardia lamblia ATCC 50803
+49	104449	104997	1	70.4773597619	9.14766125783e-11	54.0	200	307709491	hypothetical protein SMSK564_0735	Streptococcus mitis SK564
+50	104951	105508	1	47.7505847828	0.000834305588287	35.0	111	337731213	hypothetical protein	EBPR siphovirus 2
+51	105740	106177	7	50.8321813901	6.05176184343e-05	40.0	134	312885565	Uracil-DNA glycosylase superfamily	Mucilaginibacter paludis DSM 18603
+52	106194	106700	4	51.9877801179	3.14118249541e-05	31.0	102	197284362	hypothetical protein PMI0461	Proteus mirabilis HI4320
+53	106786	107010	1	40.8169924163	0.0760218560104	17.0	35	300775122	conserved hypothetical protein	Chryseobacterium gleum ATCC 35910
+54	106910	107134	6	55.0693767252	3.2692395587e-06	22.0	63	300775122	conserved hypothetical protein	Chryseobacterium gleum ATCC 35910
+55	107489	108250	64	151.75447028	8.17374968361e-35	87.0	253	327198220	putative DNA polymerase	Pseudomonas phage KPP10
+56	108267	109811	250	342.42826036	9.38595859225e-92	204.0	560	326804439	DNA polymerase	Pseudomonas phage PAK_P1
+57	110595	110876	8	52.3729796938	1.92608032965e-05	28.0	74	62464803	replication initiation protein	Sulfolobus neozealandicus
+58	110893	111591	8	97.826529652	1.18860848752e-18	76.0	234	300772203	N- superfamily bifunctional DNA primase/polymerase	Sphingobacterium spiritivorum ATCC 33861
+59	112035	112493	172	66.2401644268	1.61951543774e-09	33.0	94	109150021	putative phosphoesterase/phosphohydrolase	uncultured bacterium
+60	112477	112695	34	58.1509733326	4.15626157835e-07	34.0	71	194291749	hypothetical protein RALTA_B0988	Cupriavidus taiwanensis LMG 19424
+61	112697	113458	250	306.989899375	1.34136236652e-81	148.0	234	260588436	DNA (cytosine-5-)-methyltransferase	Blautia hansenii DSM 20583
+62	113663	115033	7	167.162453317	4.75309900287e-39	141.0	475	326632897	A1 protein	Enterobacteria phage SPC35
+63	115100	115351	5	42.7429902959	0.0182185808586	20.0	31	225023354	hypothetical protein EIKCOROL_00212	Eikenella corrodens ATCC 23834
+64	115300	115680	24	45.4393873273	0.00237064570476	32.0	91	262066939	conserved hypothetical protein	Fusobacterium periodonticum ATCC 33693
+65	117523	117185	2	50.0617822383	9.41539424218e-05	38.0	109	168178709	hypothetical protein CBN_1357	Clostridium botulinum NCTC 2916
+66	118619	117507	250	278.485130757	1.05626264182e-72	171.0	475	299145766	putative C-5 cytosine-specific DNA methylase	Bacteroides sp. 3_1_23
+67	119402	118800	98	99.3673279557	3.04220593552e-19	55.0	174	326804543	Gp30 DNA ligase	Salmonella phage Vi01
+68	120213	119377	63	99.7525275316	3.83055517504e-19	85.0	288	326536465	gp30 DNA ligase	Aeromonas phage 65
+69	121449	120697	250	132.109291909	5.57411442457e-29	69.0	154	15078813	100L	Invertebrate iridescent virus 6
+70	121849	121598	7	47.7505847828	0.000521005072906	24.0	65	290981303	predicted protein	Naegleria gruberi
+71	122590	122066	250	101.678525411	3.80674932326e-20	69.0	181	124003434	tRNA nucleotidyltransferase	Microscilla marina ATCC 23134
+72	125677	125240	1	46.594986055	0.00129347902582	21.0	67	326431770	reductase with NAD or NADP as acceptor	Salpingoeca sp. ATCC 50818
+73	129491	129153	144	130.183294029	7.9130497753e-29	65.0	109	323512741	hypothetical protein TUST1-191_00745	Vibrio phage ICP1_2006_D
+74	139834	138731	2	42.7429902959	0.0978977591567	48.0	177	289550035	iron ABC transporter substrate-binding protein	Staphylococcus lugdunensis HKU09-01
+75	144804	144469	59	76.2553534007	1.50457279119e-12	37.0	93	296536837	possible phage-related tail protein	Roseomonas cervicalis ATCC 49957
+76	459	1	0	0	inf	0	0	None	None	None
+77	1498	425	0	0	inf	0	0	None	None	None
+78	3063	1897	0	0	inf	0	0	None	None	None
+79	4387	3038	0	0	inf	0	0	None	None	None
+80	5621	4578	0	0	inf	0	0	None	None	None
+81	6494	5667	0	0	inf	0	0	None	None	None
+82	6658	6497	0	0	inf	0	0	None	None	None
+83	6773	6549	0	0	inf	0	0	None	None	None
+84	7652	6978	0	0	inf	0	0	None	None	None
+85	9177	8785	0	0	inf	0	0	None	None	None
+86	10950	9205	0	0	inf	0	0	None	None	None
+87	12214	11552	0	0	inf	0	0	None	None	None
+88	14121	13324	0	0	inf	0	0	None	None	None
+89	15360	14356	0	0	inf	0	0	None	None	None
+90	17912	16989	0	0	inf	0	0	None	None	None
+91	17961	17851	0	0	inf	0	0	None	None	None
+92	18826	18137	0	0	inf	0	0	None	None	None
+93	19361	19522	0	0	inf	0	0	None	None	None
+94	19538	19792	0	0	inf	0	0	None	None	None
+95	21990	21727	0	0	inf	0	0	None	None	None
+96	25167	24625	0	0	inf	0	0	None	None	None
+97	25581	25186	0	0	inf	0	0	None	None	None
+98	25883	25581	0	0	inf	0	0	None	None	None
+99	26398	25883	0	0	inf	0	0	None	None	None
+100	26539	26426	0	0	inf	0	0	None	None	None
+101	26880	26611	0	0	inf	0	0	None	None	None
+102	27041	26904	0	0	inf	0	0	None	None	None
+103	27226	27110	0	0	inf	0	0	None	None	None
+104	28573	28241	0	0	inf	0	0	None	None	None
+105	30557	28605	0	0	inf	0	0	None	None	None
+106	30942	30589	0	0	inf	0	0	None	None	None
+107	31117	31221	0	0	inf	0	0	None	None	None
+108	32230	31250	0	0	inf	0	0	None	None	None
+109	33460	32384	0	0	inf	0	0	None	None	None
+110	33875	33543	0	0	inf	0	0	None	None	None
+111	34093	33854	0	0	inf	0	0	None	None	None
+112	35259	34252	0	0	inf	0	0	None	None	None
+113	38074	37520	0	0	inf	0	0	None	None	None
+114	38117	38013	0	0	inf	0	0	None	None	None
+115	38228	38332	0	0	inf	0	0	None	None	None
+116	38957	38466	0	0	inf	0	0	None	None	None
+117	39144	38998	0	0	inf	0	0	None	None	None
+118	39658	39155	0	0	inf	0	0	None	None	None
+119	40326	39679	0	0	inf	0	0	None	None	None
+120	40582	40349	0	0	inf	0	0	None	None	None
+121	40796	40563	0	0	inf	0	0	None	None	None
+122	40945	40799	0	0	inf	0	0	None	None	None
+123	41333	40908	0	0	inf	0	0	None	None	None
+124	41463	41269	0	0	inf	0	0	None	None	None
+125	42893	42651	0	0	inf	0	0	None	None	None
+126	43313	42897	0	0	inf	0	0	None	None	None
+127	43481	43756	0	0	inf	0	0	None	None	None
+128	43845	44066	0	0	inf	0	0	None	None	None
+129	44118	44222	0	0	inf	0	0	None	None	None
+130	44203	44304	0	0	inf	0	0	None	None	None
+131	44329	44478	0	0	inf	0	0	None	None	None
+132	44498	44611	0	0	inf	0	0	None	None	None
+133	44778	44897	0	0	inf	0	0	None	None	None
+134	45005	45211	0	0	inf	0	0	None	None	None
+135	45174	45284	0	0	inf	0	0	None	None	None
+136	45295	45486	0	0	inf	0	0	None	None	None
+137	45837	45694	0	0	inf	0	0	None	None	None
+138	45877	45767	0	0	inf	0	0	None	None	None
+139	46252	46112	0	0	inf	0	0	None	None	None
+140	46461	46357	0	0	inf	0	0	None	None	None
+141	46801	46649	0	0	inf	0	0	None	None	None
+142	46908	47009	0	0	inf	0	0	None	None	None
+143	47249	47106	0	0	inf	0	0	None	None	None
+144	47641	47414	0	0	inf	0	0	None	None	None
+145	47645	47827	0	0	inf	0	0	None	None	None
+146	48230	48430	0	0	inf	0	0	None	None	None
+147	48699	48544	0	0	inf	0	0	None	None	None
+148	48855	48989	0	0	inf	0	0	None	None	None
+149	49128	49259	0	0	inf	0	0	None	None	None
+150	49486	49608	0	0	inf	0	0	None	None	None
+151	50493	50639	0	0	inf	0	0	None	None	None
+152	50651	51007	0	0	inf	0	0	None	None	None
+153	50997	51122	0	0	inf	0	0	None	None	None
+154	51210	51431	0	0	inf	0	0	None	None	None
+155	51413	51529	0	0	inf	0	0	None	None	None
+156	51550	51921	0	0	inf	0	0	None	None	None
+157	51921	52409	0	0	inf	0	0	None	None	None
+158	52390	52755	0	0	inf	0	0	None	None	None
+159	52703	52837	0	0	inf	0	0	None	None	None
+160	52849	53241	0	0	inf	0	0	None	None	None
+161	55976	56092	0	0	inf	0	0	None	None	None
+162	56357	56241	0	0	inf	0	0	None	None	None
+163	57020	57184	0	0	inf	0	0	None	None	None
+164	57330	57581	0	0	inf	0	0	None	None	None
+165	57676	57786	0	0	inf	0	0	None	None	None
+166	57773	57880	0	0	inf	0	0	None	None	None
+167	58108	58308	0	0	inf	0	0	None	None	None
+168	58305	58427	0	0	inf	0	0	None	None	None
+169	58435	58626	0	0	inf	0	0	None	None	None
+170	58629	58844	0	0	inf	0	0	None	None	None
+171	59477	59713	0	0	inf	0	0	None	None	None
+172	59710	60180	0	0	inf	0	0	None	None	None
+173	60162	60344	0	0	inf	0	0	None	None	None
+174	60329	60439	0	0	inf	0	0	None	None	None
+175	60694	60813	0	0	inf	0	0	None	None	None
+176	60803	61078	0	0	inf	0	0	None	None	None
+177	61075	61332	0	0	inf	0	0	None	None	None
+178	61320	61706	0	0	inf	0	0	None	None	None
+179	61820	61948	0	0	inf	0	0	None	None	None
+180	61970	62362	0	0	inf	0	0	None	None	None
+181	62376	62666	0	0	inf	0	0	None	None	None
+182	62676	62795	0	0	inf	0	0	None	None	None
+183	62935	63126	0	0	inf	0	0	None	None	None
+184	63168	63335	0	0	inf	0	0	None	None	None
+185	63337	63438	0	0	inf	0	0	None	None	None
+186	63431	63559	0	0	inf	0	0	None	None	None
+187	63575	63784	0	0	inf	0	0	None	None	None
+188	63786	63980	0	0	inf	0	0	None	None	None
+189	64100	63993	0	0	inf	0	0	None	None	None
+190	65173	65069	0	0	inf	0	0	None	None	None
+191	65459	65683	0	0	inf	0	0	None	None	None
+192	66267	66578	0	0	inf	0	0	None	None	None
+193	66571	66918	0	0	inf	0	0	None	None	None
+194	66933	67193	0	0	inf	0	0	None	None	None
+195	67198	67344	0	0	inf	0	0	None	None	None
+196	67887	68060	0	0	inf	0	0	None	None	None
+197	68085	68303	0	0	inf	0	0	None	None	None
+198	68212	68445	0	0	inf	0	0	None	None	None
+199	68438	68698	0	0	inf	0	0	None	None	None
+200	69314	69490	0	0	inf	0	0	None	None	None
+201	69474	69656	0	0	inf	0	0	None	None	None
+202	69695	69877	0	0	inf	0	0	None	None	None
+203	69870	69977	0	0	inf	0	0	None	None	None
+204	70020	70136	0	0	inf	0	0	None	None	None
+205	70081	70404	0	0	inf	0	0	None	None	None
+206	70563	70450	0	0	inf	0	0	None	None	None
+207	70653	70763	0	0	inf	0	0	None	None	None
+208	71615	71454	0	0	inf	0	0	None	None	None
+209	72039	72149	0	0	inf	0	0	None	None	None
+210	72159	72335	0	0	inf	0	0	None	None	None
+211	72308	72511	0	0	inf	0	0	None	None	None
+212	72600	72986	0	0	inf	0	0	None	None	None
+213	73416	73679	0	0	inf	0	0	None	None	None
+214	73691	74113	0	0	inf	0	0	None	None	None
+215	74149	74316	0	0	inf	0	0	None	None	None
+216	74940	75659	0	0	inf	0	0	None	None	None
+217	75744	76568	0	0	inf	0	0	None	None	None
+218	77294	77464	0	0	inf	0	0	None	None	None
+219	77695	77516	0	0	inf	0	0	None	None	None
+220	77727	78383	0	0	inf	0	0	None	None	None
+221	78380	78574	0	0	inf	0	0	None	None	None
+222	78575	78823	0	0	inf	0	0	None	None	None
+223	78795	78914	0	0	inf	0	0	None	None	None
+224	78911	79207	0	0	inf	0	0	None	None	None
+225	79207	79365	0	0	inf	0	0	None	None	None
+226	79413	79616	0	0	inf	0	0	None	None	None
+227	79693	79866	0	0	inf	0	0	None	None	None
+228	79772	80059	0	0	inf	0	0	None	None	None
+229	80095	80202	0	0	inf	0	0	None	None	None
+230	80199	80531	0	0	inf	0	0	None	None	None
+231	80467	80871	0	0	inf	0	0	None	None	None
+232	80847	80951	0	0	inf	0	0	None	None	None
+233	80941	81093	0	0	inf	0	0	None	None	None
+234	81138	81422	0	0	inf	0	0	None	None	None
+235	81444	81572	0	0	inf	0	0	None	None	None
+236	81541	81780	0	0	inf	0	0	None	None	None
+237	81982	81833	0	0	inf	0	0	None	None	None
+238	81987	82292	0	0	inf	0	0	None	None	None
+239	83321	83533	0	0	inf	0	0	None	None	None
+240	83502	84020	0	0	inf	0	0	None	None	None
+241	84075	84197	0	0	inf	0	0	None	None	None
+242	84234	84401	0	0	inf	0	0	None	None	None
+243	84409	84579	0	0	inf	0	0	None	None	None
+244	85364	85480	0	0	inf	0	0	None	None	None
+245	86490	86648	0	0	inf	0	0	None	None	None
+246	86850	87152	0	0	inf	0	0	None	None	None
+247	87175	87537	0	0	inf	0	0	None	None	None
+248	87819	88313	0	0	inf	0	0	None	None	None
+249	88782	89036	0	0	inf	0	0	None	None	None
+250	89047	89307	0	0	inf	0	0	None	None	None
+251	89309	89446	0	0	inf	0	0	None	None	None
+252	90517	90648	0	0	inf	0	0	None	None	None
+253	92461	92985	0	0	inf	0	0	None	None	None
+254	93065	93415	0	0	inf	0	0	None	None	None
+255	95969	96406	0	0	inf	0	0	None	None	None
+256	96731	96853	0	0	inf	0	0	None	None	None
+257	96860	97237	0	0	inf	0	0	None	None	None
+258	97212	97448	0	0	inf	0	0	None	None	None
+259	97480	97608	0	0	inf	0	0	None	None	None
+260	97624	97866	0	0	inf	0	0	None	None	None
+261	97850	97951	0	0	inf	0	0	None	None	None
+262	97959	98147	0	0	inf	0	0	None	None	None
+263	98197	98532	0	0	inf	0	0	None	None	None
+264	98621	98896	0	0	inf	0	0	None	None	None
+265	98910	99059	0	0	inf	0	0	None	None	None
+266	99119	99358	0	0	inf	0	0	None	None	None
+267	99336	99506	0	0	inf	0	0	None	None	None
+268	99493	99648	0	0	inf	0	0	None	None	None
+269	99721	99921	0	0	inf	0	0	None	None	None
+270	100109	100252	0	0	inf	0	0	None	None	None
+271	100471	100653	0	0	inf	0	0	None	None	None
+272	100653	100784	0	0	inf	0	0	None	None	None
+273	100995	101240	0	0	inf	0	0	None	None	None
+274	101188	101592	0	0	inf	0	0	None	None	None
+275	102143	102262	0	0	inf	0	0	None	None	None
+276	102354	102662	0	0	inf	0	0	None	None	None
+277	102659	102769	0	0	inf	0	0	None	None	None
+278	102783	102959	0	0	inf	0	0	None	None	None
+279	102907	103056	0	0	inf	0	0	None	None	None
+280	103651	103851	0	0	inf	0	0	None	None	None
+281	103928	104407	0	0	inf	0	0	None	None	None
+282	105511	105750	0	0	inf	0	0	None	None	None
+283	107181	107306	0	0	inf	0	0	None	None	None
+284	107310	107438	0	0	inf	0	0	None	None	None
+285	109835	110224	0	0	inf	0	0	None	None	None
+286	110261	110605	0	0	inf	0	0	None	None	None
+287	111597	111758	0	0	inf	0	0	None	None	None
+288	111718	111978	0	0	inf	0	0	None	None	None
+289	111905	112060	0	0	inf	0	0	None	None	None
+290	113451	113717	0	0	inf	0	0	None	None	None
+291	115680	115943	0	0	inf	0	0	None	None	None
+292	116363	116010	0	0	inf	0	0	None	None	None
+293	116554	116369	0	0	inf	0	0	None	None	None
+294	116773	116624	0	0	inf	0	0	None	None	None
+295	117198	116770	0	0	inf	0	0	None	None	None
+296	120538	120215	0	0	inf	0	0	None	None	None
+297	120680	120552	0	0	inf	0	0	None	None	None
+298	122094	121930	0	0	inf	0	0	None	None	None
+299	122732	122577	0	0	inf	0	0	None	None	None
+300	122835	122677	0	0	inf	0	0	None	None	None
+301	123007	122867	0	0	inf	0	0	None	None	None
+302	123132	123010	0	0	inf	0	0	None	None	None
+303	123265	123089	0	0	inf	0	0	None	None	None
+304	124232	123393	0	0	inf	0	0	None	None	None
+305	125319	124249	0	0	inf	0	0	None	None	None
+306	128732	125682	0	0	inf	0	0	None	None	None
+307	129141	128710	0	0	inf	0	0	None	None	None
+308	129636	129535	0	0	inf	0	0	None	None	None
+309	130417	129677	0	0	inf	0	0	None	None	None
+310	130853	130380	0	0	inf	0	0	None	None	None
+311	131049	130819	0	0	inf	0	0	None	None	None
+312	131647	131033	0	0	inf	0	0	None	None	None
+313	132101	131625	0	0	inf	0	0	None	None	None
+314	132279	132145	0	0	inf	0	0	None	None	None
+315	133510	132254	0	0	inf	0	0	None	None	None
+316	133961	133557	0	0	inf	0	0	None	None	None
+317	134139	133843	0	0	inf	0	0	None	None	None
+318	135415	134108	0	0	inf	0	0	None	None	None
+319	135734	135432	0	0	inf	0	0	None	None	None
+320	135992	135777	0	0	inf	0	0	None	None	None
+321	136563	136000	0	0	inf	0	0	None	None	None
+322	136915	136808	0	0	inf	0	0	None	None	None
+323	137114	136905	0	0	inf	0	0	None	None	None
+324	137199	137020	0	0	inf	0	0	None	None	None
+325	137521	137141	0	0	inf	0	0	None	None	None
+326	138659	137523	0	0	inf	0	0	None	None	None
+327	140186	139938	0	0	inf	0	0	None	None	None
+328	140586	140245	0	0	inf	0	0	None	None	None
+329	140830	140513	0	0	inf	0	0	None	None	None
+330	141048	140755	0	0	inf	0	0	None	None	None
+331	142262	141027	0	0	inf	0	0	None	None	None
+332	142581	142015	0	0	inf	0	0	None	None	None
+333	142904	142581	0	0	inf	0	0	None	None	None
+334	143721	142939	0	0	inf	0	0	None	None	None
+335	144436	143648	0	0	inf	0	0	None	None	None
+336	144979	144851	0	0	inf	0	0	None	None	None
+337	146105	145134	0	0	inf	0	0	None	None	None

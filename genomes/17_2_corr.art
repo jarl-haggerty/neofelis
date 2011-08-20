@@ -262,6 +262,10 @@
                             /note="type:Undet	anti codon:???	cove_score:37.3"
      gene                   142708..142780
                             /note="type:Ile	anti codon:GAT	cove_score:71.98"
+     CDS                   119637..120188
+                            /gene="None"
+                            /note=""
+                            /colour=0 255 255
      CDS                   7484..7828
                             /gene="None"
                             /note=""
@@ -271,10 +275,10 @@
                             /note=""
                             /colour=0 255 255
      CDS                   118238..118843
-                            /gene="hypothetical protein"
+                            /gene="hypothetical protein CC1_20820"
                             /note=""
                             /colour=0 255 255
-     CDS                   117588..118010
+     CDS                   142302..142502
                             /gene="None"
                             /note="Extended"
                             /colour=0 255 0
@@ -294,10 +298,18 @@
                             /gene="None"
                             /note=""
                             /colour=0 255 255
+     CDS                   92498..94054
+                            /gene="helicase protein"
+                            /note="Extended"
+                            /colour=0 255 0
      CDS                   124789..125031
                             /gene="None"
                             /note=""
                             /colour=0 255 255
+     CDS                   101637..101957
+                            /gene="None"
+                            /note="Extended"
+                            /colour=0 255 0
      CDS                   3410..3976
                             /gene="hypothetical protein PMI0461"
                             /note=""
@@ -310,6 +322,10 @@
                             /gene="N- superfamily bifunctional DNA primase/polymerase"
                             /note=""
                             /colour=0 255 255
+     CDS                   88836..88973
+                            /gene="None"
+                            /note="Extended"
+                            /colour=0 255 0
      CDS                   104055..104315
                             /gene="None"
                             /note=""
@@ -318,6 +334,10 @@
                             /gene="None"
                             /note=""
                             /colour=0 255 255
+     CDS                   117588..118010
+                            /gene="None"
+                            /note="Extended"
+                            /colour=0 255 0
      CDS                   4536..4664
                             /gene="None"
                             /note="Intergenic"
@@ -358,7 +378,7 @@
                             /gene="None"
                             /note=""
                             /colour=0 255 255
-     CDS                   119637..120188
+     CDS                   101446..101640
                             /gene="None"
                             /note="Extended"
                             /colour=0 255 0
@@ -367,7 +387,7 @@
                             /note=""
                             /colour=0 255 255
      CDS                   129085..130068
-                            /gene="OmpA/MotB domain-containing protein"
+                            /gene="OmpA/MotB domain protein"
                             /note=""
                             /colour=0 255 255
      CDS                   140619..140729
@@ -419,7 +439,7 @@
                             /note="Intergenic"
                             /colour=160 32 240
      CDS                   complement(65416..63473)
-                            /gene="gp38"
+                            /gene="hypothetical protein SVEN_2876"
                             /note=""
                             /colour=0 255 255
      CDS                   complement(34499..28626)
@@ -494,10 +514,6 @@
                             /gene="None"
                             /note="Intergenic"
                             /colour=160 32 240
-     CDS                   101446..101640
-                            /gene="None"
-                            /note="Extended"
-                            /colour=0 255 0
      CDS                   98252..99289
                             /gene="thymidylate synthase"
                             /note=""
@@ -507,7 +523,7 @@
                             /note=""
                             /colour=0 255 255
      CDS                   complement(68315..65427)
-                            /gene="None"
+                            /gene="hypothetical protein Celal_1147"
                             /note=""
                             /colour=0 255 255
      CDS                   110491..110622
@@ -531,7 +547,7 @@
                             /note=""
                             /colour=0 255 255
      CDS                   132058..132399
-                            /gene="None"
+                            /gene="hypothetical protein HMPREF9720_2110"
                             /note=""
                             /colour=0 255 255
      CDS                   4408..4533
@@ -558,11 +574,7 @@
                             /gene="None"
                             /note="Intergenic"
                             /colour=160 32 240
-     CDS                   124551..124811
-                            /gene="None"
-                            /note="Extended"
-                            /colour=0 255 0
-     CDS                   87961..88140
+     CDS                   105899..106087
                             /gene="None"
                             /note="Extended"
                             /colour=0 255 0
@@ -610,10 +622,6 @@
                             /gene="None"
                             /note=""
                             /colour=0 255 255
-     CDS                   105899..106087
-                            /gene="None"
-                            /note="Extended"
-                            /colour=0 255 0
      CDS                   complement(86097..85474)
                             /gene="None"
                             /note=""
@@ -646,6 +654,10 @@
                             /gene="None"
                             /note=""
                             /colour=0 255 255
+     CDS                   135969..136595
+                            /gene="None"
+                            /note="Extended"
+                            /colour=0 255 0
      CDS                   97813..98265
                             /gene="NAD synthetase"
                             /note=""
@@ -679,7 +691,7 @@
                             /note="Intergenic"
                             /colour=160 32 240
      CDS                   10670..12250
-                            /gene="probable A1 protein"
+                            /gene="A1 protein"
                             /note=""
                             /colour=0 255 255
      CDS                   complement(19058..17907)
@@ -718,10 +730,6 @@
                             /gene="None"
                             /note=""
                             /colour=0 255 255
-     CDS                   92498..94054
-                            /gene="putative ATP-dependent helicase"
-                            /note="Extended"
-                            /colour=0 255 0
      CDS                   complement(92094..91939)
                             /gene="None"
                             /note="Intergenic"
@@ -739,7 +747,7 @@
                             /note="Intergenic"
                             /colour=160 32 240
      CDS                   complement(27088..26729)
-                            /gene="hypothetical protein HELO_2068"
+                            /gene="hypothetical protein TUST1-191_00745"
                             /note=""
                             /colour=0 255 255
      CDS                   complement(92191..92021)
@@ -759,11 +767,11 @@
                             /note=""
                             /colour=0 255 255
      CDS                   complement(17424..16012)
-                            /gene="Gp30 DNA ligase"
+                            /gene="gp30 DNA ligase"
                             /note=""
                             /colour=0 255 255
      CDS                   complement(81792..79030)
-                            /gene="unknown"
+                            /gene="hypothetical protein DAPPUDRAFT_338964"
                             /note=""
                             /colour=0 255 255
      CDS                   92248..92370
@@ -774,6 +782,10 @@
                             /gene="None"
                             /note="Intergenic"
                             /colour=160 32 240
+     CDS                   124551..124811
+                            /gene="None"
+                            /note="Extended"
+                            /colour=0 255 0
      CDS                   117313..117576
                             /gene="None"
                             /note="Intergenic"
@@ -798,11 +810,11 @@
                             /gene="None"
                             /note=""
                             /colour=0 255 255
-     CDS                   111805..111990
+     CDS                   103491..103670
                             /gene="None"
                             /note=""
                             /colour=0 255 255
-     CDS                   103491..103670
+     CDS                   111805..111990
                             /gene="None"
                             /note=""
                             /colour=0 255 255
@@ -818,10 +830,6 @@
                             /gene="None"
                             /note="Intergenic"
                             /colour=160 32 240
-     CDS                   142302..142502
-                            /gene="None"
-                            /note="Extended"
-                            /colour=0 255 0
      CDS                   121085..121342
                             /gene="None"
                             /note=""
@@ -831,7 +839,7 @@
                             /note=""
                             /colour=0 255 255
      CDS                   complement(58036..55208)
-                            /gene="None"
+                            /gene="hypothetical protein Desaf_0775"
                             /note=""
                             /colour=0 255 255
      CDS                   94802..95308
@@ -846,10 +854,6 @@
                             /gene="None"
                             /note="Intergenic"
                             /colour=160 32 240
-     CDS                   101637..101957
-                            /gene="None"
-                            /note="Extended"
-                            /colour=0 255 0
      CDS                   139239..139586
                             /gene="hypothetical protein JNB_12593"
                             /note=""
@@ -879,7 +883,7 @@
                             /note="Intergenic"
                             /colour=160 32 240
      CDS                   complement(70810..70094)
-                            /gene="WD repeat-containing protein 65"
+                            /gene="None"
                             /note=""
                             /colour=0 255 255
      CDS                   87781..87885
@@ -923,7 +927,7 @@
                             /note=""
                             /colour=0 255 255
      CDS                   128185..128964
-                            /gene="predicted protein"
+                            /gene="hypothetical protein Runsl_3995"
                             /note=""
                             /colour=0 255 255
      CDS                   143575..144171
@@ -995,7 +999,7 @@
                             /note=""
                             /colour=0 255 255
      CDS                   137017..139185
-                            /gene="hypothetical protein CdifQCD-6_20930"
+                            /gene="hypothetical protein"
                             /note=""
                             /colour=0 255 255
      CDS                   complement(62506..60671)
@@ -1015,15 +1019,11 @@
                             /note=""
                             /colour=0 255 255
      CDS                   2184..2495
-                            /gene="None"
+                            /gene="hypothetical protein"
                             /note=""
                             /colour=0 255 255
-     CDS                   88836..88973
-                            /gene="None"
-                            /note="Extended"
-                            /colour=0 255 0
      CDS                   9255..9914
-                            /gene="conserved hypothetical protein; putative phosphoesterase"
+                            /gene="hypothetical protein RALTA_B0988"
                             /note=""
                             /colour=0 255 255
      CDS                   130452..130754
@@ -1058,10 +1058,6 @@
                             /gene="None"
                             /note="Intergenic"
                             /colour=160 32 240
-     CDS                   135969..136595
-                            /gene="None"
-                            /note="Extended"
-                            /colour=0 255 0
      CDS                   complement(72261..71929)
                             /gene="None"
                             /note=""
@@ -1083,7 +1079,7 @@
                             /note="Intergenic"
                             /colour=160 32 240
      CDS                   complement(63473..62520)
-                            /gene="conserved hypothetical protein"
+                            /gene="hypothetical protein Mpop_5107"
                             /note=""
                             /colour=0 255 255
      CDS                   120191..120775
@@ -1107,7 +1103,7 @@
                             /note=""
                             /colour=0 255 255
      CDS                   99766..100494
-                            /gene="hypothetical protein CHGG_06392"
+                            /gene="dead/deah box helicase domain protein"
                             /note=""
                             /colour=0 255 255
      CDS                   complement(19797..19060)
@@ -1126,6 +1122,10 @@
                             /gene="hypothetical protein BA3_0002"
                             /note=""
                             /colour=0 255 255
+     CDS                   87961..88140
+                            /gene="None"
+                            /note="Extended"
+                            /colour=0 255 0
      CDS                   7022..7447
                             /gene="None"
                             /note=""

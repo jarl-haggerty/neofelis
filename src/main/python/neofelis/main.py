@@ -348,41 +348,29 @@ class Main():
       s.listen(5)
       running = True
       try:
-        while running:
+        while True:
           connection, address = s.accept()
-          recieved, abort = "", False
+          received = ""
           print "listening"
-          while not "\n" in recieved:
+          data = connection.recv(4096)
+          while data:
+            received += data
             data = connection.recv(4096)
-            if data:
-              recieved += data
-            elif data == None:
-              abort = True
-              break
           connection.close()
-          print recieved, abort
-          if abort:
-            continue
-          arguments = re.split(r"\s+", recieved[:recieved.find("\n")])
-          print arguments, recieved, running
+          arguments = re.split(r"\s+", received)
+          print arguments, received, running
           if "--server" in arguments or "-v" in arguments:
             print "ERROR: Can't run a neofelis server within a neofelis server, you just had to try that didn't you?"
-          elif "--shutdown" in arguments or "-u" in arguments:
-            running = False
           else:
             print "Threading"
             NeofelisThread(arguments).start()
-          print "Continue", running
       except Exception, e:
         print e
-      finally:
-        for thread in threading.enumerate():
-          if isinstance(thread, NeofelisThread):
-            thread.terminate()
-        s.close()
         return
 
+    print "hello"
     if not self.blastLocation or not self.database or not self.genemarkLocation or not self.transtermLocation or not self.tRNAscanLocation or self.sources == [""]:
+      print "problem"
       home = System.getProperty("user.home")
       self.blastLocation = self.blastLocation if self.blastLocation else home + "/blast"
       self.database = self.database if self.database else home + "/db/"
