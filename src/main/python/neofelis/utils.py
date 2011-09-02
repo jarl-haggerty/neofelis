@@ -292,24 +292,21 @@ def parseBlast(fileName):
 
   return dict(map(lambda iteration: (iteration.query, iteration), reader.getContentHandler().iterations))
 
-def cachedBlast(fileName, blastLocation, database, eValue, query, pipeline, remote = False, force = False):
+def cachedBlast(fileName, blastLocation, database, eValue, query, pipeline, force = False):
   """
   Performs a blast search using the blastp executable and database in blastLocation on
   the query with the eValue.  The result is an XML file saved to fileName.  If fileName
-  already exists the search is skipped.  If remote is true then the search is done remotely.
+  already exists the search is skipped.
   """
   if not os.path.isfile(fileName) or force:
     output = open(fileName, "w")
     command = [blastLocation + "/bin/blastp",
                "-evalue", str(eValue),
                "-outfmt", "5",
-               "-query", os.getcwd() + "/" + query]
-    if remote:
-      command += ["-remote",
-                  "-db", database]
-    else:
-      command += ["-num_threads", str(Runtime.getRuntime().availableProcessors()),
-                  "-db", os.path.split(database)[1]]
+               "-query", os.getcwd() + "/" + query,
+               "-num_threads", str(Runtime.getRuntime().availableProcessors()),
+               "-db", os.path.split(database)[1]]
+
     blastProcess = subprocess.Popen(command,
                                     stdout = subprocess.PIPE,
                                     cwd = database)
@@ -332,7 +329,7 @@ def cachedBlast(fileName, blastLocation, database, eValue, query, pipeline, remo
   try:
     return parseBlast(fileName)
   except SAXParseException:
-    return cachedBlast(fileName, blastLocation, database, eValue, query, pipeline, remote, True)
+    return cachedBlast(fileName, blastLocation, database, eValue, query, pipeline, True)
 
 def getGCContent(genome):
   """

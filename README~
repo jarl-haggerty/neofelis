@@ -1,0 +1,4 @@
+This is the Neofelis Annotation Pipeline.  It relies on blast+, genemark, transterm, and tRNAscan which must be installed on their own.  
+This program also uses BPROM for promoter prediction, at the moment it just uses the online version here at 
+http://linux1.softberry.com/berry.phtml?topic=bprom&group=programs&subgroup=gfindb allowing for light use(<= 15 uses per day).
+

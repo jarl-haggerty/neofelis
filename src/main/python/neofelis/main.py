@@ -1,5 +1,5 @@
 """
-This Module is the entry point for Neofelis when used on the desktop.  It parses any command line arguments and if any required arguments
+This Module is the entry point for Neofelis.  It parses any command line arguments and if any required arguments
 are missing a window is displayed to collect the remaining arguments.  If a directory is specified as the query then that directory and all subdirectories
 will be searched for fasta files with a single genome, these files will then be used as queries.  All the arguments are then passed onto the pipeline.
 """
@@ -71,7 +71,7 @@ class Main():
     
   def getArguments(self):
     """
-    This function brings up a window to retreive any required arguments.  This function brings up a window with fields for each argument, filled with any arguments already given.
+    This function brings up a window to retreive any required arguments.  It uses a window with fields for each argument, filled with any arguments already given.
     While this window is visible the program will wait, once it is no longer visible all the arguments will be filled with the entries in the fields.
     """
 
@@ -250,7 +250,6 @@ class Main():
     self.promoterScoreCutoff = float(promoterScoreField.getText())
     self.sources = [queryField.getText()]
 
-
   def run(self, arguments):
     documentation = """
 -m --matrix                Matrix with which to run genemark
@@ -265,17 +264,13 @@ class Main():
 -q --query                 Genome or directory of genomes to run pipeline on
 -h --help                  Print help documentation
 -s --swing                 Use a swing interface
--v --server                Neofelis will be set to read lines of command line arguments from the socket 1122 on localhost.  For each line read a new thread will be spawned to process the query.  Only one connection will be accepted per query.
--u --shutdown              If Neofelis is already running as a server then this will shut it down.
+-v --server                Neofelis will be set to read sets of command line arguments from the socket 1122 on localhost.  For each set a new thread will be spawned to process the query.  One query will be accepted per connection.
 -n --no-swing              If any required arguments are missing then the program will exit instead of using a Swing interface to get the missing arguments
 -a --email                 Email address that will be emailed when query is processed.
--w --smtp-server           The smtp to use to send emails when the pipeline processes a genome.
--r --smtp-user             User name for the smtp server.
--y --smtp-password         Password for the smtp server.
 -z --trna-scan             Location of tRNAscan
 """
     try:
-      opts, args = getopt(arguments, "m:d:g:b:e:l:t:p:c:q:hsna:vw:r:y:z:", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "promoter-score-cutoff=", "scaffolding-distance=", "query=", "help", "swing", "no-swing", "email=", "server", "smtp-server=", "smtp-user=", "smtp-password=", "trna-scan="])
+      opts, args = getopt(arguments, "m:d:g:b:e:l:t:p:c:q:hsvna:z:", ["matrix=", "database=", "genemark=", "blast=", "e-value=", "min-length=", "transterm=", "promoter-score-cutoff=", "scaffolding-distance=", "query=", "help", "swing", "server", "no-swing", "email=", "trna-scan="])
     except GetoptError:
       print documentation
       sys.exit(0)
@@ -296,9 +291,6 @@ class Main():
     self.email = ""
     self.remote = False
     self.server = False
-    self.smtpServer = ""
-    self.smtpUser = ""
-    self.smtpPassword = ""
     
     for opt, arg in opts:
       if opt in ("-q", "--query"):
@@ -331,18 +323,11 @@ class Main():
         self.email = arg
       elif opt in ("-v", "--server"):
         self.server = True
-      elif opt in ("-w", "--smtp-server"):
-        self.smtpServer = arg
-      elif opt in ("-r", "--smtp-user"):
-        self.smtpUser = arg
-      elif opt in ("-y", "--smtp-password"):
-        self.smtpPassword = arg
       elif opt in ("-h", "--help"):
         print documentation
         sys.exit(0)
         
     if self.server:
-      print self.server
       s = socket.socket()
       s.bind(("localhost", 1122))
       s.listen(5)
@@ -351,26 +336,21 @@ class Main():
         while True:
           connection, address = s.accept()
           received = ""
-          print "listening"
           data = connection.recv(4096)
           while data:
             received += data
             data = connection.recv(4096)
           connection.close()
           arguments = re.split(r"\s+", received)
-          print arguments, received, running
           if "--server" in arguments or "-v" in arguments:
             print "ERROR: Can't run a neofelis server within a neofelis server, you just had to try that didn't you?"
           else:
-            print "Threading"
             NeofelisThread(arguments).start()
       except Exception, e:
         print e
         return
 
-    print "hello"
     if not self.blastLocation or not self.database or not self.genemarkLocation or not self.transtermLocation or not self.tRNAscanLocation or self.sources == [""]:
-      print "problem"
       home = System.getProperty("user.home")
       self.blastLocation = self.blastLocation if self.blastLocation else home + "/blast"
       self.database = self.database if self.database else home + "/db/"
@@ -393,7 +373,7 @@ class Main():
         self.queries.append(source)
         
     self.pipeline = pipeline.Pipeline()
-    self.pipeline.run(self.blastLocation, self.genemarkLocation, self.transtermLocation, self.tRNAscanLocation, self.database, self.eValue, self.matrix, self.minLength, self.scaffoldingDistance, self.promoterScoreCutoff, self.queries, self.swingInterface, self.email, self.smtpServer, self.smtpUser, self.smtpPassword)
+    self.pipeline.run(self.blastLocation, self.genemarkLocation, self.transtermLocation, self.tRNAscanLocation, self.database, self.eValue, self.matrix, self.minLength, self.scaffoldingDistance, self.promoterScoreCutoff, self.queries, self.swingInterface, self.email)
 
 if __name__ == "__main__":
   Main().run(sys.argv)

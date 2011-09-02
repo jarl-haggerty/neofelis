@@ -20,7 +20,7 @@ limitations under the License.
 
 import os
 import sys
-import smtplib
+import subprocess
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from neofelis import genemark
@@ -153,7 +153,7 @@ class Pipeline():
     
     This function use used for updating the progress shown in the interface.  If job is not equal to currentJob then
     global progress is incremented and shown and the currentProgress is reset and shown.  If job is equal to currentJob
-    then the globalProgress does not change and currentProgress is incremented.
+    then the globalProgress does not change and currentProgress is increased.
     """
     if self.exception:
       raise self.exception
@@ -195,7 +195,7 @@ class Pipeline():
       while self.frame.isVisible():
         pass
 
-  def run(self, blastLocation, genemarkLocation, transtermLocation, tRNAscanLocation, database, eValue, matrix, minLength, scaffoldingDistance, promoterScoreCutoff, queries, swing = False, email = "", smtpServer = "", smtpUser = "", smtpPassword = ""):
+  def run(self, blastLocation, genemarkLocation, transtermLocation, tRNAscanLocation, database, eValue, matrix, minLength, scaffoldingDistance, promoterScoreCutoff, queries, swing = False, email = ""):
     """
     blastLocation:       Directory blast was installed in.
     genemarkLocation:    Directory genemark was installed in.
@@ -206,14 +206,10 @@ class Pipeline():
     matrix:              The matrix to use when running genemark.  If None then genemark is run heuristically.
     minLength:           Minimum length of any genes included in the resulting annotation.
     scaffoldingDistance: The maximum length allowed between genes when contiguous regions of genes are being identified
-    promoterScoreCutoff:           Minimum LDF allowed for any promoters included in the resulting annotation
+    promoterScoreCutoff: Minimum score allowed for any promoters included in the resulting annotation
     queries:             A list of faster files to process.
     swing:               If true a swing window will be used to updated the user about the pipeline's progress.
-    email:               If this is a non-empty string an email will be sent to the address in the string when the pipeline is done.  The local machine will be used as
-                         an SMTP server and this will not work if it isn't.
-    smtpServer:          The smtp server that will be used to send an email notification.
-    smtpUser:            User name for the smtp server.
-    smtpPassword:        Password for the smtp server.
+    email:               If this is a non-empty string an email will be sent to the address in the string when the pipeline is done.  This will be attempted with the sendmail command on the local computer.
     
     The main pipeline function.  For every query genemark is used to predict genes, these genes are then extended to any preferable starts.  Then the pipeline searches
     for any intergenic genes(genes between those found by genemark) and these are combined with the extended genemark genes.  Then the genes are pruned to remove
@@ -276,19 +272,24 @@ class Pipeline():
         report.report(name, scaffolded, os.path.splitext(query)[0])
 
       if email:
-        print email, smtpServer, smtpUser, smtpPassword
-        message = MIMEText("Your genome has been annotated.")
-        message["Subject"] = "Annotation complete"
-        message["From"] = "Neofelis"
-        message["To"] = email
-
-        smtp = smtplib.SMTP(smtpServer, 587)
-        smtp.ehlo()
-        smtp.starttls()
-        smtp.ehlo
-        smtp.login(smtpUser, smtpPassword)
-        smtp.sendmail("Neofelis", [email], message.as_string())
-        smtp.close()
+        if not os.path.isfile("EMAIL_MESSAGE"):
+          message = open("EMAIL_MESSAGE", "w")
+          message.write("Subject: Annotation Complete\nYour genome has been annotated.\n")
+          message.close()
+        
+        sent = False
+        while not sent:
+          message = open("EMAIL_MESSAGE", "r")
+          sendmailProcess = subprocess.Popen(["/usr/sbin/sendmail", "-F", "Neofelis", "-f", "neofelis@tmpl.arizona.edu", email],
+                                             stdin = message,
+                                             stdout = subprocess.PIPE)
+          result = ""
+          nextRead = sendmailProcess.stdout.read()
+          while nextRead:
+            result += nextRead
+            nextRead = sendmailProcess.stdout.read()
+          sent = not result.strip()
+          message.close()
     
       self.finished()
     except PipelineException:

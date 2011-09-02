@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <title>Neofelis help document</title>
+  </head>
+  <body>
+    This is the Neofelis Annotation Pipeline.  It relies on blast+, genemark, transterm, and tRNAscan which must be installed on their own.  
+    This program also uses BPROM for promoter prediction, at the moment it just uses the online version 
+    <a href="http://linux1.softberry.com/berry.phtml?topic=bprom&group=programs&subgroup=gfindb" target="_blank">here</a> allowing for light use(<= 15 uses per day).
+    <h1>Pipeline Options</h1>
+    <table border="1">
+      <tr>
+	<td>Matrix</td>
+	<td>Matrix with which to run Genemark</td>
+      </tr>
+      <tr>
+	<td>Database</td>
+	<td>Database to use when running Blast+</td>
+      </tr>
+      <tr>
+	<td>Genemark</td>
+	<td>Location of Genemark</td>
+      </tr>
+      <tr>
+	<td>Blast</td>
+	<td>Location of Blast+</td>
+      </tr>
+      <tr>
+	<td>E Value</td>
+	<td>Minimum e value for any genes found with Blast+</td>
+      </tr>
+      <tr>
+	<td>Minimum Length</td>
+	<td>Minimum length of any intergenic genes</td>
+      </tr>
+      <tr>
+	<td>Transterm</td>
+	<td>Location of Transterm</td>
+      </tr>
+      <tr>
+	<td>tRNAScan Location</td>
+	<td>Location of tRNAScan</td>
+      </tr>
+      <tr>
+	<td>Promoter Score Cutoff</td>
+	<td>Minimum score for any predicted promoters</td>
+      </tr>
+      <tr>
+	<td>Scaffolding Distance</td>
+	<td>Minimum distance between genes for them to be combined into a
+	  scaffold.  Here, scaffold refers to a single continuous region of genes that are likely to represent an operon.</td>
+      </tr>
+      <tr>
+	<td>Query</td>
+	<td>Either a fasta file on which to run the pipeline or a
+          directory containing fasta files on which to run the
+          pipeline</td>
+      </tr>
+    </table>
+    <h2>How to install Blast+</h2>
+    <p>If you are using a Windows, Linux, or Solaris computer you can
+      download the version of Blast+ for your platform here <a href="http://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download" target="_blank">here.</a>
+      For Macs however Blast+ must be built from source.  This is not
+      that hard but the build process can take a very long time.</p>
+    <p>Download the <a href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.2.24+-src.tar.gz" target="_blank">source code</a> and put it in a safe place.  Now open
+      "Applications/Utilities/Terminal" and enter these commands</p>
+    <ol>
+      <li>cd {where did you save the download?}/c++</li>
+      <li>./configure --without-debug --without-pcre --with-mt
+	--with-flat-makefile --with-universal --with-ncbi-public
+	--with-build-root=Release --without-ccache --without-caution
+	--without-makefile-auto-update
+	--with-projects=scripts/projects/blast/project.lst
+	--with-internal</li>
+      <li>make</li>
+    </ol>
+    <p>When you tell the pipeline the location of Blast+ select {where did you save the download?} /c++/Release</p>
+    <h2>How to install a database</h2>
+    <p>Go to the list of blast <a href="ftp://ftp.ncbi.nlm.nih.gov/blast/db/" target="_blank">databases</a> and
+      search for a series of files called {your
+      database}.{number}.tar.gz.  Now, choose a folder to store your
+      database in and extract the contents of each of the archives for
+      your database into this folder.  When you specify the location of
+      your databases for the pipeline you're going to specify the
+      previous folder.</p>
+    <h2>How to install Genemark</h2>
+    <p>Go to the <a href="http://exon.biology.gatech.edu/license_download.cgi" target="_blank">download page</a> 
+      of the Genemark website, check GeneMarkS, your operating system, enter your information, and agree to the license.</p>
+    <h2>How to install Transterm</h2>
+    <p>Transterm is only available as source code, available <a	href="http://transterm.cbcb.umd.edu/" target="_blank">here.</a>  Now open
+      a terminal and enter these commands</p>
+    <ol>
+      <li>cd {where did you save the download?}</li>
+      <li>make</li>
+    </ol>
+    <p>When you tell the pipeline the location of Transterm select {where did you save the download?}.</p>
+    <h2>How to install tRNAscan-SE</h2>
+    <p>tRNAscan-SE is available as source code, available <a href="http://lowelab.ucsc.edu/tRNAscan-SE/" target="_blank">here.</a>  Now open
+      a terminal and enter these commands</p>
+    <ol>
+      <li>cd {where did you save the download?}</li>
+      <li>make</li>
+    </ol>
+    <p>When you tell the pipeline the location of tRNAscan-SE select {where did you save the download?}.</p>
+  </body>
+</html>
